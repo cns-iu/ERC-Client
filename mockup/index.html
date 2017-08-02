@@ -1,0 +1,50 @@
+<DOCTYPE! html>
+<head>
+    <meta charset=UTF-8 />
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ERC</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="main-vis">
+            <h3>Main Visualization Container</h3>
+                <div class="pop-up"></div>
+            </div>
+        </div>
+        <div class="right-column">
+                <div class="bar-graph">
+                <h3>Bar Graph</h3>
+                </div>
+                <div class="legend">
+                    <div class="legend-row">
+                        <div id="item-1"></div>
+                        <div id="item-2"></div>
+                    </div>
+                    <div class="legend-row">
+                        <div id="item-3"></div>
+                        <div id="item-4"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <!-- Your application bootstrap  -->
+    <script type="text/javascript">
+    /**
+    * You must include the dependency on 'ngMaterial'
+    */
+    angular.module('BlankApp', ['ngMaterial']);
+    </script>
+</html>

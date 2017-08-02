@@ -1,0 +1,930 @@
+{
+  "meta": {
+    "type": "org.cishell.json.vis.metadata",
+    "visualization": "scimap",
+    "sizeCoding": [
+      "Frequency"
+    ],
+    "sortBy": ["Frequency"],
+    "sortByDir": "desc",
+    "sizeCodingDisplayFormat": "",
+    "label": "label",
+    "summary": {
+      "label": "disc_name",
+      "content": [
+        {
+          "title": "Subdiscipline",
+          "field": "subd_name",
+          "type": "value",
+          "format": ""
+        }
+    ],
+      "Subdiscipline IDs": {
+        "label": "Journal name",
+        "content": [
+          {
+            "title": "Total Cost",
+            "field": "Frequency",
+            "type": "operator",
+            "operator": "+",
+            "format": ""
+          }
+        ]
+      }
+    },
+    "headerData": {
+      "pageTitle": "Topical Analysis Visualization",
+      "headerTitle": "Topical Analysis Visualization",
+      "description": "Publications for all core (multi-year) projects for the portfolio of 200 records",
+            "disclaimer": "Please be aware of certain limitations in data sources when using this visualization."
+    },
+    "categorization": [
+      "Discipline ID",
+      "Subdiscipline IDs"
+    ],
+    "latLng": {
+      "lat": "mod_x",
+      "lng": "mod_y"
+    }
+  },
+    "records": {
+        "schema": [{
+            "name": "Journal name",
+            "type": "string"
+        }, {
+            "name": "Discipline ID",
+            "type": "string"
+        }, {
+            "name": "Discipline name",
+            "type": "string"
+        }, {
+            "name": "Subdiscipline IDs",
+            "type": "string"
+        }, {
+            "name": "Frequency",
+            "type": "numeric"
+        }],
+
+
+        "data": [{
+            "Subdiscipline IDs": "46",
+            "Discipline ID": "7",
+            "Journal name": "optoelectronics letters",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "journal of applied physics",
+            "Frequency": 32,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "66",
+            "Discipline ID": "7",
+            "Journal name": "international journal of electronics",
+            "Frequency": 2,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "physica b: condensed matter",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "journal of physics d: applied physics",
+            "Frequency": 3,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "228",
+            "Discipline ID": "11",
+            "Journal name": "mathematical and computer modelling",
+            "Frequency": 2,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "185",
+            "Discipline ID": "5",
+            "Journal name": "acs nano",
+            "Frequency": 6,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "179",
+            "Discipline ID": "5",
+            "Journal name": "journal of quantitative spectroscopy and radiative transfer",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "175",
+            "Discipline ID": "7",
+            "Journal name": "solid-state electronics",
+            "Frequency": 15,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "501",
+            "Discipline ID": "11",
+            "Journal name": "numerical linear algebra with applications",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "248",
+            "Discipline ID": "4",
+            "Journal name": "journal of the iest",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "35",
+            "Discipline ID": "5",
+            "Journal name": "comptes rendus chimie",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "465",
+            "Discipline ID": "4",
+            "Journal name": "international journal of engineering science",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "232",
+            "Discipline ID": "11",
+            "Journal name": "review of scientific instruments",
+            "Frequency": 3,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "371",
+            "Discipline ID": "7",
+            "Journal name": "concurrency computation practice and experience",
+            "Frequency": 4,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "5",
+            "Discipline ID": "7",
+            "Journal name": "canadian conference on electrical and computer engineering",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "metamaterials",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "46",
+            "Discipline ID": "7",
+            "Journal name": "optical and quantum electronics",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "23",
+            "Discipline ID": "4",
+            "Journal name": "modelling and simulation in materials science and engineering",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "semiconductor science and technology",
+            "Frequency": 5,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "523",
+            "Discipline ID": "10",
+            "Journal name": "plos one",
+            "Frequency": 2,
+            "Discipline name": "Infectious Diseases"
+        }, {
+            "Subdiscipline IDs": "439",
+            "Discipline ID": "4",
+            "Journal name": "microelectronics and reliability",
+            "Frequency": 4,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "88",
+            "Discipline ID": "5",
+            "Journal name": "journal of molecular modeling",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "125",
+            "Discipline ID": "11",
+            "Journal name": "european journal of physics",
+            "Frequency": 2,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "395",
+            "Discipline ID": "7",
+            "Journal name": "journal of grid computing",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "439",
+            "Discipline ID": "4",
+            "Journal name": "ecs transactions",
+            "Frequency": 2,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "journal of physics condensed matter",
+            "Frequency": 2,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "35",
+            "Discipline ID": "5",
+            "Journal name": "chemistry (weinheim an der bergstrasse, germany)",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "176",
+            "Discipline ID": "11",
+            "Journal name": "optics and spectroscopy (english translation of optika i spektroskopiya)",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "416",
+            "Discipline ID": "4",
+            "Journal name": "progress in photovoltaics: research and applications",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "applied physics letters",
+            "Frequency": 28,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "surface science",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "446",
+            "Discipline ID": "7",
+            "Journal name": "ieee internet computing",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "modern physics letters b",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "229",
+            "Discipline ID": "11",
+            "Journal name": "international journal of high speed electronics and systems",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "165",
+            "Discipline ID": "12",
+            "Journal name": "nano today",
+            "Frequency": 2,
+            "Discipline name": "Health Professionals"
+        }, {
+            "Subdiscipline IDs": "5",
+            "Discipline ID": "7",
+            "Journal name": "etri journal",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "396",
+            "Discipline ID": "4",
+            "Journal name": "jom",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "physical review b - condensed matter and materials physics",
+            "Frequency": 22,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "46",
+            "Discipline ID": "7",
+            "Journal name": "optics express",
+            "Frequency": 5,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "175",
+            "Discipline ID": "7",
+            "Journal name": "international conference on simulation of semiconductor processes and devices, sispad",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "482",
+            "Discipline ID": "4",
+            "Journal name": "tribology letters",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "439",
+            "Discipline ID": "4",
+            "Journal name": "journal of computational electronics",
+            "Frequency": 21,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "403",
+            "Discipline ID": "13",
+            "Journal name": "systems research and behavioral science",
+            "Frequency": 1,
+            "Discipline name": "Social Sciences"
+        }, {
+            "Subdiscipline IDs": "175",
+            "Discipline ID": "7",
+            "Journal name": "2007 international semiconductor device research symposium, isdrs",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "153",
+            "Discipline ID": "7",
+            "Journal name": "journal of electrical engineering & technology",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "415",
+            "Discipline ID": "5",
+            "Journal name": "acta chimica slovenica",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "152",
+            "Discipline ID": "7",
+            "Journal name": "future generation computer systems",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "49",
+            "Discipline ID": "5",
+            "Journal name": "biological research",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "121",
+            "Discipline ID": "7",
+            "Journal name": "ibm journal of research and development",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "36",
+            "Discipline ID": "4",
+            "Journal name": "chemical engineering science",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "175",
+            "Discipline ID": "7",
+            "Journal name": "ieee transactions on electron devices",
+            "Frequency": 27,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "175",
+            "Discipline ID": "7",
+            "Journal name": "japanese journal of applied physics",
+            "Frequency": 3,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "journal of the korean physical society",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "2005 international semiconductor device research symposium",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "ieee nanotechnology magazine",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "152",
+            "Discipline ID": "7",
+            "Journal name": "parallel processing letters",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "18,35,88",
+            "Discipline ID": "MULTIPLE_DISCIPLINES",
+            "Journal name": "journal of the american chemical society",
+            "Frequency": 2,
+            "Discipline name": "Multiple Categories"
+        }, {
+            "Subdiscipline IDs": "463",
+            "Discipline ID": "11",
+            "Journal name": "journal of physics: conference series",
+            "Frequency": 6,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "121",
+            "Discipline ID": "7",
+            "Journal name": "ieee transactions on very large scale integration (vlsi) systems",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "463",
+            "Discipline ID": "11",
+            "Journal name": "physics of the solid state",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "444",
+            "Discipline ID": "13",
+            "Journal name": "ieee transactions on education",
+            "Frequency": 1,
+            "Discipline name": "Social Sciences"
+        }, {
+            "Subdiscipline IDs": "263",
+            "Discipline ID": "11",
+            "Journal name": "thin solid films",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "185",
+            "Discipline ID": "5",
+            "Journal name": "nanotechnology",
+            "Frequency": 5,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "66",
+            "Discipline ID": "7",
+            "Journal name": "ieee transactions on circuits and systems i: regular papers",
+            "Frequency": 2,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "441",
+            "Discipline ID": "10",
+            "Journal name": "physiological reviews",
+            "Frequency": 1,
+            "Discipline name": "Infectious Diseases"
+        }, {
+            "Subdiscipline IDs": "10",
+            "Discipline ID": "5",
+            "Journal name": "polymer",
+            "Frequency": 2,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "52",
+            "Discipline ID": "4",
+            "Journal name": "journal of structural engineering",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "228",
+            "Discipline ID": "11",
+            "Journal name": "european journal of applied mathematics",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "128",
+            "Discipline ID": "4",
+            "Journal name": "international journal of thermal sciences",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "14",
+            "Discipline ID": "11",
+            "Journal name": "journal of dynamics and differential equations",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "153",
+            "Discipline ID": "7",
+            "Journal name": "ieej transactions on electrical and electronic engineering",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "371",
+            "Discipline ID": "7",
+            "Journal name": "computing in science and engineering",
+            "Frequency": 10,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "164",
+            "Discipline ID": "7",
+            "Journal name": "journal of academic librarianship",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "426,69,31,10,322,176,310,338,19,55,18,1,262,13,20,40,409,372,63,353,180,16,463,81,157,185,125,6,103,77,441,213,401,42,78,12,320,46,61,21,25,422,26,54,131,200,238,254,293,106,9,29,166,424,394,4,443,144,179,264,135,233,48,384,161,35,423,30,158,45,218,72,366,15,321,127,454",
+            "Discipline ID": "MULTIPLE_DISCIPLINES",
+            "Journal name": "nature",
+            "Frequency": 1,
+            "Discipline name": "Multiple Categories"
+        }, {
+            "Subdiscipline IDs": "57",
+            "Discipline ID": "13",
+            "Journal name": "journal of management information systems",
+            "Frequency": 1,
+            "Discipline name": "Social Sciences"
+        }, {
+            "Subdiscipline IDs": "185",
+            "Discipline ID": "5",
+            "Journal name": "nano letters",
+            "Frequency": 8,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "376",
+            "Discipline ID": "11",
+            "Journal name": "european physical journal-special topics",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "274",
+            "Discipline ID": "2",
+            "Journal name": "omics a journal of integrative biology",
+            "Frequency": 2,
+            "Discipline name": "Biotechnology"
+        }, {
+            "Subdiscipline IDs": "185",
+            "Discipline ID": "5",
+            "Journal name": "nanoscale",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "physical review letters",
+            "Frequency": 3,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "400",
+            "Discipline ID": "7",
+            "Journal name": "computer",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "415",
+            "Discipline ID": "5",
+            "Journal name": "journal of thermal analysis and calorimetry",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "441",
+            "Discipline ID": "10",
+            "Journal name": "biophysical journal",
+            "Frequency": 2,
+            "Discipline name": "Infectious Diseases"
+        }, {
+            "Subdiscipline IDs": "152",
+            "Discipline ID": "7",
+            "Journal name": "grid computing environments workshop, gce 2008",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "176",
+            "Discipline ID": "11",
+            "Journal name": "nature physics",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "journal of vacuum science and technology b: microelectronics and nanometer structures",
+            "Frequency": 2,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "446",
+            "Discipline ID": "7",
+            "Journal name": "information services and use",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "65",
+            "Discipline ID": "7",
+            "Journal name": "iete technical review (institution of electronics and telecommunication engineers, india)",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "448",
+            "Discipline ID": "4",
+            "Journal name": "journal of microelectromechanical systems",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "applied physics a: materials science and processing",
+            "Frequency": 3,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "185",
+            "Discipline ID": "5",
+            "Journal name": "2005 5th ieee conference on nanotechnology",
+            "Frequency": 2,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "179",
+            "Discipline ID": "5",
+            "Journal name": "chemical physics letters",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "37",
+            "Discipline ID": "5",
+            "Journal name": "journal of pharmaceutical innovation",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "179",
+            "Discipline ID": "5",
+            "Journal name": "journal of chemical physics",
+            "Frequency": 2,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "nature materials",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "international journal of modern physics b",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "351",
+            "Discipline ID": "11",
+            "Journal name": "computing (vienna/new york)",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "10",
+            "Discipline ID": "5",
+            "Journal name": "macromolecules",
+            "Frequency": 4,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "480",
+            "Discipline ID": "4",
+            "Journal name": "cellulose",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "185",
+            "Discipline ID": "5",
+            "Journal name": "journal of nanoscience and nanotechnology",
+            "Frequency": 3,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "179",
+            "Discipline ID": "5",
+            "Journal name": "journal of raman spectroscopy",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "481",
+            "Discipline ID": "7",
+            "Journal name": "international journal of circuit theory and applications",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "65",
+            "Discipline ID": "7",
+            "Journal name": "progress in electromagnetics research",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "263",
+            "Discipline ID": "11",
+            "Journal name": "surface and coatings technology",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "46",
+            "Discipline ID": "7",
+            "Journal name": "optics communications",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "374",
+            "Discipline ID": "6",
+            "Journal name": "journal of hydrologic engineering",
+            "Frequency": 1,
+            "Discipline name": "Earth Sciences"
+        }, {
+            "Subdiscipline IDs": "147",
+            "Discipline ID": "4",
+            "Journal name": "chinese physics b",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "9,443,42,46,320,61,69,218,365,423,103,82,35,278,366,394,144,213,508,463,78,150,19,179,77,63,13,23,185,321,180,54,21,262,10,454,135,384,200,4,127,29,176,26,424,310,55,30,1,106,31,293,15,33,18,37,12,25,353,426,48,20,264,16,81,361,161,233,6,125,158,322,45,372,131,238,254,166,157,40,422,72",
+            "Discipline ID": "MULTIPLE_DISCIPLINES",
+            "Journal name": "science",
+            "Frequency": 4,
+            "Discipline name": "Multiple Categories"
+        }, {
+            "Subdiscipline IDs": "229",
+            "Discipline ID": "11",
+            "Journal name": "nuclear instruments and methods in physics research, section b: beam interactions with materials and atoms",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "ieee transactions on nanotechnology",
+            "Frequency": 8,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "88",
+            "Discipline ID": "5",
+            "Journal name": "journal of physical chemistry letters",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "415",
+            "Discipline ID": "5",
+            "Journal name": "thermochimica acta",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "161",
+            "Discipline ID": "5",
+            "Journal name": "analyst",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "physica e: low-dimensional systems and nanostructures",
+            "Frequency": 2,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "journal of materials science: materials in electronics",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "93",
+            "Discipline ID": "12",
+            "Journal name": "journal of biomedical informatics",
+            "Frequency": 1,
+            "Discipline name": "Health Professionals"
+        }, {
+            "Subdiscipline IDs": "188",
+            "Discipline ID": "7",
+            "Journal name": "ieee transactions on visualization and computer graphics",
+            "Frequency": 2,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "57",
+            "Discipline ID": "13",
+            "Journal name": "information and organization",
+            "Frequency": 1,
+            "Discipline name": "Social Sciences"
+        }, {
+            "Subdiscipline IDs": "223",
+            "Discipline ID": "7",
+            "Journal name": "journal of electronic materials",
+            "Frequency": 2,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "13",
+            "Discipline ID": "11",
+            "Journal name": "journal of computational and theoretical nanoscience",
+            "Frequency": 3,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "260",
+            "Discipline ID": "4",
+            "Journal name": "international journal of hydrogen energy",
+            "Frequency": 2,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "280",
+            "Discipline ID": "7",
+            "Journal name": "proceedings of the ieee",
+            "Frequency": 5,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "465",
+            "Discipline ID": "4",
+            "Journal name": "applied mechanics and materials",
+            "Frequency": 2,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "402",
+            "Discipline ID": "12",
+            "Journal name": "prostaglandins, leukotrienes, and essential fatty acids",
+            "Frequency": 1,
+            "Discipline name": "Health Professionals"
+        }, {
+            "Subdiscipline IDs": "385",
+            "Discipline ID": "7",
+            "Journal name": "ieee microwave and wireless components letters",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "179",
+            "Discipline ID": "5",
+            "Journal name": "molecular simulation",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "165",
+            "Discipline ID": "12",
+            "Journal name": "wiley interdisciplinary reviews-nanomedicine and nanobiotechnology",
+            "Frequency": 3,
+            "Discipline name": "Health Professionals"
+        }, {
+            "Subdiscipline IDs": "273",
+            "Discipline ID": "4",
+            "Journal name": "journal of chemical and engineering data",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "128",
+            "Discipline ID": "4",
+            "Journal name": "journal of heat transfer",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "280",
+            "Discipline ID": "7",
+            "Journal name": "ieee transactions on computers",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "88",
+            "Discipline ID": "5",
+            "Journal name": "journal of computational chemistry",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "199",
+            "Discipline ID": "5",
+            "Journal name": "journal of physical chemistry c",
+            "Frequency": 4,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "nanoscale research letters",
+            "Frequency": 1,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "260",
+            "Discipline ID": "4",
+            "Journal name": "electrochemical and solid-state letters",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "70",
+            "Discipline ID": "4",
+            "Journal name": "journal of computational physics",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "10",
+            "Discipline ID": "5",
+            "Journal name": "polymer engineering and science",
+            "Frequency": 1,
+            "Discipline name": "Chemistry"
+        }, {
+            "Subdiscipline IDs": "189",
+            "Discipline ID": "4",
+            "Journal name": "journal of membrane science",
+            "Frequency": 1,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "38",
+            "Discipline ID": "11",
+            "Journal name": "microelectronics journal",
+            "Frequency": 4,
+            "Discipline name": "Math & Physics"
+        }, {
+            "Subdiscipline IDs": "396",
+            "Discipline ID": "4",
+            "Journal name": "advanced materials research",
+            "Frequency": 2,
+            "Discipline name": "Chemical, Mechanical, & Civil Engineering"
+        }, {
+            "Subdiscipline IDs": "152",
+            "Discipline ID": "7",
+            "Journal name": "journal of parallel and distributed computing",
+            "Frequency": 1,
+            "Discipline name": "Electrical Engineering & Computer Science"
+        }, {
+            "Subdiscipline IDs": "523",
+            "Discipline ID": "10",
+            "Journal name": "nature nanotechnology",
+            "Frequency": 1,
+            "Discipline name": "Infectious Diseases"
+        }, {
+            "Subdiscipline IDs": "470",
+            "Discipline ID": "5",
+            "Journal name": "journal of nanoparticle research",
+            "Frequency": 2,
+            "Discipline name": "Chemistry"
+        }]
+    },
+    "topology": "table"
+}

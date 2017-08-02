@@ -1,0 +1,162 @@
+.hexagon {
+    cursor: pointer;
+}
+
+.disc-label {
+    font-weight: 600;
+    font-size: 14px;
+    cursor:pointer;
+}
+
+
+.background-clickable {
+    cursor:pointer;
+}
+
+.metric-rect {
+    fill: white;
+    stroke: black;
+    stroke-width: .25;
+}
+
+.selected {
+    opacity: 1;
+}
+
+.deselected {
+    cursor: pointer;
+    opacity: .4;
+}
+
+.highlighted {
+    opacity: .85;
+}
+
+.wvf-axis.text {
+    font: 10px open sans sans-serif;
+}
+
+.wvf-axis.path {
+    stroke-dasharray: 5, 5;
+    fill: none;
+    stroke: #666;
+    shape-rendering: crispEdges;
+}
+
+.wvf-axis.line {}
+
+
+/* ---- Node Styles ---- */
+
+.wvf-node {
+    stroke: #333333;
+    stroke-width: .5;
+    cursor:pointer;
+}
+
+.wvf-node.selected {
+    opacity: .8;
+}
+
+.subd {
+    display: none;
+    cursor: default;
+    font-size: 6;
+}
+
+.subd.selected {
+    display: block;
+}
+
+.subd.deselected {
+    display: none;
+}
+
+.wvf-node.deselected {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.wvf-node.highlighted {
+    opacity: .7;
+}
+
+
+/* ---- Labels ----- */
+
+.wvf-label {
+    font-size: 24px;
+    font-weight: 600 !important;
+    stroke-width: 1px;
+    stroke: #000000;
+}
+
+.wvf-label:hover {
+    cursor: pointer;
+}
+
+.wvf-label.selected {}
+
+.wvf-label.deselected {
+    opacity: .2;
+}
+
+.wvf-label.focused {}
+
+
+/* ---- Edge Styles ---- */
+
+.wvf-edge {
+    stroke: #8e8e8e !important;
+    cursor: pointer;
+    stroke-width: .5;
+    opacity: .5;
+    fill: none;
+}
+
+.wvf-edge.selected {
+    stroke-width: 1;
+    opacity: 1;
+}
+
+.wvf-edge.deselected {
+    opacity: .2;
+}
+
+.wvf-edge.focused {}
+
+
+/* --- Rectangle Styles ---- */
+
+.wvf-rect.selected {}
+
+.wvf-rect.deselected {}
+
+.wvf-rect.focused {}
+
+
+/* --- Path Styles  ----- */
+
+.wvf-path.selected {}
+
+.wvf-path.deselected {}
+
+.wvf-path.focused {}
+
+
+/* --- Area Styles  ----- */
+
+.wvf-area.selected {}
+
+.wvf-area.deselected {}
+
+.wvf-area.focused {}
+
+
+/* --- Shape Styles  ----- */
+
+.wvf-shape.selected {}
+
+.wvf-shape.deselected {}
+
+.wvf-shape.focused {}
