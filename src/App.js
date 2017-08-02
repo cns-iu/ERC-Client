@@ -1,122 +1,169 @@
-//http://www.ng-newsletter.com/posts/directives.html 
-var app = angular.module('app', [])
+var app = angular.module('app', ['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
 
-var globalScope;
 var verbose = false;
-//TODO: KNOWN ISSUES
-//	- Toggling physics off, then dragging an element turns physics back on. This doesn't reregister properly though. 
-//		So to turn physics off again, the button in the debug bar needs to be clicked twice
-//	- The tolerance slider doesn't reset so the values slip out of range if you change the node size attribute
+var visualizationFunctions = {};
+var configs = {};
+var events = {};
+var dataprep = {};
+
 app.service('Data', ['$rootScope', '$http', function($rootScope, $http) {
-	var service = {
-		mapDatasource: globalDatasourceMap,
-		dataQueue: [],
-		//TODO: Test this
-		addToDataQueue: function(s) {
-			if (this.dataQueue.indexOf(s) < 0) {
-				this.dataQueue.push(s);
-			}
-		},
-		retrieveData: function(datasource, cb) {
-			if (datasource) {
-				if (verbose) console.log("Getting " + datasource + " data...");
-				$http({
-					method: 'GET',
-					url: this.mapDatasource[datasource].url
-				}).then(function(res) {
-					if (verbose) console.log("Got " + datasource + " data!");
-					cb(res);
-				});
-			}
-		},
-		getData: function(datasource) {
-			var that = this;
-			this.retrieveData(datasource, function(res) {
-				that.mapDatasource[datasource].data = res.data;
-				if (verbose) console.log("Broadcasting: " + datasource + " updated.");
-				$rootScope.$broadcast(datasource + '.update', res.data);
-				that.mapDatasource[datasource].dataPrepared = true;
-				return res.data;
-			})
-		},
-		getAllData: function() {
-			var that = this;
-			this.dataQueue.forEach(function(d, i) {
-				that.getData(d);
-			})
-		}
-	}
-	Object.keys(service.mapDatasource).map(function(d, i) { 
-		service.mapDatasource[d].data = {}; 
-		service.mapDatasource[d].dataPrepared = false;
-	});
-	return service;
+    var service = {
+        mapDatasource: globalDatasourceMap,
+        addToDatasource: function(datasource, url) {
+            this.mapDatasource[datasource] = this.mapDatasource[datasource] || {};
+            this.mapDatasource[datasource].data = {};
+            this.mapDatasource[datasource].url = url || datasource;
+            this.mapDatasource[datasource].params = this.mapDatasource[datasource].params || {};
+            this.mapDatasource[datasource].queued = false;
+        },
+        retrieveData: function(datasource, cb) {
+            if (datasource) {
+                if (verbose) console.info("Getting " + datasource + " data...");
+                this.mapDatasource[datasource].queued = true;
+                if (!service.mapDatasource[datasource]) {
+                    service.addToDatasource(datasource);
+                }
+                var paramList = {};
+                var urlParams = service.getURLParams();
+                Object.keys(service.mapDatasource[datasource].params).forEach(function(d, i) {
+                    if (service.mapDatasource[datasource].params[d] == "QUERYSTRING") {
+                        if (urlParams[d]) {
+                            paramList[d] = urlParams[d][0];
+                        }
+                    } else {
+                        paramList[d] = service.mapDatasource[datasource].params[d]
+                    }
+                })
+                $http({
+                    method: 'GET',
+                    url: service.mapDatasource[datasource].url,
+                    params: paramList,
+                    dataType: 'jsonp',
+                }).then(function successCallback(res) {
+                    if (verbose) console.info("Got " + datasource + " data!");
+                    service.mapDatasource[datasource].queued = false;
+                    cb(res);
+                }, function errorCallback(res) {
+                    console.warn('Datasource: ' + datasource + ' not found. Check the ng-data-field attribute and the corresponding entry in /src/DatasourceMap.js (if applicable).')
+                });
+            }
+        },
+        getURLParams: function() {
+            var url = location.search;
+            var queryString = url || window.location.search || '';
+            var keyValPairs = [];
+            var params = {};
+            queryString = queryString.replace(/.*?\?/, "");
+
+            if (queryString.length) {
+                keyValPairs = queryString.split('&');
+                for (pairNum in keyValPairs) {
+                    var key = keyValPairs[pairNum].split('=')[0];
+                    if (!key.length) continue;
+                    if (typeof params[key] === 'undefined')
+                        params[key] = [];
+                    params[key].push(keyValPairs[pairNum].split('=')[1]);
+                }
+            }
+            return params;
+        },
+        getData: function(datasource, args = {}) {
+            if (!service.mapDatasource[datasource]) {
+                service.addToDatasource(datasource);
+            }
+            var currDatasource = service.mapDatasource[datasource]
+            function broadcastUpdate(data) {
+                if (verbose) console.info("Broadcasting: " + datasource + " updated.");
+                $rootScope.$broadcast(datasource + '.update', data);
+            }
+            if (!service.mapDatasource[datasource].queued) {
+                this.retrieveData(datasource, function(res) {
+                    currDatasource.data = res.data;
+                    broadcastUpdate(res.data);
+                    return res.data;
+                });
+            }
+        }
+    }
+    Object.keys(service.mapDatasource).map(function(d, i) {
+        service.addToDatasource(d, service.mapDatasource[d].url);
+    });
+    return service;
 }])
 
+app.controller('ngCnsVisual', ['$rootScope', '$scope', '$element', '$attrs', 'Data', function($rootScope, $scope, elem, attrs, Data) {
+    $scope.attrs = attrs;
+    $scope.elem = elem;
+    $scope.Visualization = new Visualization($scope, elem, attrs);
+    $scope.DataService = Data
+    window[attrs.ngIdentifier] = $scope;
+    $scope.element = elem;
+    $scope.attrs = attrs;
 
-app.directive('ngCnsVisual', ['$rootScope', 'Data', function($rootScope, Data) {
-	return {
-		restrict: "A",
-		controller: ['$scope', '$http', function($scope, $http) {
-		}],
-		link: {
-			pre:  function(scope, elem, attrs, ctrl) {
-				if (verbose) console.log("Visual pre link for: " + attrs.ngIdentifier);
-				Data.addToDataQueue(attrs.ngDataField);
-				visualizations[attrs.ngIdentifier] = new VisualizationClass();
-				visualizations[attrs.ngIdentifier].Vis = visualizationFunctions[attrs.ngVisType];
+    var loadConfigPromise = new Promise(function(resolve, reject) {
+        if (attrs.ngConfig) {
+            var configObj = new Object();
+            configObj['config_' + attrs.ngIdentifier] = attrs.ngConfig;
+            //HeadJS has no way to handle 404s :(.
+            //Just have to check if the object exists after it loads.
+            head.js(configObj);
 
-				visualizations[attrs.ngIdentifier].SetAngularElement(elem);
-				visualizations[attrs.ngIdentifier].SetAngularOpts(attrs);
-				if(attrs.ngComponentFor) {
-					scope.$watch(attrs.ngComponentFor + '.created', function() {
-						visualizations[attrs.ngComponentFor].Children.push(attrs.ngIdentifier);
-					})
-				} else {
-					$rootScope.$broadcast(attrs.ngIdentifier + '.created')
-				}
-			},
-			post: function(scope, elem, attrs, ctrl) {
-				if (verbose) console.log("Visual post link for: " + attrs.ngIdentifier);
-				if (attrs.ngDataField) {
-					scope.$on(attrs.ngDataField + '.update', function(oldVal, newVal) {
-						if (verbose) console.log("Updating: " + attrs.ngIdentifier);
-						//TODO: Method to update args a little better 
-						if (newVal !== oldVal) {
-							//TODO: This may need to be updated if we want to periodically push new data WITHOUT redrawing the whole visualization
-							visualizations[attrs.ngIdentifier].SetAngularData(newVal);
-							visualizations[attrs.ngIdentifier].Update();
-						}
-					})
-				}
-			}
-		}
-	}
-}])
+            head.ready('config_' + attrs.ngIdentifier, function() {
+                if (typeof configs[attrs.ngIdentifier] == "undefined") {
+                    Promise.reject(new Error("Failed to load specified config for: " + attrs.ngIdentifier + ". Visualization failed to load."))
+                } else {
+                    angular.element(elem).scope().configs = configs[attrs.ngIdentifier]
+                    resolve();
+                }
+            })
+        } else {
+            resolve();
+        }
+    })
 
-app.directive('ngCnsVisRunner', ['$rootScope', '$timeout', 'Data', function($rootScope, $timeout, Data) {
-	return {
-		restrict: "A",
-		controller: ['$scope', '$http', function($scope, $http) {
-			$scope.attrs = {};
-			$scope.postHelper = function() {
-				$timeout(function() {
-					Data.getAllData();
-				}, 1);
-			}
-		}],
-		link: {
-			pre:  function(scope, elem, attrs, ctrl) {
-				if (verbose) console.log("Runner pre link");
-			},
-			post: function(scope, elem, attrs, ctrl) {
-				if (verbose) console.log("Runner post link");
-				scope.postHelper();
-			}
-		}
-	}
+    loadConfigPromise.then(function() {
+        if (attrs.ngDataField) {
+            Data.getData(attrs.ngDataField)
+        }
+        $rootScope.$broadcast(attrs.ngIdentifier + '.created')
+
+        if (!visualizationFunctions[attrs.ngVisType]) {
+            var obj = new Object();
+            obj[attrs.ngVisType] = 'visuals/' + attrs.ngVisType + '/' + attrs.ngVisType + '/' + attrs.ngVisType + '.js'
+            head.js(obj);
+            head.ready(attrs.ngVisType, function(d) {
+                $scope.VisScript = visualizationFunctions[attrs.ngVisType];
+                if (!attrs.ngDataField) {
+                    $scope.RunVis();
+                }
+            });
+        } else {
+            $scope.VisScript = visualizationFunctions[attrs.ngVisType];
+        }
+    }).then(function() {
+            $scope.updateDataSource();
+    })
+    $scope.switchDatasource = function(ds, args = {}) {
+        $scope.$$listeners[attrs.ngDataField + '.update'] = [];
+        attrs.ngDataField = ds;
+        $scope.$$listeners[ds + '.update'] = [];
+        $scope.updateDataSource();
+        Data.getData(attrs.ngDataField, args);
+    };
+
+    $scope.updateDataSource = function() {
+        $scope.$on(attrs.ngDataField + '.update', function(oldVal, newVal) {
+            if (verbose) console.info("Updating: " + attrs.ngIdentifier);
+            if (newVal !== oldVal) {
+                $scope.filteredData = newVal;
+                $scope.setData(newVal);
+                $scope.ResetVis();
+            }
+        })
+    }
+
 }]);
 
 angular.element(document).ready(function() {
-	angular.bootstrap(document, ['app']);
-})
+    angular.bootstrap(document, ['app']);
+});

@@ -1,0 +1,2280 @@
+{
+    "records": {
+        "schema": [
+            {
+                "name": "author_ids",
+                "type": "string"
+            },
+            {
+                "name": "title",
+                "type": "string"
+            },
+            {
+                "name": "journal",
+                "type": "string"
+            },
+            {
+                "name": "year",
+                "type": "numeric"
+            },
+            {
+                "name": "url",
+                "type": "string"
+            },
+            {
+                "name": "citation_count",
+                "type": "numeric"
+            }
+        ],
+        "data": [
+            {
+                "author_ids": [
+                    "efc0d159dff62e759d2ee8654a2807d4",
+                    "7248de3b255ebd7442f24035f2d3d176",
+                    "122a919d2e959980181c9363a6fcd3aa",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "a796b1ac347930d6078ef4efc6de2a78"
+                ],
+                "title": "Physiological and biochemical responses of sunflower (Helianthus annuus L.) exposed to nano-CeO2 and excess boron: Modulation of boron phytotoxicity.",
+                "journal": "Plant physiology and biochemistry : PPB",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0981942816303680",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "6bf11468e2c94b12eec8728dbe7fe3a5",
+                    "c00b7df5538f1169c620ce236280bfb7",
+                    "0dd3ddc8927c3110ea0a6085c3b6f80e",
+                    "ac52494a36513be538e7f559f2117056",
+                    "76ef21fa40b1b0a88a20bb5e4d1f836e",
+                    "673583e0cc709d794fd53a70b3c243a8",
+                    "1dfef813b638dc43fc0e846baa78a65e",
+                    "ba194946df5f82b5f47ba568fa34e003"
+                ],
+                "title": "Fate of TiO2 nanoparticles entering sewage treatment plants and bioaccumulation in fish in the receiving streams",
+                "journal": "NanoImpact",
+                "year": 2016,
+                "url": "http://www.sciencedirect.com/science/article/pii/S245207481630074X",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "a29818443b480ff574481eafec03c9e2",
+                    "22aa166c50a287dfae2ce03fc41399e5",
+                    "67bdf4a11229e89434b21b61ed999d5a",
+                    "6dce07f3974ddcc7de9be1507ac046ef",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Effects of uncoated and citric acid coated cerium oxide nanoparticles, bulk cerium oxide, cerium acetate, and citric acid on tomato plants.",
+                "journal": "The Science of the total environment",
+                "year": 2016,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0048969715311244",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "fb3a9b363a112f95bbb0f0b4d301ff14",
+                    "d2fb60bf4d05f9773a1a50358e461c76",
+                    "a9775b294ed6a04a3d7d44fd25773d48",
+                    "0180db041bfa2677bc810b4a18e11d03",
+                    "7084ea95748ed96e5afe8228d25894a5",
+                    "60ff51e60f6109eaf74bc173671c5f37"
+                ],
+                "title": "Inhibition of biofilm formation by d-tyrosine: Effect of bacterial type and d-tyrosine concentration",
+                "journal": "Water Research",
+                "year": 2016,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0043135416300367",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "a29818443b480ff574481eafec03c9e2",
+                    "6dce07f3974ddcc7de9be1507ac046ef",
+                    "c66f297cacb74e0a176fdbd3b77c065a",
+                    "b0a43e815f92e415122908aab6d07406",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Nutritional quality assessment of tomato fruits after exposure to uncoated and citric acid coated cerium oxide nanoparticles, bulk cerium oxide, cerium acetate and citric acid.",
+                "journal": "Plant physiology and biochemistry : PPB",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0981942816301322",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "1f3c6c744321bdfe122a0f9a4e0597b3",
+                    "071a7e15a7183ddd004bd3405cb26924",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Omniphobic Polyvinylidene Fluoride (PVDF) Membrane for Desalination of Shale Gas Produced Water by Membrane Distillation",
+                "journal": "Environ. Sci. Technol.",
+                "year": 2016,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.est.6b03882",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "ee57bcf2ff6c09eb0a9d899e7d3f797d",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "6182166b0dc917da17661a90736ba4cb",
+                    "a524bee8de7b7f631f54477199546013",
+                    "9390af3cda31f6e8cc42580ee1c46c68",
+                    "fa8a622df4ad33a1038c46532b42b6c8",
+                    "173eae7071e46f4fbfe9a1799533d536",
+                    "09c85956de827b2434b8cde514290451",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "d0c2e396e0e76506123f65a40ae42ba4"
+                ],
+                "title": "Elevated CO2 levels modify TiO2 nanoparticle effects on rice and soil microbial communities.",
+                "journal": "The Science of the total environment",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0048969716323865",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "6e31f90796098f1782b9851e143faf65",
+                    "06c906dfadaadbe9763c14dc79d37646",
+                    "f9b7edd0ec99f612a1e3fda16cbf4e43"
+                ],
+                "title": "Selenium Removal from Sulfate-Containing Groundwater Using Granular Layered Double Hydroxide Materials",
+                "journal": "Industrial & Engineering Chemistry Research",
+                "year": 2017,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.iecr.6b04461",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "23d20deda0e1c2e3a7d8256482e97b0d",
+                    "7619aeb2acdfb8b4b46da978c5e267d3",
+                    "ed8bcb34f989b3ffeda001ec8e7218b6",
+                    "57f10b6d82403df956d9de7666e9506d",
+                    "c9144145e308bcb6a197ce1bf33af12f"
+                ],
+                "title": "Morphology, structure, and properties of metal oxide/polymer nanocomposite electrospun mats",
+                "journal": "Journal of Applied Polymer Science",
+                "year": 2016,
+                "url": "http://onlinelibrary.wiley.com/doi/10.1002/app.43811/full",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "6dce07f3974ddcc7de9be1507ac046ef",
+                    "c66f297cacb74e0a176fdbd3b77c065a",
+                    "397ead4c585802a11dcddbb5f79acf69",
+                    "d674a19166206a83b070dc7992007f01",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Biophysical Methods of Detection and Quantification of Uptake, Translocation, and Accumulation of Nanoparticles",
+                "year": 2016,
+                "url": "http://link.springer.com/10.1007/978-3-319-42154-4_3",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "0222e449ae991bbf3b9b0f631a76976c",
+                    "ef77a817910a06230a8388cd4a435687",
+                    "ba194946df5f82b5f47ba568fa34e003",
+                    "5056d9f7cef67d534a8b62514b25bed1",
+                    "1e7ae2e3bacc8a66eb3fb0a243809184"
+                ],
+                "title": "Visible Light Sensitized Production of Hydroxyl Radicals Using Fullerol as an Electron-Transfer Mediator.",
+                "journal": "Environmental Science & Technology",
+                "year": 2016,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.est.6b03250",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "260425a8d258f6bb11e0f19987174a4f",
+                    "ac67d1ee780eb93c70210d680c745aa0",
+                    "c3039078e6c25eb4e940f5bcbcc2fa13",
+                    "280e66b9410efbff2ff8573fa14bf65e",
+                    "60ff51e60f6109eaf74bc173671c5f37",
+                    "ba194946df5f82b5f47ba568fa34e003"
+                ],
+                "title": "Phosphate Changes Effect of Humic Acids on TiO2 Photocatalysis: From Inhibition to Mitigation of Electron-Hole Recombination.",
+                "journal": "Environmental Science & Technology",
+                "year": 2017,
+                "url": "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&id=27982576&retmode=ref&cmd=prlinks",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "233038b816c314b33b3c75a4a3ae8453",
+                    "425c475fd7ed4fae7b7c07a4d0131a85",
+                    "e2151af7c111aa88c496e1167895a5a7",
+                    "3d491f47aed87f056856c825e7e3f360",
+                    "d674a19166206a83b070dc7992007f01",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Plant-based green synthesis of metallic nanoparticles: scientific curiosity or a realistic alternative to chemical synthesis?",
+                "journal": "Nanotechnology for ?",
+                "year": 2016,
+                "url": "http://link.springer.com/10.1007/s41204-016-0004-5",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "397ead4c585802a11dcddbb5f79acf69",
+                    "ee57bcf2ff6c09eb0a9d899e7d3f797d",
+                    "a29818443b480ff574481eafec03c9e2",
+                    "723059c0ba5044bbeba74a9db68cb12e",
+                    "c66f297cacb74e0a176fdbd3b77c065a",
+                    "77535156f4828840d30eb63f8812ff87",
+                    "600a50a3a9ee59f7b60320484001b735",
+                    "5d3ecb008564004adfa9a8cecf99f9c3",
+                    "d674a19166206a83b070dc7992007f01",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Surface coating changes the physiological and biochemical impacts of nano-TiO2 in basil (Ocimum basilicum) plants.",
+                "journal": "Environmental pollution (Barking, Essex : 1987)",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0269749116317249",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "185a621862fe2c2437e87c0beed070ff",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "67bdf4a11229e89434b21b61ed999d5a",
+                    "b9d354b3d33576f9af381c6e89274b05",
+                    "a29818443b480ff574481eafec03c9e2",
+                    "6f4b1ce5e009b43794356a70b25570b9",
+                    "7acb0b81df764c1689961ea6aa77c3ec",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Soil organic matter influences cerium translocation and physiological processes in kidney bean plants exposed to cerium oxide nanoparticles.",
+                "journal": "The Science of the total environment",
+                "year": 2016,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0048969716312645",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "9acb45133c7cd105b6d8718249b52625",
+                    "828281bb78d2fe71fae4eedac4d99c7e",
+                    "4f063fe4366688f339325116c189dfb4",
+                    "a3a1f95c8b82cffd467f2ce9469f8de4",
+                    "b054e639cb2855d18a86ff554d8f10de",
+                    "9baefe7212e714c1aeacd9b120e775c3",
+                    "4243aa3cd40eefbfeb81ff95df944299",
+                    "fed89d9b115af6c37c0ed4cdf30c3a96"
+                ],
+                "title": "Synthesis of AgCl Mineralized Thin Film Composite Polyamide Membranes To Enhance Performance and Antifouling Properties in Forward Osmosis",
+                "journal": "Industrial & Engineering Chemistry Research",
+                "year": 2017,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.iecr.6b04287",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "f6b457c8d0f9008ad551091eade0151f",
+                    "f7aa6486897e4704cb7b8165206e9c72",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Influence of polyamide membrane surface chemistry on gypsum scaling behavior",
+                "journal": "Journal of Membrane Science",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0376738816313977",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "d16872a493771367f2aab8f7dd85ff63",
+                    "071a7e15a7183ddd004bd3405cb26924",
+                    "aacad5731e6944fc44e0e9112a01dc59",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Antifouling Thin-Film Composite Membranes by Controlled Architecture of Zwitterionic Polymer Brush Layer",
+                "journal": "Environ. Sci. Technol.",
+                "year": 2017,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.est.6b05992",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "9db9328704951dbf00571e3168b51c00",
+                    "bb09c75066f743051023c27175c477b7",
+                    "caf04be08a009658d4585dc63bfd3ddb",
+                    "695ebc69bcd3b9372b27fe7b73f8e1f3",
+                    "6c955a80a597b2f33ddadb6ae0120f11",
+                    "d674a19166206a83b070dc7992007f01",
+                    "bd1b4753e735c7c3edbfcc3a91e61475",
+                    "185a621862fe2c2437e87c0beed070ff",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "73c3b5d9ec5c17c08c469b50166ce00f",
+                    "85fe0045a76a03e025bdb1eaba87cc92"
+                ],
+                "title": "Weathering in soil increases nanoparticle CuO bioaccumulation within a terrestrial food chain.",
+                "journal": "Nanotoxicology",
+                "year": 2017,
+                "url": "https://www.tandfonline.com/doi/full/10.1080/17435390.2016.1277274",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "071a7e15a7183ddd004bd3405cb26924",
+                    "1f3c6c744321bdfe122a0f9a4e0597b3",
+                    "98dab7c1fe24796205faa750dfddcadf",
+                    "46d54fe03878c532e9964a3b78a6d8a9",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Development of Omniphobic Desalination Membranes Using a Charged Electrospun Nanofiber Scaffold.",
+                "journal": "ACS applied materials & interfaces",
+                "year": 2016,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acsami.6b02419",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "ed8bcb34f989b3ffeda001ec8e7218b6",
+                    "62d404e06492ed6675f51375bb07f297",
+                    "5f0aac52a7ad0b662d20d351ae71664e",
+                    "57f10b6d82403df956d9de7666e9506d",
+                    "d55763f10e9582316eb93d9ae1d93cfa",
+                    "c9144145e308bcb6a197ce1bf33af12f"
+                ],
+                "title": "Prospecting nanomaterials in aqueous environments by cloud-point extraction coupled with transmission electron microscopy.",
+                "journal": "The Science of the total environment",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0048969717300591",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "8810131f9d053d8bc0d1bce1cb15ca1b",
+                    "fb3a9b363a112f95bbb0f0b4d301ff14",
+                    "60ff51e60f6109eaf74bc173671c5f37"
+                ],
+                "title": "Novel regenerable antimicrobial nanocomposite membranes: Effect of silver loading and valence state",
+                "journal": "Journal of Membrane Science",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0376738816310559",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "4f3ecd2661b985ca1b7f4844fe0422c9",
+                    "24a4b8cafe0c3f17a64e8b63062ef8a7",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Can batch or semi-batch processes save energy in reverse-osmosis desalination?",
+                "journal": "Desalination",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0011916416306312",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "68d33b801bed28f9f6bf774bc00abb29",
+                    "1f74cb49ff9f77dd5c4def7237fee3a1",
+                    "0dcc82359a558225854f981da6a06f7c",
+                    "132538d4710c629b76a949ca3fc85b8c",
+                    "0bc7bae6368683639d2a4239d17f6058"
+                ],
+                "title": "Phosphino-polycarboxylic acid modified inhibitor nanomaterial for oilfield scale control: Synthesis, characterization and migration",
+                "journal": "Journal of Industrial and Engineering Chemistry",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S1226086X16303835",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "ee57bcf2ff6c09eb0a9d899e7d3f797d",
+                    "397ead4c585802a11dcddbb5f79acf69",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "173eae7071e46f4fbfe9a1799533d536",
+                    "a524bee8de7b7f631f54477199546013",
+                    "d0c2e396e0e76506123f65a40ae42ba4"
+                ],
+                "title": "Interaction of metal oxide nanoparticles with higher terrestrial plants: Physiological and biochemical aspects.",
+                "journal": "Plant physiology and biochemistry : PPB",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0981942816301395",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "c9144145e308bcb6a197ce1bf33af12f",
+                    "ba194946df5f82b5f47ba568fa34e003",
+                    "60ff51e60f6109eaf74bc173671c5f37",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "652eaac1a11973754f2fd12ce34c0709"
+                ],
+                "title": "Overcoming Implementation Barriers for Nanotechnology in Drinking Water Treatment",
+                "journal": "Environ. Sci.: Nano",
+                "year": 2016,
+                "url": "http://pubs.rsc.org/en/Content/ArticleLanding/2016/EN/C6EN00183A",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "1fbf6c4a91aa3a3eaf2d4bc4ea7dfdaf",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "The Global Rise of Zero Liquid Discharge for Wastewater Management: Drivers, Technologies, and Future Directions.",
+                "journal": "Environmental Science & Technology",
+                "year": 2016,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.est.6b01000",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "a524bee8de7b7f631f54477199546013",
+                    "6d6e74000484642f95315a95bd92d27a",
+                    "ee57bcf2ff6c09eb0a9d899e7d3f797d",
+                    "f0142337df3e50d8dd1cd5e85fac20bd",
+                    "173eae7071e46f4fbfe9a1799533d536",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "d0c2e396e0e76506123f65a40ae42ba4"
+                ],
+                "title": "Elevated CO2 levels increase the toxicity of ZnO nanoparticles to goldfish (Carassius auratus) in a water-sediment ecosystem",
+                "journal": "Journal of Hazardous Materials",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0304389416311852",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "b500c8221412069623c15cb98f889bc9",
+                    "5465503a54e9f7ede61a7ef12a850fe2",
+                    "5f7e9211bdee02b74d043d7ed1013f9f",
+                    "6af2c3fe4bf7572c8ed982cab586f0e8",
+                    "fd51432d121854529cd061ad2a86930e",
+                    "c9144145e308bcb6a197ce1bf33af12f"
+                ],
+                "title": "Carbonaceous nano-additives augment microwave-enabled thermal remediation of soils containing petroleum hydrocarbons",
+                "journal": "Environmental Science: Nano",
+                "year": 2016,
+                "url": "http://pubs.rsc.org/en/content/articlehtml/2016/en/c6en00261g",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "a4be5c0b20ce26d35a4777b28bea7885",
+                    "b16a523534170151a37a0a9afed5efce",
+                    "b21b5dd3b2e29d30b436c09b1ef1f884",
+                    "3b54d36215650708217488e6d9f63725",
+                    "87d6249220f7f521d50c76f5a842569a",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Biofouling Mitigation in Forward Osmosis Using Graphene Oxide Functionalized Thin-Film Composite Membranes",
+                "journal": "Environ. Sci. Technol.",
+                "year": 2016,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.est.5b06364",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "d16872a493771367f2aab8f7dd85ff63",
+                    "f97e2ed22bfc578bd0f9fccb6f1001f0",
+                    "aacad5731e6944fc44e0e9112a01dc59",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Mitigation of Biofilm Development on Thin-Film Composite Membranes Functionalized with Zwitterionic Polymers and Silver Nanoparticles",
+                "journal": "Environ. Sci. Technol.",
+                "year": 2016,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.est.6b03795",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "68d33b801bed28f9f6bf774bc00abb29",
+                    "1f74cb49ff9f77dd5c4def7237fee3a1",
+                    "132538d4710c629b76a949ca3fc85b8c",
+                    "0bc7bae6368683639d2a4239d17f6058"
+                ],
+                "title": "Synthesis and laboratory testing of a novel calcium-phosphonate reverse micelle nanofluid for oilfield mineral scale control",
+                "journal": "RSC Advances",
+                "year": 2016,
+                "url": "http://pubs.rsc.org/en/content/articlehtml/2016/ra/c6ra01228k",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "9672e71c8620ab4ed15ffbe637cfe2ef",
+                    "fa0bb37ca2d11ca5d27eeed9e4b2ca8f",
+                    "c9144145e308bcb6a197ce1bf33af12f",
+                    "04f1d729ad5fbcf42a1f2e4e58fa2ff6"
+                ],
+                "title": "Comparative analysis of the photocatalytic reduction of drinking water oxoanions using titanium dioxide",
+                "journal": "Water Research",
+                "year": 2016,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0043135416305668",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "904c6909867f80f68a40b8e4ff89927a",
+                    "899b9b7a4c4656ca53dbef5ad09df41d",
+                    "de00f5fab2cfb26e2c6821ed2f92ece0",
+                    "bf42c5b9629718101c25d0164763e0f2"
+                ],
+                "title": "Small-angle neutron scattering analysis of bottlebrush backbone and side chain flexibility",
+                "journal": "Journal of Polymer Science Part B: Polymer Physics",
+                "year": 2016,
+                "url": "http://onlinelibrary.wiley.com/doi/10.1002/polb.24251/full",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "b054e639cb2855d18a86ff554d8f10de",
+                    "7b9e4449f753c319788c9ce4f624ce22",
+                    "32702a7f88ce4b92b2351864a12068f6",
+                    "9baefe7212e714c1aeacd9b120e775c3",
+                    "4243aa3cd40eefbfeb81ff95df944299"
+                ],
+                "title": "Evaluation of thin film nanocomposite reverse osmosis membranes for long-term brackish water desalination performance",
+                "journal": "Desalination",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0011916416305756",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "2304e8417060cea10c40466801fed62c",
+                    "147811339f2ed1124c5361aec59eca48",
+                    "87254d15c737e8e71484c421189fa5c6"
+                ],
+                "title": "LED revolution: fundamentals and prospects for UV disinfection applications",
+                "journal": "Environmental Science: Water Research & Technology",
+                "year": 2017,
+                "url": "http://pubs.rsc.org/en/Content/ArticleHTML/2017/EW/C6EW00241B",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "7619aeb2acdfb8b4b46da978c5e267d3",
+                    "c9144145e308bcb6a197ce1bf33af12f"
+                ],
+                "title": "Adsorption ofiii/vions (In(iii), Ga(iii) and As(v)) onto SiO2, CeO2and Al2O3nanoparticles used in the semiconductor industry",
+                "journal": "Environ. Sci.: Nano",
+                "year": 2016,
+                "url": "http://pubs.rsc.org/en/Content/ArticleLanding/2016/EN/C6EN00184J",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "1f3c6c744321bdfe122a0f9a4e0597b3",
+                    "071a7e15a7183ddd004bd3405cb26924",
+                    "0916fea609324cfb1385ddfd97fbdc76"
+                ],
+                "title": "Engineering Surface Energy and Nanostructure of Microporous Films for Expanded Membrane Distillation Applications",
+                "journal": "Environ. Sci. Technol.",
+                "year": 2016,
+                "url": "http://pubs.acs.org/doi/abs/10.1021/acs.est.6b02316",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "505f86a8426b04375d48b1e9513638b8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "f7ad0b0a5e0bf3502b2b50d23f16d436"
+                ],
+                "title": "In Pursuit of Safe Drinking Water in the Texas-Mexico Border Region: A Matter of Social Justice",
+                "journal": "SDRP Journal of Earth Sciences & Environmental Studies",
+                "year": 2017,
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "4502bee0689db4ec810845268818b807",
+                    "c3461b3727b4540a674917548f2a6702",
+                    "2032cfdde26c00e3e509c2d6abf8e715",
+                    "a22832b006c53c0b17ccaf7bf14caf81",
+                    "c9fc488752469d659f75fdd28313beea",
+                    "0dd3ddc8927c3110ea0a6085c3b6f80e",
+                    "ba194946df5f82b5f47ba568fa34e003"
+                ],
+                "title": "The oxidation capacity of Mn3O4 nanoparticles is significantly enhanced by anchoring them onto reduced graphene oxide to facilitate regeneration of surface-associated Mn(III).",
+                "journal": "Water Research",
+                "year": 2016,
+                "url": "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&id=27448035&retmode=ref&cmd=prlinks",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "92698b5ce1990072ceec3173d7f5b9c4",
+                    "c37dc2d1bf80e36e28d879426a4c5da9",
+                    "618ef6743f99c50f1b8226d8f73383ca",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                    "cf34de39c63b21c5f55949c3ec982054"
+                ],
+                "title": "Green synthesis of magnetic MOF@GO and MOF@CNT hybrid nanocomposites with high adsorption capacity towards organic pollutants",
+                "journal": "Chemical Engineering Journal",
+                "year": 2016,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S1385894716308415",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "31bf4db0dcbb925da58a9b1f87d0eba8",
+                    "90cd9cd1a716a0a330146bf7a57f69ce",
+                    "fbcb0528504a817c6194a17f9a6da17c",
+                    "0dcc82359a558225854f981da6a06f7c",
+                    "223db63f26e9d43f2451e613d9898849",
+                    "faee058bc158277b4a431e2c11b0e34c",
+                    "fff09c39519b6c3047cab174a827903c",
+                    "132538d4710c629b76a949ca3fc85b8c",
+                    "0bc7bae6368683639d2a4239d17f6058"
+                ],
+                "title": "Acid/base and metal complex solution chemistry of sulfonated polyacrylate copolymer versus temperature and ionic strength",
+                "journal": "Applied Geochemistry",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0883292716304681",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "c66f297cacb74e0a176fdbd3b77c065a",
+                    "ca66122a6483f39df8664edce41aad0f",
+                    "ee57bcf2ff6c09eb0a9d899e7d3f797d",
+                    "d674a19166206a83b070dc7992007f01",
+                    "9aca9b8749c492c881266b7eaac47d49",
+                    "3d491f47aed87f056856c825e7e3f360",
+                    "f160f42b1b4c564c5f4999dcc0d96799",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Exposure of engineered nanomaterials to plants: Insights into the physiological and biochemical responses-A review.",
+                "journal": "Plant physiology and biochemistry : PPB",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0981942816302182",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "26692ef2daa7e4a8edd3dc6e22d46a8e",
+                    "25f6057ae8079bf9f8ae1de2481db03f",
+                    "ece845830079190d4211ab2f121bc44f",
+                    "534237bde735dfad77a78ef9b94bab78",
+                    "cd80ca7b043465002c1f62f5a178cc86",
+                    "a2a9f995d5cb4d7562ba5c981cc27e77",
+                    "dc663a2404497d9ae349739a63fbc278",
+                    "64bf45f2a0190b297757bb8a7180ef06",
+                    "31121e5a8fef23ff4ffbb76ebed95525",
+                    "1d80bd89f09389583e85e119c4a2f7a7",
+                    "ba194946df5f82b5f47ba568fa34e003",
+                    "b1afc29bed2dc0e7a77f594c191709cb",
+                    "699b467ab704b4597fa907ae44e67d3a",
+                    "6355349f31558a93e8f39ae0182828a5",
+                    "d06ebe5c470ca0c984db408af9ba6397",
+                    "5056d9f7cef67d534a8b62514b25bed1"
+                ],
+                "title": "Tin porphyrin immobilization significantly enhances visible-light-photosensitized degradation of Microcystins: Mechanistic implications",
+                "journal": "Applied Catalysis B: Environmental",
+                "year": 2016,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0926337316304647",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "5f0aac52a7ad0b662d20d351ae71664e",
+                    "dbde207fc4aa23a7846958eba9a332d3",
+                    "5f7e9211bdee02b74d043d7ed1013f9f",
+                    "d55763f10e9582316eb93d9ae1d93cfa",
+                    "57f10b6d82403df956d9de7666e9506d",
+                    "c9144145e308bcb6a197ce1bf33af12f"
+                ],
+                "title": "Detection and dissolution of needle-like hydroxyapatite nanomaterials in infant formula",
+                "journal": "NanoImpact",
+                "year": 2017,
+                "url": "http://www.sciencedirect.com/science/article/pii/S2452074816300805",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "fbcb0528504a817c6194a17f9a6da17c",
+                    "90cd9cd1a716a0a330146bf7a57f69ce",
+                    "0dcc82359a558225854f981da6a06f7c",
+                    "b371d8b6c6cc0707c3758d08ed32b1a1",
+                    "223db63f26e9d43f2451e613d9898849",
+                    "31bf4db0dcbb925da58a9b1f87d0eba8",
+                    "fff09c39519b6c3047cab174a827903c",
+                    "faee058bc158277b4a431e2c11b0e34c",
+                    "132538d4710c629b76a949ca3fc85b8c",
+                    "0bc7bae6368683639d2a4239d17f6058"
+                ],
+                "title": "Barite scale formation and inhibition in laminar and turbulent flow: A rotating cylinder approach",
+                "journal": "Journal of Petroleum Science and Engineering",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0920410516307239",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "ff78823e8486d3c9ba6ca9d176ffea1a",
+                    "d674a19166206a83b070dc7992007f01",
+                    "cac103eaf0e784eaf67cf530ab241ad8",
+                    "2458e72c6b0b3d01a78d8398c4e7dd2a"
+                ],
+                "title": "Lessons learned: Are engineered nanomaterials toxic to terrestrial plants?",
+                "journal": "The Science of the total environment",
+                "year": 2016,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0048969716312165",
+                "citation_count": null
+            },
+            {
+                "author_ids": [
+                    "59b495c9c7fc5f5491a80d4e30711036",
+                    "08094eba0ba760330f6e0700894e2578",
+                    "15b7f29acd890f4518f2c4a3329ebbb9",
+                    "b500c8221412069623c15cb98f889bc9",
+                    "57f10b6d82403df956d9de7666e9506d"
+                ],
+                "title": "The effect of metal (hydr)oxide nano-enabling on intraparticle mass transport of organic contaminants in hybrid granular activated carbon",
+                "journal": "Science of the Total Environment",
+                "year": 2017,
+                "url": "http://linkinghub.elsevier.com/retrieve/pii/S0048969717303637",
+                "citation_count": null
+            }
+        ]
+    },
+    "authors": {
+        "schema": [
+            {
+                "name": "id",
+                "type": "string"
+            },
+            {
+                "name": "author",
+                "type": "string"
+            },
+            {
+                "name": "affiliation",
+                "type": "numeric"
+            },
+            {
+                "name": "lat",
+                "type": "numeric"
+            },
+            {
+                "name": "lng",
+                "type": "numeric"
+            },
+            {
+                "name": "role",
+                "type": "string"
+            },
+            {
+                "name": "gender",
+                "type": "string"
+            }
+        ],
+        "data": [
+            {
+                "id": "efc0d159dff62e759d2ee8654a2807d4",
+                "author": "Tassi, E.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "7248de3b255ebd7442f24035f2d3d176",
+                "author": "Giorgetti, L.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "122a919d2e959980181c9363a6fcd3aa",
+                "author": "Morelli, E.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "cac103eaf0e784eaf67cf530ab241ad8",
+                "author": "Peralta-Videa, Jose R.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "2458e72c6b0b3d01a78d8398c4e7dd2a",
+                "author": "Gardea-Torresdey, Jorge L.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a796b1ac347930d6078ef4efc6de2a78",
+                "author": "Barbafieri, M.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6bf11468e2c94b12eec8728dbe7fe3a5",
+                "author": "Shi, Xiaomei",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "c00b7df5538f1169c620ce236280bfb7",
+                "author": "Li, Zaixing",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "0dd3ddc8927c3110ea0a6085c3b6f80e",
+                "author": "Chen, Wei",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ac52494a36513be538e7f559f2117056",
+                "author": "Qiang, Liwen",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "76ef21fa40b1b0a88a20bb5e4d1f836e",
+                "author": "Xia, Junchao",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "673583e0cc709d794fd53a70b3c243a8",
+                "author": "Chen, Meng",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "1dfef813b638dc43fc0e846baa78a65e",
+                "author": "Zhu, Lingyan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ba194946df5f82b5f47ba568fa34e003",
+                "author": "Alvarez, Pedro J. J.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a29818443b480ff574481eafec03c9e2",
+                "author": "Barrios, Ana Cecilia",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "22aa166c50a287dfae2ce03fc41399e5",
+                "author": "Rico, Cyren M.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "67bdf4a11229e89434b21b61ed999d5a",
+                "author": "Trujillo-Reyes, Jesica",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6dce07f3974ddcc7de9be1507ac046ef",
+                "author": "Medina-Velo, Illya A.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "fb3a9b363a112f95bbb0f0b4d301ff14",
+                "author": "Yu, Cong",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "d2fb60bf4d05f9773a1a50358e461c76",
+                "author": "Li, Xuening",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a9775b294ed6a04a3d7d44fd25773d48",
+                "author": "Zhang, Nan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "0180db041bfa2677bc810b4a18e11d03",
+                "author": "Wen, Donghui",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "7084ea95748ed96e5afe8228d25894a5",
+                "author": "Liu, Charles",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "60ff51e60f6109eaf74bc173671c5f37",
+                "author": "Li, Qilin",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "c66f297cacb74e0a176fdbd3b77c065a",
+                "author": "Zuverza-Mena, Nubia",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b0a43e815f92e415122908aab6d07406",
+                "author": "Dominguez, Osvaldo E.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "1f3c6c744321bdfe122a0f9a4e0597b3",
+                "author": "Boo, Chanhee",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "071a7e15a7183ddd004bd3405cb26924",
+                "author": "Lee, Jongho",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "0916fea609324cfb1385ddfd97fbdc76",
+                "author": "Elimelech, Menachem",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ee57bcf2ff6c09eb0a9d899e7d3f797d",
+                "author": "Du, Wenchao",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6182166b0dc917da17661a90736ba4cb",
+                "author": "Xie, Yuwei",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a524bee8de7b7f631f54477199546013",
+                "author": "Yin, Ying",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "9390af3cda31f6e8cc42580ee1c46c68",
+                "author": "Zhu, Jianguo",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "fa8a622df4ad33a1038c46532b42b6c8",
+                "author": "Zhang, Xiaowei",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "173eae7071e46f4fbfe9a1799533d536",
+                "author": "Ji, Rong",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "09c85956de827b2434b8cde514290451",
+                "author": "Gu, Kaihua",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "d0c2e396e0e76506123f65a40ae42ba4",
+                "author": "Guo, Hongyan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6e31f90796098f1782b9851e143faf65",
+                "author": "Li, Man",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "06c906dfadaadbe9763c14dc79d37646",
+                "author": "Farmen, Lisa M.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "f9b7edd0ec99f612a1e3fda16cbf4e43",
+                "author": "Chan, Candace K.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "23d20deda0e1c2e3a7d8256482e97b0d",
+                "author": "Hoogesteijn von Reitzenstein, Natalia",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "7619aeb2acdfb8b4b46da978c5e267d3",
+                "author": "Bi, Xiangyu",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ed8bcb34f989b3ffeda001ec8e7218b6",
+                "author": "Yang, Yu",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "57f10b6d82403df956d9de7666e9506d",
+                "author": "Hristovski, Kiril D.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "c9144145e308bcb6a197ce1bf33af12f",
+                "author": "Westerhoff, Paul",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "397ead4c585802a11dcddbb5f79acf69",
+                "author": "Tan, Wenjuan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "d674a19166206a83b070dc7992007f01",
+                "author": "Hernandez-Viezcas, Jose A.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "0222e449ae991bbf3b9b0f631a76976c",
+                "author": "Lim, Jonghun",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ef77a817910a06230a8388cd4a435687",
+                "author": "Kim, Hyejin",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "5056d9f7cef67d534a8b62514b25bed1",
+                "author": "Lee, Jaesang",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "1e7ae2e3bacc8a66eb3fb0a243809184",
+                "author": "Choi, Wonyong",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "260425a8d258f6bb11e0f19987174a4f",
+                "author": "Long, Mingce",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ac67d1ee780eb93c70210d680c745aa0",
+                "author": "Brame, Jonathon",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "c3039078e6c25eb4e940f5bcbcc2fa13",
+                "author": "Qin, Fan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "280e66b9410efbff2ff8573fa14bf65e",
+                "author": "Bao, Jiming",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "233038b816c314b33b3c75a4a3ae8453",
+                "author": "Huang, Yuxiong",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "425c475fd7ed4fae7b7c07a4d0131a85",
+                "author": "Parsons, Jason G.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "e2151af7c111aa88c496e1167895a5a7",
+                "author": "Zhao, Lijuan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "3d491f47aed87f056856c825e7e3f360",
+                "author": "Lopez-Moreno, Laura",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "723059c0ba5044bbeba74a9db68cb12e",
+                "author": "Armendariz, Raul",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "77535156f4828840d30eb63f8812ff87",
+                "author": "Ji, Zhaoxia",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "600a50a3a9ee59f7b60320484001b735",
+                "author": "Chang, Chong Hyun",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "5d3ecb008564004adfa9a8cecf99f9c3",
+                "author": "Zink, Jeffrey I.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "185a621862fe2c2437e87c0beed070ff",
+                "author": "Majumdar, Sanghamitra",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b9d354b3d33576f9af381c6e89274b05",
+                "author": "Sun, Youping",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6f4b1ce5e009b43794356a70b25570b9",
+                "author": "Niu, Genhua",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "7acb0b81df764c1689961ea6aa77c3ec",
+                "author": "Margez, Juan P. Flores",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "9acb45133c7cd105b6d8718249b52625",
+                "author": "Jin, Haiyang",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "828281bb78d2fe71fae4eedac4d99c7e",
+                "author": "Rivers, Frederick",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "4f063fe4366688f339325116c189dfb4",
+                "author": "Yin, Huidan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a3a1f95c8b82cffd467f2ce9469f8de4",
+                "author": "Lai, Tianmiao",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b054e639cb2855d18a86ff554d8f10de",
+                "author": "Cay-Durgun, Pinar",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "9baefe7212e714c1aeacd9b120e775c3",
+                "author": "Khosravi, Afsaneh",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "4243aa3cd40eefbfeb81ff95df944299",
+                "author": "Lind, Mary Laura",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "fed89d9b115af6c37c0ed4cdf30c3a96",
+                "author": "Yu, Ping",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "f6b457c8d0f9008ad551091eade0151f",
+                "author": "Shaffer, Devin L.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "f7aa6486897e4704cb7b8165206e9c72",
+                "author": "Tousley, Marissa E.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "d16872a493771367f2aab8f7dd85ff63",
+                "author": "Liu, Caihong",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "aacad5731e6944fc44e0e9112a01dc59",
+                "author": "Ma, Jun",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "9db9328704951dbf00571e3168b51c00",
+                "author": "Servin, Alia D.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "bb09c75066f743051023c27175c477b7",
+                "author": "Pagano, Luca",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "caf04be08a009658d4585dc63bfd3ddb",
+                "author": "Castillo-Michel, Hiram",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "695ebc69bcd3b9372b27fe7b73f8e1f3",
+                "author": "De la Torre-Roche, Roberto",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6c955a80a597b2f33ddadb6ae0120f11",
+                "author": "Hawthorne, Joseph",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "bd1b4753e735c7c3edbfcc3a91e61475",
+                "author": "Loredo-Portales, Rene",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "73c3b5d9ec5c17c08c469b50166ce00f",
+                "author": "Dhankher, Om Parkash",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "85fe0045a76a03e025bdb1eaba87cc92",
+                "author": "White, Jason C.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "98dab7c1fe24796205faa750dfddcadf",
+                "author": "Ryu, Won-Hee",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "46d54fe03878c532e9964a3b78a6d8a9",
+                "author": "Taylor, Andre D.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "62d404e06492ed6675f51375bb07f297",
+                "author": "Reed, Robert",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "5f0aac52a7ad0b662d20d351ae71664e",
+                "author": "Schoepf, Jared J.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "d55763f10e9582316eb93d9ae1d93cfa",
+                "author": "Herckes, Pierre",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "8810131f9d053d8bc0d1bce1cb15ca1b",
+                "author": "Wu, Jinjian",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "4f3ecd2661b985ca1b7f4844fe0422c9",
+                "author": "Werber, Jay R.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "24a4b8cafe0c3f17a64e8b63062ef8a7",
+                "author": "Deshmukh, Akshay",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "68d33b801bed28f9f6bf774bc00abb29",
+                "author": "Zhang, Ping",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "1f74cb49ff9f77dd5c4def7237fee3a1",
+                "author": "Shen, Dong",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "0dcc82359a558225854f981da6a06f7c",
+                "author": "Ruan, Gedeng",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "132538d4710c629b76a949ca3fc85b8c",
+                "author": "Kan, Amy T.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "0bc7bae6368683639d2a4239d17f6058",
+                "author": "Tomson, Mason B.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "652eaac1a11973754f2fd12ce34c0709",
+                "author": "Zimmerman, Julie",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "1fbf6c4a91aa3a3eaf2d4bc4ea7dfdaf",
+                "author": "Tong, Tiezheng",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6d6e74000484642f95315a95bd92d27a",
+                "author": "Hu, Zhengxue",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "f0142337df3e50d8dd1cd5e85fac20bd",
+                "author": "Ai, Fuxun",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b500c8221412069623c15cb98f889bc9",
+                "author": "Apul, Onur G.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "5465503a54e9f7ede61a7ef12a850fe2",
+                "author": "Delgado, Anca G.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "5f7e9211bdee02b74d043d7ed1013f9f",
+                "author": "Kidd, Justin",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6af2c3fe4bf7572c8ed982cab586f0e8",
+                "author": "Alam, Fabiha",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "fd51432d121854529cd061ad2a86930e",
+                "author": "Dahlen, Paul",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a4be5c0b20ce26d35a4777b28bea7885",
+                "author": "Perreault, Franccois",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b16a523534170151a37a0a9afed5efce",
+                "author": "Jaramillo, Humberto",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b21b5dd3b2e29d30b436c09b1ef1f884",
+                "author": "Xie, Ming",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "3b54d36215650708217488e6d9f63725",
+                "author": "Ude, Mercy",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "87d6249220f7f521d50c76f5a842569a",
+                "author": "Nghiem, Long D.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "f97e2ed22bfc578bd0f9fccb6f1001f0",
+                "author": "Faria, Andreia F.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "9672e71c8620ab4ed15ffbe637cfe2ef",
+                "author": "Marks, Randal",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "fa0bb37ca2d11ca5d27eeed9e4b2ca8f",
+                "author": "Yang, Ting",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "04f1d729ad5fbcf42a1f2e4e58fa2ff6",
+                "author": "Doudrick, Kyle",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "904c6909867f80f68a40b8e4ff89927a",
+                "author": "Pesek, Stacy L.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "899b9b7a4c4656ca53dbef5ad09df41d",
+                "author": "Xiang, Qiqi",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "de00f5fab2cfb26e2c6821ed2f92ece0",
+                "author": "Hammouda, Boualem",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "bf42c5b9629718101c25d0164763e0f2",
+                "author": "Verduzco, Rafael",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "7b9e4449f753c319788c9ce4f624ce22",
+                "author": "McCloskey, Cailen",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "32702a7f88ce4b92b2351864a12068f6",
+                "author": "Konecny, John",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "2304e8417060cea10c40466801fed62c",
+                "author": "Chen, Jian",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "147811339f2ed1124c5361aec59eca48",
+                "author": "Loeb, Stephanie",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "87254d15c737e8e71484c421189fa5c6",
+                "author": "Kim, Jae-Hong",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "505f86a8426b04375d48b1e9513638b8",
+                "author": "Moya, Eva Margarita",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "f7ad0b0a5e0bf3502b2b50d23f16d436",
+                "author": "Quintanak, D. M.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "4502bee0689db4ec810845268818b807",
+                "author": "Duan, Lin",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "c3461b3727b4540a674917548f2a6702",
+                "author": "Wang, Zhongyuan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "2032cfdde26c00e3e509c2d6abf8e715",
+                "author": "Hou, Yan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a22832b006c53c0b17ccaf7bf14caf81",
+                "author": "Wang, Zepeng",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "c9fc488752469d659f75fdd28313beea",
+                "author": "Gao, Guandao",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "92698b5ce1990072ceec3173d7f5b9c4",
+                "author": "Jabbari, V.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "c37dc2d1bf80e36e28d879426a4c5da9",
+                "author": "Veleta, J. M.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "618ef6743f99c50f1b8226d8f73383ca",
+                "author": "Zarei-Chaleshtori, M.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "cf34de39c63b21c5f55949c3ec982054",
+                "author": "Villagren, D.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "31bf4db0dcbb925da58a9b1f87d0eba8",
+                "author": "Zhang, Fangfu",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "90cd9cd1a716a0a330146bf7a57f69ce",
+                "author": "Dai, Zhaoyi",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "fbcb0528504a817c6194a17f9a6da17c",
+                "author": "Yan, Fei",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "223db63f26e9d43f2451e613d9898849",
+                "author": "Bhandari, Narayan",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "faee058bc158277b4a431e2c11b0e34c",
+                "author": "Zhang, Zhang",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "fff09c39519b6c3047cab174a827903c",
+                "author": "Liu, Ya",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ca66122a6483f39df8664edce41aad0f",
+                "author": "Martinez-Fernandez, Domingo",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "9aca9b8749c492c881266b7eaac47d49",
+                "author": "Bonilla-Bird, Nestor",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "f160f42b1b4c564c5f4999dcc0d96799",
+                "author": "Komerek, Michael",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "26692ef2daa7e4a8edd3dc6e22d46a8e",
+                "author": "Yoo, Ha-Young",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "25f6057ae8079bf9f8ae1de2481db03f",
+                "author": "Yan, Shuwen",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ece845830079190d4211ab2f121bc44f",
+                "author": "Ra, Ji Woon",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "534237bde735dfad77a78ef9b94bab78",
+                "author": "Jeon, Dahee",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "cd80ca7b043465002c1f62f5a178cc86",
+                "author": "Goh, Byoungsook",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "a2a9f995d5cb4d7562ba5c981cc27e77",
+                "author": "Kim, Tae-Young",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "dc663a2404497d9ae349739a63fbc278",
+                "author": "Mackeyev, Yuri",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "64bf45f2a0190b297757bb8a7180ef06",
+                "author": "Ahn, Yong-Yoon",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "31121e5a8fef23ff4ffbb76ebed95525",
+                "author": "Kim, Hee-Joon",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "1d80bd89f09389583e85e119c4a2f7a7",
+                "author": "Wilson, Lon J.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b1afc29bed2dc0e7a77f594c191709cb",
+                "author": "Lee, Yunho",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "699b467ab704b4597fa907ae44e67d3a",
+                "author": "Song, Weihua",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "6355349f31558a93e8f39ae0182828a5",
+                "author": "Hong, Seok Won",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "d06ebe5c470ca0c984db408af9ba6397",
+                "author": "Kim, Jungwon",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "dbde207fc4aa23a7846958eba9a332d3",
+                "author": "Bi, Yuqiang",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "b371d8b6c6cc0707c3758d08ed32b1a1",
+                "author": "Alsaiari, Hamad",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "ff78823e8486d3c9ba6ca9d176ffea1a",
+                "author": "Reddy, P. Venkata Laxma",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "59b495c9c7fc5f5491a80d4e30711036",
+                "author": "Garcia, Jose",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "08094eba0ba760330f6e0700894e2578",
+                "author": "Markovski, Jasmina",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            },
+            {
+                "id": "15b7f29acd890f4518f2c4a3329ebbb9",
+                "author": "McKay Gifford, J.",
+                "affiliation": null,
+                "lat": null,
+                "lng": null,
+                "role": null,
+                "gender": null
+            }
+        ]
+    },
+    "topology": "table"
+}

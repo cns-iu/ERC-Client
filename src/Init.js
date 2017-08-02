@@ -1,42 +1,89 @@
-//Head loads scripts in parellel, but executes them in order.
-var visualizations = {};
-var visualizationFunctions = {};
-var events = {};
-var configs = {};
-(function() {
-	'use strict';
-	head.js(
-		// FONTS
-		// CSS
-		{'main-css'				: 'css/style.css'},
-		{'leaflet-css'			: 'css/leaflet.css'},
-		{'font-awesome' 		: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'},
-		// JAVASCRIPT
-		{'jquery'				: 'lib/jquery-1.11.2.min.js'},
-		{'d3'					: 'lib/d3.v3.min.js'},
-		{'d3-tip' 				: 'lib/d3.tip.v0.6.3.js'},
-		{'forceEdgeBundling' 	: 'lib/d3-forceEdgeBundling.js'},
-		{'bootstrap'			: 'lib/bootstrap.min.js'},
-		{'immutable'			: 'lib/immutable.js'},
-		{'leaflet'				: 'lib/leaflet.js'},
-		{'Utilities'			: 'src/Utilities.js'},
-		{'VisualizationMeta'	: 'src/VisualizationMeta.js'},
-		{'Visualization'		: 'src/Visualization.js'},
-		{'DatasourceMap'		: 'src/DatasourceMap.js'},
-		{'a' 					: 'visuals/ProportionalSymbol/visualization/ProportionalSymbol.js'},
-		{'b' 					: 'visuals/ProportionalSymbol/visualization/underlyingStateData.js'},
-		{'c' 					: 'visuals/ProportionalSymbol/prosym-events.js'},
-		{'d' 					: 'visuals/MapOfScience/visualization/MapOfScience.js'},
-		{'e' 					: 'visuals/MapOfScience/visualization/underlyingScimapData.js'},
-		{'f' 					: 'visuals/MapOfScience/scimap-events.js'},
-		{'g' 					: 'visuals/MapOfScience/scimap-config.js'},
-		{'angular-route'		: 'lib/angular-route.js'}
- 	);
- }).call(this);
+var scripts = [{
+        "style.css": "css/style.css"
+    }, {
+        "svg.css": "css/svg.css"
+    }, {
+        "leaflet-css": "css/leaflet.css"
+    }, {
+        "opensans": "css/fonts/opensans.css"
+    }, {
+        "jQuery": "lib/jquery-1.11.2.min.js"
+    }, {
+        "bootstrap.min.js": "lib/bootstrap.min.js"
+    }, {
+        "d3.v3.min.js": "lib/d3.v3.min.js"
+    }, {
+        "head.js": "lib/head.js"
+    }, {
+        "immutable.js": "lib/immutable.js"
+    }, {
+        "jquery-1.11.2.min.js": "lib/jquery-1.11.2.min.js"
+    }, {
+        "json2.js": "lib/json2.js"
+    }, {
+        "matchMedia": "lib/fills/matchMedia.js"
+    }, {
+        "matchMediaListener": "lib/fills/matchMedia.addListener.js"
+    }, {
+        "DatasourceMap.js": "src/DatasourceMap.js"
+    }, {
+        "Utilities.js": "src/Utilities.js"
+    }, {
+        "journalMapping.js": "data/journalMapping.js"
+    }, {
+        "ion.rangeSlider.css": "lib/ion.rangeSlider/css/ion.rangeSlider.css"
+    }, {
+        "ion.rangeSlider.skinModern.css": "lib/ion.rangeSlider/css/ion.rangeSlider.skinModern.css"
+    }, {
+        "normalize.css": "lib/ion.rangeSlider/css/normalize.css"
+    }, {
+        "ion.rangeSlider.js": "lib/ion.rangeSlider/js/ion-rangeSlider/ion.rangeSlider.js"
+    }, {
+        "thenBy": "lib/thenBy.js"
+    },
 
-// Load the app once the last head script is called. angular-route is the name given to the appropriate script (above).
-head.ready('angular-route', function() {
-	angular.element(document).ready(function() {
-		head.js('src/App.js');
-	});
+    {
+        "Visualization.js": "src/Visualization.js"
+    }
+]
+
+head.js(scripts);
+
+
+head.ready(Object.keys(scripts[scripts.length - 2])[0], function() {
+    head.ready(document, function() {
+        head.js({
+            "dropdown.min.js": "lib/dropdown.min.js"
+        }, {
+            "iscroll.min.js": "lib/iscroll.min.js"
+        }, {
+            "drawer.min.js": "lib/drawer.min.js"
+        }, {
+            'ng-table.min.js': 'lib/angular/ng-table.min.js'
+        }, {
+            'angular-material.css': 'lib/angular/angular-material.css'
+        }, {
+            'docs.css': 'lib/angular/docs.css'
+        }, {
+            'angular-animate.min.js': 'lib/angular/angular-animate.min.js'
+        }, {
+            'angular-route.min.js': 'lib/angular/angular-route.min.js'
+        }, {
+            'angular-aria.min.js': 'lib/angular/angular-aria.min.js'
+        }, {
+            'angular-messages.min.js': 'lib/angular/angular-messages.min.js'
+        }, {
+            'svg-assets-cache.js': 'lib/angular/svg-assets-cache.js'
+        }, {
+            'angular-material.js': 'lib/angular/angular-material.js'
+        }, {
+            'App.js': 'src/App.js'
+        }, {
+            'ViewControllers': 'src/ViewControllers.js'
+        }, {
+            'Injectors': 'src/Injectors.js'
+        });
+    });
 });
+
+var verbose = false;

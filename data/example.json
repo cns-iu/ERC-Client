@@ -1,0 +1,268 @@
+{
+    "records": {
+        "schema": [{
+            "name": "title",
+            "type": "string"
+        }, {
+            "name": "journal",
+            "type": "string"
+        }],
+        "data": [{
+            "journal": "ACS Applied Materials & Interfaces",
+            "title": "Fabrication of Functional Nanowire Devices on Unconventional Substrates Using Strain-Release Assembly"
+        }, {
+            "journal": "ACS Applied Materials & Interfaces",
+            "title": "pH-Controlled Selective Etching of Al2O3 over ZnO"
+        }, {
+            "journal": "ACS Nano",
+            "title": "Stretch-Triggered Drug Delivery from Wearable Elastomer Films Containing Therapeutic Depots"
+        }, {
+            "journal": "ACS Nano",
+            "title": "Surface-Energy-Assisted Perfect Transfer of Centimeter-Scale Monolayer and Few-Layer MoS2 Films onto Arbitrary Substrates"
+        }, {
+            "journal": "ACS applied materials & interfaces",
+            "title": "Conformal atomic layer deposition of alumina on millimeter tall, vertically-aligned carbon nanotube arrays"
+        }, {
+            "journal": "ACS applied materials & interfaces",
+            "title": "Stretchable and reversibly deformable radio frequency antennas based on silver nanowires"
+        }, {
+            "journal": "Advanced Materials",
+            "title": "3D printing of free standing liquid metal microstructures"
+        }, {
+            "journal": "Advanced Materials",
+            "title": "Nanomaterial-enabled stretchable conductors: strategies, materials and devices"
+        }, {
+            "journal": "Advanced Materials & Processes",
+            "title": "Stereolithography in Medical Device Fabrication"
+        }, {
+            "journal": "Analytical chemistry",
+            "title": "Perspectives on moving ionic liquid chemistry into the solid phase"
+        }, {
+            "journal": "Applied Biochemistry and Biotechnology",
+            "title": "Electrochemical Sensing of Cortisol: A Recent Update"
+        }, {
+            "journal": "Applied Physics Express",
+            "title": "Low-Temperature Atomic-Layer-Deposited High-{\\ ^ I} {\\ textordmasculine } Dielectric for p - Channel In 0.7 Ga 0.3 As / GaAs 0.35 Sb 0.65 Heterojunction Tunneling Field - Effect Transistor "
+        }, {
+            "journal": "Applied Surface Science",
+            "title": "Fabrication and current--voltage characteristics of NiOx/ZnO based MIIM tunnel diode"
+        }, {
+            "journal": "Biomicrofluidics",
+            "title": "The dynamics and stability of lubricating oil films during droplet transport by electrowetting in microfluidic devices"
+        }, {
+            "journal": "Biosensors",
+            "title": "Two-dimensional algal collection and assembly by combining AC-dielectrophoresis with fluorescence detection for contaminant-induced oxidative stress sensing"
+        }, {
+            "journal": "Biosensors and Bioelectronics",
+            "title": "A low-cost miniaturized potentiostat for point-of-care diagnosis"
+        }, {
+            "journal": "Biosensors and Bioelectronics",
+            "title": "Recent advances in cortisol sensing technologies for point-of-care application"
+        }, {
+            "journal": "ECS Journal of Solid State Science and Technology",
+            "title": "Activated Carbon Nanofibers as High Capacity Anodes for Lithium-Ion Batteries"
+        }, {
+            "journal": "ECS Journal of Solid State Science and Technology",
+            "title": "Application of AlGaN/GaN heterostructures for ultra-low power nitrogen dioxide sensing"
+        }, {
+            "journal": "ECS Journal of Solid State Science and Technology",
+            "title": "Atomic Layer Deposition of SnO2 for Selective Room Temperature Low ppb Level O3 Sensing"
+        }, {
+            "journal": "ECS Transactions",
+            "title": "Enzyme Functionalized Metal Nanostructures for Enhanced Electrochemical Detection of Lactate"
+        }, {
+            "journal": "IEEE Electron Device Letters",
+            "title": "0.5 V Supply Voltage Operation of In0.65Ga0.35As/GaAs0.4Sb0.6 Tunnel FET"
+        }, {
+            "journal": "IEEE Electron Device Letters",
+            "title": "Cost-Effective Integration of an a-Si:H Solar Cell and a ZnO TFT Ring Oscillator \\#x2014;Toward an Autonomously Powered Circuit"
+        }, {
+            "journal": "IEEE Electron Device Letters",
+            "title": "Impact of Single Trap Random Telegraph Noise on Heterojunction TFET SRAM Stability"
+        }, {
+            "journal": "IEEE Electron Device Letters",
+            "title": "Low-Voltage Double-Gate ZnO Thin-Film Transistor Circuits"
+        }, {
+            "journal": "IEEE Electron Device Letters",
+            "title": "Trilayer ZnO Thin-Film Transistors With In Situ {\\"
+        }, {
+            "journal": "IEEE Journal of Solid-State Circuits",
+            "title": "A 32 b 90 nm Processor Implementing Panoptic DVS Achieving Energy Efficient Operation From Sub-Threshold to High Performance"
+        }, {
+            "journal": "IEEE Journal of Solid-State Circuits",
+            "title": "A Batteryless 19 $\\mu$ W MICS/ISM-Band Energy Harvesting Body Sensor Node SoC for ExG Applications"
+        }, {
+            "journal": "IEEE Journal on Emerging and Selected Topics in Circuits and Systems",
+            "title": "Tunnel FET RF Rectifier Design for Energy Harvesting Applications"
+        }, {
+            "journal": "IEEE Micro",
+            "title": "Nonvolatile Processor Architecture Exploration for Energy-Harvesting Applications"
+        }, {
+            "journal": "IEEE Trans Biomed Circuits Syst",
+            "title": "Design and Experimental Investigation of a Compact Circularly Polarized Integrated Filtering Antenna for Wearable Biotelemetric Devices."
+        }, {
+            "journal": "IEEE Transactions on Antennas and Propagation",
+            "title": "A Compact, Low-Profile Metasurface-Enabled Antenna for Wearable Medical Body-Area Network Devices"
+        }, {
+            "journal": "IEEE Transactions on Antennas and Propagation",
+            "title": "A Compact, Wideband Circularly Polarized Co-designed Filtering Antenna and Its Application for Wearable Devices With Low SAR"
+        }, {
+            "journal": "IEEE Transactions on Applied Superconductivity",
+            "title": "Enhanced Quench Propagation in Bi\\_2Sr\\_2CaCu\\_2O\\_x and YBa\\_2Cu\\_3O\\_7-x Coils via a Nanoscale Doped-Titania-Based Thermally Conducting Electrical Insulator"
+        }, {
+            "journal": "IEEE Transactions on Biomedical Engineering",
+            "title": "Fabric-Based Wearable Dry Electrodes for Body Surface Biopotential Recording"
+        }, {
+            "journal": "IEEE Transactions on Device and Materials Reliability",
+            "title": "Soft-Error Performance Evaluation on Emerging Low Power Devices"
+        }, {
+            "journal": "IEEE Transactions on Electron Devices",
+            "title": "A Steep-Slope Tunnel FET Based SAR Analog-to-Digital Converter"
+        }, {
+            "journal": "IEEE Transactions on Electron Devices",
+            "title": "Electrical Noise in Heterojunction Interband Tunnel FETs"
+        }, {
+            "journal": "IEEE Transactions on Electron Devices",
+            "title": "III-V Tunnel FET Model With Closed-Form Analytical Solution"
+        }, {
+            "journal": "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control",
+            "title": "A three-mask process for fabricating vacuum-sealed capacitive micromachined ultrasonic transducers using anodic bonding"
+        }, {
+            "journal": "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control",
+            "title": "Control of crystallographic texture and surface morphology of Pt/Tio2 templates for enhanced PZT thin film texture"
+        }, {
+            "journal": "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control",
+            "title": "Ferroelectric/Ferroelastic domain wall motion in dense and porous tetragonal lead zirconate titanate films"
+        }, {
+            "journal": "International Journal of Science Education",
+            "title": "Nanotechnology and nanoscale science: Educational challenges"
+        }, {
+            "journal": "International Journal of Science Education",
+            "title": "Teachers' concepts of spatial scale: An international comparison"
+        }, {
+            "journal": "International journal of nanomedicine",
+            "title": "Electrochemical sensing method for point-of-care cortisol detection in human immunodeficiency virus-infected patients."
+        }, {
+            "journal": "JOM",
+            "title": "Nanomaterial-Enabled Dry Electrodes for Electrophysiological Sensing: A Review"
+        }, {
+            "journal": "Journal of Applied Physics",
+            "title": "Coherently strained epitaxial Pb (Zr1- xTix) O3 thin films"
+        }, {
+            "journal": "Journal of Applied Physics",
+            "title": "Dependence of e31, f on polar axis texture for tetragonal Pb (Zrx, Ti1- x) O3 thin films"
+        }, {
+            "journal": "Journal of Applied Physics",
+            "title": "Design, fabrication, and analysis of p-channel arsenide/antimonide hetero-junction tunnel transistors"
+        }, {
+            "journal": "Journal of Applied Physics",
+            "title": "Epitaxial Pb (Zrx, Ti1- x) O3 (0.30{\\ ^ afor energy harvesting applications "
+        }, {
+            "journal": "Journal of Applied Physics",
+            "title": "Phase transitions and octahedral rotations in epitaxial Ag (TaxNb1- x) O3 thin films under tensile strain"
+        }, {
+            "journal": "Journal of Applied Physics",
+            "title": "\\$\\$001\\$\\$ Oriented piezoelectric films prepared by chemical solution deposition on Ni foils"
+        }, {
+            "journal": "Journal of Electronic Materials",
+            "title": "The Effect of Multivalley Bandstructure on Thermoelectric Properties of Al x Ga1- x As"
+        }, {
+            "journal": "Journal of Low Power Electronics and Applications",
+            "title": "39 fJ/bit On-Chip Identification ofWireless Sensors Based on Manufacturing Variation"
+        }, {
+            "journal": "Journal of Low Power Electronics and Applications",
+            "title": "A DC-DC Converter Efficiency Model for System Level Analysis in Ultra Low Power Applications"
+        }, {
+            "journal": "Journal of Low Power Electronics and Applications",
+            "title": "An Ultra-Low Energy Subthreshold SRAM Bitcell for Energy Constrained Biomedical Applications"
+        }, {
+            "journal": "Journal of Materials Chemistry C",
+            "title": "Methods to pattern liquid metals"
+        }, {
+            "journal": "Journal of Materials Science",
+            "title": "Influence of Li doping on domain wall motion in Pb (Zr0. 52Ti0. 48) O3 films"
+        }, {
+            "journal": "Journal of Nano Education",
+            "title": "Exploring Pre-Service Teachers' Perceptions of the Risks of Emergent Technologies: Implications for Teaching and Learning"
+        }, {
+            "journal": "Journal of Nano Education",
+            "title": "Nanoscience for all: Strategies for teaching nanoscience to undergraduate freshmen science and non-science majors"
+        }, {
+            "journal": "Journal of Nano Education",
+            "title": "Teaching a Multidisciplinary Nanotechnology Laboratory Course to Undergraduate Students"
+        }, {
+            "journal": "Journal of Occupational and Environmental Medicine",
+            "title": "Provision Increases Reported PPE Use for Mexican Immigrant Farmworkers: An mHealth Pilot Study"
+        }, {
+            "journal": "Journal of Physics: Conference Series",
+            "title": "Analysis of Magnetic Plucking Configurations for Frequency Up-Converting Harvesters"
+        }, {
+            "journal": "Journal of Physics: Conference Series",
+            "title": "Analysis of Upper Bound Power Output for a Wrist-Worn Rotational Energy Harvester from Real-World Measured Inputs"
+        }, {
+            "journal": "Journal of Sound and Vibration",
+            "title": "Fluidic flexible matrix composite damping treatment for a cantilever beam"
+        }, {
+            "journal": "Journal of Vibration and Acoustics",
+            "title": "Efficient Energy Harvesting Using Piezoelectric Compliant Mechanisms: Theory and Experiment"
+        }, {
+            "journal": "Journal of Vibration and Acoustics",
+            "title": "Fluidic Flexible Matrix Composite Vibration Absorber for a Cantilever Beam"
+        }, {
+            "journal": "Journal of Vibration and Control",
+            "title": "Tunable fluidic composite mounts for vibration absorption"
+        }, {
+            "journal": "Journal of the Electrochemical Society",
+            "title": "Electrochemical immunosensing of saliva cortisol"
+        }, {
+            "journal": "MRS Bulletin",
+            "title": "Thin-film piezoelectric MEMS"
+        }, {
+            "journal": "Materials Letters",
+            "title": "Chalcogenide-based lithium solid electrolytes processed by the Powder-in-a-tube method"
+        }, {
+            "journal": "Materials Today",
+            "title": "Big possibilities for small scale implants"
+        }, {
+            "journal": "Nanomaterials",
+            "title": "Fabrication and characterization of SnO2/graphene composites as high capacity anodes for Li-ion batteries"
+        }, {
+            "journal": "Nanomaterials",
+            "title": "High Performance Li4Ti5O12/Si Composite Anodes for Li-Ion Batteries"
+        }, {
+            "journal": "Optical Materials Express",
+            "title": "Incorporation of vanadium oxide films in optical fibers for temperature sensing and optical switching applications"
+        }, {
+            "journal": "Physical Review B",
+            "title": "First-principles calculation of thermal transport in metal/graphene systems"
+        }, {
+            "journal": "Proceedings of the IEEE",
+            "title": "Flexible Technologies for Self-Powered Wearable Health and Environmental Sensing"
+        }, {
+            "journal": "RSC Adv.",
+            "title": "Wearable silver nanowire dry electrodes for electrophysiological sensing"
+        }, {
+            "journal": "RSC Adv.",
+            "title": "Wearable silver nanowire dry electrodes for electrophysiological sensing"
+        }, {
+            "journal": "Regenerative medicine",
+            "title": "Two-photon polymerization of polyethylene glycol diacrylate scaffolds with riboflavin and triethanolamine used as a water-soluble photoinitiator"
+        }, {
+            "journal": "Scientific reports",
+            "title": "Prediction of Giant Thermoelectric Power Factor in Type-VIII Clathrate Si46"
+        }, {
+            "journal": "Small",
+            "title": "Sculpting Asymmetric, Hollow-Core, Three-Dimensional Nanostructures Using Colloidal Particles"
+        }, {
+            "journal": "Superconductor Science and Technology",
+            "title": "Thermal conductivity and dielectric properties of a TiO 2 -based electrical insulator for use with high temperature superconductor-based magnets"
+        }, {
+            "journal": "The Journal of Physical Chemistry C",
+            "title": "Ultrahigh-Power Flexible Electrochemical Capacitors Using Binder-Free Single-Walled Carbon Nanotube Electrodes and Hydrogel Membranes"
+        }, {
+            "journal": "Wireless Health",
+            "title": "Enhanced Multiple Sclerosis Gait Assessment using Inertial Sensors"
+        }]
+    },
+    "topology": "table"
+}

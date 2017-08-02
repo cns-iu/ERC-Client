@@ -1,39 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<DOCTYPE! html>
 
-<head>
-	<!--[if lte IE 7]>
-		<script
-		<script src="lib/json2.js"></script>
-		<![endif]-->
-	<!--[if lte IE 8]>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>     
-		<script>
-			document.createElement('ng-include');
-			document.createElement('ng-pluralize');
-			document.createElement('ng-view');
-			document.createElement('ng:include');
-			document.createElement('ng:pluralize');
-			document.createElement('ng:view');
-		</script>
-		<![endif]-->
-	<!--[if lte IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>ERC</title>
-	<meta name="viewport" content="initial-scale=1.0,width=device-width" />
-	<!-- TODO: Add these to Init somehow -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-	<script src="lib/angular.min.js"></script>
-	<script src="lib/head.js"></script>
-	<script src="src/Init.js"></script>
-</head>
-<body ng-cns-vis-runner>
-	<div ng-cns-visual ng-vis-type="MapOfScience" id="scimap" ng-data-field="scimapPrelim" ng-identifier="scimap"></div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <head>
+        <meta charset=UTF-8 />
+        <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+        <title>CNS Visualization</title>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/head.js"></script>
+        <script src="src/Init.js"></script>
+    </head>
 
-</html>
+    <body id="sciMapBody">
+        <div flex layout-fill layout="row" >
+            <div flex layout="column">
+                <div ng-include="'partials/scimap-popup.html'"></div>
+                <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-reset-on-resize ng-data-attr="ng-cns-visual" ng-config="visuals/scimap01-config.js" ng-vis-type="MapOfScience" id="scimap01" ng-data-field="iufinal" ng-identifier="scimap01">
+                </div>
+                <div class="legend-container scimap legend">
+                    <button>
+                        <span>Legend</span>
+                    </button>
+                    <div class="legend-row">
+                        <div flex layout="row">
+                            <div flex="75" layout="column">
+                                <div flex class="legend-item-label">Nodes</div>
+                                <div flex layout="row">
+                                    <div flex class="legend-item">
+                                        <div layout="column" layout-fi ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-vis-type="LegendNodeSize" id="nodeSize" ng-identifier="nodeSize">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+    var legendToggleOff = true;
+    setTimeout(function() {
+        $(document).ready(function() {
+            $(".legend-container").click(function() {
+                toggleLegend();
+            });
+        });
+    }, 2000)
+
+    function toggleLegend() {
+        if (legendToggleOff) {
+            $(".legend-container").animate({
+                bottom: '0px'
+            }, 250);
+            legendToggleOff = false;
+        } else {
+            $(".legend-container").animate({
+                bottom: '-192px'
+            }, 75);
+            legendToggleOff = true;
+        }
+
+    }
+    </script>
+
+    </html>

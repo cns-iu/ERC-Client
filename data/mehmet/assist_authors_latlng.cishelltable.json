@@ -1,0 +1,990 @@
+{
+    "records": {
+        "schema": [{
+            "name": "Name",
+            "type": "string"
+        }, {
+            "name": "First Name",
+            "type": "string"
+        }, {
+            "name": "Last Name",
+            "type": "string"
+        }, {
+            "name": "Institution",
+            "type": "string"
+        }, {
+            "name": "Zip code",
+            "type": "string"
+        }, {
+            "name": "Thrust",
+            "type": "string"
+        }, {
+            "name": "Latitude",
+            "type": "numeric"
+        }, {
+            "name": "Longitude",
+            "type": "numeric"
+        }, {
+            "type": "string"
+        }, {
+            "name": "County",
+            "type": "string"
+        }, {
+            "name": "City",
+            "type": "string"
+        }, {
+            "name": "State",
+            "type": "string"
+        }, {
+            "name": "Country",
+            "type": "string"
+        }],
+        "data": [{
+            "First Name": "Kofi",
+            "Institution": "",
+            "Last Name": "Adu",
+            "Thrust": "",
+            "Name": "Kofi Adu"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Agrawal",
+            "Thrust": "",
+            "Name": "N. Agrawal"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Aitken",
+            "Thrust": "",
+            "Name": "R. Aitken"
+        }, {
+            "First Name": "Sunil",
+            "Institution": "",
+            "Last Name": "Arya",
+            "Thrust": "",
+            "Name": "Sunil K. Arya"
+        }, {
+            "First Name": "Brinnae",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "B. Bent",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Bent",
+            "Thrust": "HET/SAP Testbeds"
+        }, {
+            "First Name": "Eric",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "E. Beppler",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Beppler",
+            "Thrust": "HET/SAP Testbeds"
+        }, {
+            "First Name": "Peter",
+            "Latitude": 38.036170959472656,
+            "Institution": "University of Virginia",
+            "City": "Charlottesville",
+            "Longitude": -78.50160217285156,
+            "County": "Charlottesville",
+            "Name": "P. Beshay",
+            "State": "VA",
+            "Country": "United States",
+            "Last Name": "Beshay",
+            "Thrust": ""
+        }, {
+            "State": "FL",
+            "First Name": "Shekhar",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "Bhansali",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Wearable Nanosensors",
+            "Name": "Shekhar Bhansali"
+        }, {
+            "First Name": "Alper",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "A. Bozkurt",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Bozkurt",
+            "Thrust": "Wearable Nanosensors/HET/SAP Testbeds"
+        }, {
+            "First Name": "Barry",
+            "Institution": "",
+            "Last Name": "Brennan",
+            "Thrust": "",
+            "Name": "Barry Brennan"
+        }, {
+            "First Name": "Benton",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "B. H. Calhoun",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Calhoun",
+            "Thrust": "Integrated Sensor Nod Design/HET/SAP Testbeds"
+        }, {
+            "First Name": "Linyou",
+            "Institution": "",
+            "Last Name": "Cao",
+            "Thrust": "",
+            "Name": "Linyou Cao"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Chandra",
+            "Thrust": "",
+            "Name": "V. Chandra"
+        }, {
+            "First Name": "Eom",
+            "Institution": "",
+            "Last Name": "Chang-Beom",
+            "Thrust": "",
+            "Name": "Eom,chang-beom"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Chobpattana",
+            "Thrust": "",
+            "Name": "V. Chobpattana"
+        }, {
+            "First Name": "Zheng",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Zheng Cui",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Cui",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Dasu",
+            "Thrust": "",
+            "Name": "A. R. Dasu"
+        }, {
+            "First Name": "Suman",
+            "Institution": "Penn State University",
+            "Last Name": "Datta",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "Suman Datta"
+        }, {
+            "First Name": "Jin",
+            "Institution": "",
+            "Last Name": "Di",
+            "Thrust": "",
+            "Name": "Jin Di"
+        }, {
+            "State": "FL",
+            "First Name": "Andres",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "Diaz Cruz",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Integrated Sensor Node",
+            "Name": "Andres Felipe Diaz Cruz"
+        }, {
+            "First Name": "James",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "J. P. Dieffenderfer",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Dieffenderfer",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Du",
+            "Thrust": "",
+            "Name": "L. Du"
+        }, {
+            "First Name": "John",
+            "Institution": "",
+            "Last Name": "Durham",
+            "Thrust": "",
+            "Name": "John W. Durham, Iii"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Eichfeld",
+            "Thrust": "",
+            "Name": "C. Eichfeld"
+        }, {
+            "State": "FL",
+            "First Name": "Bilal",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "El-Zahab",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "El-zahab, Bilal"
+        }, {
+            "First Name": "Roman",
+            "Institution": "",
+            "Last Name": "Engel-Herbert",
+            "Thrust": "",
+            "Name": "Roman Engel-herbert"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Fritze",
+            "Thrust": "",
+            "Name": "M. Fritze"
+        }, {
+            "First Name": "Tushar",
+            "Institution": "",
+            "Last Name": "Ghosh",
+            "Thrust": "",
+            "Name": "Tushar K. Ghosh"
+        }, {
+            "First Name": "Henry",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "H. Goodell",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Goodell",
+            "Thrust": "HET/SAP Testbeds"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Granacki",
+            "Thrust": "",
+            "Name": "J. J. Granacki"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Gregory",
+            "Thrust": "",
+            "Name": "M. D. Gregory"
+        }, {
+            "First Name": "Zhen",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Zhen Gu",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Gu",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "Alper",
+            "Institution": "",
+            "Last Name": "Gurarslan",
+            "Thrust": "",
+            "Name": "Alper Gurarslan"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Henry",
+            "Thrust": "",
+            "Name": "K. Henry"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Huang",
+            "Thrust": "",
+            "Name": "H. Huang"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Hunt",
+            "Thrust": "",
+            "Name": "A Hunt"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Ishmael",
+            "Thrust": "",
+            "Name": "S A Ishmael"
+        }, {
+            "First Name": "Thomas",
+            "Institution": "Penn State University",
+            "Last Name": "Jackson",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Thomas N. Jackson"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Jagasivamani",
+            "Thrust": "",
+            "Name": "M. Jagasivamani"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Jayakumar",
+            "Thrust": "",
+            "Name": "R. Jayakumar"
+        }, {
+            "First Name": "Zhihao",
+            "Institution": "Penn State University",
+            "Last Name": "Jiang",
+            "Thrust": "Integrated Sensor Node Design",
+            "Name": "Z. H. Jiang"
+        }, {
+            "First Name": "Jesse",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "J. S. Jur",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Jur",
+            "Thrust": "System Testbeds"
+        }, {
+            "First Name": "Jim",
+            "Institution": "",
+            "Last Name": "Kalupson",
+            "Thrust": "",
+            "Name": "Jim Kalupson"
+        }, {
+            "State": "FL",
+            "First Name": "Ajeet",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "Kaushik",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Wearable Nanosensors",
+            "Name": "Ajeet Kaushik"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Kuhn",
+            "Thrust": "",
+            "Name": "M. Kuhn"
+        }, {
+            "First Name": "Rajesh",
+            "Institution": "",
+            "Last Name": "Kumar",
+            "Thrust": "",
+            "Name": "Kumar, Rajesh"
+        }, {
+            "First Name": "Mohit",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "M. Kumar",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Kumar",
+            "Thrust": ""
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Labella",
+            "Thrust": "",
+            "Name": "M. Labella"
+        }, {
+            "First Name": "Bongmook",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "B. Lee",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Lee",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "Yuanyuan",
+            "Institution": "Penn State University",
+            "Last Name": "Li",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Yuanyuan V. Li"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Li",
+            "Thrust": "",
+            "Name": "S. Li"
+        }, {
+            "First Name": "Xueqing",
+            "Institution": "Penn State University",
+            "Last Name": "Li",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "Li, Xueqing"
+        }, {
+            "First Name": "Huichu",
+            "Institution": "Penn State University",
+            "Last Name": "Liu",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "H. Liu"
+        }, {
+            "First Name": "Yongpan",
+            "Institution": "",
+            "Last Name": "Liu",
+            "Thrust": "",
+            "Name": "Liu, Yongpan"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Luo",
+            "Thrust": "",
+            "Name": "H Luo"
+        }, {
+            "First Name": "Danhao",
+            "Institution": "Penn State University",
+            "Last Name": "Ma",
+            "Thrust": "",
+            "Name": "Danhao Ma"
+        }, {
+            "First Name": "Xiaokun",
+            "Institution": "Penn State University",
+            "Last Name": "Ma",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Ma, Xiaokun"
+        }, {
+            "First Name": "Kaisheng",
+            "Institution": "Penn State University",
+            "Last Name": "Ma",
+            "Thrust": "",
+            "Name": "Ma, Kaisheng"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Mahapatra",
+            "Thrust": "",
+            "Name": "S. Mahapatra"
+        }, {
+            "First Name": "Marzana Mantasha",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "M. M. Mahmud",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Mahmud",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Maier",
+            "Thrust": "",
+            "Name": "J. Maier"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Mandzy",
+            "Thrust": "",
+            "Name": "N Mandzy"
+        }, {
+            "State": "FL",
+            "First Name": "Pandiaraj",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "Manickam",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Wearable Nanosensors",
+            "Name": "Manickam, Pandiaraj"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Mcilrath",
+            "Thrust": "",
+            "Name": "L. Mcilrath"
+        }, {
+            "First Name": "steven",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "S. Mills",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Mills",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "Veena",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "V. Misra",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Misra",
+            "Thrust": ""
+        }, {
+            "First Name": "Dheeraj",
+            "Institution": "",
+            "Last Name": "Mohata",
+            "Thrust": "",
+            "Name": "Dheeraj Mohata"
+        }, {
+            "First Name": "Kamran",
+            "Institution": "",
+            "Last Name": "Moradi",
+            "Thrust": "",
+            "Name": "Moradi, Kamran"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Mukhopadhyay",
+            "Thrust": "",
+            "Name": "S. Mukhopadhyay"
+        }, {
+            "First Name": "John",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Muth, John F",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Muth",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "Amanda",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "A. Myers",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Myers",
+            "Thrust": "Wearablility, Human Interface and Data"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Nagle",
+            "Thrust": "",
+            "Name": "H. T. Nagle"
+        }, {
+            "First Name": "Madhavan",
+            "Institution": "",
+            "Last Name": "Nair",
+            "Thrust": "",
+            "Name": "Nair, Madhavan"
+        }, {
+            "First Name": "Vijaykrishnan",
+            "Institution": "Penn State University",
+            "Last Name": "Narayanan",
+            "Thrust": "",
+            "Name": "Narayanan, Vijaykrishnan"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Nesbit",
+            "Thrust": "",
+            "Name": "R Nesbit"
+        }, {
+            "State": "FL",
+            "First Name": "Nicolas",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "Norena",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Integrated Sensor Node",
+            "Name": "Nicolas Norena"
+        }, {
+            "First Name": "Mehmet",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Mehmet Ozturk",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Ozturk",
+            "Thrust": "Energy Harvesting and Storage"
+        }, {
+            "First Name": "Rahul",
+            "Institution": "Penn State University",
+            "Last Name": "Pandey",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "R. Pandey"
+        }, {
+            "State": "FL",
+            "First Name": "Syed",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "Pasha",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Wearable Nanosensors",
+            "Name": "Syed Khalid Pasha"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Paskova",
+            "Thrust": "",
+            "Name": "T Paskova"
+        }, {
+            "First Name": "David",
+            "Latitude": 35.908748626708984,
+            "Institution": "University of North Carolina-Chapel Hill",
+            "City": "Chapel Hill",
+            "Longitude": -79.03009796142578,
+            "County": "Orange Co.",
+            "Name": "D. Peden",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Peden",
+            "Thrust": "System Testbeds"
+        }, {
+            "First Name": "Christopher",
+            "Institution": "Penn State University",
+            "Last Name": "Rahn",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Rahn, Christopher D"
+        }, {
+            "First Name": "Ramakrishnan",
+            "Institution": "Penn State University",
+            "Last Name": "Rajagopalan",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Ramakrishnan Rajagopalan"
+        }, {
+            "First Name": "Bijesh",
+            "Institution": "Penn State University",
+            "Last Name": "Rajamohanan",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "Bijesh Rajamohanan"
+        }, {
+            "First Name": "Clive",
+            "Institution": "Penn State University",
+            "Last Name": "Randall",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Clive A. Randall"
+        }, {
+            "First Name": "Shad",
+            "Latitude": 40.765480041503906,
+            "Institution": "University of Utah",
+            "City": "Salt Lake City",
+            "Longitude": -111.84990692138672,
+            "County": "Salt Lake Co.",
+            "Name": "S Roundy",
+            "State": "UT",
+            "Country": "United States",
+            "Last Name": "Roundy",
+            "Thrust": ""
+        }, {
+            "First Name": "David",
+            "Institution": "",
+            "Last Name": "Saint John",
+            "Thrust": "",
+            "Name": "David B. Saint John"
+        }, {
+            "First Name": "John",
+            "Institution": "",
+            "Last Name": "Sampson",
+            "Thrust": "",
+            "Name": "Sampson, John"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Schwartz",
+            "Thrust": "",
+            "Name": "J Schwartz"
+        }, {
+            "State": "FL",
+            "First Name": "Aparajita",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International University",
+            "Last Name": "Singh",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Wearable Nanosensors",
+            "Name": "Singh, Aparajita"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Slomski",
+            "Thrust": "",
+            "Name": "M Slomski"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Stemmer",
+            "Thrust": "",
+            "Name": "S. Stemmer"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Straka",
+            "Thrust": "",
+            "Name": "W Straka"
+        }, {
+            "First Name": "Liqin",
+            "Institution": "",
+            "Last Name": "Su",
+            "Thrust": "",
+            "Name": "Liqin Su"
+        }, {
+            "First Name": "Francisco",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Francisco Suarez",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Suarez",
+            "Thrust": "Energy Harvesting and Storage"
+        }, {
+            "First Name": "Kaige",
+            "Institution": "Penn State University",
+            "Last Name": "Sun",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Kaige G. Sun"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Swaminathan",
+            "Thrust": "",
+            "Name": "K. Swaminathan"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Trivedi",
+            "Thrust": "",
+            "Name": "A. R. Trivedi"
+        }, {
+            "First Name": "Susan",
+            "Institution": "Penn State University",
+            "Last Name": "Trolier-McKinstry",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Trolier-mckinstry, Susan"
+        }, {
+            "State": "FL",
+            "First Name": "Abhay",
+            "Country": "United States",
+            "Latitude": 25.76103973388672,
+            "Institution": "Florida International Univesity",
+            "Last Name": "Vasudev",
+            "Longitude": -80.37641906738281,
+            "County": "Miami-Dade Co.",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "Abhay Vasudev"
+        }, {
+            "First Name": "Robert",
+            "Institution": "",
+            "Last Name": "Wallace",
+            "Thrust": "",
+            "Name": "Robert M. Wallace"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Wang",
+            "Thrust": "",
+            "Name": "K. Wang"
+        }, {
+            "First Name": "Yan",
+            "Institution": "",
+            "Last Name": "Wang",
+            "Thrust": "",
+            "Name": "Wang, Yan"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Werner",
+            "Thrust": "",
+            "Name": "P. L. Werner"
+        }, {
+            "First Name": "Douglas",
+            "Institution": "Penn State University",
+            "Last Name": "Werner",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "D. H. Werner"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "White",
+            "Thrust": "",
+            "Name": "M White"
+        }, {
+            "First Name": "Yuan",
+            "Institution": "",
+            "Last Name": "Xie",
+            "Thrust": "",
+            "Name": "Xie, Yuan"
+        }, {
+            "First Name": "Tiancheng",
+            "Latitude": 40.765480041503906,
+            "Institution": "University of Utah",
+            "City": "Salt Lake City",
+            "Longitude": -111.84990692138672,
+            "County": "Salt Lake Co.",
+            "Name": "T Xue",
+            "State": "UT",
+            "Country": "United States",
+            "Last Name": "Xue",
+            "Thrust": "Energy Harvesting and Storage"
+        }, {
+            "First Name": "Feysel",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "F. Y. Yamaner",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Yamaner",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "Shanshan",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Shanshan Yao",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Yao",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "Yanqi",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Yanqi Ye",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Ye",
+            "Thrust": ""
+        }, {
+            "First Name": "Hong Goo",
+            "Institution": "Penn State University",
+            "Last Name": "Yeo",
+            "Thrust": "Energy Harvesting and Storage",
+            "Name": "Yeo, Hong Goo"
+        }, {
+            "First Name": "Murat",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "M. A. Yokus",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Yokus",
+            "Thrust": "System Testbeds"
+        }, {
+            "First Name": "Yifei",
+            "Institution": "",
+            "Last Name": "Yu",
+            "Thrust": "",
+            "Name": "Yifei Yu"
+        }, {
+            "First Name": "Yiling",
+            "Institution": "",
+            "Last Name": "Yu",
+            "Thrust": "",
+            "Name": "Yiling Yu"
+        }, {
+            "First Name": "Jicheng",
+            "Institution": "",
+            "Last Name": "Yu",
+            "Thrust": "",
+            "Name": "Jicheng Yu"
+        }, {
+            "First Name": "Taiwei",
+            "Institution": "Penn State University",
+            "Last Name": "Yue",
+            "Thrust": "Low-Power Nanoelectronics",
+            "Name": "T. Yue"
+        }, {
+            "First Name": "Yong",
+            "Institution": "",
+            "Last Name": "Zhang",
+            "Thrust": "",
+            "Name": "Yong Zhang"
+        }, {
+            "First Name": "Xiao",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Xiao Zhang",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Zhang",
+            "Thrust": "Wearable Nanosensors"
+        }, {
+            "First Name": "",
+            "Institution": "",
+            "Last Name": "Zheng",
+            "Thrust": "",
+            "Name": "Y. Zheng"
+        }, {
+            "First Name": "Dmitry",
+            "Institution": "",
+            "Last Name": "Zhernokletov",
+            "Thrust": "",
+            "Name": "Dmitry Zhernokletov"
+        }, {
+            "First Name": "Yong",
+            "Latitude": 35.78676986694336,
+            "Institution": "North Carolina State University",
+            "City": "Raleigh",
+            "Longitude": -78.66439056396484,
+            "County": "Wake Co.",
+            "Name": "Yong Zhu",
+            "State": "NC",
+            "Country": "United States",
+            "Last Name": "Zhu",
+            "Thrust": "Wearable Nanosensors"
+        }]
+    },
+    "topology": "table"
+}

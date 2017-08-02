@@ -1,2 +1,0 @@
-events.prosym = function(ntwrk) {
-}

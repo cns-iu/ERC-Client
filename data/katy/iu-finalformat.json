@@ -1,0 +1,851 @@
+{
+    "records": {
+        "schema": [{
+            "name": "author_ids",
+            "type": "string"
+        }, {
+            "name": "title",
+            "type": "string"
+        }, {
+            "name": "journal",
+            "type": "string"
+        }, {
+            "name": "year",
+            "type": "numeric"
+        }, {
+            "name": "url",
+            "type": "string"
+        }, {
+            "name": "citation_count",
+            "type": "numeric"
+        }],
+        "data": [{
+            "author_ids": [
+                "cfeee0dea9121e3f0191952629028ed5",
+                "f3d377132169e6965dcbd77239ae4ecb",
+                "81b66fdc80446107595807ee3257cc09",
+                "a209cd7eebfe64ea42c4470f7fd19f49"
+            ],
+            "title": "Research Discovery through Linked Open Data",
+            "year": null,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "e70f86c2b08f055b0acdf9b36df2ab3b",
+                "6f5c17a4ad2ed6312a3458aba63c9fab",
+                "a61c3f9911b67751851428443b78ff99",
+                "dfc69683db52e720c8c366297584de21"
+            ],
+            "title": "Time-aware visualization of document collections",
+            "year": null,
+            "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84863580202&partnerID=40&md5=78724855f5044b5127a8c91636fd5d8d",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "b0da1fdff155542bfa72e6e224309dbf"
+            ],
+            "title": "Plug-and-Play Macroscopes",
+            "journal": "Communications of the Acm",
+            "year": 2011,
+            "url": "<Go to ISI>://WOS:000289938200025",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "e04fa2cbe343dc97233658b47659046e",
+                "3e2b1055a9abfb55b984849d1f9be185",
+                "45caebe9efe411acce49cc656788fd9b",
+                "4ad9f20f42e2605988f31a145ccb3c71",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "An efficient system to fund science: From proposal review to peer-to-peer distributions",
+            "journal": "Scientometrics",
+            "year": 2016,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "9537373b32efa3c8e258f854ab590d6c",
+                "e5608c5fd007553e3ad3aa478132f41b",
+                "0c821f675f132d790b3f25e79da739a7",
+                "c2eaa4c670cd4c1c537b2a2ae4fbeb5d",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "From funding agencies to scientific agency",
+            "journal": "Embo Reports",
+            "year": 2014,
+            "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3989857/pdf/embr0015-0131.pdf",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "9537373b32efa3c8e258f854ab590d6c",
+                "e5608c5fd007553e3ad3aa478132f41b",
+                "0c821f675f132d790b3f25e79da739a7",
+                "c2eaa4c670cd4c1c537b2a2ae4fbeb5d",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Response: ``Why we still need grant peer review''",
+            "journal": "Embo Reports",
+            "year": 2014,
+            "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4210098/pdf/embr0015-0467.pdf",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "e04fa2cbe343dc97233658b47659046e",
+                "3e2b1055a9abfb55b984849d1f9be185",
+                "45caebe9efe411acce49cc656788fd9b",
+                "4ad9f20f42e2605988f31a145ccb3c71",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "An efficient system to fund science: from proposal review to peer-to-peer distributions",
+            "journal": "Scientometrics",
+            "year": 2016,
+            "url": "http://dx.doi.org/10.1007/s11192-016-2110-3",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Visual Strategies: A Practical Guide to Graphics for Scientists and Engineers",
+            "journal": "Nature",
+            "year": 2012,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "Picturing Science",
+            "journal": "Nature",
+            "year": 2012,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "81b66fdc80446107595807ee3257cc09",
+                "adfa0cc2c47adc92dff13e87defb31c4",
+                "594275eee071d14b778771ec2805bc71",
+                "01863ba2dfd6f415e5308a9daba84ff1"
+            ],
+            "title": "Investigating Aspects of Data Visualization Literacy Using 20 Information Visualizations and 273 Science Museum Visitors",
+            "journal": "Information Visualization",
+            "year": 2015,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "Data-Driven Science Policy",
+            "journal": "Issues in Science and Technology",
+            "year": 2016,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "81b66fdc80446107595807ee3257cc09",
+                "c72794c2561097044df76b8ea409e355",
+                "b4648c1778bc9c06ec213ce15dfe2491",
+                "69b668ecfd9e39ffead07a0c5a4da931"
+            ],
+            "title": "Simulating the Processes of Science, Technology, and Innovation",
+            "journal": "Scientometrics",
+            "year": 2016,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "8998cdf96cbba52d8aadc7c471eb106b",
+                "9b083036405074e0cdc75f7d1d603495",
+                "f0430316502eda28f8d28ab8c104ea74",
+                "7317a14aac763e33fba5e02001d97fe9"
+            ],
+            "title": "Modeling science: studying the structure and dynamics of science",
+            "journal": "Scientometrics",
+            "year": 2011,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "8998cdf96cbba52d8aadc7c471eb106b",
+                "3801978cf323bc3ea56eecafe6d77e03",
+                "9d5b0e7d1e91d1b4e8938fb37cc2dbb6",
+                "42a7bd979be5b85b786208adb4aff1b4",
+                "8f5be6a4790e3d2dd4c0a50211f4ffe5",
+                "2ac43aa43bf473f9a9c09b4b608619d3",
+                "86d041990b8e8bba24ef9a7b7bfe7f26",
+                "16c2c0336df630b832fec6939c680f1f"
+            ],
+            "title": "Design and Update of a Classification System: The UCSD Map of Science",
+            "journal": "Plos One",
+            "year": 2012,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "16c2c0336df630b832fec6939c680f1f",
+                "0ee099107dc8c1ee2e06666b965601ef",
+                "108e0a7644d56e256367e679acbfdc1b",
+                "3801978cf323bc3ea56eecafe6d77e03",
+                "9d5b0e7d1e91d1b4e8938fb37cc2dbb6",
+                "8f5be6a4790e3d2dd4c0a50211f4ffe5",
+                "e0e9a403a219a49d79b76b11b5add814",
+                "4dedb491d3b7c764ca91f2d98f710bda",
+                "b74df323e3939b563635a2cba7a7afba",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Clustering More than Two Million Biomedical Publications: Comparing the Accuracies of Nine Text-Based Similarity Approaches",
+            "journal": "Plos One",
+            "year": 2011,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "992d52e3f29eaab0e32299f8adbea68d",
+                "13e44c412de7d6b56cb62e7a530eb3b6",
+                "18ed10aaf714602cff3dc28c8b078f3b",
+                "12c81b241be5c95cebf52c017a6d48d1",
+                "9c7f6d64d67329fd04cc4acc2c54eb29",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "Topical, Geospatial, and Temporal Diffusion of the 2015 North American Menopause Society Position Statement on Non-hormonal Management of Vasomotor Symptoms",
+            "journal": "Menopause",
+            "year": 2016,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "a1a8887793acfc199182a649e905daab",
+                "8998cdf96cbba52d8aadc7c471eb106b",
+                "0b527ad35a7983fa5c9abdf31825c3cb"
+            ],
+            "title": "Evolving collaboration networks in Scientometrics in 1978-2010: a micro-macro analysis",
+            "journal": "Scientometrics",
+            "year": 2013,
+            "url": "http://download.springer.com/static/pdf/789/art%253A10.1007%252Fs11192-012-0895-2.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs11192-012-0895-2&token2=exp=1456852755~acl=%2Fstatic%2Fpdf%2F789%2Fart%25253A10.1007%25252Fs11192-012-0895-2.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs11192-012-0895-2*~hmac=7cbb789fd6a9fe3fd4b850711d25fa5b38a5c3413ab9a2fc0b0f9807d3d42f1b",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "335715f582b05eb060b505ff6c4c4a74",
+                "93d5a18ad45f545326d1408ddb61697f",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "MOOC Visual Analytics: Empowering Teachers, Students, Researchers, and Developers of Massively Open Online Courses",
+            "journal": "Journal Of The American Society For Information Science And Technology",
+            "year": 2016,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "335715f582b05eb060b505ff6c4c4a74",
+                "c57248bca141e0abb9d5ccd3b4ab5e95",
+                "c36093302df34da652a00f99eaf97f93",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "Analysis of Network Clustering Algorithms and Cluster Quality Metrics at Scale",
+            "journal": "PLoS ONE",
+            "year": 2016,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "744235191d8380f3dd98f64c2728a897",
+                "d5b11afecabdf257af9b7f0445a6a177",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Self-portraits of the brain: cognitive science, data visualization, and communicating brain structure and function",
+            "journal": "Trends in Cognitive Sciences",
+            "year": 2015,
+            "url": "<Go to ISI>://WOS:000359499400010",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "e2ac255ade95b9268571eb5baf345974",
+                "b505af0a7b8bce9ac3c8ac586b002f61",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Mixed-indicators model for identifying emerging research areas",
+            "journal": "Scientometrics",
+            "year": 2011,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "0b427e2d71c89c6d9bfa594edcb6fbf1",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "Comparing the Consumption of CPU Hours with Scientific Output for the Extreme Science and Engineering Discovery Environment (XSEDE)",
+            "journal": "PLoS ONE",
+            "year": 2016,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "c4f6e4ba3ad26620cc19e470154644a4",
+                "fe9dfbfa82495ca6c0e5970ac95873b9",
+                "6f5c17a4ad2ed6312a3458aba63c9fab"
+            ],
+            "title": "Long-distance interdisciplinarity leads to higher scientific impact",
+            "journal": "PLoS ONE",
+            "year": 2015,
+            "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84926309793&partnerID=40&md5=59542998e04ba99133ef676608eafc89",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "93d5a18ad45f545326d1408ddb61697f",
+                "f5136073914d53b3099a6fe3bd6ca5c4",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "An Automated System for Tracking the Growth of Expert Profiling Systems",
+            "year": null,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "93d5a18ad45f545326d1408ddb61697f",
+                "4059c857439747be5c071cf6957ae7a1",
+                "b0da1fdff155542bfa72e6e224309dbf"
+            ],
+            "title": "Open data and open code for big science of science studies",
+            "journal": "Scientometrics",
+            "year": 2014,
+            "url": "<Go to ISI>://WOS:000343609900038",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "b373ed48287369b6c2a3807b1525635d",
+                "93d5a18ad45f545326d1408ddb61697f",
+                "ea5d55352dd3c4b710bc2ff33cfa801c",
+                "81b66fdc80446107595807ee3257cc09"
+            ],
+            "title": "Mapping the Intersection of Science & Philosophy",
+            "year": null,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "df2e7d8bde0afdee992922a26c65eebb",
+                "2f0a7a79532cad44c48e0aade9aee503",
+                "07de4f8c9719f4cc9659eb76b88421a3",
+                "c8d1da8ffe2665ac7301b14a64269f2a",
+                "69b668ecfd9e39ffead07a0c5a4da931"
+            ],
+            "title": "'Seed plus expand': a general methodology for detecting publication oeuvres of individual researchers",
+            "journal": "Scientometrics",
+            "year": 2014,
+            "url": "<Go to ISI>://WOS:000343609900030",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "230412ffdd194ddac551180c35f7d08a",
+                "3d5c7070ae3d0af5ea6c221c547341b0",
+                "250b6b53a0f3ca2cbb47d47af0a8e754",
+                "6f5c17a4ad2ed6312a3458aba63c9fab"
+            ],
+            "title": "Map-based Visualizations Increase Recall Accuracy of Data",
+            "journal": "Computer Graphics Forum",
+            "year": 2015,
+            "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84937958558&partnerID=40&md5=51da5de31c30b696107a1eaeda2499c6",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "239a57d0121a321d5b0d30887505047f",
+                "b42bd185b48237cc992ad5dd2907c2a7",
+                "c57248bca141e0abb9d5ccd3b4ab5e95",
+                "b0da1fdff155542bfa72e6e224309dbf"
+            ],
+            "title": "Node, Node-Link, and Node-Link-Group Diagrams: An Evaluation",
+            "journal": "Ieee Transactions on Visualization and Computer Graphics",
+            "year": 2014,
+            "url": "<Go to ISI>://WOS:000344991700068",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "4dedb491d3b7c764ca91f2d98f710bda",
+                "8f5be6a4790e3d2dd4c0a50211f4ffe5",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Visualizing the Topical Structure of the Medical Sciences: A Self-Organizing Map Approach",
+            "journal": "Plos One",
+            "year": 2013,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "b6a3c1f09f592d933bab5402047c4823",
+                "0d7718e033e78fc38e2b44d42b7503e8",
+                "8998cdf96cbba52d8aadc7c471eb106b",
+                "7317a14aac763e33fba5e02001d97fe9",
+                "0efbfb7e7afb1dc2ce5f533e51a9096f",
+                "d9b80cc41279cacbe6503442702a2cf0",
+                "210b3fdeae358c878527e9d08e0d8c9a",
+                "1b59582b6c05ac4e57aa8b90dd9667f9",
+                "89ba023086e37a345839e0c6a0d272eb",
+                "799d978330dff449f8244947929a4518",
+                "6ed756dc3a4c7ccbbdc85810cad7ac71",
+                "3231e02aebf641a5dd3d661a2659d4ae",
+                "675e5ac402e4467c244905df3894db6b"
+            ],
+            "title": "Theoretical and technological building blocks for an innovation accelerator",
+            "journal": "European Physical Journal-Special Topics",
+            "year": 2012,
+            "url": "http://download.springer.com/static/pdf/700/art%253A10.1140%252Fepjst%252Fe2012-01692-1.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1140%2Fepjst%2Fe2012-01692-1&token2=exp=1456852759~acl=%2Fstatic%2Fpdf%2F700%2Fart%25253A10.1140%25252Fepjst%25252Fe2012-01692-1.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1140%252Fepjst%252Fe2012-01692-1*~hmac=58fbbb8c4993c513dbb75dc70e622f54f0b10a3639e5e1274415262447b031ea",
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "23ba6002aa3583a61db26e957b1fbe43",
+                "ba77ff9f8cb4a1234caf0dd519411c82",
+                "3e4d3171098b517ec1bb5aee884d74d3",
+                "89a114bef2a7ddb400826f3683ca2bf8",
+                "16c2c0336df630b832fec6939c680f1f",
+                "5e0efa7834bdab95b891971869c0a626",
+                "723699f6e31e3e2a15524d30d219f7d3",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Approaches to understanding and measuring interdisciplinary scientific research (IDR): A review of the literature",
+            "journal": "Journal of Informetrics",
+            "year": 2011,
+            "citation_count": null
+        }, {
+            "author_ids": [
+                "42a7bd979be5b85b786208adb4aff1b4",
+                "8998cdf96cbba52d8aadc7c471eb106b"
+            ],
+            "title": "Mapping interactions within the evolving science of science and innovation policy community",
+            "journal": "Scientometrics",
+            "year": 2012,
+            "url": "http://download.springer.com/static/pdf/578/art%253A10.1007%252Fs11192-011-0574-8.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs11192-011-0574-8&token2=exp=1456852764~acl=%2Fstatic%2Fpdf%2F578%2Fart%25253A10.1007%25252Fs11192-011-0574-8.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs11192-011-0574-8*~hmac=5d9ae6c5c271f7f0dd3f1a9a64960b48f3cd3b970d76becaaa8599a4aac64f30",
+            "citation_count": null
+        }]
+    },
+    "authors": {
+        "schema": [{
+            "name": "id",
+            "type": "string"
+        }, {
+            "name": "author",
+            "type": "string"
+        }, {
+            "name": "affiliation",
+            "type": "numeric"
+        }, {
+            "name": "lat",
+            "type": "numeric"
+        }, {
+            "name": "lng",
+            "type": "numeric"
+        }, {
+            "name": "role",
+            "type": "string"
+        }, {
+            "name": "gender",
+            "type": "string"
+        }, {
+            "name": "state",
+            "type": "string"
+        }],
+        "data": [{
+            "id": "cfeee0dea9121e3f0191952629028ed5",
+            "author": "Albert, Paul",
+            "affiliation": null,
+            "lat": 40.7645239,
+            "lng": -73.96243270000001,
+            "role": null,
+            "gender": null,
+            "state": "New York",
+            "zip": 10065
+        }, {
+            "id": "f3d377132169e6965dcbd77239ae4ecb",
+            "author": "Holmes, Kristi",
+            "affiliation": null,
+            "lat": 38.6212468,
+            "lng": -90.2526163,
+            "role": null,
+            "gender": null,
+            "state": "Missouri",
+            "zip": 63110
+        }, {
+            "id": "81b66fdc80446107595807ee3257cc09",
+            "author": "B{\\backslash}{\\~A}{\\backslash}{\\textparagraph}rner, Katy",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "a209cd7eebfe64ea42c4470f7fd19f49",
+            "author": "Conlon, Mike",
+            "affiliation": null,
+            "lat": 29.6516344,
+            "lng": -82.32482619999999,
+            "role": null,
+            "gender": null,
+            "state": "Florida",
+            "zip": 32627
+        }, {
+            "id": "6f5c17a4ad2ed6312a3458aba63c9fab",
+            "author": "B{\\backslash}{\\~A}{\\backslash}{\\textparagraph}rner, K.",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "b0da1fdff155542bfa72e6e224309dbf",
+            "author": "Boerner, Katy",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "e04fa2cbe343dc97233658b47659046e",
+            "author": "Bollen, Johan",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "3e2b1055a9abfb55b984849d1f9be185",
+            "author": "Crandall, David",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "45caebe9efe411acce49cc656788fd9b",
+            "author": "Junk, Damion",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "4ad9f20f42e2605988f31a145ccb3c71",
+            "author": "Ding, Ying",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "9537373b32efa3c8e258f854ab590d6c",
+            "author": "Bollen, J.",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "e5608c5fd007553e3ad3aa478132f41b",
+            "author": "Crandall, D.",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "0c821f675f132d790b3f25e79da739a7",
+            "author": "Junk, D.",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "c2eaa4c670cd4c1c537b2a2ae4fbeb5d",
+            "author": "Ding, Y.",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "8998cdf96cbba52d8aadc7c471eb106b",
+            "author": "Borner, K.",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "adfa0cc2c47adc92dff13e87defb31c4",
+            "author": "Heimlich, Joe E.",
+            "affiliation": null,
+            "lat": 39.9602601,
+            "lng": -83.0092803,
+            "role": null,
+            "gender": null,
+            "state": "Ohio",
+            "zip": 43215
+        }, {
+            "id": "594275eee071d14b778771ec2805bc71",
+            "author": "Balliet, Russell",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "01863ba2dfd6f415e5308a9daba84ff1",
+            "author": "Maltese, Adam V.",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "b4648c1778bc9c06ec213ce15dfe2491",
+            "author": "Milojevic, Stasa",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "16c2c0336df630b832fec6939c680f1f",
+            "author": "Boyack, K. W.",
+            "affiliation": null,
+            "lat": 35.0853336,
+            "lng": -106.6055534,
+            "role": null,
+            "gender": null,
+            "state": "New Mexico",
+            "zip": 87106
+        }, {
+            "id": "992d52e3f29eaab0e32299f8adbea68d",
+            "author": "Carpenter, Janet S.",
+            "affiliation": null,
+            "lat": 39.7794767,
+            "lng": -86.1700894,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 46202
+        }, {
+            "id": "13e44c412de7d6b56cb62e7a530eb3b6",
+            "author": "Laine, Tei",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "18ed10aaf714602cff3dc28c8b078f3b",
+            "author": "Harrison, Blake",
+            "affiliation": null,
+            "lat": 39.9990626,
+            "lng": -83.01733860000002,
+            "role": null,
+            "gender": null,
+            "state": "Ohio",
+            "zip": 43210
+        }, {
+            "id": "9c7f6d64d67329fd04cc4acc2c54eb29",
+            "author": "Hoteling, Nathan",
+            "affiliation": null,
+            "lat": 39.0023604,
+            "lng": -77.097455,
+            "role": null,
+            "gender": null,
+            "state": "Maryland",
+            "zip": 20814
+        }, {
+            "id": "335715f582b05eb060b505ff6c4c4a74",
+            "author": "Emmons, Scott",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "93d5a18ad45f545326d1408ddb61697f",
+            "author": "Light, Robert",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "c57248bca141e0abb9d5ccd3b4ab5e95",
+            "author": "Kobourov, Stephen",
+            "affiliation": null,
+            "lat": 32.2332841,
+            "lng": -110.9488008,
+            "role": null,
+            "gender": null,
+            "state": "Arizona",
+            "zip": 85719
+        }, {
+            "id": "c36093302df34da652a00f99eaf97f93",
+            "author": "Gallant, Michael",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "0b427e2d71c89c6d9bfa594edcb6fbf1",
+            "author": "Knepper, Rich",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "b373ed48287369b6c2a3807b1525635d",
+            "author": "Murdock, Jaimie",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "ea5d55352dd3c4b710bc2ff33cfa801c",
+            "author": "Allen, Colin",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "c8d1da8ffe2665ac7301b14a64269f2a",
+            "author": "Borner, Katy",
+            "affiliation": null,
+            "lat": 39.1714266,
+            "lng": -86.51860219999999,
+            "role": null,
+            "gender": null,
+            "state": "Indiana",
+            "zip": 47405
+        }, {
+            "id": "230412ffdd194ddac551180c35f7d08a",
+            "author": "Saket, B.",
+            "affiliation": null,
+            "lat": 32.2332841,
+            "lng": -110.9488008,
+            "role": null,
+            "gender": null,
+            "state": "Arizona",
+            "zip": 85719
+        }, {
+            "id": "3d5c7070ae3d0af5ea6c221c547341b0",
+            "author": "Scheidegger, C.",
+            "affiliation": null,
+            "lat": 32.2332841,
+            "lng": -110.9488008,
+            "role": null,
+            "gender": null,
+            "state": "Arizona",
+            "zip": 85719
+        }, {
+            "id": "250b6b53a0f3ca2cbb47d47af0a8e754",
+            "author": "Kobourov, S. G.",
+            "affiliation": null,
+            "lat": 32.2332841,
+            "lng": -110.9488008,
+            "role": null,
+            "gender": null,
+            "state": "Arizona",
+            "zip": 85719
+        }, {
+            "id": "239a57d0121a321d5b0d30887505047f",
+            "author": "Saket, Bahador",
+            "affiliation": null,
+            "lat": 32.2332841,
+            "lng": -110.9488008,
+            "role": null,
+            "gender": null,
+            "state": "Arizona",
+            "zip": 85719
+        }, {
+            "id": "b42bd185b48237cc992ad5dd2907c2a7",
+            "author": "Simonetto, Paolo",
+            "affiliation": null,
+            "lat": 32.2332841,
+            "lng": -110.9488008,
+            "role": null,
+            "gender": null,
+            "state": "Arizona",
+            "zip": 85719
+        }, {
+            "id": "23ba6002aa3583a61db26e957b1fbe43",
+            "author": "Wagner, C. S.",
+            "affiliation": null,
+            "lat": 38.8922092,
+            "lng": -77.070837,
+            "role": null,
+            "gender": null,
+            "state": "Virginia",
+            "zip": 22209
+        }, {
+            "id": "ba77ff9f8cb4a1234caf0dd519411c82",
+            "author": "Roessner, J. D.",
+            "affiliation": null,
+            "lat": 38.8922092,
+            "lng": -77.070837,
+            "role": null,
+            "gender": null,
+            "state": "Virginia",
+            "zip": 22209
+        }, {
+            "id": "3e4d3171098b517ec1bb5aee884d74d3",
+            "author": "Bobb, K.",
+            "affiliation": null,
+            "lat": 38.8922092,
+            "lng": -77.070837,
+            "role": null,
+            "gender": null,
+            "state": "Virginia",
+            "zip": 22209
+        }, {
+            "id": "89a114bef2a7ddb400826f3683ca2bf8",
+            "author": "Klein, J. T.",
+            "affiliation": null,
+            "lat": 42.3664506,
+            "lng": -83.0737195,
+            "role": null,
+            "gender": null,
+            "state": "Michigan",
+            "zip": 48202
+        }, {
+            "id": "5e0efa7834bdab95b891971869c0a626",
+            "author": "Keyton, J.",
+            "affiliation": null,
+            "lat": 35.7795897,
+            "lng": -78.6381787,
+            "role": null,
+            "gender": null,
+            "state": "North Carolina",
+            "zip": 27601
+        }]
+    }
+}

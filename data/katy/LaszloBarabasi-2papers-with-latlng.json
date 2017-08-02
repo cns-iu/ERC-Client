@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "schema": [{
+            "name": "label",
+            "type": "string"
+        }, {
+            "name": "number_of_authored_works",
+            "type": "numeric"
+        }, {
+            "name": "id",
+            "type": "numeric"
+        }, {
+            "name": "address",
+            "type": "string"
+        }, {
+            "name": "city",
+            "type": "string"
+        }, {
+            "name": "state",
+            "type": "string"
+        }, {
+            "name": "lat",
+            "type": "numeric"
+        }, {
+            "name": "lng",
+            "type": "numeric"
+        }],
+        "data": [{
+            "number_of_authored_works": 1,
+            "id": 0,
+            "label": "H Jeong",
+            "address": "IUB, 1320 E. Tenth Street, Bloomington, IN 47405",
+            "city": "Bloomington",
+            "state": "IN",
+            "lat": 39.171030,
+            "lng": -86.516899
+        }, {
+            "number_of_authored_works": 3,
+            "id": 1,
+            "label": "Al Barabási",
+            "address": "U Notre Dame, Notre Dame, IN 46556",
+            "city": "Notre Dame",
+            "state": "IN",            
+            "lat": 41.704333,
+            "lng": -86.241254
+        }, {
+            "number_of_authored_works": 1,
+            "id": 2,
+            "label": "R Albert",
+            "address": "CMU, 5000 Forbes Ave, Pittsburgh, PA 15213",
+            "city": "Pittsburgh",
+            "state": "PA",            
+            "lat": 40.443466,
+            "lng": -79.943457
+        }, {
+            "number_of_authored_works": 2,
+            "id": 3,
+            "label": "I Daruka",
+            "address": "Boston U, Boston, MA 02215",
+            "city": "Boston",
+            "state": "MA",            
+            "lat": 42.347618,
+            "lng": -71.100288
+        }]
+    },
+    "topology": "graph",
+    "edges": {
+        "schema": [{
+            "name": "source",
+            "type": "numeric"
+        }, {
+            "name": "target",
+            "type": "numeric"
+        }, {
+            "name": "number_of_coauthored_works",
+            "type": "numeric"
+        }, {
+            "name": "weight",
+            "type": "numeric"
+        }, {
+            "name": "id",
+            "type": "numeric"
+        }],
+        "data": [{
+            "weight": 1,
+            "id": 0,
+            "source": 0,
+            "number_of_coauthored_works": 1,
+            "target": 1
+        }, {
+            "weight": 1,
+            "id": 1,
+            "source": 0,
+            "number_of_coauthored_works": 1,
+            "target": 2
+        }, {
+            "weight": 1,
+            "id": 2,
+            "source": 1,
+            "number_of_coauthored_works": 1,
+            "target": 2
+        }, {
+            "weight": 2,
+            "id": 3,
+            "source": 1,
+            "number_of_coauthored_works": 2,
+            "target": 3
+        }],
+        "name": "edges",
+        "type": "undirected"
+    }
+}

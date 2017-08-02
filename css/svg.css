@@ -1,0 +1,220 @@
+.type-1 {
+    stroke: darkred !important;
+}
+.type-2 {
+    stroke: darkblue !important;
+}
+
+
+
+/*//temp axis style*/
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis .minor line {
+  stroke: #777;
+  stroke-dasharray: 2,2;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.hexagon {
+    cursor: pointer;
+}
+
+.disc-label {
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.background-clickable {
+    cursor: pointer;
+}
+
+.metric-rect {
+    fill: white;
+    stroke: black;
+    stroke-width: .25;
+}
+
+.selected {
+    opacity: 1;
+}
+
+.deselected {
+    cursor: pointer;
+    opacity: .4;
+}
+
+.highlighted {
+    opacity: .85;
+}
+
+.wvf-axis.text {
+    font: 10px open sans sans-serif;
+}
+
+.wvf-axis.path {
+    stroke-dasharray: 5, 5;
+    fill: none;
+    stroke: #666;
+    shape-rendering: crispEdges;
+}
+
+.wvf-axis.line {}
+
+
+/* ---- Node Styles ---- */
+
+.wvf-node {
+    stroke: #333333;
+    stroke-width: 1px;
+    cursor: pointer;
+    
+}
+
+.forceNetwork01 .wvf-node {
+    fill: #eaeaea;
+}
+
+.wvf-node.selected {
+    stroke-width: 4px;
+}
+
+.subd {
+    display: none;
+    cursor: default;
+    font-size: 6;
+}
+
+.subd.selected {
+    display: block;
+}
+
+.subd.deselected {
+    display: none;
+}
+
+.wvf-node.deselected {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.wvf-node.highlighted {
+    opacity: .7;
+}
+
+
+/* ---- Labels ----- */
+
+.wvf-label {
+    font-size: 15px;
+    stroke-width: .1;
+    stroke: #FFF;
+    /*font-weight: 800;*/
+    fill: black;
+}
+
+.wvf-label:hover {
+    cursor: pointer;
+}
+
+.wvf-label.selected {}
+
+.wvf-label.deselected {
+    opacity: .2;
+}
+
+.wvf-label.focused {}
+
+.wvf-label-mid {
+    font-size: 13px;
+}
+
+.wvf-label-mid:hover {
+    cursor: pointer;
+    stroke: black;
+    stroke-width: .5px;
+    color: white;
+}
+
+.wvf-label-mid.selected {}
+
+.wvf-label-mid.deselected {
+    opacity: .2;
+}
+
+.wvf-label-mid.focused {}
+
+
+/* ---- Edge Styles ---- */
+
+.wvf-edge {
+    stroke: #9b9b9b !important;
+    /*cursor: pointer;*/
+    stroke-width: 1;
+    fill: none;
+}
+
+.wvf-edge.selected {
+    opacity: 1;
+}
+
+.wvf-edge.deselected {
+    opacity: .2;
+}
+
+.wvf-edge.focused {}
+
+
+/* --- Rectangle Styles ---- */
+
+.wvf-rect {
+    fill: #eaeaea;
+}
+
+.wvf-rect.selected {
+    stroke-width: 3px;
+}
+.wvf-rect.deselected {}
+
+.wvf-rect.focused {}
+
+
+/* --- Path Styles  ----- */
+
+.wvf-path.selected {}
+
+.wvf-path.deselected {}
+
+.wvf-path.focused {}
+
+
+/* --- Area Styles  ----- */
+.wvf-area {
+    fill:#222;
+    stroke:#3b3b3b;
+}
+
+.wvf-area.selected {}
+
+.wvf-area.deselected {}
+
+.wvf-area.focused {}
+
+
+/* --- Shape Styles  ----- */
+
+.wvf-shape.selected {}
+
+.wvf-shape.deselected {}
+
+.wvf-shape.focused {}

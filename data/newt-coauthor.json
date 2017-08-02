@@ -1,0 +1,124 @@
+{
+    "nodes": {
+        "schema": [{
+            "name": "label",
+            "type": "string"
+        }, {
+            "name": "id",
+            "type": "numeric"
+        }],
+        "data": [{
+            "id": 0,
+            "label": "Elimelech, M."
+        }, {
+            "id": 1,
+            "label": "Abudalo, R. A."
+        }, {
+            "id": 2,
+            "label": "Bogatsu, Y. G."
+        }, {
+            "id": 3,
+            "label": "Ryan, J. N."
+        }, {
+            "id": 4,
+            "label": "Harvey, R. W."
+        }, {
+            "id": 5,
+            "label": "Metge, D. W."
+        }]
+    },
+    "topology": "graph",
+    "edges": {
+        "schema": [{
+            "name": "source",
+            "type": "numeric"
+        }, {
+            "name": "target",
+            "type": "numeric"
+        }, {
+            "name": "weight",
+            "type": "numeric"
+        }, {
+            "name": "id",
+            "type": "numeric"
+        }],
+        "data": [{
+            "weight": 1,
+            "id": 0,
+            "source": 0,
+            "target": 1
+        }, {
+            "weight": 1,
+            "id": 1,
+            "source": 0,
+            "target": 2
+        }, {
+            "weight": 1,
+            "id": 2,
+            "source": 0,
+            "target": 3
+        }, {
+            "weight": 1,
+            "id": 3,
+            "source": 0,
+            "target": 4
+        }, {
+            "weight": 1,
+            "id": 4,
+            "source": 0,
+            "target": 5
+        }, {
+            "weight": 1,
+            "id": 5,
+            "source": 1,
+            "target": 5
+        }, {
+            "weight": 1,
+            "id": 6,
+            "source": 2,
+            "target": 5
+        }, {
+            "weight": 1,
+            "id": 7,
+            "source": 3,
+            "target": 5
+        }, {
+            "weight": 1,
+            "id": 8,
+            "source": 4,
+            "target": 5
+        }, {
+            "weight": 1,
+            "id": 9,
+            "source": 1,
+            "target": 4
+        }, {
+            "weight": 1,
+            "id": 10,
+            "source": 2,
+            "target": 4
+        }, {
+            "weight": 1,
+            "id": 11,
+            "source": 3,
+            "target": 4
+        }, {
+            "weight": 1,
+            "id": 12,
+            "source": 1,
+            "target": 3
+        }, {
+            "weight": 1,
+            "id": 13,
+            "source": 2,
+            "target": 3
+        }, {
+            "weight": 1,
+            "id": 14,
+            "source": 1,
+            "target": 2
+        }],
+        "name": "edges",
+        "type": "undirected"
+    }
+}
