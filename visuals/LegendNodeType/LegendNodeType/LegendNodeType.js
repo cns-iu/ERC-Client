@@ -71,7 +71,7 @@ visualizationFunctions.LegendNodeType = function(element, data, opts) {
         });
 
         context.updateTypeColors = function(arr) {
-            context.getG1().selectAll("rect").style("fill", arr[4])
+            if(arr[4]){context.getG1().selectAll("rect").style("fill", arr[4])}
             context.getG2().selectAll("rect").style("fill", arr[3])
             context.getG3().selectAll("rect").style("fill", arr[2])
             context.getG4().selectAll("rect").style("fill", arr[1])

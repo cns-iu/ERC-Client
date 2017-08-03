@@ -10,11 +10,14 @@
     </head>
 
     <body id="sciMapBody">
+
+    <button type="button" id = "backgroundChange" onclick="changeBackgroundColor();">Toggle background</button>
         <div flex layout-fill layout="row" >
             <div flex layout="column">
                 <div ng-include="'partials/scimap-popup.html'"></div>
-                <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-reset-on-resize ng-data-attr="ng-cns-visual" ng-config="visuals/scimap01-config.js" ng-vis-type="MapOfScience" id="scimap01" ng-data-field="iufinal" ng-identifier="scimap01">
+                <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-reset-on-resize ng-data-attr="ng-cns-visual" ng-config="visuals/scimap01-config.js" ng-vis-type="MapOfScience" id="scimap01" ng-data-field="nanohub" ng-identifier="scimap01">
                 </div>
+
                 <div class="legend-container scimap legend">
                     <button>
                         <span>Legend</span>
@@ -60,6 +63,15 @@
         }
 
     }
+
+    function changeBackgroundColor(){
+        var current = document.body.style.background;
+ 
+        if (current == 'white' || current == '')
+            document.body.style.background = 'black';
+        if (current == 'black' ) document.body.style.background = 'white'
+    }
+
     </script>
 
     </html>

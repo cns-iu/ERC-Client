@@ -33,9 +33,9 @@ var globalDatasourceMap = {
     	url: 'data/assist-coauthor.json'
     },
     nanohub: {
-        url: 'https://dev.nanohub.org/citations/curate/download/',
+        url: 'https://nanohub.org/erc-citations/download/',
         params: {
-            hash: 'QUERYSTRING'
+            hash: 'd74d5eb2005b4384c340c2563c6a35eeb29fd7b4'
         },
         toProcess: true
     },

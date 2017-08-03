@@ -82,14 +82,27 @@ events.forceNetwork01 = function(ntwrk) {
 
                 if (authNode.idd != d.idd) authNodes.push(authNode.author);
             })
-
+            if (d1.url !=null){
             tableData.push({
                 authors: authNodes.join("; "),
                 year: d1.year,
                 title: d1.title,
                 journal: d1.journal,
-                url: d1.url
+                url: d1.url,
+                
             })
+        }
+        else{
+              tableData.push({
+                authors: authNodes.join("; "),
+                year: d1.year,
+                title: d1.title,
+                journal: d1.journal,
+                url: "#0",
+             
+            })
+        }
+    
         })
 
         $("#popup-name").text(d[configs.forceNetwork01.labels.identifier.attr])
@@ -202,8 +215,8 @@ events.forceNetwork01 = function(ntwrk) {
         var $range = $("#range");
         $range.ionRangeSlider({
             min: d3.min(orderedSizeCoding),
-            max: d3.max(orderedSizeCoding) + 1,
-            from: d3.mean(orderedSizeCoding),
+            max: d3.max(orderedSizeCoding),
+            from: 17,
             // type: 'double',
             step: 1,
             grid: false,
@@ -214,20 +227,20 @@ events.forceNetwork01 = function(ntwrk) {
 
         ntwrk.allNodes = [].concat(ntwrk.filteredData.nodes.data);
         ntwrk.allEdges = [].concat(ntwrk.filteredData.edges.data);
-        updateLabelVisibility(d3.mean(orderedSizeCoding), orderedSizeCoding);
+        updateLabelVisibility(17, orderedSizeCoding);
 
         slider = $("#range").data("ionRangeSlider");
         var sliderFormElem = $("#sliderForm");
         var sliderFormScope = angular.element(sliderFormElem).scope();
         nodeSize.setTitle("#Papers")
-        nodeSize.setNote("Based on Zoom Level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
+        nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range);
         nodeSize.updateTextFromFunc(function(d) {
             return ntwrk.Scales.nodeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
         });
 
         edgeSize.setTitle("#Co-authored Papers")
-        edgeSize.setNote("Based on Zoom Level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
+        edgeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         edgeSize.updateEdgeSize(configs.forceNetwork01.edges.styleEncoding.strokeWidth.range);
         edgeSize.updateTextFromFunc(function(d) {
             return ntwrk.Scales.edgeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
@@ -239,6 +252,7 @@ events.forceNetwork01 = function(ntwrk) {
 
         var roleColor = ["#35618f", "#bde267", "#60409b", "#3dcdc1"];
         nodeType.setTitle("Author Type")
+        
         nodeType.updateTypeColors(roleColor)
         function toTitleCase(str) {
             return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
@@ -251,18 +265,20 @@ events.forceNetwork01 = function(ntwrk) {
             case "postdoc": return roleColor[2]; break;
             case "staff": return roleColor[3]; break;
             case "student": return roleColor[4]; break;
+            default: return roleColor[0]; break;
           }
         })
 
 
         barChart01.SVG.barGroups.selectAll("rect").style("stroke", function(d, i) {
-            console.log(d);
+            
           switch (d.values.children[0].role) {
             case "other": return roleColor[0]; break;
             case "faculty": return roleColor[1]; break;
             case "postdoc": return roleColor[2]; break;
             case "staff": return roleColor[3]; break;
             case "student": return roleColor[4]; break;
+            default: return roleColor[0]; break;
           }
         })
 
@@ -279,8 +295,8 @@ events.forceNetwork01 = function(ntwrk) {
                 edgeSize.updateTextFromFunc(function(d) {
                     return ntwrk.Scales.edgeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
                 });
-                nodeSize.setNote("Based on Zoom Level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-                edgeSize.setNote("Based on Zoom Level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
+                nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
+                edgeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
             }, 10);
         });
     }

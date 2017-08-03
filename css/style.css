@@ -16,9 +16,7 @@ html,body {
 
 }
 
-#sciMapBody{
-  background:#555!important;
-}
+
 
 h3 {
 	font-size: 20px;
@@ -81,7 +79,7 @@ dl, dd, dt{
 }
 
 .irs.js-irs-0{
-  width: 255px;
+  width: 300px;
 }
 
 .irs-min,
@@ -125,10 +123,116 @@ dl, dd, dt{
   font-size: 14px !important;
 }
 
+.popup {
+    z-index: 10001;
+    background: white;
+    outline: solid;
+    outline-width: .125px;
+    outline-color: lightgrey;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 250px;
+    font-weight: 300;
+    /*  height:280px;*/
+    /*justify-content: space-between;*/
+    display: flex;
+    width: 800px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
 
+.table {
+    margin-bottom: 25px;
+    width: inherit;
+}
+
+#popup-table-container {
+    overflow: scroll;
+}
+
+#popup-table-no-records {
+    display: none;
+}
+
+#popup-table-container.default {
+    display: none;
+
+}
+thead {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #222;
+    color: #d6d9d8;
+    width: inherit;
+}
+
+tbody {
+    display: block;
+    width: inherit;
+}
+
+td {
+    padding: 5px !important;
+}
+
+thead > tr,
+tbody > tr,
+tfoot > tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+thead {
+    padding: 4px;
+}
+
+th {
+    font-weight: normal !important;
+    color: white;
+}
+
+thead,
+tfoot {
+    flex-shrink: 0;
+}
+
+th,
+tbody td {
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    text-align:left;
+}
+
+tfoot {
+    display: inline-block;
+}
+
+tfoot td {
+    width: 100%;
+    display: inline-block;
+}
+
+.table>tbody>tr:nth-child(odd)>td,
+.table>tbody>tr:nth-child(odd)>th {
+    background-color: #eaeaea;
+}
 
 
 /*Force network legends*/
+#nodes{
+  text-align: left;
+  padding: 7px 11px;
+}
+
+#edges{
+  text-align: left;
+  padding: 7px 11px;
+}
 .container h3 {
   font-weight: 400;
   font-size: 18px;
@@ -181,7 +285,7 @@ dl, dd, dt{
   display: block;
   text-align: center;
   position: fixed;
-  bottom: -190px;
+  bottom: -210px;
   left: 40%;
   transform: translate(-40%, 0);
 }
