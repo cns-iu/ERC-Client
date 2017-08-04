@@ -5,7 +5,7 @@ var visualizationFunctions = {};
 var configs = {};
 var events = {};
 var dataprep = {};
-
+var forceNetwork01,scimap01,prosym01;
 app.service('Data', ['$rootScope', '$http', function($rootScope, $http) {
     var service = {
         mapDatasource: globalDatasourceMap,

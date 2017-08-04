@@ -17,12 +17,12 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
         context.SVG.g = context.SVG.append("g")
 
         var shapeData = usShapeData;
-        context.projection = d3.geo.albersUsa()
-            .scale(context.config.dims.fixedWidth)
-            .translate([context.config.dims.fixedWidth / 2, context.config.dims.fixedHeight / 2])
+        context.projection = d3.geo.equirectangular()
+            .scale(context.config.dims.fixedWidth/4)
+            .translate([context.config.dims.fixedWidth / 2+190, context.config.dims.fixedHeight / 2])
 
         context.SVG.pathG = context.SVG.g.selectAll("path")
-            .data(topojson.feature(shapeData, shapeData.objects.states).features)
+            .data(topojson.feature(shapeData, shapeData.objects.countries).features)
             .enter()
 
         context.SVG.path = context.SVG.pathG
@@ -255,8 +255,7 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
     context.SVG = context.config.easySVG(element[0], {
         zoomable: true,
         zoomLevels: [.5, 20],
-    }).attr("transform", "translate(" + (context.config.margins.left + context.config.dims.width / 2) + "," + (context.config.margins.top + context.config.dims.height / 2) + ")")
-
+    })
 
 
 

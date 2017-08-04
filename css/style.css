@@ -137,7 +137,7 @@ dl, dd, dt{
     /*  height:280px;*/
     /*justify-content: space-between;*/
     display: flex;
-    width: 800px;
+    width: 1000px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.22);
     overflow: hidden;
 }
@@ -250,6 +250,7 @@ tfoot td {
   padding: 5px 0px 10px 2px;
 }
 
+
 .legend-item {
   background: #fefefe;
   height: 150px;
@@ -307,6 +308,23 @@ tfoot td {
   transform: translate(-40%, 0);
 }
 
+.prosym.legend.legend-container {
+  width: 300px;
+  z-index: 10000;
+  text-align: center;
+  /*height: 500px;*/
+  font-size: 18px;
+  color: #000;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: -210px;
+  left: 50%;
+  transform: translate(-40%, 0);
+}
+
 
 .legend-container button {
   display: inline-block;
@@ -354,4 +372,10 @@ tfoot td {
 }
 .legend-container button:hover {
   background-color: #d8d8d8; /* blue color */
+}
+
+#backgroundChange{
+  position:relative;
+ bottom:1090px;
+ left:130px;
 }

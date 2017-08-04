@@ -342,7 +342,7 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                 context.SVG.underlyingNodes
                     .attr("r", defaultNodeSize)
 
-                context.SVG.underlyingLabels
+                
 
                 context.SVG.recalculateMaxGlobalDomain(function(d) {
                     return d[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr]
@@ -352,6 +352,7 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                 })
             }
 
+            
             context.SVG.recalculateMaxGlobalDomain = function(func) {
                 rVals = [];
                 context.nestedData.sub_disc.forEach(function(d, i) {

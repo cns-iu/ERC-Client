@@ -11,7 +11,7 @@
 
     <body>
         <div flex layout-fill layout="row">
-            <div flex="80" layout="column">
+            <div flex="85" layout="column">
                 <div ng-include="'partials/prosym-popup.html'"></div>
                 <div flex>
                     <div ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-reset-on-resize ng-config="visuals/prosym01-config.js" ng-vis-type="D3ProportionalSymbol" id="prosym01" ng-data-field="nanohub" ng-identifier="prosym01">
@@ -23,7 +23,7 @@
                         <div class="legend-row">
                             <div flex layout="row">
                                 <div layout="column">
-                                    <div flex class="legend-item-label">Nodes</div>
+                                    <div flex class="legend-item-label" id="nodes">Nodes</div>
                                     <div flex layout="row">
                                         <div flex class="legend-item">
                                             <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-vis-type="LegendNodeSize" id="nodeSize" ng-identifier="nodeSize">
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                                 <div flex layout="column">
-                                    <div flex class="legend-item-label">Edges</div>
+                                    <div flex class="legend-item-label" id="edges">Edges</div>
                                     <div flex layout="row">
                                         <div flex class="legend-item">
                                             <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-vis-type="LegendEdgeSize" id="edgeSize" ng-identifier="edgeSize">
@@ -71,7 +71,7 @@
             legendToggleOff = false;
         } else {
             $(".legend-container").animate({
-                bottom: '-180px'
+                bottom: '-210px'
             }, 75);
             legendToggleOff = true;
         }

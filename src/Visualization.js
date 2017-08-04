@@ -77,11 +77,20 @@ var Visualization = function(scope) {
             if (args.zoomable) {
                 var scaleExtent = args.zoomLevels || [1, 10]
                 
-                scope.zoom = d3.behavior.zoom()
-                      .translate([scope.config.margins.left + scope.config.dims.width / 2, scope.config.margins.top + scope.config.dims.height / 2])
-                   
-                    .scaleExtent(scaleExtent)
-                    .on("zoom", zoomed);
+
+                if (forceNetwork01!=undefined && !scimap01 && !prosym01)
+                    {
+                          scope.zoom = d3.behavior.zoom()
+                           .translate([forceNetwork01.config.margins.left + forceNetwork01.config.dims.width / 2, forceNetwork01.config.margins.top + forceNetwork01.config.dims.height / 2])
+                           .scaleExtent(scaleExtent)
+                        .on("zoom", zoomed);
+                    }
+                else{
+                      scope.zoom = d3.behavior.zoom()
+                           .scaleExtent(scaleExtent)
+                        .on("zoom", zoomed);
+                }
+
 
                 function zoomed() {
                     scope.SVG.attr("transform", "translate(" + scope.zoom.translate() + ")scale(" + scope.zoom.scale() + ")");
@@ -93,6 +102,7 @@ var Visualization = function(scope) {
                     .append("g")
                 var zoomtext = btn.append("text")
                     .attr("class", "zoom-level-text")
+                    .attr("id", "zoom-text")
                     .text("(" + scope.zoom.scale() + "x)")
                     .attr("x", 80)
                     .attr("y", 23)
@@ -109,7 +119,7 @@ var Visualization = function(scope) {
                         return d
                     })
                     .style("fill", function(d, i) {
-                        return i ? "darkgrey" : "#D8D8D8"
+                        return i ? "rgb(216,216,216)" : "#D8D8D8"
                     })
                     .style("cursor", "pointer")
                     .style("border-radius", ".2em")

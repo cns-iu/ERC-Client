@@ -110,17 +110,32 @@ events.prosym01 = function(ntwrk) {
         showPopup(tableData);
         ntwrk.isPopupShowing = true;        
     }
+       function showFilteredLabels() {
+        prosym01.SVG.nodeG.selectAll("text").style("display", "block")
+        prosym01.SVG.nodeG.selectAll("text").style("display", function(d1, i1) {
+            if (!d1.keepLabel) {
+                return "none"
+            }
+            return "block"
+        });
+    }
     ntwrk.edgeMouseover = function(d, i) {
-        if (!ntwrk.isPopupShowing) {
-            deselectSelection(ntwrk.SVG.edges);
-            deselectSelection(ntwrk.SVG.nodeG);
+        if (!prosym01.isPopupShowing) {
+            deselectSelection(prosym01.SVG.nodeG);
+            deselectSelection(prosym01.SVG.edges);
+          
             deselectSelection(barChart02.SVG.barGroups);
+            prosym01.SVG.nodeG.selectAll("text").style("display", "none")
             selectSelection(d3.select(this));
             selectSelection(barChart02.SVG.barGroups.filter(function(d1, i1) {
-                return d.source.id == d1.values.id || d.target.id == d1.values.id;
+                if(d.source == d1.values.id || d.target == d1.values.id)
+                    return d1.values.id;
             }));
-            var selectedNode = ntwrk.SVG.nodeG.filter(function(d1, i1) {
-                return d.source.id == d1.id || d.target.id == d1.id;
+            var selectedNode = prosym01.SVG.nodeG.filter(function(d1, i1) {
+                if (d.source == d1.values.children[0].id)
+                    return d1.values.children[0].id;
+                if(d.target == d1.values.children[0].id)
+                    return d1.values.children[0].id;
             });
             selectSelection(selectedNode);
             selectedNode.selectAll("text").style("display", "block");
@@ -131,6 +146,7 @@ events.prosym01 = function(ntwrk) {
             defaultSelection(ntwrk.SVG.nodeG);
             defaultSelection(ntwrk.SVG.edges);
             defaultSelection(barChart02.SVG.barGroups);
+              showFilteredLabels();
         }
     }
     ntwrk.nodeMouseover = function(d, i) {
@@ -203,6 +219,10 @@ events.prosym01 = function(ntwrk) {
     ntwrk.SVG.background.on("click", function() {
         $(".popup").css({ display: "none" })
         ntwrk.isPopupShowing = false;
+            defaultSelection(prosym01.SVG.nodeG);
+            defaultSelection(prosym01.SVG.edges);
+            defaultSelection(barChart02.SVG.barGroups);
+            showFilteredLabels();
     })
 }
 

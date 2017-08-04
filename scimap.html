@@ -11,7 +11,6 @@
 
     <body id="sciMapBody">
 
-    <button type="button" id = "backgroundChange" onclick="changeBackgroundColor();">Toggle background</button>
         <div flex layout-fill layout="row" >
             <div flex layout="column">
                 <div ng-include="'partials/scimap-popup.html'"></div>
@@ -38,6 +37,8 @@
                 </div>
             </div>
         </div>
+
+    <button type="button" id = "backgroundChange" onclick="changeBackgroundColor();">B/W</button>
     </body>
     <script>
     var legendToggleOff = true;
@@ -65,12 +66,18 @@
     }
 
     function changeBackgroundColor(){
-        var current = document.body.style.background;
- 
+        var current = document.body.style.backgroundColor;
+        console.log(current);
         if (current == 'white' || current == '')
-            document.body.style.background = 'black';
-        if (current == 'black' ) document.body.style.background = 'white'
+            {
+                document.body.style.backgroundColor = 'black';
+                document.getElementById("zoom-text").style.fill="white";
+            }
+        if (current == 'black' ) {
+            document.body.style.backgroundColor = 'white';
+            document.getElementById("zoom-text").style.fill="black";
     }
+}
 
     </script>
 
