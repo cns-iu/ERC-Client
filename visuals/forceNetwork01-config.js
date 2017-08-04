@@ -216,7 +216,7 @@ events.forceNetwork01 = function(ntwrk) {
         $range.ionRangeSlider({
             min: d3.min(orderedSizeCoding),
             max: d3.max(orderedSizeCoding),
-            from: 17,
+            from: d3.mean(orderedSizeCoding),
             // type: 'double',
             step: 1,
             grid: false,
@@ -227,7 +227,7 @@ events.forceNetwork01 = function(ntwrk) {
 
         ntwrk.allNodes = [].concat(ntwrk.filteredData.nodes.data);
         ntwrk.allEdges = [].concat(ntwrk.filteredData.edges.data);
-        updateLabelVisibility(17, orderedSizeCoding);
+        updateLabelVisibility(d3.mean(orderedSizeCoding), orderedSizeCoding);
 
         slider = $("#range").data("ionRangeSlider");
         var sliderFormElem = $("#sliderForm");

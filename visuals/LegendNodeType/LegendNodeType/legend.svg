@@ -6,23 +6,23 @@
     <g transform="translate(20,0)">
         <g id="g1" transform="translate(0, 37)">
             <rect stroke="#000000" fill="lightgrey" stroke-width="2" stroke-miterlimit="10" width="35" height="17" />
-            <text transform="translate(80,13)" text-anchor="end" font-size="13">A</text>
+            <text transform="translate(60,13)" text-anchor="start" font-size="13">A</text>
         </g>
         <g id="g2" transform="translate(0, 60)">
             <rect stroke="#000000" fill="lightgrey" stroke-width="2" stroke-miterlimit="10" width="35" height="17" />
-            <text transform="translate(80,13)" text-anchor="end" font-size="13">B</text>
+            <text transform="translate(60,13)" text-anchor="start" font-size="13">B</text>
         </g>
         <g id="g3" transform="translate(0,83)">
             <rect stroke="#000000" fill="lightgrey" stroke-width="2" stroke-miterlimit="10" width="35" height="17" />
-            <text transform="translate(80,13)" text-anchor="end" font-size="13">C</text>
+            <text transform="translate(60,13)" text-anchor="start" font-size="13">C</text>
         </g>
         <g id="g4" transform="translate(0,106)">
             <rect stroke="#000000" fill="lightgrey" stroke-width="2" stroke-miterlimit="10" width="35" height="17" />
-            <text transform="translate(80,13)" text-anchor="end" font-size="13">C</text>
+            <text transform="translate(60,13)" text-anchor="start" font-size="13">C</text>
         </g>
         <g id="g5" transform="translate(0,129)">
             <rect stroke="#000000" fill="lightgrey" stroke-width="2" stroke-miterlimit="10" width="35" height="17" />
-            <text transform="translate(80,13)" text-anchor="end" font-size="13">C</text>
+            <text transform="translate(60,13)" text-anchor="start" font-size="13">C</text>
         </g>        
     </g>
     <text id="note" transform="matrix(1 0 0 1 20 193)" fill="#444445" font-style="italic" font-size="10"></text>    

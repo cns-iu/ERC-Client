@@ -35,7 +35,7 @@ var globalDatasourceMap = {
     nanohub: {
         url: 'https://nanohub.org/erc-citations/download/',
         params: {
-            hash: 'd74d5eb2005b4384c340c2563c6a35eeb29fd7b4'
+            hash: 'QUERYSTRING'
         },
         toProcess: true
     },
