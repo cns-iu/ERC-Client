@@ -4,7 +4,7 @@
  * @description Bar chart context can be flipped between a horizontal and vertical orientation. Options also allow stacked/non-stacked chart types depending on the configuration.
  */
 
-
+ 
 head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/leaflet.js')
  visualizationFunctions.HVBarChart = function(element, data, opts) {
     var context = this;
@@ -312,6 +312,10 @@ head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/leaflet.js')
     // if(d.tableD.length!=0) 
       // showPopup(d.tableD);
       prosym01.map.panTo(new L.LatLng(d.values.lat, d.values.lng))
+      t = prosym01.filteredData.authors.data.filter(function(d1){
+          return d1.author == d.key 
+      })
+      showPopup(t[0].tableD);
 
   }
 })
@@ -327,8 +331,9 @@ else{
                  // Remove links
                  prosym01.linklayer.selectAll("path").remove();
                  $(".popup").css({ display: "none" })
-
+                
              prosym01.map.panTo(new L.LatLng(40.737, -83.923));
+             if (prosym01.mark)prosym01.map.removeLayer(prosym01.mark);
 }
 
             })
