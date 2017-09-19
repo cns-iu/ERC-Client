@@ -153,6 +153,7 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
 context.map._initPathRoot()
 
 context.map.panTo(new L.LatLng(40.737, -83.923));
+
 // Setup svg element to work with
 var svg = d3.select("#map").select("svg");
 prosym01.linklayer = svg.append("g"),
@@ -220,8 +221,8 @@ if (prosym01.click==0){
         }
       });*/
 // var greenIcon = new LeafIcon({iconUrl: 'images/usergroup.png'});
-    //mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");
-//mark.bindTooltip("my tooltip text").openTooltip();
+    //prosym01.mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");
+//prosym01.mark.bindTooltip("my tooltip text").openTooltip();
 }
 
 };
@@ -237,7 +238,7 @@ if (prosym01.click==0){
       prosym01.linklayer.selectAll("path").remove();
       // Show all nodes
       prosym01.circs.transition().style('opacity', 0.7);
-      // map.removeLayer(mark)
+      // map.removeLayer(prosym01.mark)
     }
     };
 
@@ -296,12 +297,12 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
         }
       });
 var greenIcon = new LeafIcon({iconUrl: 'images/usergroup.png'});
-mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context.map)
+prosym01.mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context.map)
 /*var popup = L.popup()
     .setLatLng(d.geometry.coordinates)
     .setContent('<p>Hello world!<br />This is a nice popup.</p>')
     .openOn(map);*/
-    mark.bindPopup('<strong>Loading ... </strong>')
+    prosym01.mark.bindPopup('<strong>Loading ... </strong>')
           .openPopup();
           /*    function onMapClick(e) {
             var popup = e.target.getPopup();
@@ -321,7 +322,7 @@ mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context.map)
                     });
             };
 
-    mark.on('click', onMapClick );*/
+    prosym01.mark.on('click', onMapClick );*/
           $("#zip-name").text(d.zip + "_");
 
       if(d.tableD.length!=0)    
@@ -340,7 +341,7 @@ mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context.map)
       prosym01.linklayer.selectAll("path").remove();
       // Show all nodes
       prosym01.circs.transition().style('opacity', 0.7);
-      context.map.removeLayer(mark);
+      context.map.removeLayer(prosym01.mark);
         $(".popup").css({ display: "none" })
      
     }
@@ -370,8 +371,11 @@ mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context.map)
     .attr("opacity", 0.7)
     .on('mouseover', mouseover)
     .on('mouseout', mouseout)
-    .on("click",click);
-prosym01.SVG.nodeG = prosym01.circs;
+    .on("click",click)
+    .attr("class",function(d){
+      return d.author;
+    });
+// prosym01.SVG.nodeG = prosym01.circs;
 
 prosym01.click=0;
     // Adopt size of drawn objects after leaflet zoom reset
