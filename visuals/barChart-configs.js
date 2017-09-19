@@ -25,6 +25,7 @@ configs.barChart01 = {
 }
 
 events.barChart01 = function(ntwrk) {
+
     var labels = [];
     ntwrk.filteredData.records.data.forEach(function(d, i) {
         if (labels.indexOf(d.key) == -1) {
@@ -103,6 +104,7 @@ events.barChart01 = function(ntwrk) {
 
 }
 dataprep.barChart01 = function(ntwrk) {
+        barChart02 = null;
     if (ntwrk.DataService.mapDatasource[ntwrk.attrs.ngDataField].toProcess) {
         var processedData = processAuthorSpec(ntwrk.filteredData);
         ntwrk.filteredData.records = processedData.nodes;
@@ -112,7 +114,13 @@ dataprep.barChart01 = function(ntwrk) {
 
 
 configs.barChart02 = configs.barChart01
-dataprep.barChart02 = dataprep.barChart01
+dataprep.barChart02 = function(ntwrk) {
+barChart01 = null;
+    if (ntwrk.DataService.mapDatasource[ntwrk.attrs.ngDataField].toProcess) {
+        var processedData = processAuthorSpec(ntwrk.filteredData);
+        ntwrk.filteredData.records = processedData.nodes;
+    }
+}
 
 
 events.barChart02 = function(ntwrk) {
@@ -152,38 +160,8 @@ events.barChart02 = function(ntwrk) {
             return "block"
         });
     }
-    ntwrk.SVG.barGroups.on("mouseover", function(d, i) {
-        if (!prosym01.isPopupShowing) {
-            deselectSelection(prosym01.SVG.nodeG);
-            deselectSelection(prosym01.SVG.edges);
-            deselectSelection(barChart02.SVG.barGroups);
-            prosym01.SVG.nodeG.selectAll("text").style("display", "none")
-            var selected = prosym01.SVG.nodeG.filter(function(d1, i1) {
-                if (d1.values.children[0].id== d.values.id)
-                    return d1.values.children[0].id;
-            })
-            selectSelection(selected);
-            selected.selectAll("text").style("display", "block");
-
-            selectSelection(prosym01.SVG.edges.filter(function(d1, i1) {
-                return d.values.id == d1.source.id || d.values.id == d1.target.id;
-            }))
-            selectSelection(d3.select(this));
-        }
-    })
-    ntwrk.SVG.barGroups.on("mouseout", function(d, i) {
-        if (!prosym01.isPopupShowing) {
-                defaultSelection(prosym01.SVG.nodeG);
-            defaultSelection(prosym01.SVG.edges);
-            defaultSelection(barChart02.SVG.barGroups);
-            showFilteredLabels();
-        }
-    })
-
-    ntwrk.SVG.barGroups.on("click", function(d, i) {
-        var selected = findMatchingCoauthorNode(d, i);
-        applyD3Event(selected.selectAll("circle"), "click")
-    });
+   
+  
 
     function applyD3Event(sel, evt) {
        $(sel[0]).d3Event(evt); 

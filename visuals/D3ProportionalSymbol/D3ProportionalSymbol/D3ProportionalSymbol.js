@@ -1,12 +1,13 @@
-head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/us.js');
-head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/topojson.js');
-head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/d3-ForceEdgeBundling.js')
 
+
+head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/d3.js')
+head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/leaflet.js')
+head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/spatialsankey.js')
 
 visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
-    var context = this;
-    this.VisFunc = function() {
-        context.SVG.background = context.SVG.append("rect")
+  var context = this;
+  this.VisFunc = function() {
+ context.SVG.background = context.SVG.append("rect")
             .attr("opacity", .000001)
             .attr("width", "100%")
             .attr("height", "100%")
@@ -15,219 +16,386 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
 
         nestData();
         context.SVG.g = context.SVG.append("g")
+      
+     context.config = context.CreateBaseConfig();
+     context.update = function() {
 
-        var shapeData = usShapeData;
-        context.projection = d3.geo.equirectangular()
-            .scale(context.config.dims.fixedWidth/4)
-            .translate([context.config.dims.fixedWidth / 2+190, context.config.dims.fixedHeight / 2])
+      if (context.PrimaryDataAttr == "nodes") {
 
-        context.SVG.pathG = context.SVG.g.selectAll("path")
-            .data(topojson.feature(shapeData, shapeData.objects.countries).features)
-            .enter()
+        if (true) {
+          var nodeData = {};
+          var edgeData = [];
+          context.filteredData[context.PrimaryDataAttr].data[context.currCategory].forEach(function(d, i) {
+            nodeData[i] = d;
+          })
+          context.filteredData.edges.data.forEach(function(d, i) {
+            var s = Object.keys(nodeData).filter(function(d1, i1) {
+              return nodeData[d1].values.children.filter(function(d2, i2) {
+                return d2.id == d.source
+              }).length > 0;
+            })[0]
 
-        context.SVG.path = context.SVG.pathG
-            .append("path")
-            .classed("feature wvf-area", true)
-            .attr("d", d3.geo.path()
-                .projection(context.projection))
+            var t = Object.keys(nodeData).filter(function(d1, i1) {
+              return nodeData[d1].values.children.filter(function(d2, i2) {
+                return d2.id == d.target
+              }).length > 0;
+            })[0]
 
-        // .on("click", clicked)
-
-        context.update = function() {
-            try { context.SVG.nodeG.selectAll("*").remove(); } catch (e) {};
-            try { context.SVG.edges.selectAll("*").remove(); } catch (e) {};
-
-            context.SVG.nodeG = context.SVG.g.selectAll(".nodeG")
-                .data(context.filteredData[context.PrimaryDataAttr].data[context.currCategory])
-                .enter()
-                .append("g")
-                .attr("class", function(d, i) {
-                    var outStr = "";
-                    d.values.children.forEach(function(d1, i1) {
-                        outStr += "id-" + d1[context.config.meta.identifier] + " ";
-                    })
-                    return "node " + outStr;
-                })
-                .attr("transform", function(d, i) {
-                    var arr = [d.values[context.config.meta.lng], d.values[context.config.meta.lat]]
-                    d.projected = context.projection(arr)
-                    if (d.projected == null) {
-                        d3.select(context).remove()
-                    } else {
-                        d.x = d.projected[0];
-                        d.y = d.projected[1];
-                        return "translate(" + (d.projected[0]) + "," + (d.projected[1]) + ")"
-                    }
-                })
-
-            context.SVG.nodes = context.SVG.nodeG
-                .append("circle")
-                .classed("wvf-node", true)
-                .attr("r", function(d, i) {
-                    return context.categoryScales[context.currCategory].size(d.sizeSum)
-                })
-                .attr("fill", "#0BBCCE")
-            var toBundle = false;
-            if (context.PrimaryDataAttr == "nodes") {
-                if (context.config.meta.edges) {
-                    if (context.config.meta.edges.bundle) {
-                        toBundle = true;
-                    }
-                }
-                if (toBundle) {
-                    var nodeData = {};
-                    var edgeData = [];
-                    context.filteredData[context.PrimaryDataAttr].data[context.currCategory].forEach(function(d, i) {
-                        nodeData[i] = d;
-                    })
-                    context.filteredData.edges.data.forEach(function(d, i) {
-                        var s = Object.keys(nodeData).filter(function(d1, i1) {
-                            return nodeData[d1].values.children.filter(function(d2, i2) {
-                                return d2.id == d.source
-                            }).length > 0;
-                        })[0]
-
-                        var t = Object.keys(nodeData).filter(function(d1, i1) {
-                            return nodeData[d1].values.children.filter(function(d2, i2) {
-                                return d2.id == d.target
-                            }).length > 0;
-                        })[0]
-
-                        if (s == t) {
+            if (s == t) {
                             //do something about this?
-                        } else {
+                          } else {
                             var existingEdge = edgeData.filter(function(d1, i1) {
-                                return ((d1.source == s) && (d1.target == t))
+                              return ((d1.source == s) && (d1.target == t))
                             })
                             if (existingEdge.length > 0) {
-                                existingEdge[0].d.push(d);
+                              existingEdge[0].d.push(d);
                             } else {
-                                edgeData.push({
-                                    //TODO: This needs to change to find the node id. 
-                                    "source": s,
+                              edgeData.push({
+                                   "source": s,
                                     "target": t,
                                     "d": [d]
-                                })
+                                  })
                             }
-                        }
-                    });
-                    var fbundling = d3.ForceEdgeBundling()
-                        .step_size(10)
-                        .compatibility_threshold(.05)
-                        .bundling_stiffness(1)
-                        .step_size(.1)
-                        .cycles(8)
-                        .iterations(90)
-                        .iterations_rate(.0125)
-                        .subdivision_points_seed(1)
-                        .subdivision_rate(2)
-                        .nodes(nodeData)
-                        .edges(edgeData);
-
-                    var results = fbundling();
-                    context.SVG.edgeG = context.SVG.g.selectAll(".edge")
-                        .data(results)
-                        .enter()
-                        .append("path")
-                        .attr("class", "wvf-edge")
-                        .attr("d", function(d, i) {
-
-                            return Utilities.lineFunction(d);
-                        })
-                        .attr("opacity", .2)
-
-                } else {
-                    context.Scales.edgeSizeScale = d3.scale[context.config.meta.edges.styleEncoding.size.scaleType || "linear"]()
-                        .domain(d3.extent(context.filteredData.edges.data, function(d1, i1) {
-                            return d1[context.config.meta.edges.styleEncoding.size.attr];
-                        }))
-                        .range(context.config.meta.edges.styleEncoding.size.range)
-
-                    context.SVG.edges = context.SVG.g.selectAll(".edge")
-                        .data(context.filteredData.edges.data)
-                        .enter()
-                        .append("path")
-                        .attr("class", "wvf-edge")
-                        .attr("d", context.edgeFunc)
-                        .attr("stroke-width", function(d, i) {
-                            return context.Scales.edgeSizeScale(d[context.config.meta.edges.styleEncoding.size.attr])
-                        })
-                        .attr("opacity", .4)
-
-                }
-            }
-
-            context.SVG.nodeG.moveToFront();
-        }
-
-        if (!context.edgeFunc) {
-            context.edgeFunc = function(d, i, proj) {
-                var s = context.SVG.nodeG.filter(".id-" + d.source).data()[0];
-                var t = context.SVG.nodeG.filter(".id-" + d.target).data()[0];
-                s.projected = s.projected || [0, 0];
-                t.projected = t.projected || [0, 0];
-                return Utilities.lineFunction([{
-                    x: s.projected[0],
-                    y: s.projected[1]
-                }, {
-                    x: t.projected[0],
-                    y: t.projected[1]
-                }])
-            }
-        }
+                          }
+                        });
 
 
-        function nestData() {
-            context.categories = context.config.meta.categories;
-            context.categoryBank = {};
+        } 
+      }
 
-            context.categories.forEach(function(category, i) {
-                context.categoryBank[category] = nest(category, i);
-            })
-
-            context.filteredData[context.PrimaryDataAttr].data = context.categoryBank;
-            context.currCategory = context.categories[0];
-
-            context.categoryScales = {};
-            context.categories.forEach(function(d, i) {
-                var sizeScale = d3.scale[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.scaleType || "linear"]()
-                    .domain(d3.extent(context.filteredData[context.PrimaryDataAttr].data[d], function(d1, i1) {
-                        d1.sizeSum = d3.sum(d1.values.children, function(d2, i2) {
-                            return d2[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr]
-                        })
-                        return d1.sizeSum;
-                    }))
-                    .range(context.config.meta[context.PrimaryDataAttr].styleEncoding.size.range)
-                context.categoryScales[d] = {};
-                context.categoryScales[d].size = sizeScale;
-            });
-        }
-
-        function nest(category, i) {
-            return d3.nest()
-                .key(function(d) {
-                    return d[category];
-                })
-                .rollup(function(leaves) {
-                    var obj = {
-                        children: leaves
-                    };
-                    context.filteredData[context.PrimaryDataAttr].schema.forEach(function(d) {
-                        if (d.type == "numeric") {
-                            obj[d.name] = d3.mean(leaves, function(d1) {
-                                return d1[d.name];
-                            })
-                        }
-                    })
-                    return obj;
-                })
-                .entries(context.filteredData[context.PrimaryDataAttr].data);
-        }
-
-        context.update();
 
     }
-    this.configSchema = {
+
+    if (!context.edgeFunc) {
+      context.edgeFunc = function(d, i, proj) {
+        var s = context.SVG.nodeG.filter(".id-" + d.source).data()[0];
+        var t = context.SVG.nodeG.filter(".id-" + d.target).data()[0];
+        s.projected = s.projected || [0, 0];
+        t.projected = t.projected || [0, 0];
+        return Utilities.lineFunction([{
+          x: s.projected[0],
+          y: s.projected[1]
+        }, {
+          x: t.projected[0],
+          y: t.projected[1]
+        }])
+      }
+    }
+ 
+    function nestData() {
+      context.categories = context.config.meta.categories;
+      context.categoryBank = {};
+
+      context.categories.forEach(function(category, i) {
+        context.categoryBank[category] = nest(category, i);
+      })
+
+      context.filteredData[context.PrimaryDataAttr].data = context.categoryBank;
+      context.currCategory = context.categories[0];
+
+      context.categoryScales = {};
+      context.categories.forEach(function(d, i) {
+        var sizeScale = d3.scale[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.scaleType || "linear"]()
+        .domain(d3.extent(context.filteredData[context.PrimaryDataAttr].data[d], function(d1, i1) {
+          d1.sizeSum = d3.sum(d1.values.children, function(d2, i2) {
+            return d2[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr]
+          })
+          return d1.sizeSum;
+        }))
+        .range(context.config.meta[context.PrimaryDataAttr].styleEncoding.size.range)
+        context.categoryScales[d] = {};
+        context.categoryScales[d].size = sizeScale;
+      });
+    }
+
+    function nest(category, i) {
+      return d3.nest()
+      .key(function(d) {
+        return d[category];
+      })
+      .rollup(function(leaves) {
+        var obj = {
+          children: leaves
+        };
+        context.filteredData[context.PrimaryDataAttr].schema.forEach(function(d) {
+          if (d.type == "numeric") {
+            obj[d.name] = d3.mean(leaves, function(d1) {
+              return d1[d.name];
+            })
+          }
+        })
+        return obj;
+      })
+      .entries(context.filteredData[context.PrimaryDataAttr].data);
+    }
+
+    context.update();
+}
+  //  k = context.filteredData.edges.data;
+
+  // Set leaflet map
+   context.map = new L.map('map', {
+    center: new L.LatLng(50,15),
+    zoom: 4,
+    layers: [
+    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      subdomains: 'abcd',
+      noWrap:true,
+      minZoom: 4,
+      maxZoom: 20,
+      ext: 'png'
+    })
+    ]
+  });
+
+// Initialize the SVG layer
+context.map._initPathRoot()
+
+context.map.panTo(new L.LatLng(40.737, -83.923));
+// Setup svg element to work with
+var svg = d3.select("#map").select("svg");
+prosym01.linklayer = svg.append("g"),
+prosym01.nodelayer = svg.append("g");
+
+// Load data asynchronosuly
+d3.json("nodes.geojson", function(nodes) {
+  d3.csv("links.csv", function(links) {
+
+    // Setup spatialsankey object
+    prosym01.spatialsankey = d3.spatialsankey()
+    .lmap(context.map)
+    .nodes(context.filteredData.authors.data)
+    .links(context.filteredData.edges.data);
+
+    var mouseover = function(d){
+if (prosym01.click==0){
+      barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
+      barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
+        if (d6[0].innerHTML == d.author.toString()){
+          d6[0].setAttribute("opacity",1);
+          d6[0].style.fontWeight = "bold";
+          d6[0].style.stroke = "black";
+          d6[0].style.strokeWidth = ".5px";
+          d6.parentNode.childNodes[0].style.fill = "darkgrey";
+        }
+
+
+      })
+      // Get link data for this prosym01.node
+      var nodelinks = prosym01.spatialsankey.links().filter(function(link){
+        return link.source == d.id;
+      });
+
+
+      // Add data to link layer
+      var beziers = prosym01.linklayer.selectAll("path").data(nodelinks);
+      link = prosym01.spatialsankey.link(options);
+
+      // Draw new links
+      beziers.enter()
+      .append("path")
+      .attr("d", link)
+      .attr('id', function(d){return d.id})
+      .style("stroke-width", prosym01.spatialsankey.link().width());
+      
+      // Remove old links
+      beziers.exit().remove();
+
+
+      // Hide inactive nodes
+      var circleUnderMouse = this;
+      prosym01.circs.transition().style('opacity',function () {
+        return (this === circleUnderMouse) ? 0.7 : 0;
+      });
+
+      /*var LeafIcon = L.Icon.extend({
+        options: {
+          shadowUrl: 'images/circleshadow.png',
+          iconSize:     [50, 50],
+          shadowSize:   [50, 64],
+          iconAnchor:   [22, 50],
+          shadowAnchor: [4, 62],
+          popupAnchor:  [-3, -76]
+        }
+      });*/
+// var greenIcon = new LeafIcon({iconUrl: 'images/usergroup.png'});
+    //mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");
+//mark.bindTooltip("my tooltip text").openTooltip();
+}
+
+};
+
+var mouseout = function(d) {
+if (prosym01.click==0){
+ barChart02.SVG.selectAll("text").attr("opacity",1);
+ barChart02.SVG.selectAll("text").style("stroke-width","0px");
+ barChart02.SVG.selectAll("text").style("font-weight","bold");            
+ barChart02.SVG.selectAll("rect").style("fill","lightgrey");
+
+      // Remove links
+      prosym01.linklayer.selectAll("path").remove();
+      // Show all nodes
+      prosym01.circs.transition().style('opacity', 0.7);
+      // map.removeLayer(mark)
+    }
+    };
+
+var click = function(d){
+ if (prosym01.click==0){
+
+ prosym01.click=1;
+ barChart02.click=1;
+barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
+      barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
+        if (d6[0].innerHTML == d.author.toString()){
+          d6[0].setAttribute("opacity",1);
+          d6[0].style.fontWeight = "bold";
+          d6[0].style.stroke = "black";
+          d6[0].style.strokeWidth = ".5px";
+          d6.parentNode.childNodes[0].style.fill = "darkgrey";
+        }
+
+
+      })
+      // Get link data for this prosym01.node
+      var nodelinks = prosym01.spatialsankey.links().filter(function(link){
+        return link.source == d.id;
+      });
+
+ 
+      // Add data to link layer
+      var beziers = prosym01.linklayer.selectAll("path").data(nodelinks);
+      link = prosym01.spatialsankey.link(options);
+
+      // Draw new links
+      beziers.enter()
+      .append("path")
+      .attr("d", link)
+      .attr('id', function(d){return d.id})
+      .style("stroke-width", prosym01.spatialsankey.link().width());
+      
+      // Remove old links
+      beziers.exit().remove();
+
+
+      // Hide inactive nodes
+      var circleUnderMouse = this;
+      prosym01.circs.transition().style('opacity',function () {
+        return (this === circleUnderMouse) ? 0.7 : 0;
+      });
+
+      var LeafIcon = L.Icon.extend({
+        options: {
+          shadowUrl: 'images/circleshadow.png',
+          iconSize:     [50, 50],
+          shadowSize:   [50, 64],
+          iconAnchor:   [22, 50],
+          shadowAnchor: [4, 62],
+          popupAnchor:  [-3, -76]
+        }
+      });
+var greenIcon = new LeafIcon({iconUrl: 'images/usergroup.png'});
+mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context.map)
+/*var popup = L.popup()
+    .setLatLng(d.geometry.coordinates)
+    .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+    .openOn(map);*/
+    mark.bindPopup('<strong>Loading ... </strong>')
+          .openPopup();
+          /*    function onMapClick(e) {
+            var popup = e.target.getPopup();
+
+
+            $.ajax({
+                url: "partials/prosym-popup.html",
+                })
+                .done(function( data ) {
+                    //alert( data );
+                    popup.setContent( data );
+                    popup.update();
+                    })
+                .fail(function( data ) {
+                    alert( 'FAIL: ' + data );
+
+                    });
+            };
+
+    mark.on('click', onMapClick );*/
+          $("#zip-name").text(d.zip + "_");
+
+      if(d.tableD.length!=0)    
+        showPopup(d.tableD);
+
+    }
+    else{
+      prosym01.click=0;
+      barChart02.click=0;
+      barChart02.SVG.selectAll("text").attr("opacity",1);
+ barChart02.SVG.selectAll("text").style("stroke-width","0px");
+ barChart02.SVG.selectAll("text").style("font-weight","bold");            
+ barChart02.SVG.selectAll("rect").style("fill","lightgrey");
+
+      // Remove links
+      prosym01.linklayer.selectAll("path").remove();
+      // Show all nodes
+      prosym01.circs.transition().style('opacity', 0.7);
+      context.map.removeLayer(mark);
+        $(".popup").css({ display: "none" })
+     
+    }
+      
+
+
+
+
+
+
+
+
+};
+
+
+
+    // Draw nodes
+    prosym01.node = prosym01.spatialsankey.node()
+    prosym01.circs = prosym01.nodelayer.selectAll("circle")
+    .data(prosym01.spatialsankey.nodes())
+    .enter()
+    .append("circle")
+    .attr("cx", prosym01.node.cx)
+    .attr("cy", prosym01.node.cy)
+    .attr("r", prosym01.node.r)
+    .style("fill", prosym01.node.fill)
+    .attr("opacity", 0.7)
+    .on('mouseover', mouseover)
+    .on('mouseout', mouseout)
+    .on("click",click);
+prosym01.SVG.nodeG = prosym01.circs;
+
+prosym01.click=0;
+    // Adopt size of drawn objects after leaflet zoom reset
+    var zoomend = function(){
+      prosym01.linklayer.selectAll("path").attr("d", prosym01.spatialsankey.link());
+
+      prosym01.circs.attr("cx", prosym01.node.cx)
+      .attr("cy", prosym01.node.cy);
+    };
+
+    context.map.on("zoomend", zoomend);
+  });
+});
+var options = {'use_arcs': false, 'flip': false};
+d3.selectAll("input").forEach(function(x){
+  options[x.name] = parseFloat(x.value);
+})
+
+d3.selectAll("input").on("click", function(){
+  options[this.name] = parseFloat(this.value);
+});
+
+
+this.configSchema = {
         records: {
             styleEncoding: {
                 size: {
@@ -257,9 +425,7 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
         zoomLevels: [.5, 20],
     })
 
-
-
-    return this;
+return this;
 }
 
 
@@ -271,215 +437,3 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
 
 
 
-
-//Some scratch code for edge bundling. Mostly fixable...mostly. 
-
-
-// configs.prosym01.bundle =     [
-// {
-//     bundleType: "state",
-//     data: statesData.records.data,
-//     attr: "name"
-// },
-// // {
-// //     bundleType: "region",
-// //     attr: "region"
-// // }, 
-// {
-//     bundleType: "zip",
-//     attr: "zip"
-// }, 
-// {
-//     bundleType: "id",
-//     attr: "id"
-// }],
-
-
-
-
-// var levels = configs.prosym01.bundle.map(function(d, i) {
-//     return d.bundleType; })
-
-// function createNodeHierarchy() {
-//     var unbundledData = [];
-//     configs.prosym01.bundle.forEach(function(d, i) {
-//         //Map custom data if it exists
-//         if (d.data) {
-//             d.data.forEach(function(d1, i1) {
-//                 d1[d.bundleType] = d1[d.attr]
-//                 unbundledData.push({
-//                     bundleVal: d1[d.bundleType],
-//                     bundleType: d.bundleType,
-//                     children: [],
-//                     parent: "",
-//                     level: i + 1,
-//                     data: d1
-//                 })
-//             })
-//         } else {
-
-//             ntwrk.filteredData.nodes.data.forEach(function(d1, i1) {
-//                 var obj = {
-//                     bundleVal: d1[d.bundleType],
-//                     bundleType: d.bundleType,
-//                     children: [],
-//                     parent: "",
-//                     level: i + 1,
-//                     data: d1
-//                 };
-//                 // if (unbundledData.indexOf(obj) == -1) {
-//                     unbundledData.push(obj);
-//                 // }
-//             })
-//             //Convert into bundlable object and add to unbundledData
-//             // list.forEach(function(d1, i1) {
-//             //     unbundledData.push({
-//             //         bundleVal: d1,
-//             //         bundleType: d.bundleType,
-//             //         children: [],
-//             //         parent: "",
-//             //         level: i + 1
-//             //     })
-//             // })
-//         }
-//     });
-
-//     console.log(unbundledData);
-//     var bundledData = {
-//         "": {
-//             bundleVal: "",
-//             bundleType: "",
-//             children: [],
-//             parent: null,
-//             level: 0
-//         }
-//     };
-
-//     configs.prosym01.bundle.reverse().forEach(function(d, i) {
-//         if (i == 0) {
-//             unbundledData.filter(function(d1, i1) {
-//                 return d1.bundleType == d.bundleType;
-//             }).forEach(function(d1, i1) {
-//                 var bundledNode = {
-//                     bundleVal: d1.bundleVal,
-//                     bundleType: d.bundleType,
-//                     children: [],
-//                     parent: bundledData[""],
-//                     data: ntwrk.filteredData.nodes.data.filter(function(d2, i2) {
-//                         return d2[d.bundleType] == d1.bundleVal })[0]
-//                 }
-//                 bundledNode[configs.prosym01.bundle[1].bundleType] = bundledNode.data[configs.prosym01.bundle[1].bundleType]
-//                 bundledData[d.bundleType + "-" + d1.bundleVal] = bundledNode;
-//             })
-//         }
-//         if (i > 0) {
-//             var foundChildren = unbundledData.filter(function(d1, i1) {
-//                 return d.bundleType == d1.bundleType
-//             })
-
-//             foundChildren.forEach(function(d1, i1) {
-//                 var bundledNode = {
-//                     bundleVal: d1.bundleVal,
-//                     bundleType: d.bundleType,
-//                     parent: bundledData[""],
-//                     data: d1.data
-//                 }
-//                 bundledData[d.bundleType + "-" + d1.bundleVal] = bundledNode;
-//                 var childrensChildren = Object.keys(bundledData).filter(function(d2, i2) {
-//                     var curr = bundledData[d2];
-//                     return curr[d1.bundleType] == d1.bundleVal;
-//                 })
-//                 var fixedChildren = [];
-//                 childrensChildren.forEach(function(d2, i2) {
-//                     bundledData[d2].parent = bundledData[d.bundleType + "-" + d1.bundleVal];
-//                     fixedChildren.push(bundledData[d2])
-//                 })
-//                 bundledData[d.bundleType + "-" + d1.bundleVal].children = fixedChildren;
-
-//                 if (configs.prosym01.bundle.length - 1 == i) {
-//                     bundledData[""].children.push(bundledNode);
-//                 } else {
-//                         bundledData[d.bundleType + "-" + d1.bundleVal][configs.prosym01.bundle[i + 1].bundleType] = bundledData[d.bundleType + "-" + d1.bundleVal].data[configs.prosym01.bundle[i + 1].bundleType]
-//                 }
-
-
-//             })
-//         }
-//         console.log(bundledData);
-//     })
-
-
-//     Object.keys(bundledData).filter(function(d, i) {
-//         //Remember the bundle object is reversed
-//         return bundledData[d].bundleType == configs.prosym01.bundle[0].bundleType;
-//     }).forEach(function(d, i) {
-//         bundledData[d].lat = bundledData[d].data.lat;
-//         bundledData[d].lng = bundledData[d].data.lng;
-//     })
-//     Object.keys(bundledData).filter(function(d, i) {
-//         return bundledData[d].children.length > 0
-//     }).forEach(function(d, i) {
-//         if (bundledData[d].bundleVal == "") {
-
-//         } else {
-//             bundledData[d].lat = d3.mean(bundledData[d].children, function(d1, i1) {
-//                 return d1.lat });
-//             bundledData[d].lng = d3.mean(bundledData[d].children, function(d1, i1) {
-//                 return d1.lng });
-//         }
-//     })
-
-//     bundledData[""].lat = d3.mean(bundledData[""].children.filter(function(d, i) {
-//         return d.lat != null;
-//     }), function(d, i) {
-//         return d.lat
-//     })
-//     bundledData[""].lng = d3.mean(bundledData[""].children.filter(function(d, i) {
-//         return d.lng != null;
-//     }), function(d, i) {
-//         return d.lng
-//     })
-//     // bundledData[""].lat = 38.75;
-//     // bundledData[""].lng = -98.5;
-
-//     return bundledData;
-
-// }
-
-
-// function createEdgeHierarchy(bundledNodes) {
-//     ntwrk.filteredData.edges.data.forEach(function(d, i) {
-//         d.source = bundledNodes["id-" + d.source]
-//         d.target = bundledNodes["id-" + d.target]
-//     })
-//     return ntwrk.filteredData.edges.data;
-// }
-
-
-
-// var bundle = d3.layout.bundle();
-// ntwrk.bundledNodes = createNodeHierarchy();
-// ntwrk.bundledEdges = bundle(createEdgeHierarchy(ntwrk.bundledNodes))
-// 
-// 
-//     ntwrk.SVG.selectAll(".link")
-// .data(ntwrk.bundledEdges)
-// .enter()
-// .append("path")
-// .attr("class", "link")
-// .attr("d", function(d, i) {
-//     var edgeData = [];
-//     console.log(d);
-//     d.forEach(function(d1, i1) {
-//         var proj = ntwrk.projection([d1.lng, d1.lat])
-//         edgeData.push({
-//             "x": proj[0],
-//             "y": proj[1]
-//         })
-//     })
-
-//     return Utilities.lineFunction(edgeData);
-// }).attr("fill", "none")
-// .attr("stroke", "#0DFF6A")
-// .classed("edge", true)
-// .attr("opacity", .125)

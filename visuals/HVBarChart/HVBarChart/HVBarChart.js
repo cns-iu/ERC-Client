@@ -3,11 +3,15 @@
  * @type {Object}
  * @description Bar chart context can be flipped between a horizontal and vertical orientation. Options also allow stacked/non-stacked chart types depending on the configuration.
  */
-visualizationFunctions.HVBarChart = function(element, data, opts) {
+
+ head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/d3.js')
+head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/leaflet.js')
+ visualizationFunctions.HVBarChart = function(element, data, opts) {
     var context = this;
     this.config = this.CreateBaseConfig();
+    if(barChart02!=null)barChart02.click=0;
     this.VisFunc = function() {
-        
+
         var chartOrientation = context.config.meta.orientation;
         if (chartOrientation == "vertical") {
             var newHeight = (22 * context.filteredData[context.PrimaryDataAttr].data.length)
@@ -37,7 +41,7 @@ visualizationFunctions.HVBarChart = function(element, data, opts) {
             })
             context.possibleRowValues.sort(function(a, b) {
                 if (a > b) return 1
-                return -1
+                    return -1
             })
 
             function rollup(leaves) {
@@ -54,16 +58,16 @@ visualizationFunctions.HVBarChart = function(element, data, opts) {
 
             function nest(data, attr) {
                 return d3.nest()
-                    .key(function(d) {
-                        return d[attr]
-                    })
-                    .rollup(rollup)
-                    .entries(data)
+                .key(function(d) {
+                    return d[attr]
+                })
+                .rollup(rollup)
+                .entries(data)
             }
 
             function getUnique(arr) {
                 var u = {},
-                    a = [];
+                a = [];
                 for (var i = 0, l = arr.length; i < l; ++i) {
                     if (u.hasOwnProperty(arr[i])) {
                         continue;
@@ -108,111 +112,226 @@ visualizationFunctions.HVBarChart = function(element, data, opts) {
         function configureChartArea() {
             if (chartOrientation == "horizontal") {
                 context.Scales.yScale = d3.scale.linear()
-                    .domain([d3.max(context.filteredData[context.PrimaryDataAttr].data, function(d, i) {
-                        return d.values[context.config.meta.bars.styleEncoding.size.attr]
-                    }), 0])
+                .domain([d3.max(context.filteredData[context.PrimaryDataAttr].data, function(d, i) {
+                    return d.values[context.config.meta.bars.styleEncoding.size.attr]
+                }), 0])
                 context.Scales.xScale = d3.scale.linear()
-                    .domain([0, context.filteredData[context.PrimaryDataAttr].data.length])
+                .domain([0, context.filteredData[context.PrimaryDataAttr].data.length])
             }
             if (chartOrientation == "vertical") {
                 context.Scales.xScale = d3.scale.linear()
-                    .domain([0, d3.max(context.filteredData[context.PrimaryDataAttr].data, function(d, i) {
-                        return d.values[context.config.meta.bars.styleEncoding.size.attr]
-                    })])
+                .domain([0, d3.max(context.filteredData[context.PrimaryDataAttr].data, function(d, i) {
+                    return d.values[context.config.meta.bars.styleEncoding.size.attr]
+                })])
                 context.Scales.yScale = d3.scale.linear()
-                    .domain([0, context.filteredData[context.PrimaryDataAttr].data.length])
+                .domain([0, context.filteredData[context.PrimaryDataAttr].data.length])
             }
             context.SVG.visG = context.SVG.append("g");
             var chart = Utilities.chartArea()
-                .network(context)
-                .selector(context.SVG.visG)
-                .origin(context.config.meta.bars.styleEncoding.graphOffset)
-                .end([context.config.dims.fixedWidth, context.config.dims.fixedHeight])
-                .xscale(context.Scales.xScale)
-                .xorientation(xOrientation)
-                .xtitle(context.config.meta.labels.xAxis.attr, context.config.meta.labels.xAxis.orientation)
-                .yscale(context.Scales.yScale)
-                .ytitle(context.config.meta.labels.yAxis.attr, context.config.meta.labels.yAxis.orientation)
+            .network(context)
+            .selector(context.SVG.visG)
+            .origin(context.config.meta.bars.styleEncoding.graphOffset)
+            .end([context.config.dims.fixedWidth, context.config.dims.fixedHeight])
+            .xscale(context.Scales.xScale)
+            .xorientation(xOrientation)
+            .xtitle(context.config.meta.labels.xAxis.attr, context.config.meta.labels.xAxis.orientation)
+            .yscale(context.Scales.yScale)
+            .ytitle(context.config.meta.labels.yAxis.attr, context.config.meta.labels.yAxis.orientation)
             chart();
             return chart;
         }
 
         function createBars() {
             return context.SVG.visG.append("g")
-                .attr("transform", function(d, i) {
+            .attr("transform", function(d, i) {
+                if (chartOrientation == "horizontal") {
+                    return "translate(" + context.chart.xorigin()[0] + ", " + (context.chart.yorigin()[1] + d3.max(context.chart.yscale().range())) + ")"
+                }
+                if (chartOrientation == "vertical") {
+                    return "translate(" + (context.chart.xorigin()[0]) + ", " + (context.chart.xorigin()[1]) + ")"
+                }
+            })
+            .selectAll("bars")
+            .data(context.filteredData[context.PrimaryDataAttr].data)
+            .enter()
+            .append("g")
+            .each(function(d, i) {
+                var x = 0;
+                var y = 0;
+                var w = 0;
+                var h = 0;
+                var currG = d3.select(this);
+                var prevX = 0;
+                var prevY = 0;
+                d[context.config.meta[context.PrimaryDataAttr].rowAggregator].forEach(function(d1, i1) {
                     if (chartOrientation == "horizontal") {
-                        return "translate(" + context.chart.xorigin()[0] + ", " + (context.chart.yorigin()[1] + d3.max(context.chart.yscale().range())) + ")"
+                        w = context.chart.xscale()(1) - 3;
+                        h = context.chart.yscale()(d3.max(context.chart.yscale().domain()) - d1.values[context.config.meta.bars.styleEncoding.size.attr]);
+                        x = context.chart.xscale()(i);
+                        if (xOrientation == "bottom") {
+                            y = context.chart.xscale()(0) - h;
+                            h = d3.max([h, 0]);
+                            y = d3.min([y + prevY, 0]);
+                        }
+                        if (xOrientation == "top") {
+                            y = -context.chart.yscale()(0) - prevY
+                        }
+                        prevY -= h
                     }
                     if (chartOrientation == "vertical") {
-                        return "translate(" + (context.chart.xorigin()[0]) + ", " + (context.chart.xorigin()[1]) + ")"
+                        w = context.chart.xscale()(d3.max([d1.values[context.config.meta.bars.styleEncoding.size.attr], 0]));
+                        h = context.chart.yscale()(1) - 3;
+                        x = context.chart.yscale()(0) + prevX;
+                        y = context.chart.yscale()(i);
+                        if (xOrientation == "bottom") {
+                            y = -context.chart.yscale()(i + 1);
+                        } else {
+                            y += 5;
+                        }
+                        prevX += w;
                     }
-                })
-                .selectAll("bars")
-                .data(context.filteredData[context.PrimaryDataAttr].data)
-                .enter()
-                .append("g")
-                .each(function(d, i) {
-                    var x = 0;
-                    var y = 0;
-                    var w = 0;
-                    var h = 0;
-                    var currG = d3.select(this);
-                    var prevX = 0;
-                    var prevY = 0;
-                    d[context.config.meta[context.PrimaryDataAttr].rowAggregator].forEach(function(d1, i1) {
-                        if (chartOrientation == "horizontal") {
-                            w = context.chart.xscale()(1) - 3;
-                            h = context.chart.yscale()(d3.max(context.chart.yscale().domain()) - d1.values[context.config.meta.bars.styleEncoding.size.attr]);
-                            x = context.chart.xscale()(i);
-                            if (xOrientation == "bottom") {
-                                y = context.chart.xscale()(0) - h;
-                                h = d3.max([h, 0]);
-                                y = d3.min([y + prevY, 0]);
-                            }
-                            if (xOrientation == "top") {
-                                y = -context.chart.yscale()(0) - prevY
-                            }
-                            prevY -= h
-                        }
-                        if (chartOrientation == "vertical") {
-                            w = context.chart.xscale()(d3.max([d1.values[context.config.meta.bars.styleEncoding.size.attr], 0]));
-                            h = context.chart.yscale()(1) - 3;
-                            x = context.chart.yscale()(0) + prevX;
-                            y = context.chart.yscale()(i);
-                            if (xOrientation == "bottom") {
-                                y = -context.chart.yscale()(i + 1);
-                            } else {
-                                y += 5;
-                            }
-                            prevX += w;
-                        }
+                    currG.append("rect")
+                    .attr("class", "wvf-rect bar-" + i + "-" + i1 + " " + d.key + " " + d1.key)
+                    .attr("x", x)
+                    .attr("y", y)
+                    .attr("width", w)
+                    .attr("height", h)
+                    .attr("fill", "white")
+                    if (chartOrientation == "vertical") {
                         currG.append("rect")
-                            .attr("class", "wvf-rect bar-" + i + "-" + i1 + " " + d.key + " " + d1.key)
-                            .attr("x", x)
-                            .attr("y", y)
-                            .attr("width", w)
-                            .attr("height", h)
-                            .attr("fill", "white")
-                        if (chartOrientation == "vertical") {
-                            currG.append("rect")
-                                .attr("x", x)
-                                .attr("y", y)
-                                .attr("width", context.config.dims.fixedWidth)
-                                .attr("height", h + 3.1)
-                                .attr("fill", "lightgrey")
-                                .style("opacity", .000001)
-                        }
-                        if (chartOrientation == "horizontal") {
-                            currG.append("rect")
-                                .attr("x", x)
-                                .attr("y", y - context.config.dims.fixedHeight)
-                                .attr("width", w)
-                                .attr("height", context.config.dims.fixedHeight)
-                                .attr("fill", "lightgrey")
-                                .style("opacity", .000001)
-                        }
+                        .attr("x", x)
+                        .attr("y", y)
+                        .attr("width", context.config.dims.fixedWidth)
+                        .attr("height", h + 3.1)
+                        .attr("fill", "lightgrey")
+                        .style("opacity", .000001)
+                    }
+                    if (chartOrientation == "horizontal") {
+                        currG.append("rect")
+                        .attr("x", x)
+                        .attr("y", y - context.config.dims.fixedHeight)
+                        .attr("width", w)
+                        .attr("height", context.config.dims.fixedHeight)
+                        .attr("fill", "lightgrey")
+                        .style("opacity", .000001)
+                    }
+                });
+            })
+            .on('mouseover', function(d,i){
+                 if(barChart02.click!=1){
+             barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
+
+             d3.select(this).selectAll("text")[0][0].setAttribute("opacity",1);
+             d3.select(this).selectAll("text")[0][0].style.fontWeight = "bold";
+             d3.select(this).selectAll("text")[0][0].style.stroke = "black";
+             d3.select(this).selectAll("text")[0][0].style.strokeWidth = ".5px";
+             d3.select(this).selectAll("text")[0].parentNode.childNodes[0].style.fill = "darkgrey";
+             prosym01.circs.transition().style('opacity',0);
+             prosym01.circs.filter(function(d1,i1){
+                if(d1.author === d.key)
+                {
+
+                    d3.select(this).transition().style('opacity',0.7);
+
+                    var nodelinks = prosym01.spatialsankey.links().filter(function(link){
+                        return link.source == d1.id;
+
+
+
                     });
-                })
+                    options = {'use_arcs': false, 'flip': false};
+                    beziers = prosym01.linklayer.selectAll("path").data(nodelinks);
+                    barChart02.link = prosym01.spatialsankey.link(options);
+
+      // Draw new links
+      beziers.enter()
+      .append("path")
+      .attr("d", barChart02.link)
+      .attr('id', function(d){return d.id})
+      .style("stroke-width", prosym01.spatialsankey.link().width());
+      
+      // Remove old links
+      beziers.exit().remove(); 
+
+
+  }
+})
+                     //console.log(id);
+
+              }   })
+            .on('mouseout', function(d,i){
+                if(barChart02.click!=1){
+               barChart02.SVG.selectAll("text").attr("opacity",1);
+               barChart02.SVG.selectAll("text").style("stroke-width","0px");
+               barChart02.SVG.selectAll("text").style("font-weight","bold");            
+               barChart02.SVG.selectAll("rect").style("fill","lightgrey");
+               prosym01.circs.transition().style('opacity',0.7);
+                 // Remove links
+                 prosym01.linklayer.selectAll("path").remove();
+             }
+             })
+
+            .on('click',function(d,i){
+                if(barChart02.click==0){
+                barChart02.click=1;
+                prosym01.click=1;
+                     barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
+
+             d3.select(this).selectAll("text")[0][0].setAttribute("opacity",1);
+             d3.select(this).selectAll("text")[0][0].style.fontWeight = "bold";
+             d3.select(this).selectAll("text")[0][0].style.stroke = "black";
+             d3.select(this).selectAll("text")[0][0].style.strokeWidth = ".5px";
+             d3.select(this).selectAll("text")[0].parentNode.childNodes[0].style.fill = "darkgrey";
+             prosym01.circs.transition().style('opacity',0);
+             prosym01.circs.filter(function(d1,i1){
+                if(d1.author === d.key)
+                {
+
+                    d3.select(this).transition().style('opacity',0.7);
+
+                    var nodelinks = prosym01.spatialsankey.links().filter(function(link){
+                        return link.source == d1.id;
+
+
+
+                    });
+                    options = {'use_arcs': false, 'flip': false};
+                    beziers = prosym01.linklayer.selectAll("path").data(nodelinks);
+                    barChart02.link = prosym01.spatialsankey.link(options);
+
+      // Draw new links
+      beziers.enter()
+      .append("path")
+      .attr("d", barChart02.link)
+      .attr('id', function(d){return d.id})
+      .style("stroke-width", prosym01.spatialsankey.link().width());
+      
+      // Remove old links
+      beziers.exit().remove(); 
+   // $("#zip-name").text(d.zip + "_");
+    // if(d.tableD.length!=0) 
+      // showPopup(d.tableD);
+      prosym01.map.panTo(new L.LatLng(d.values.lat, d.values.lng))
+
+  }
+})
+          }
+else{
+    barChart02.click=0;
+    prosym01.click=0;
+    barChart02.SVG.selectAll("text").attr("opacity",1);
+               barChart02.SVG.selectAll("text").style("stroke-width","0px");
+               barChart02.SVG.selectAll("text").style("font-weight","bold");            
+               barChart02.SVG.selectAll("rect").style("fill","lightgrey");
+               prosym01.circs.transition().style('opacity',0.7);
+                 // Remove links
+                 prosym01.linklayer.selectAll("path").remove();
+                 $(".popup").css({ display: "none" })
+
+             prosym01.map.panTo(new L.LatLng(40.737, -83.923));
+}
+
+            })
         }
     }
     return context;
