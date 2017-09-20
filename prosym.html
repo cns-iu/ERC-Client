@@ -12,19 +12,19 @@ body {
   height: 100%;
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
-  
+  overflow: hidden;  
 }
-#map {
 
+#map {
   left:0px;
   right:0px;
   height: 100%;
   width:100%;
   bottom:0px;
-position: absolute;
-overflow: hidden;
+  position: absolute;
+  overflow: hidden;
 }
+
 path {
   fill: none;
   stroke: #4682B4;
@@ -32,15 +32,18 @@ path {
   stroke-linecap: round;
   cursor: pointer;
 }
+
 path:hover {
   stroke-opacity: 1;
   stroke: #315B7E;
 }
+
 .curvesettings {
   position: absolute;
   left: 10px;
   bottom:26px;
 }
+
 .box {
   border: 1px solid #EEE;
   margin: 3px;
@@ -48,39 +51,44 @@ path:hover {
   background-color: white;
   font-size: 12px;
 }
+
 .title {
   font-weight: 600;
 }
+
 .source {
   position: absolute;
   width: 50%;
   top: 6px;
   left: 50px;
 }
+
 .barChart02{
-  background: white;
- 
-  
+  background: white; 
 }
+
 circle{
   cursor: pointer;
 }
+
 #stats{
   position: relative;
   bottom:30px;
 }
+
 .modal-header-warning {
   color:#fff;
-    padding:9px 15px;
-    border-bottom:1px solid #eee;
-    background-color: #f0ad4e;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
+  padding:9px 15px;
+  border-bottom:1px solid #eee;
+  background-color: #f0ad4e;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
+
 </style>
 <script src="lib/angular/angular.js"></script>
   <script src="lib/head.js"></script>
@@ -158,30 +166,30 @@ circle{
     <div>Change styles using<br> radio buttons.</div>
   </div>
     <div class="box">
-      <div class="title">Curve shape</div>
-      <input type="radio" name="use_arcs" value="0" checked>Beziers<br>
-      <input type="radio" name="use_arcs" value="1">Arcs<br>
+      <div class="title"> Curve shape</div>
+      <input type="radio" name="use_arcs" value="0" checked> Beziers<br>
+      <input type="radio" name="use_arcs" value="1"> Arcs<br>
     </div>
     <div class="box">
-    <div class="title">Flip at horizontal axis</div>
-    <input type="radio" name="flip" value="1" checked>Flip<br>
-    <input type="radio" name="flip" value="0">NoFlip<br>
+    <div class="title"> Flip at horizontal axis</div>
+    <input type="radio" name="flip" value="1" checked> Flip<br>
+    <input type="radio" name="flip" value="0"> NoFlip<br>
     </div>
     <div class="box">
     <div class="title">Set curve steepness X</div>
     <div>(bezier control point)</div>
-    <input type="radio" name="xshift" value="0.1">xshift 0.1<br>
-    <input type="radio" name="xshift" value="0.4" checked>xshift 0.4<br>
-    <input type="radio" name="xshift" value="0.8">xshift 0.8<br>
-    <input type="radio" name="xshift" value="1.6">xshift 1.6<br>
+    <input type="radio" name="xshift" value="0.1"> xshift 0.1<br>
+    <input type="radio" name="xshift" value="0.4" checked> xshift 0.4<br>
+    <input type="radio" name="xshift" value="0.8"> xshift 0.8<br>
+    <input type="radio" name="xshift" value="1.6"> xshift 1.6<br>
     </div>
     <div class="box">
     <div class="title">Set curve steepness Y</div>
     <div>(bezier control point)</div>
     <input type="radio" name="yshift" value="0.1" checked>yshift 0.1<br>
-    <input type="radio" name="yshift" value="0.4">yshift 0.4<br>
-    <input type="radio" name="yshift" value="0.8">yshift 0.8<br>
-    <input type="radio" name="yshift" value="1.6">yshift 1.6<br>
+    <input type="radio" name="yshift" value="0.4"> yshift 0.4<br>
+    <input type="radio" name="yshift" value="0.8"> yshift 0.8<br>
+    <input type="radio" name="yshift" value="1.6"> yshift 1.6<br>
     </div>
   </form>
 </div>
