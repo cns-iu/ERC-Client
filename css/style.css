@@ -377,9 +377,9 @@ tfoot td {
 }
 
 #backgroundChange{
-  position:relative;
- bottom:1090px;
- left:130px;
+  position: absolute;
+  top: 40px;
+  left: 10px;
 }
 
 #downloadPpt{
