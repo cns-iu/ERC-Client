@@ -50,7 +50,7 @@ events.barChart01 = function(ntwrk) {
             .attr("class", "wvf-label-mid")
             .attr("x", 4)
             .text(d.key)
-            .attr("y", offset)
+            // .attr("y", offset)
     });
 
 
