@@ -271,10 +271,10 @@ tfoot td {
   display: block;
   width: 100%;
 }
+
 .table>thead>tr>th {
-    vertical-align: bottom;
-    border-bottom: 0px !important;
-  }
+    border-bottom: 0px transparent !important;
+}
 
 .legend-container {
   width: 600px;
