@@ -131,25 +131,25 @@ events.barChart02 = function(ntwrk) {
         }
     })
 
-    // var newyAxis = d3.svg.axis()
-    //     .scale(d3.scale.ordinal()
-    //         .domain(labels)
-    //         .range(ntwrk.chart.yscale().range()))
-    //     .tickValues([])
-    //     .ticks([])
-    // ntwrk.chart.chartYG().call(newyAxis)
+    var newyAxis = d3.svg.axis()
+        .scale(d3.scale.ordinal()
+            .domain(labels)
+            .range(ntwrk.chart.yscale().range()))
+        .tickValues([])
+        .ticks([])
+    ntwrk.chart.chartYG().call(newyAxis)
 
-    // ntwrk.SVG.barGroups.each(function(d, i) {
-    //     var currG = d3.select(this);
-    //     var rect = d3.select(currG.selectAll("rect")[0][0])
-    //     var offset = parseFloat(rect.attr("y")) - (parseFloat(rect.attr("height")) / 2) + parseFloat(rect.attr("height") * 1.25)
-    //     currG.selectAll("rect").attr("fill", "white")
-    //     currG.append("text")
-    //         .attr("class", "wvf-label-mid")
-    //         .attr("x", 4)
-    //         .text(d.key)
-    //         .attr("y", offset)
-    // });
+    ntwrk.SVG.barGroups.each(function(d, i) {
+        var currG = d3.select(this);
+        var rect = d3.select(currG.selectAll("rect")[0][0])
+        var offset = parseFloat(rect.attr("y")) - (parseFloat(rect.attr("height")) / 2) + parseFloat(rect.attr("height") * 1.25)
+        currG.selectAll("rect").attr("fill", "white")
+        currG.append("text")
+            .attr("class", "wvf-label-mid")
+            .attr("x", 4)
+            .text(d.key)
+            .attr("y", offset)
+    });
 
     function showFilteredLabels() {
         prosym01.SVG.nodeG.selectAll("text").style("display", "block")
