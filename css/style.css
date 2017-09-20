@@ -272,6 +272,11 @@ tfoot td {
   width: 100%;
 }
 
+.legend-container .table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 0px !important;
+  }
+
 .legend-container {
   width: 600px;
   z-index: 10000;
