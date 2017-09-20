@@ -124,6 +124,8 @@ dl, dd, dt{
 .popup {
     z-index: 10001;
     background: white;
+    font-family: 'Open Sans' sans-serif;
+    font-size: 16px;
     outline: solid;
     outline-width: .125px;
     outline-color: lightgrey;
