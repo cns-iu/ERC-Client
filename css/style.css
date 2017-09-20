@@ -271,8 +271,7 @@ tfoot td {
   display: block;
   width: 100%;
 }
-
-.legend-container .table>thead>tr>th {
+.table>thead>tr>th {
     vertical-align: bottom;
     border-bottom: 0px !important;
   }
