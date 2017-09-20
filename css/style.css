@@ -133,7 +133,7 @@ dl, dd, dt{
     left: 0px;
     bottom: 0px;
     height: 250px;
-    font-weight: 300;
+/*    font-weight: 300;*/
     /*  height:280px;*/
     /*justify-content: space-between;*/
     display: flex;
@@ -141,6 +141,7 @@ dl, dd, dt{
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.22);
     overflow: hidden;
 }
+
 
 .table {
     margin-bottom: 25px;
