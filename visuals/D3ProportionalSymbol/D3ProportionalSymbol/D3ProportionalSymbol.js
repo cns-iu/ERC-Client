@@ -132,7 +132,10 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
     context.update();
 }
   //  k = context.filteredData.edges.data;
-
+// Define the div for the tooltip
+var div = d3.select("body").append("div") 
+    .attr("class", "tooltip")       
+    .style("opacity", 0);
   // Set leaflet map
    context.map = new L.map('map', {
     center: new L.LatLng(50,15),
@@ -154,6 +157,9 @@ context.map._initPathRoot()
 
 context.map.panTo(new L.LatLng(40.737, -83.923));
 
+
+
+
 // Setup svg element to work with
 var svg = d3.select("#map").select("svg");
 prosym01.linklayer = svg.append("g"),
@@ -170,7 +176,18 @@ d3.json("nodes.geojson", function(nodes) {
     .links(context.filteredData.edges.data);
 
     var mouseover = function(d){
+      
+              
 if (prosym01.click==0){
+        div.transition()    
+                .duration(200)    
+                .style("opacity", .7);    
+        div.html(d.author + "<br/>" )  
+                .style("left", (d3.event.pageX) + "px")   
+                .style("top", (d3.event.pageY - 28) + "px")
+                .style("background","black") 
+                .style("color","white");
+
       barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
         if (d6[0].innerHTML == d.author.toString()){
@@ -210,24 +227,15 @@ if (prosym01.click==0){
         return (this === circleUnderMouse) ? 0.7 : 0;
       });
 
-      /*var LeafIcon = L.Icon.extend({
-        options: {
-          shadowUrl: 'images/circleshadow.png',
-          iconSize:     [50, 50],
-          shadowSize:   [50, 64],
-          iconAnchor:   [22, 50],
-          shadowAnchor: [4, 62],
-          popupAnchor:  [-3, -76]
-        }
-      });*/
-// var greenIcon = new LeafIcon({iconUrl: 'images/usergroup.png'});
-    //prosym01.mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");
-//prosym01.mark.bindTooltip("my tooltip text").openTooltip();
+
 }
 
 };
 
 var mouseout = function(d) {
+  div.transition()    
+                .duration(500)    
+                .style("opacity", 0); 
 if (prosym01.click==0){
  barChart02.SVG.selectAll("text").attr("opacity",1);
  barChart02.SVG.selectAll("text").style("stroke-width","0px");
@@ -238,7 +246,7 @@ if (prosym01.click==0){
       prosym01.linklayer.selectAll("path").remove();
       // Show all nodes
       prosym01.circs.transition().style('opacity', 0.7);
-      // map.removeLayer(prosym01.mark)
+
     }
     };
 
@@ -286,45 +294,6 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
         return (this === circleUnderMouse) ? 0.7 : 0;
       });
 
-      var LeafIcon = L.Icon.extend({
-        options: {
-          shadowUrl: 'images/circleshadow.png',
-          iconSize:     [50, 50],
-          shadowSize:   [50, 64],
-          iconAnchor:   [22, 50],
-          shadowAnchor: [4, 62],
-          popupAnchor:  [-3, -76]
-        }
-      });
-var greenIcon = new LeafIcon({iconUrl: 'images/usergroup.png'});
-prosym01.mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context.map)
-/*var popup = L.popup()
-    .setLatLng(d.geometry.coordinates)
-    .setContent('<p>Hello world!<br />This is a nice popup.</p>')
-    .openOn(map);*/
-    prosym01.mark.bindPopup('<strong>Loading ... </strong>')
-          .openPopup();
-          /*    function onMapClick(e) {
-            var popup = e.target.getPopup();
-
-
-            $.ajax({
-                url: "partials/prosym-popup.html",
-                })
-                .done(function( data ) {
-                    //alert( data );
-                    popup.setContent( data );
-                    popup.update();
-                    })
-                .fail(function( data ) {
-                    alert( 'FAIL: ' + data );
-
-                    });
-            };
-
-    prosym01.mark.on('click', onMapClick );*/
-          $("#zip-name").text(d.zip + "_");
-
       if(d.tableD.length!=0)    
         showPopup(d.tableD);
 
@@ -341,7 +310,7 @@ prosym01.mark = L.marker(d.geometry.coordinates,{icon: greenIcon}).addTo(context
       prosym01.linklayer.selectAll("path").remove();
       // Show all nodes
       prosym01.circs.transition().style('opacity', 0.7);
-      context.map.removeLayer(prosym01.mark);
+    
         $(".popup").css({ display: "none" })
      
     }
