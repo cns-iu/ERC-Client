@@ -1,12 +1,16 @@
+
+
+
 visualizationFunctions.ForceNetwork = function(element, data, opts) {
     var context = this;
+
     //TODO: Not all events are unbound properly. Resetting the visualization just doesn't work. Do data filters instead if you need :)
     this.VisFunc = function() {
         context.SVG = context.config.easySVG(element[0], {
-                zoomable: true,
-                zoomLevels: [.5, 20],
-                background: false
-            }).attr("transform", "translate(" + (context.config.margins.left + context.config.dims.width / 2) + "," + (context.config.margins.top + context.config.dims.height / 2) + ")")
+            zoomable: true,
+            zoomLevels: [.5, 20],
+            background: false
+        }).attr("transform", "translate(" + (context.config.margins.left + context.config.dims.width / 2) + "," + (context.config.margins.top + context.config.dims.height / 2) + ")")
 
 
         context.Scales.nodeSizeScale = Utilities.makeDynamicScaleNew(d3.extent(context.filteredData.nodes.data, function(d, i) {
@@ -37,57 +41,75 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
         var k = Math.sqrt(context.filteredData.nodes.data.length / (context.config.dims.width * context.config.dims.height));
 
         context.SVG.background = context.SVG.append("rect")
-            .attr("opacity", .000001)
+        .attr("opacity", .000001)
             // .attr("fill", "red")
             .attr("width", "400%")
             .attr("height", "400%")
             .attr("x", 0)
             .attr("y", 0)
             .attr("transform", "translate(" + -(context.config.margins.left + context.config.dims.width) + "," + -(context.config.margins.top + context.config.dims.height) + ")")
-        context.SVG.force = null;
-        context.SVG.force = d3.layout.force()
+            context.SVG.force = null;
+            context.SVG.force = d3.layout.force()
             .nodes(context.filteredData.nodes.data)
             .links(context.filteredData.edges.data)
             .linkDistance(context.config.meta.visualization.forceLayout.linkDistance || 20)
             .charge(0)
             .on("tick", tick)
 
-        context.SVG.nodeG = context.SVG.selectAll(".node"),
+            context.SVG.nodeG = context.SVG.selectAll(".node"),
             context.SVG.edges = context.SVG.selectAll(".link")
 
 
 
-        function tick() {
-            if (!context.SVG.force.lock) {
-                context.SVG.nodeG.attr("transform", function(d) {
-                    return "translate(" + d.x + "," + d.y + ")"
-                })
-                context.SVG.edges.attr("d", function(d, i) {
-                    return Utilities.lineFunction([{
-                        "x": d.source.x,
-                        "y": d.source.y
-                    }, {
-                        "x": d.target.x,
-                        "y": d.target.y
-                    }])
-                });
+
+
+            var tooltipDiv = d3.select("body").append("div") 
+            .attr("class", "tooltip")       
+            .style("opacity", 0)
+            .attr("id","tooltip");
+            function componentToHex(c) {
+                var hex = c.toString(16);
+                return hex.length == 1 ? "0" + hex : hex;
             }
-        }
 
-        context.SVG.force.restart = function() {
-            context.SVG.nodeG = context.SVG.nodeG.data(context.SVG.force.nodes());
-            context.SVG.edges = context.SVG.edges.data(context.SVG.force.links());
+            function rgbToHex(r, g, b) {
+                return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+            }
 
-            var nodeRef = context.SVG.nodeG.enter().insert("g", ".nodeG")
+
+            function tick() {
+                if (!context.SVG.force.lock) {
+                    context.SVG.nodeG.attr("transform", function(d) {
+                        return "translate(" + d.x + "," + d.y + ")"
+                    })
+                    context.SVG.edges.attr("d", function(d, i) {
+                        return Utilities.lineFunction([{
+                            "x": d.source.x,
+                            "y": d.source.y
+                        }, {
+                            "x": d.target.x,
+                            "y": d.target.y
+                        }])
+                    });
+                }
+            }
+
+            context.SVG.force.restart = function() {
+                context.SVG.nodeG = context.SVG.nodeG.data(context.SVG.force.nodes());
+                context.SVG.edges = context.SVG.edges.data(context.SVG.force.links());
+
+                var nodeRef = context.SVG.nodeG.enter().insert("g", ".nodeG")
                 .attr("class", function(d, i) {
                     return "node g g" + d[context.config.meta.nodes.identifier.attr];
                 })
-            nodeRef.call(context.SVG.force.drag()
-                .on("dragstart", function() {
-                    d3.event.sourceEvent.stopPropagation();
-                })
-            )
-            nodeRef.append("circle")
+                nodeRef.call(context.SVG.force.drag()
+                    .on("dragstart", function(d) {
+                        d3.event.sourceEvent.stopPropagation();
+                            // d3.select(this).classed("fixed", d.fixed = true);
+
+                        })
+                    )
+                nodeRef.append("circle")
                 .attr("class", function(d, i) {
                     return d[context.config.meta.labels.identifier.attr] + " wvf-node wvf-node" + d[context.config.meta.nodes.identifier.attr];
                 })
@@ -97,9 +119,40 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
                 .style("fill", function(d, i) {
                     return context.Scales.nodeColorScale(d[context.config.meta.nodes.styleEncoding.color.attr])
                 })
+                .on("contextmenu", function(d){
+                  d3.event.preventDefault();
 
-            nodeRef.append("text")
-            
+
+                  curr =  d3.select(this);   
+                  curr.classed("fixed", d.fixed = true);
+                  currColorRGB = curr.style("fill")
+                  colorsOnly = currColorRGB.substring(currColorRGB.indexOf('(') + 1, currColorRGB.lastIndexOf(')')).split(/,\s*/)
+                  currColorHex = rgbToHex(parseInt(colorsOnly[0]),parseInt(colorsOnly[1]), parseInt(colorsOnly[2]));
+
+                  tooltipDiv.transition()    
+                  .duration(200)    
+                  .style("opacity", 1);    
+                  tooltipDiv.html(" <input type='color' id='colorpicker' value="+currColorHex+" >" )  
+                  .style("left", (d3.event.pageX) + "px")   
+                  .style("top", (d3.event.pageY - 2) + "px")
+
+                  $("#colorpicker").on('input', function() {       
+
+                     color = $("#colorpicker").val();
+
+                     curr.style("fill",color); 
+                     $("#colorpicker").hide();   
+                     curr.classed("fixed", d.fixed = false);
+                     barChart01.SVG.barGroups.selectAll("rect").filter(function(d1){
+                        return d1.key == d.author;
+                    }).style("stroke", color);   
+                 });
+             
+
+              })
+
+                nodeRef.append("text")
+
                 .attr("class", "wvf-label")
                 .style("pointer-events", "none")
                 .text(function(d, i) {
@@ -113,15 +166,15 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
                 })
 
 
-            context.SVG.nodeG.exit().each(function(d, i) {
-                context.filteredData.edges.data.forEach(function(d1, i1) {
-                    if ((d1.source.id == d.id) || (d1.target.id == d.id)) {
-                        delete context.filteredData.edges.data[i1];
-                    }
-                })
-            }).remove();
+                context.SVG.nodeG.exit().each(function(d, i) {
+                    context.filteredData.edges.data.forEach(function(d1, i1) {
+                        if ((d1.source.id == d.id) || (d1.target.id == d.id)) {
+                            delete context.filteredData.edges.data[i1];
+                        }
+                    })
+                }).remove();
 
-            context.SVG.edges.enter().insert("path", ".link")
+                context.SVG.edges.enter().insert("path", ".link")
                 .attr("class", function(d, i) {
                     return "" + " link wvf-edge s s" + d.source + " t t" + d.target;
                 })
@@ -135,33 +188,33 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
                     return context.Scales.edgeOpacityScale(d[context.config.meta.edges.styleEncoding.opacity.attr])
                 })
 
-            context.SVG.edges.exit().remove();
-            context.SVG.nodeG.moveToFront();
-        }
-
-
-        context.SVG.nodeG.on("mouseover.labels", function(d, i) {
-            d3.select(this).selectAll("text").attr("display", "block");
-        })
-        context.SVG.nodeG.on("mouseout.labels", function(d, i) {
-            d3.select(this).selectAll("text").attr("display", "none");
-        })
-        context.SVG.nodeG.on("mouseup.pinNodes", function(d, i) {
-            if (d3.event.shiftKey) {
-                d.fixed = true;
-            } else {
-                d.fixed = false;
+                context.SVG.edges.exit().remove();
+                context.SVG.nodeG.moveToFront();
             }
-        })
-        context.SVG.nodeG.on("click.showEdges", function(d, i) {
-            context.SVG.edges
+
+
+            context.SVG.nodeG.on("mouseover.labels", function(d, i) {
+                d3.select(this).selectAll("text").attr("display", "block");
+            })
+            context.SVG.nodeG.on("mouseout.labels", function(d, i) {
+                d3.select(this).selectAll("text").attr("display", "none");
+            })
+            context.SVG.nodeG.on("mouseup.pinNodes", function(d, i) {
+                if (d3.event.shiftKey) {
+                    d.fixed = true;
+                } else {
+                    d.fixed = false;
+                }
+            })
+            context.SVG.nodeG.on("click.showEdges", function(d, i) {
+                context.SVG.edges
                 .classed("selected", false)
                 .classed("deselected", true)
 
-            context.SVG.edges.filter(function(d1, i1) {
-                return d.id == d1.source.id || d.id == d1.target.id
-            }).classed("selected", true).classed("deselected", false)
-        })
+                context.SVG.edges.filter(function(d1, i1) {
+                    return d.id == d1.source.id || d.id == d1.target.id
+                }).classed("selected", true).classed("deselected", false)
+            })
 
 
 
@@ -186,8 +239,8 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
             } else {
                 context.SVG.force.stop()
                 context.SVG.force
-                    .charge((context.config.meta.visualization.forceLayout.charge || -20 / k) / maxIntervalIteration * intervalIteration)
-                    .gravity((context.config.meta.visualization.forceLayout.gravity || 100 * k) / maxIntervalIteration * intervalIteration)
+                .charge((context.config.meta.visualization.forceLayout.charge || -20 / k) / maxIntervalIteration * intervalIteration)
+                .gravity((context.config.meta.visualization.forceLayout.gravity || 100 * k) / maxIntervalIteration * intervalIteration)
                 context.SVG.force.start()
                 intervalIteration += 1;
             }
