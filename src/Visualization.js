@@ -100,7 +100,7 @@ var Visualization = function(scope) {
                     }
                     else {
                          scope.SVG.selectAll("circle").attr("transform", "scale(" + scope.zoom.scale() + ")");
-                      scope.SVG.selectAll(".subd_label").attr("transform", "scale(" + scope.zoom.scale() + ")");
+                      scope.SVG.selectAll(".subd_label").attr("transform", "scale(" + scope.zoom.scale()/2 + ")");
                         
                          zoomtext.text("(" + Utilities.round(scope.zoom.scale(), 2) + "x)");
                     }
