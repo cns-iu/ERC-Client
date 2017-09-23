@@ -309,9 +309,11 @@ events.forceNetwork01 = function(ntwrk) {
     ntwrk.SVG.nodeG.selectAll("rect").on("click", ntwrk.nodeClickEvent)
 
     ntwrk.SVG.background.on("click", function() {
+
         $(".popup").css({ display: "none" })
         ntwrk.isPopupShowing = false;
         ntwrk.nodeMouseout();
+         $("#colorpicker").hide();  
     })
 }
 
