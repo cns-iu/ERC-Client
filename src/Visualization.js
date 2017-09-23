@@ -93,8 +93,16 @@ var Visualization = function(scope) {
 
 
                 function zoomed() {
-                    scope.SVG.attr("transform", "translate(" + scope.zoom.translate() + ")scale(" + scope.zoom.scale() + ")");
-                    zoomtext.text("(" + Utilities.round(scope.zoom.scale(), 2) + "x)");
+                   if (!prosym01)
+                    {
+                        scope.SVG.attr("transform", "translate(" + scope.zoom.translate() + ")scale(" + scope.zoom.scale() + ")");
+                        zoomtext.text("(" + Utilities.round(scope.zoom.scale(), 2) + "x)");
+                    }
+                    else {
+                         scope.SVG.selectAll("circle").attr("transform", d3.event.transform);
+                         zoomtext.text("(" + Utilities.round(scope.zoom.scale(), 2) + "x)");
+                    }
+
                 }
                 var btn = scope.SVGBase.selectAll(".zoombutton")
                     .data(['zoom_in', 'zoom_out'])
