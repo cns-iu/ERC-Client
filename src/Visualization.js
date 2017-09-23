@@ -93,7 +93,7 @@ var Visualization = function(scope) {
 
 
                 function zoomed() {
-                   if (!prosym01)
+                   if (!scimap01)
                     {
                         scope.SVG.attr("transform", "translate(" + scope.zoom.translate() + ")scale(" + scope.zoom.scale() + ")");
                         zoomtext.text("(" + Utilities.round(scope.zoom.scale(), 2) + "x)");
