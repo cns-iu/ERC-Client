@@ -99,7 +99,7 @@ var Visualization = function(scope) {
                         zoomtext.text("(" + Utilities.round(scope.zoom.scale(), 2) + "x)");
                     }
                     else {
-                         scope.SVG.selectAll("underlyingNodes").attr("transform", "scale(" + scope.zoom.scale() + ")");
+                         scope.SVG.underlyingNodeG.attr("transform", "translate(" + scope.zoom.translate() + ")scale(" + scope.zoom.scale() + ")");
                          zoomtext.text("(" + Utilities.round(scope.zoom.scale(), 2) + "x)");
                     }
 
