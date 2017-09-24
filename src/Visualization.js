@@ -198,7 +198,10 @@ var Visualization = function(scope) {
                 }
 
 
-                scope.SVGBase.call(scope.zoom);
+                scope.SVGBase.call(scope.zoom) .on("mousedown.zoom", null)
+    .on("touchstart.zoom", null)
+    .on("touchmove.zoom", null)
+    .on("touchend.zoom", null);
             }
             if (args.background) {
                 scope.SVGBase.background = scope.SVGBase.append("rect")
