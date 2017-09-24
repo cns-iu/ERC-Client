@@ -76,7 +76,7 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
                 return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
             }
 
-var x = d3.scale.linear()
+/*var x = d3.scale.linear()
     .range([0, context.config.dims.width])
     .domain([0, 50]);
 
@@ -125,7 +125,7 @@ x.domain(brush.extent());
 
 d3.select(".brush").call(brush.clear());
 
-            function tick() {
+*/            function tick() {
                 if (!context.SVG.force.lock) {
                     context.SVG.nodeG.attr("transform", function(d) {
                         return "translate(" + d.x + "," + d.y + ")"
