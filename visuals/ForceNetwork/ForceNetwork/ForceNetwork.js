@@ -76,6 +76,43 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
                 return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
             }
 
+var x = d3.scale.linear()
+    .range([0, context.config.dims.width])
+    .domain([0, 50]);
+
+var brush = d3.svg.brush()
+    .x(x)
+    .on("brush", brushmove)
+    .on("brushend", brushend);
+
+function brushmove() {
+  var extent = brush.extent();
+  context.SVG.nodeG.classed("selected", function(d) {
+    is_brushed = extent[0] <= d.index && d.index <= extent[1];
+    return is_brushed;
+  });
+}
+
+function brushend() {
+  get_button = d3.select(".clear-button");
+  if(get_button.empty() === true) {
+    clear_button = svg.append('text')l
+      .attr("y", 460)
+      .attr("x", 825)
+      .attr("class", "clear-button")
+      .text("Clear Brush");
+  }
+
+
+context.SVG.append("g")
+    .attr("class", "brush")
+    .call(brush)
+  .selectAll('rect')
+    .attr('height', context.config.dims.height);
+
+x.domain(brush.extent());
+
+d3.select(".brush").call(brush.clear());
 
             function tick() {
                 if (!context.SVG.force.lock) {
