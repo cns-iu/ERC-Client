@@ -85,7 +85,7 @@ var brush = d3.svg.brush()
     .on("brush", brushmove)
     .on("brushend", brushend);
 
-function brushmove() {
+function brushmove(d) {
   var extent = brush.extent();
   context.SVG.nodeG.classed("selected", function(d) {
     is_brushed = extent[0] <= d.index && d.index <= extent[1];
@@ -96,7 +96,7 @@ function brushmove() {
 function brushend() {
   get_button = d3.select(".clear-button");
   if(get_button.empty() === true) {
-    clear_button = svg.append('text')
+    clear_button =  context.SVG.append('text')
       .attr("y", 460)
       .attr("x", 825)
       .attr("class", "clear-button")
