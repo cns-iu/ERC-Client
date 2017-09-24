@@ -96,7 +96,7 @@ function brushmove() {
 function brushend() {
   get_button = d3.select(".clear-button");
   if(get_button.empty() === true) {
-    clear_button = svg.append('text')l
+    clear_button = svg.append('text')
       .attr("y", 460)
       .attr("x", 825)
       .attr("class", "clear-button")
