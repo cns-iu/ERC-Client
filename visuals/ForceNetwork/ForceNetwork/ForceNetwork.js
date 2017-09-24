@@ -104,6 +104,17 @@ function brushend() {
   }
 
 
+  context.SVG.nodeG.classed("selected", false);
+  d3.select(".brush").call(brush.clear());
+
+  clear_button.on('click', function(){
+    x.domain([0, 50]);
+   
+    clear_button.remove();
+  });
+}
+
+
 context.SVG.append("g")
     .attr("class", "brush")
     .call(brush)
