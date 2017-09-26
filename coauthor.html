@@ -40,7 +40,7 @@ div.tooltip {
 </head>
 
 <body >
- <div flex layout-fill layout="row" style="max-height: 100%; overflow-y: hidden;">
+ <div flex layout-fill layout="row" style="height: 100%; overflow-y: hidden;">
     <div flex="80" layout="column flex-80">
         <div class="filter-section" layout="column" >
             <label id="filterLabel">Filter Labels by Node Weight</label>
@@ -87,9 +87,9 @@ div.tooltip {
                 </div>
             </div>
         </div>
-        <div flex style="">
+        <div flex style="overflow-y: scroll; overflow-x: hidden;">
             <div style="">
-                <div  style="overflow-y: scroll; overflow-x: hidden;" ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-reset-on-resize ng-config="visuals/barChart-configs.js" ng-vis-type="HVBarChart" id="barChart01" ng-data-field="nanohub" ng-identifier="barChart01">
+                <div ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-reset-on-resize ng-config="visuals/barChart-configs.js" ng-vis-type="HVBarChart" id="barChart01" ng-data-field="nanohub" ng-identifier="barChart01">
                 </div>
             </div>
         </div>
