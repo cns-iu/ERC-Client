@@ -149,7 +149,7 @@ dl, dd, dt{
 }
 
 #popup-table-container {
-    overflow: scroll;
+  /*  overflow: scroll;*/
 }
 
 #popup-table-no-records {
