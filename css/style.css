@@ -41,7 +41,7 @@ dl, dd, dt{
 .table_specification{
     display: table;
     width: 80%;
-   /* overflow:hidden;*/
+    overflow:hidden;
 }
 
 .table_specification dl{    
@@ -139,7 +139,7 @@ dl, dd, dt{
     display: flex;
     width: 1000px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.22);
-    overflow: hidden;
+    overflow: scroll;
 }
 
 
