@@ -41,7 +41,7 @@ dl, dd, dt{
 .table_specification{
     display: table;
     width: 80%;
-    overflow:hidden;
+   /* overflow:hidden;*/
 }
 
 .table_specification dl{    
