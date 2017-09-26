@@ -192,7 +192,7 @@ d3.spatialsankey = function() {
     // Range of node circles (set min and max equal for constant circle size)
     var node_radius_range = {min: 10, max: 20};
     // Range for color coding according to flow size (set colors for single coloring)
-    node_color_range = ["yellow", "red"];
+    node_color_range = ["#ffeda0", "#f03b20"];
     // Instantiate color scale function
     var color = d3.scale.linear()
                   .domain([0, 1])
