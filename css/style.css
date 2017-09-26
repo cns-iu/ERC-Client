@@ -173,6 +173,7 @@ tbody {
     display: block;
     width: inherit;
     overflow-y: scroll;
+    max-height: 140px;
 }
 
 
