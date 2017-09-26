@@ -240,7 +240,7 @@ if (prosym01.click==0){
  barChart02.SVG.selectAll("text").attr("opacity",1);
  barChart02.SVG.selectAll("text").style("stroke-width","0px");
  barChart02.SVG.selectAll("text").style("font-weight","bold");            
- barChart02.SVG.selectAll("rect").style("fill","lightgrey");
+ barChart02.SVG.selectAll("rect").style("fill","#eaeaea");
 
       // Remove links
       prosym01.linklayer.selectAll("path").remove();
@@ -304,7 +304,7 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       barChart02.SVG.selectAll("text").attr("opacity",1);
  barChart02.SVG.selectAll("text").style("stroke-width","0px");
  barChart02.SVG.selectAll("text").style("font-weight","bold");            
- barChart02.SVG.selectAll("rect").style("fill","lightgrey");
+ barChart02.SVG.selectAll("rect").style("fill","#eaeaea");
 
       // Remove links
       prosym01.linklayer.selectAll("path").remove();
