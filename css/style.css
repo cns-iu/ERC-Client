@@ -173,11 +173,13 @@ tbody {
     display: block;
     width: inherit;
     overflow-y: scroll;
+    height: 160px;
 }
 
 .prosym-popup tbody {
     max-height: 140px;
 }
+
 
 td {
     padding: 5px !important;
