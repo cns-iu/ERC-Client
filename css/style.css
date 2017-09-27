@@ -62,7 +62,7 @@ dl, dd, dt{
 .filter-section {
   padding-top:5px;
   display: block;
-  z-index: 400000000000000;
+  z-index: 40;
   text-align: center;
   position: fixed;
   left: 40%;
