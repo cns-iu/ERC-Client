@@ -7,6 +7,10 @@
     <script src="lib/angular/angular.js"></script>
     <script src="lib/head.js"></script>
     <script src="src/Init.js"></script>
+	   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
 	 <style type="text/css">
 
 
@@ -35,12 +39,173 @@ div.tooltip {
 .clear-button {
   font: 14px sans-serif;
   cursor: pointer;
-}*/
+}
+.modal-header-info {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5bc0de;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.btn-info{
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    z-index: 10;
+}
+
+.modal-dialog{
+    position: relative;
+    top:90px;
+}  
+
+#aboutTable th{
+    color:black;
+
+
+  }
+
+#circle{
+z-index: 1;
+}
+
+#rightClick{
+z-index: 2;
+
+}
+*/
   </style>
 </head>
 
 <body >
  <div flex layout-fill layout="row" style="height: 100%; overflow-y: hidden;">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#myModal">  <span class="glyphicon glyphicon-info-sign"></span> About</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content " >
+        <div class="modal-header modal-header-info">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Interface Operations</h4>
+        </div>
+        <div class="modal-body">
+             <table id="aboutTable" class="table table-bordered table-hover"  >
+          <thead>
+
+          </thead>
+          <tbody>
+            <tr>
+              <th>Operation</th>
+              <th>Description</th>
+            </tr>
+             <tr>
+            <td>
+            <img src="images/circle.png" alt="Node" height="50" width="50" id="circle">
+            <img src="images/leftClick.png" alt="Right Click" height="42" width="42" id="rightClick">
+            </td>
+            <td>
+            Selects the node, highlights its connections, opens the publication popup and the corresponding entry in bar graph.
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <img src="images/barGraph.png" alt="barGraph" height="50" width="50" id="barGraph">
+            <img src="images/leftClick.png" alt="Left Click" height="42" width="42" id="rightClick">
+            </td>
+            <td>
+            Selects the bar graph entry, corresponding node in network, its publication popup and its connections.
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <img src="images/circle.png" alt="barGraph" height="50" width="50" id="circle">
+            <img src="images/mouseover.png" alt="Right Click" height="42" width="42" id="mouseover">
+            </td>
+            <td>
+            Highlights the node, its connections and corresponding bar-graph entry.
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <img src="images/barGraph.png" alt="barGraph" height="50" width="50" id="barGraph">
+            <img src="images/mouseover.png" alt="Right Click" height="42" width="42" id="mouseover">
+            </td>
+            <td>
+            Highlights the bar-graph entry, its corresponding node in the network and its connections
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <img src="images/circle.png" alt="Node" height="50" width="50" id="circle">
+            <img src="images/rightClick.png" alt="Right Click" height="42" width="42" id="rightClick">
+            </td>
+            <td>
+            Produces a color-picker button for color selection of the node.
+            </td>
+            </tr>
+                <tr>
+            <td>
+           
+            <img src="images/slider.png" alt="Right Click" height="42" width="42" id="slider">
+               <img src="images/leftClick.png" alt="Right Click" height="42" width="42" id="rightClick">
+            </td>
+            <td>
+            Filter node labels
+            </td>
+            </tr>
+               <tr>
+            <td>
+           
+            <img src="images/scroll.png" alt="Right Click" height="42" width="42" id="scroll">
+
+            </td>
+            <td>
+            Zoom In/Out
+            </td>
+            </tr>
+         
+                <tr>
+            <td>
+           <img src="images/screen.png" alt="Right Click" height="42" width="42" id="screen">
+            <img src="images/leftClick.png" alt="Right Click" height="42" width="42" id="leftClick">
+               
+            </td>
+            <td>
+            Clears the color-picker and/or publication popup.
+            </td>
+            </tr>
+
+                <tr>
+            <td>
+           <img src="images/screen.png" alt="Right Click" height="42" width="42" id="screen">
+            <img src="images/doubleClick.png" alt="Right Click" height="42" width="42" id="doubleClick">
+               
+            </td>
+            <td>
+            Zoom in 
+            </td>
+            </tr>
+
+          
+          </tbody>
+        </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
     <div flex="80" layout="column flex-80">
         <div class="filter-section" layout="column" >
             <label id="filterLabel">Filter Labels by Node Weight</label>
