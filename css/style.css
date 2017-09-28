@@ -490,4 +490,8 @@ tfoot td {
     height: 550px;
 }
 
+.modal-content .table {
+    margin-bottom: 0px;
+}
+
 
