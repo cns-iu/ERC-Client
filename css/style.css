@@ -480,3 +480,14 @@ tfoot td {
   
 }
 
+/* -------- Modal Window -----------*/
+.modal-dialog{
+    width: 1000px;
+    margin: auto;
+    top: 90px;
+}  
+.modal-content tbody {
+    height: 600px;
+}
+
+
