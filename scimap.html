@@ -7,10 +7,43 @@
         <script src="lib/angular/angular.js"></script>
         <script src="lib/head.js"></script>
         <script src="src/Init.js"></script>
+           <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+        <style type="text/css">
+            .btn-info{
+    position: absolute;
+    left: 0px;
+    top:40px;
+    z-index: 10;
+}
+
+.modal-dialog{
+    position: relative;
+    top:90px;
+}  
+
+#aboutTable th{
+    color:black;
+
+
+  }
+
+#circle{
+z-index: 1;
+}
+
+#rightClick{
+z-index: 2;
+
+}
+        </style>
     </head>
 
     <body id="sciMapBody">
-
+ <!-- Trigger the modal with a button -->
+ <div ng-include="'partials/scimap_about_modal.html'"></div>
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#myModal" >  <span class="glyphicon glyphicon-info-sign"></span> About</button>
         <div flex layout-fill layout="row" >
             <div flex layout="column">
                 <div ng-include="'partials/scimap-popup.html'"></div>
