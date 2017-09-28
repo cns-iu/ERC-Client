@@ -124,6 +124,9 @@ div.tooltip {
 
   <form class="curvesettings">
   <div class="box" id = "stats">
+  <button type="button" class="close" aria-label="Close" onclick="closeStats()" data-toggle="tooltip" title=" Close Stats " data-placement= "right">
+  <span aria-hidden="true" >&times;</span>
+</button>
     <div class="title" >User Statistics</div>
     <div>#Authors Geocoded: <span id="geocoded"></span>.</div>
     <div>#Authors Not Geocoded: <span id="notgeocoded"></span>.</div>
@@ -174,36 +177,53 @@ div.tooltip {
   
 </div>
   </div>
- <div class="box">
+  <div id="allSettings">
+ <div class="box" >
+  <button type="button" class="close" aria-label="Close" onclick="closeSettings()" data-toggle="tooltip" title=" Close All Settings " data-placement= "right" >
+  <span aria-hidden="true">&times;</span>
+</button>
     <div class="title">Curve settings</div>
     <div>Hover over nodes<br> to see links.</div>
     <div>Change styles using<br> radio buttons.</div>
   </div>
-    <div class="box">
-      <div class="title"> Curve shape</div>
-      <input type="radio" name="use_arcs" value="0" checked> Beziers<br>
-      <input type="radio" name="use_arcs" value="1"> Arcs<br>
+    <div class="box" id="curveShape">
+     <button type="button" class="close" aria-label="Close" onclick="closeCurveShape()" data-toggle="tooltip" title=" Close Curve Shape Settings " data-placement= "right">
+  <span aria-hidden="true">&times;</span>
+</button>
+      <div class="title">Curve shape</div>
+      <input type="radio" name="use_arcs" value="0" checked>Beziers<br>
+      <input type="radio" name="use_arcs" value="1">Arcs<br>
     </div>
-    <div class="box">
-    <div class="title"> Flip at horizontal axis</div>
-    <input type="radio" name="flip" value="1" checked> Flip<br>
-    <input type="radio" name="flip" value="0"> NoFlip<br>
+    <div class="box" id="flipHorizontal">
+     <button type="button" class="close" aria-label="Close" onclick="closeFlipHorizontal()" data-toggle="tooltip" title=" Close Flip Horizontal Settings " data-placement= "right">
+  <span aria-hidden="true">&times;</span>
+</button>
+    <div class="title">Flip at horizontal axis</div>
+    <input type="radio" name="flip" value="1" checked>Flip<br>
+    <input type="radio" name="flip" value="0">NoFlip<br>
     </div>
-    <div class="box">
+    <div class="box" id="xSteepness">
+     <button type="button" class="close" aria-label="Close" onclick="closeXSteepness()"data-toggle="tooltip" title=" Close X Curve Steepness Settings " data-placement= "right">
+  <span aria-hidden="true">&times;</span>
+</button>
     <div class="title">Set curve steepness X</div>
     <div>(bezier control point)</div>
-    <input type="radio" name="xshift" value="0.1"> xshift 0.1<br>
-    <input type="radio" name="xshift" value="0.4" checked> xshift 0.4<br>
-    <input type="radio" name="xshift" value="0.8"> xshift 0.8<br>
-    <input type="radio" name="xshift" value="1.6"> xshift 1.6<br>
+    <input type="radio" name="xshift" value="0.1">xshift 0.1<br>
+    <input type="radio" name="xshift" value="0.4" checked>xshift 0.4<br>
+    <input type="radio" name="xshift" value="0.8">xshift 0.8<br>
+    <input type="radio" name="xshift" value="1.6">xshift 1.6<br>
     </div>
-    <div class="box">
+    <div class="box" id="ySteepness">
+     <button type="button" class="close" aria-label="Close" onclick="closeYSteepness()" data-toggle="tooltip" title=" Close Y Curve Steepness Settings " data-placement= "right">
+  <span aria-hidden="true">&times;</span>
+</button>
     <div class="title">Set curve steepness Y</div>
     <div>(bezier control point)</div>
-    <input type="radio" name="yshift" value="0.1" checked> yshift 0.1<br>
-    <input type="radio" name="yshift" value="0.4"> yshift 0.4<br>
-    <input type="radio" name="yshift" value="0.8"> yshift 0.8<br>
-    <input type="radio" name="yshift" value="1.6"> yshift 1.6<br>
+    <input type="radio" name="yshift" value="0.1" checked>yshift 0.1<br>
+    <input type="radio" name="yshift" value="0.4">yshift 0.4<br>
+    <input type="radio" name="yshift" value="0.8">yshift 0.8<br>
+    <input type="radio" name="yshift" value="1.6">yshift 1.6<br>
+    </div>
     </div>
   </form>
 </div>
@@ -215,6 +235,46 @@ div.tooltip {
 
 
 </body>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+closeCount = 0;
+function closeStats(){
+$("#stats").hide();
+}  
+
+function closeSettings(){
+$("#allSettings").hide();
+closeCount = 0;
+}
+
+function closeCurveShape(){
+$("#curveShape").hide();
+closeCount++;
+if(closeCount == 4)
+  closeSettings();
+}
+
+function closeFlipHorizontal(){
+  $("#flipHorizontal").hide();
+  closeCount++;
+  if(closeCount == 4)
+  closeSettings();
+}
+function closeXSteepness(){
+  $("#xSteepness").hide();
+  closeCount++;
+  if(closeCount == 4)
+  closeSettings();
+}
+function closeYSteepness(){
+  $("#ySteepness").hide();
+  closeCount++;
+  if(closeCount == 4)
+  closeSettings();
+}
+</script>
 
  
 <!-- <script src="http://d3js.org/d3.v3.min.js"></script>
