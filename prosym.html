@@ -138,47 +138,10 @@ div.tooltip {
 	    <div >
 
   <!-- Trigger the modal with a button -->
+  <div ng-include="'partials/prosym_warning_modal.html'"></div>
   <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#myModal">  <span class="glyphicon glyphicon-info-sign"></span> Warning</button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content " >
-        <div class="modal-header modal-header-warning">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Warning - Incomplete Data</h4>
-        </div>
-        <div class="modal-body">
-          <p>Please return to the upload page and update your data to produce a more accurate visualization.
-          Make sure to include all author details -  </p>
-
-          <ul><li>id </li>
-          <li>author-name</li>
-          <li>affiliation</li>
-          <li>latitude</li>
-          <li>longitude</li>
-          <li>zip</li>
-          <li>gender</li>
-          </ul>
-          
-           <p>And all publication details - </p>
-           <ul> 
-           <li>author ids</li>
-           <li> title</li>
-           <li>year</li>
-           <li>citation count </li>
-           </ul>
-           <p>and validate the data! </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+  
   
 </div>
   </div>
