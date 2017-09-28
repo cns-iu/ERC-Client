@@ -14,16 +14,16 @@
                     <thead>
                         <tr>
                             <th st-ratio="35" st-sort="authors">Authors</th>
-                            <th st-ratio="5" st-sort="year">Year</th>
-                            <th st-ratio="35" st-sort="title">Title</th>
+                            <th st-ratio="7" st-sort="year">Year</th>
+                            <th st-ratio="33" st-sort="title">Title</th>
                             <th st-ratio="25" st-sort="journal">Journal</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr ng-repeat="row in tableData">
                             <td st-ratio="35" st-sort="authors">{{row.authors}}</td>
-                            <td st-ratio="5" st-sort="year">{{row.year}}</td>
-                            <td st-ratio="35" st-sort="title"><a href={{row.url}}>{{row.title}}</a></td>
+                            <td st-ratio="7" st-sort="year">{{row.year}}</td>
+                            <td st-ratio="33" st-sort="title"><a href={{row.url}}>{{row.title}}</a></td>
                             <td st-ratio="25" st-sort="journal">{{row.journal}}</td>                        
                         </tr>
                     </tbody>
