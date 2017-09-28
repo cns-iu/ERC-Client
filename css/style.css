@@ -17,7 +17,7 @@ html,body {
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 27px !important;
 }
 
 
