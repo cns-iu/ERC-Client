@@ -199,12 +199,12 @@ tfoot > tr {
 }
 
 thead {
-    padding: 4px;
 }
 
 th {
     font-weight: normal !important;
     color: white;
+    padding: 8px 5px;
 }
 
 thead,
@@ -490,7 +490,7 @@ tfoot td {
     height: 550px;
 }
 
-.modal-content .table {
+.table {
     margin-bottom: 0px;
 }
 
