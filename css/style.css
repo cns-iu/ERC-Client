@@ -280,12 +280,12 @@ tfoot td {
 }
 
 
-
+/*
 .legend-space {
   margin: 0 auto;
   display: block;
   width: 100%;
-}
+}*/
 
 .table>thead>tr>th {
     border-bottom: 0px transparent !important;
