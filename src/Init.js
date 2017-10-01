@@ -6,9 +6,9 @@ var scripts = [{
         "leaflet-css": "css/leaflet.css"
     }, {
         "opensans": "css/fonts/opensans.css"
-    }, {
+    }, /*{
         "jQuery": "lib/jquery-1.11.2.min.js"
-    }, {
+    },*/ {
         "bootstrap.min.js": "lib/bootstrap.min.js"
     }, {
         "d3.v3.min.js": "lib/d3.v3.min.js"
