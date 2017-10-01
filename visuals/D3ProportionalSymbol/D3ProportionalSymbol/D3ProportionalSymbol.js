@@ -275,8 +275,10 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       })
       // Get link data for this prosym01.node
       var nodelinks = prosym01.spatialsankey.links().filter(function(link){
-        return link.source == d.id;
+        return link.source == d.id || link.target == d.id;
       });
+
+
 
  
       // Add data to link layer
@@ -321,14 +323,6 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
      
     }
       
-
-
-
-
-
-
-
-
 };
 
 
