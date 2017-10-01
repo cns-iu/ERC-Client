@@ -232,11 +232,15 @@ head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/leaflet.js')
                 {
 
                     d3.select(this).transition().style('opacity',0.7);
-
+                  var targetNodes=[];
+        
                     var nodelinks = prosym01.spatialsankey.links().filter(function(link){
-                        return link.source == d1.id;
-
-
+                      if (link.source == d.id)
+          {
+            if ($.inArray(link.target,targetNodes)==-1)
+              targetNodes.push(link.target);
+          return link.source;
+          }
 
                     });
                     options = {'use_arcs': false, 'flip': false};
@@ -254,9 +258,14 @@ head.js('visuals/D3ProportionalSymbol/D3ProportionalSymbol/leaflet.js')
       beziers.exit().remove(); 
 
 
+
   }
 })
-                     //console.log(id);
+   prosym01.circs.transition().style('opacity',function (d) {  
+        if(targetNodes.indexOf(d.id)!=-1)
+          targetNames.push(d.author.toString());
+        return (targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0;
+      });                   //console.log(id);
 
               }   })
             .on('mouseout', function(d,i){
