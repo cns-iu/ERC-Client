@@ -258,8 +258,8 @@
       beziers.exit().remove(); 
       var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d2) {  
-       if(targetNodes.indexOf(d.id)!=-1)
-        targetNames.push(d.author.toString());
+       if(targetNodes.indexOf(d2.id)!=-1)
+        targetNames.push(d2.author.toString());
       return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
     }); 
       barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
@@ -343,8 +343,8 @@
       showPopup(t[0].tableD);
       var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d2) {  
-       if(targetNodes.indexOf(d.id)!=-1)
-        targetNames.push(d.author.toString());
+       if(targetNodes.indexOf(d2.id)!=-1)
+        targetNames.push(d2.author.toString());
       return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
     }); 
 
