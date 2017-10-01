@@ -277,25 +277,7 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       var targetNodes=[]
       // Get link data for this prosym01.node
       var nodelinks = prosym01.spatialsankey.links().filter(function(link){
-        if (link.source == d.id)
-        {
-          if($.inArray(link.target,targetNodes) == -1)
-            {
-              targetNodes.push(link.target);
-              return link.source;
-            }
-        }
-
-        if (link.target == d.id)
-        {
-          if($.inArray(link.source,targetNodes) == -1)
-            {
-              targetNodes.push(link.source);
-              return link.target;
-            }
-        }
-        
-
+     return link.source == d.id;
       });
   
       // Add data to link layer
