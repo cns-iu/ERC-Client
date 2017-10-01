@@ -63,7 +63,7 @@ visualizationFunctions.ForceNetwork = function(element, data, opts) {
 
 
 
-            var tooltipDiv = d3.select("body").append("div") 
+            var tooltipDiv = d3.select(".flex").append("div") 
             .attr("class", "tooltip")       
             .style("opacity", 0)
             .attr("id","tooltip");
