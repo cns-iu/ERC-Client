@@ -182,10 +182,7 @@ d3.json("nodes.geojson", function(nodes) {
         }), context.config.meta.nodes.styleEncoding.size.range)
 
     var mouseover = function(d){
-      
-              
-if (prosym01.click==0){
-        div.transition()    
+       div.transition()    
                 .duration(200)    
                 .style("opacity", .7);    
         div.html(d.author + "<br/>" )  
@@ -194,6 +191,9 @@ if (prosym01.click==0){
                 .style("background","black") 
                 .style("color","white");
 
+              
+if (prosym01.click==0){
+       
       barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
         if (d6[0].innerHTML == d.author.toString()){
