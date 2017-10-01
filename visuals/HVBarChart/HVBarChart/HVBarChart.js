@@ -231,7 +231,7 @@
           if(d1.author === d.key)
           {
 
-            d3.select(this).transition().style('opacity',0.7);
+            
             var targetNodes=[];
 
             var nodelinks = prosym01.spatialsankey.links().filter(function(link){
@@ -294,7 +294,7 @@
             if(d1.author === d.key)
             {
 
-              d3.select(this).transition().style('opacity',0.7);
+            
               var targetNodes=[];
               var nodelinks = prosym01.spatialsankey.links().filter(function(link){
                 if (link.source == d1.id)
