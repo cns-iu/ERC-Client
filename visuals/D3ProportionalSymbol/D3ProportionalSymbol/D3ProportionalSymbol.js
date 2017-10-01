@@ -228,7 +228,7 @@ if (prosym01.click==0){
       var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d) {
         if(targetNodes.indexOf(d.id)!=-1)
-          targetNames.push(d.author);
+          targetNames.push(d.author.toString());
         return (this === circleUnderMouse|| targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0;
       });
 
@@ -243,7 +243,7 @@ if (prosym01.click==0){
           d6[0].style.strokeWidth = ".5px";
           d6.parentNode.childNodes[0].style.fill = "darkgrey";
         }
-        if (targetName.indexOf(d6[0].innerHTML)!=-1)
+        if (targetNames.indexOf(d6[0].innerHTML)!=-1)
         {
           d6[0].setAttribute("opacity",1);
           d6[0].style.fontWeight = "bold";
