@@ -14,9 +14,6 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
             .attr("x", 0)
             .attr("y", 0)
 
-    context.Scales.nodeSizeScale = Utilities.makeDynamicScaleNew(d3.extent(spatialsankey.nodeSizeArr, function(d, i) {
-            return d;
-        }), context.config.meta.nodes.styleEncoding.size.range)
 
         nestData();
         context.SVG.g = context.SVG.append("g")
@@ -178,6 +175,11 @@ d3.json("nodes.geojson", function(nodes) {
     .lmap(context.map)
     .nodes(context.filteredData.authors.data)
     .links(context.filteredData.edges.data);
+
+
+    context.Scales.nodeSizeScale = Utilities.makeDynamicScaleNew(d3.extent(prosym01.spatialsankey.nodeSizeArr, function(d, i) {
+            return d;
+        }), context.config.meta.nodes.styleEncoding.size.range)
 
     var mouseover = function(d){
       
