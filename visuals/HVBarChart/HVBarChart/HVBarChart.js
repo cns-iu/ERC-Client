@@ -235,7 +235,7 @@
             var targetNodes=[];
 
             var nodelinks = prosym01.spatialsankey.links().filter(function(link){
-              if (link.source == d.id)
+              if (link.source == d1.id)
               {
                 if ($.inArray(link.target,targetNodes)==-1)
                   targetNodes.push(link.target);
@@ -257,8 +257,8 @@
       // Remove old links
       beziers.exit().remove(); 
 
-      prosym01.circs.transition().style('opacity',function (d) {  
-        return (targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0;
+      prosym01.circs.transition().style('opacity',function (d2) {  
+        return (targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
       }); 
 
     }
