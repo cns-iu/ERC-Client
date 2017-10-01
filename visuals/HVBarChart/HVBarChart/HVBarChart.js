@@ -332,7 +332,7 @@ else{
                  prosym01.linklayer.selectAll("path").remove();
                  $(".popup").css({ display: "none" })
                 
-             prosym01.map.panTo(new L.LatLng(40.737, -83.923));
+             prosym01.map.panTo(new L.LatLng(40.737, -53.923));
              if (prosym01.mark)prosym01.map.removeLayer(prosym01.mark);
 }
 
