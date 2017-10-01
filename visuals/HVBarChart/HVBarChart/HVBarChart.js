@@ -233,7 +233,7 @@
 
             
             var targetNodes=[];
-
+            var targetNames=[];
             var nodelinks = prosym01.spatialsankey.links().filter(function(link){
               if (link.source == d1.id)
               {
@@ -258,9 +258,28 @@
       beziers.exit().remove(); 
       var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d2) {  
-        return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
-      }); 
+       if(targetNodes.indexOf(d.id)!=-1)
+        targetNames.push(d.author.toString());
+      return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
+    }); 
+      barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
+        if (d6[0].innerHTML == d.author.toString()){
+          d6[0].setAttribute("opacity",1);
+          d6[0].style.fontWeight = "bold";
+          d6[0].style.stroke = "black";
+          d6[0].style.strokeWidth = ".5px";
+          d6.parentNode.childNodes[0].style.fill = "darkgrey";
+        }
+        if (targetNames.indexOf(d6[0].innerHTML)!=-1)
+        {
+          d6[0].setAttribute("opacity",1);
+          
+          d6[0].style.stroke = "black";
+          
+          d6.parentNode.childNodes[0].style.fill = "darkgrey";
+        }
 
+      })
     }
   })
                      //console.log(id);
@@ -294,8 +313,9 @@
             if(d1.author === d.key)
             {
 
-            
+              
               var targetNodes=[];
+              var targetNames=[];
               var nodelinks = prosym01.spatialsankey.links().filter(function(link){
                 if (link.source == d1.id)
                 {
@@ -329,8 +349,29 @@
       showPopup(t[0].tableD);
       var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d2) {  
-        return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
-      }); 
+       if(targetNodes.indexOf(d.id)!=-1)
+        targetNames.push(d.author.toString());
+      return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
+    }); 
+
+      barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
+        if (d6[0].innerHTML == d.author.toString()){
+          d6[0].setAttribute("opacity",1);
+          d6[0].style.fontWeight = "bold";
+          d6[0].style.stroke = "black";
+          d6[0].style.strokeWidth = ".5px";
+          d6.parentNode.childNodes[0].style.fill = "darkgrey";
+        }
+        if (targetNames.indexOf(d6[0].innerHTML)!=-1)
+        {
+          d6[0].setAttribute("opacity",1);
+          
+          d6[0].style.stroke = "black";
+          
+          d6.parentNode.childNodes[0].style.fill = "darkgrey";
+        }
+
+      })
     }
   })
         }
