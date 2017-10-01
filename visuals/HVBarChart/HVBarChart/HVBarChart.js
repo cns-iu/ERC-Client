@@ -340,6 +340,7 @@
       t = prosym01.filteredData.authors.data.filter(function(d1){
         return d1.author == d.key 
       })
+       $("#zip-name").text(t[0].cutZip + "_");
       showPopup(t[0].tableD);
       var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d2) {  

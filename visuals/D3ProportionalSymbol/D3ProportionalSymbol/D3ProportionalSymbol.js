@@ -17,7 +17,7 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
 
    nestData();
    context.SVG.g = context.SVG.append("g")
-   
+
    context.config = context.CreateBaseConfig();
    context.update = function() {
 
@@ -82,7 +82,7 @@ visualizationFunctions.D3ProportionalSymbol = function(element, data, opts) {
       }])
     }
   }
-  
+
   function nestData() {
     context.categories = context.config.meta.categories;
     context.categoryBank = {};
@@ -182,8 +182,8 @@ d3.json("nodes.geojson", function(nodes) {
     }), context.config.meta.nodes.styleEncoding.size.range)
 
     var mouseover = function(d){
-      
-      
+
+
       if (prosym01.click==0){
         div.transition()    
         .duration(200)    
@@ -234,7 +234,7 @@ d3.json("nodes.geojson", function(nodes) {
 
       barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       barChart02.SVG.barGroups.selectAll("text").forEach(function(d6,i6){
-        
+
         if (d6[0].innerHTML == d.author.toString()){
           d6[0].setAttribute("opacity",1);
           d6[0].style.fontWeight = "bold";
@@ -247,7 +247,7 @@ d3.json("nodes.geojson", function(nodes) {
           d6[0].setAttribute("opacity",1);
           
           d6[0].style.stroke = "black";
-          
+
           d6.parentNode.childNodes[0].style.fill = "darkgrey";
         }
 
@@ -283,7 +283,7 @@ d3.json("nodes.geojson", function(nodes) {
      prosym01.click=1;
      barChart02.click=1;
 
-     
+
      var targetNodes=[];
      var targetNames=[];
       // Get link data for this prosym01.node
@@ -295,7 +295,7 @@ d3.json("nodes.geojson", function(nodes) {
           return link.source;
         }
       });
-      
+
       // Add data to link layer
       var beziers = prosym01.linklayer.selectAll("path").data(nodelinks);
       link = prosym01.spatialsankey.link(options);
@@ -333,14 +333,17 @@ d3.json("nodes.geojson", function(nodes) {
           d6[0].setAttribute("opacity",1);
           
           d6[0].style.stroke = "black";
-          
+
           d6.parentNode.childNodes[0].style.fill = "darkgrey";
         }
 
       })
 
       if(d.tableD.length!=0)    
-        showPopup(d.tableD);
+        {
+          $("#zip-name").text(d.cutZip + "_");
+          showPopup(d.tableD);
+        }
 
     }
     else{
@@ -355,11 +358,11 @@ d3.json("nodes.geojson", function(nodes) {
       prosym01.linklayer.selectAll("path").remove();
       // Show all nodes
       prosym01.circs.transition().style('opacity', 0.7);
-      
+
       $(".popup").css({ display: "none" })
-      
+
     }
-    
+
   };
 
 
