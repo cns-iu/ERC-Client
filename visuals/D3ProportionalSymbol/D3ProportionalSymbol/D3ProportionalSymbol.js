@@ -273,23 +273,33 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
 
 
       })
+      
+      var targetNodes=[]
       // Get link data for this prosym01.node
-      var nodelinksSource = prosym01.spatialsankey.links().filter(function(link){
-        return link.source == d.id;
+      var nodelinks = prosym01.spatialsankey.links().filter(function(link){
+        if (link.source == d.id)
+        {
+          if($.inArray(link.target,targetNodes) == -1)
+            {
+              targetNodes.push(link.target);
+              return link.source;
+            }
+        }
+
+        if (link.target == d.id)
+        {
+          if($.inArray(link.source,targetNodes) == -1)
+            {
+              targetNodes.push(link.source);
+              return link.target;
+            }
+        }
+        
+
       });
-
-      var nodelinksTarget = prosym01.spatialsankey.links().filter(function(link){
-        return link.target == d.id ;
-      });
-
-
-      nodelinksTarget = nodelinksTarget.filter(function(val){
-        return nodelinksSource.indexOf(val) == -1;
-      })
- 
-      var nodelinks = nodelinksSource.concat(nodelinksTarget);
+  
       // Add data to link layer
-      var beziers = prosym01.linklayer.selectAll("path").data(nodelinksSource);
+      var beziers = prosym01.linklayer.selectAll("path").data(nodelinks);
       link = prosym01.spatialsankey.link(options);
 
       // Draw new links
