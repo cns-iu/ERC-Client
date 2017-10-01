@@ -295,10 +295,14 @@
             {
 
               d3.select(this).transition().style('opacity',0.7);
-
+              var targetNodes=[];
               var nodelinks = prosym01.spatialsankey.links().filter(function(link){
-                return link.source == d1.id;
-
+                if (link.source == d1.id)
+                {
+                  if ($.inArray(link.target,targetNodes)==-1)
+                    targetNodes.push(link.target);
+                  return link.source;
+                }
 
 
               });
@@ -323,7 +327,9 @@
         return d1.author == d.key 
       })
       showPopup(t[0].tableD);
-
+      prosym01.circs.transition().style('opacity',function (d2) {  
+        return (targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
+      }); 
     }
   })
         }
