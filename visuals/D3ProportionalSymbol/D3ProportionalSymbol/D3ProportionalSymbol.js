@@ -145,7 +145,7 @@ var div = d3.select("body").append("div")
       attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       noWrap:true,
-      minZoom: 3,
+      minZoom: 4,
       maxZoom: 20,
       ext: 'png'
     })
@@ -155,7 +155,7 @@ var div = d3.select("body").append("div")
 // Initialize the SVG layer
 context.map._initPathRoot()
 
-context.map.panTo(new L.LatLng(40.737, -53.923));
+context.map.panTo(new L.LatLng(40.737, -83.923));
 
 
 
