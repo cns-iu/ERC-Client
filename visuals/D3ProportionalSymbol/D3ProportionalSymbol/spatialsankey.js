@@ -229,7 +229,7 @@ d3.spatialsankey = function() {
       var diff = d.properties.aggregate_outflows - node_flow_range.min,
           range = node_flow_range.max - node_flow_range.min;
       // return (node_radius_range.max - node_radius_range.min)*(diff/range) + node_radius_range.min;
-    return ((d.properties.aggregate_outflows/10) + (d.properties.aggregate_inflows/10));
+    return ((d.properties.aggregate_outflows/10) + (d.properties.aggregate_inflows/10)+5);
     };
     node.color = function(_) {
       if (!arguments.length) return color;
