@@ -279,11 +279,15 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       });
 
       var nodelinksTarget = prosym01.spatialsankey.links().filter(function(link){
-        return link.target == d.id && $.inArray(link.target,nodelinksSource)==-1;
+        return link.target == d.id ;
       });
 
 
+      nodelinksTarget = nodelinksTarget.filter(function(val){
+        return nodelinksSource.indexOf(val) == -1;
+      })
  
+      var nodelinks = nodelinksSource.concat(nodelinksTarget);
       // Add data to link layer
       var beziers = prosym01.linklayer.selectAll("path").data(nodelinksSource);
       link = prosym01.spatialsankey.link(options);
