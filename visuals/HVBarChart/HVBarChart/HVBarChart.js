@@ -256,9 +256,9 @@
       
       // Remove old links
       beziers.exit().remove(); 
-
+      var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d2) {  
-        return (targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
+        return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
       }); 
 
     }
@@ -327,8 +327,9 @@
         return d1.author == d.key 
       })
       showPopup(t[0].tableD);
+      var circleUnderMouse = this;
       prosym01.circs.transition().style('opacity',function (d2) {  
-        return (targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
+        return (this === circleUnderMouse||targetNodes.indexOf(d2.id)!=-1) ? 0.7 : 0;
       }); 
     }
   })
