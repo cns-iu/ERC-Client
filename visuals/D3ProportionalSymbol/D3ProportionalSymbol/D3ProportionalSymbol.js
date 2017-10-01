@@ -155,7 +155,7 @@ var div = d3.select("body").append("div")
 // Initialize the SVG layer
 context.map._initPathRoot()
 
-context.map.panTo(new L.LatLng(40.737, -73.923));
+context.map.panTo(new L.LatLng(40.737, -53.923));
 
 
 
