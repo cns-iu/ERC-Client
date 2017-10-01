@@ -185,18 +185,57 @@ z-index: 2;
       </div></div>
 </div>
 
-
+<div class="legend-container coauthor legend">
+                    <button>
+                        <span>Legend</span>
+                    </button>
+                    <div class="legend-row">
+                        <div flex layout="row">
+                            <div flex="75" layout="column">
+                                <div flex class="legend-item-label" id = "nodes">Nodes</div>
+                                <div flex layout="row">
+                                    <div flex class="legend-item">
+                                        <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-vis-type="LegendNodeSize" id="nodeSize" ng-identifier="nodeSize">
+                                        </div>
+                                    </div>
+                                 
+                                   
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
 </body>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
+    $('[data-toggle="tooltip"]').tooltip(); 
+      $(".legend-container").click(function() {
+                toggleLegend();
+            });  
 });
 
 function closeStats(){
 $("#stats").hide();
 }  
 
+ var legendToggleOff = true;
+  
 
+    function toggleLegend() {
+        if (legendToggleOff) {
+            $(".legend-container").animate({
+                bottom: '0px'
+            }, 250);
+            legendToggleOff = false;
+        } else {
+            $(".legend-container").animate({
+                bottom: '-210px'
+            }, 75);
+            legendToggleOff = true;
+        }
+
+    }
 </script>
 
  
