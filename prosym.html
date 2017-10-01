@@ -73,8 +73,9 @@ circle{
 }
 
 #stats{
-  position: relative;
-  bottom:30px;
+  position: absolute;
+  bottom:0px;
+  width:100px;
 }
 
 .modal-header-warning {
@@ -190,41 +191,12 @@ z-index: 2;
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
-closeCount = 0;
+
 function closeStats(){
 $("#stats").hide();
 }  
 
-function closeSettings(){
-$("#allSettings").hide();
-closeCount = 0;
-}
 
-function closeCurveShape(){
-$("#curveShape").hide();
-closeCount++;
-if(closeCount == 4)
-  closeSettings();
-}
-
-function closeFlipHorizontal(){
-  $("#flipHorizontal").hide();
-  closeCount++;
-  if(closeCount == 4)
-  closeSettings();
-}
-function closeXSteepness(){
-  $("#xSteepness").hide();
-  closeCount++;
-  if(closeCount == 4)
-  closeSettings();
-}
-function closeYSteepness(){
-  $("#ySteepness").hide();
-  closeCount++;
-  if(closeCount == 4)
-  closeSettings();
-}
 </script>
 
  
