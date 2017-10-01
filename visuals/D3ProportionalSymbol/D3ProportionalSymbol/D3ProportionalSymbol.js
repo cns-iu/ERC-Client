@@ -248,7 +248,7 @@ if (prosym01.click==0){
           d6[0].setAttribute("opacity",1);
           d6[0].style.fontWeight = "bold";
           d6[0].style.stroke = "black";
-          d6[0].style.strokeWidth = ".5px";
+          d6[0].style.strokeWidth = ".25px";
           d6.parentNode.childNodes[0].style.fill = "darkgrey";
         }
 
