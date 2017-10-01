@@ -128,9 +128,9 @@ edges: {
         && (ntwrk.filteredData.authors.data[d.target].latitude!=null)
         &&  (ntwrk.filteredData.authors.data[d.target].longitude!=null))
       {
-        d.flow = 50;
+        d.flow = 1;
       }
-      else d.flow = 50;
+      else d.flow = 1;
 
     })
 
