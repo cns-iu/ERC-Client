@@ -236,7 +236,7 @@ if (prosym01.click==0){
 
       // Hide inactive nodes
       var circleUnderMouse = this;
-      prosym01.circs.transition().style('opacity',function () {
+      prosym01.circs.transition().style('opacity',function (d) {
         return (this === circleUnderMouse|| targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0;
       });
 
