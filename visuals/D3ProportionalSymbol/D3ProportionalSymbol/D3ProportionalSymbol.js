@@ -277,7 +277,12 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
       var targetNodes=[]
       // Get link data for this prosym01.node
       var nodelinks = prosym01.spatialsankey.links().filter(function(link){
-     return link.source == d.id;
+          if (link.source == d.id)
+          {
+            if ($.inArray(link.target,targetNodes)==-1)
+              targetNodes.push(link.target);
+          return link.source;
+          }
       });
   
       // Add data to link layer
@@ -297,9 +302,11 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
 
       // Hide inactive nodes
       var circleUnderMouse = this;
-      prosym01.circs.transition().style('opacity',function () {
-        return (this === circleUnderMouse) ? 0.7 : 0;
+      prosym01.circs.transition().style('opacity',function (d) {
+        return (this === circleUnderMouse || targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0;
       });
+
+
 
       if(d.tableD.length!=0)    
         showPopup(d.tableD);
