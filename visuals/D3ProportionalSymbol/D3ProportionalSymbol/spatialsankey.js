@@ -12,7 +12,8 @@ d3.spatialsankey = function() {
       remove_zero_links = true,
       remove_zero_nodes = true,
       version = '0.0.5';
-
+  
+  spatialsankey.nodeSizeArr=[];
   // Get or set leaflet map instance
   spatialsankey.lmap = function(_) {
     if(!arguments.length) return map;
@@ -229,6 +230,7 @@ d3.spatialsankey = function() {
       var diff = d.properties.aggregate_outflows - node_flow_range.min,
           range = node_flow_range.max - node_flow_range.min;
       // return (node_radius_range.max - node_radius_range.min)*(diff/range) + node_radius_range.min;
+    spatialsankey.nodeSizeArr = (d.properties.aggregate_outflows/10) + (d.properties.aggregate_inflows/10)+10;
     return ((d.properties.aggregate_outflows/10) + (d.properties.aggregate_inflows/10)+10);
     };
     node.color = function(_) {
