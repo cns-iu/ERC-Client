@@ -274,15 +274,18 @@ barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
 
       })
       // Get link data for this prosym01.node
-      var nodelinks = prosym01.spatialsankey.links().filter(function(link){
+      var nodelinksSource = prosym01.spatialsankey.links().filter(function(link){
         return link.source == d.id;
       });
 
+      var nodelinksTarget = prosym01.spatialsankey.links().filter(function(link){
+        return link.target == d.id && $.inArray(link.target,nodelinksSource)==-1;
+      });
 
-     
+
  
       // Add data to link layer
-      var beziers = prosym01.linklayer.selectAll("path").data(nodelinks);
+      var beziers = prosym01.linklayer.selectAll("path").data(nodelinksSource);
       link = prosym01.spatialsankey.link(options);
 
       // Draw new links
