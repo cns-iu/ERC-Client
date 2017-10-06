@@ -2,7 +2,7 @@ configs.prosym01 = {
  nodes: {
   styleEncoding: {
     size: {
-      attr: "tableD",
+      attr: "",
       range: [10, 20],
       scaleType: "linear"
     }
