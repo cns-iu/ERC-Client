@@ -3,27 +3,6 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
     context.config = context.CreateBaseConfig();
     // context.SVG = context.config.easySVG(element[0])
     context.VisFunc = function() {
-        
-        // var data = [4, 20];
-        // var extent = d3.extent(data);
-
-        // context.SVG.nodeG = context.SVG.append("g")
-        //     .attr("transform", "translate(" + (context.config.dims.fixedWidth / 3) + ", 0)")
-        //     .selectAll(".node")
-        //     .data([extent[0], d3.mean(extent), extent[1]])
-        //     .enter()
-        //     .append("g")
-
-        // context.SVG.nodes = context.SVG.nodeG
-        //     .each(function(d, i) {
-        //         var currG = d3.select(this);
-        //         currG.append("circle")
-        //             .attr("r", d)
-        //             .attr("stroke", "black")
-        //     })
-
-
-
         d3.xml("visuals/LegendNodeSize/LegendNodeSize/legend.svg").mimeType("image/svg+xml").get(function(error, xml) {
             if (error) throw error;
             context.SVG = d3.select(xml.documentElement);
