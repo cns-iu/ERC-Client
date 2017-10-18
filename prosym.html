@@ -7,7 +7,137 @@
 
 <style>
 
+body {
+  position: absolute;
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif !important;
+  overflow: hidden; 
+  background-color: #C8C8C8; 
+}
 
+#map {
+  left:0px;
+  right:0px;
+  height: 100%;
+  width:100%;
+  bottom:0px;
+  position: absolute;
+  overflow: hidden;
+}
+
+path {
+  fill: none;
+  stroke: #4682B4;
+  stroke-opacity: 0.6;
+  stroke-linecap: round;
+  cursor: pointer;
+}
+
+path:hover {
+  stroke-opacity: 1;
+  stroke: #315B7E;
+}
+
+/*.curvesettings {
+  position: absolute;
+  left: 10px;
+  bottom:26px;
+}*/
+
+.box {
+  border: 1px solid #eaeaea;
+  margin: 3px;
+  padding: 5px;
+  background-color: white;
+  font-size: 12px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.source {
+  position: absolute;
+  width: 50%;
+  top: 6px;
+  left: 50px;
+}
+
+.barChart02{
+  background: white; 
+}
+
+circle{
+  cursor: pointer;
+}
+
+#stats{
+  position: absolute;
+  bottom:0px;
+  width:130px;
+}
+
+.modal-header-warning {
+  color:#fff;
+  padding:9px 15px;
+  border-bottom:1px solid #eee;
+  background-color: #f0ad4e;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 60px;          
+    height: 30px;         
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: white; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;   
+ 
+}
+.tooltip-inner {
+
+    
+    width: 100px; 
+}
+.btn-info{
+    position: absolute;
+   top:10px;
+   left:40px;
+    z-index: 10;
+}
+.modal-dialog{
+    position: relative;
+    top:90px;
+} 
+
+#aboutTable th{
+    color:black;
+
+
+  }
+
+#circle{
+z-index: 1;
+}
+
+#rightClick{
+z-index: 2;
+
+}
+#warningContent{
+  font-size: 1.6rem;
+}
 </style>
 <script src="lib/angular/angular.js"></script>
   <script src="lib/head.js"></script>
@@ -21,7 +151,7 @@
 <div id="container" class="flexChild rowParent">
  <!-- Trigger the modal with a button -->
  <div ng-include="'partials/prosym_about_modal.html'"></div>
-  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#aboutModal" id="geomapAbout">  <span class="glyphicon glyphicon-info-sign"></span> About</button>
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#aboutModal" >  <span class="glyphicon glyphicon-info-sign"></span> About</button>
   
   <div ng-include="'partials/prosym-popup.html'"></div>
 <div id="rowChild18007" class="flexChild">
