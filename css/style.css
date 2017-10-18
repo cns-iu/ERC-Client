@@ -5,15 +5,15 @@ html,body {
 	overflow: none !important;	
 	width: 100%;
 	height: 100%;
-
+ margin: 0px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-html-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-
-
+  overflow: hidden; 
+  position: absolute;
 }
 
 
@@ -547,3 +547,119 @@ z-index: 2;
 
 }
 
+#map {
+  left:0px;
+  right:0px;
+  height: 100%;
+  width:100%;
+  bottom:0px;
+  position: absolute;
+  overflow: hidden;
+}
+
+
+/*.curvesettings {
+  position: absolute;
+  left: 10px;
+  bottom:26px;
+}*/
+
+.box {
+  border: 1px solid #eaeaea;
+  margin: 3px;
+  padding: 5px;
+  background-color: white;
+  font-size: 12px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.source {
+  position: absolute;
+  width: 50%;
+  top: 6px;
+  left: 50px;
+}
+
+.barChart02{
+  background: white; 
+}
+
+circle{
+  cursor: pointer;
+}
+
+#stats{
+  position: absolute;
+  bottom:0px;
+  width:130px;
+}
+
+.modal-header-warning {
+  color:#fff;
+  padding:9px 15px;
+  border-bottom:1px solid #eee;
+  background-color: #f0ad4e;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 60px;          
+    height: 30px;         
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: white; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;   
+ 
+}
+.tooltip-inner {
+
+    
+    width: 100px; 
+}
+.btn-info{
+    position: absolute;
+   top:10px;
+   left:40px;
+    z-index: 10;
+}
+.modal-dialog{
+    position: relative;
+    top:90px;
+} 
+
+#aboutTable th{
+    color:black;
+
+
+  }
+
+#circle{
+z-index: 1;
+}
+
+#rightClick{
+z-index: 2;
+
+}
+#warningContent{
+  font-size: 1.6rem;
+}
+
+#geomapAbout{
+    position: absolute;
+    left: 10px;
+    top:40px;
+    z-index: 10;
+}
