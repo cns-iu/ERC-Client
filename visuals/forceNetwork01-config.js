@@ -283,9 +283,9 @@ events.forceNetwork01 = function(ntwrk) {
         })
 
         //Faculty, Student, Unknown
-        var typeArr = []; 
+        var typeArr = [roleColor[0],roleColor[1],roleColor[2],roleColor[3]]; 
         ntwrk.filteredData.nodes.data.forEach(function(d, i) { if (d.role == null) d.role = "Other"})
-        ntwrk.filteredData.nodes.data.forEach(function(d, i) { if (typeArr.indexOf(toTitleCase(d.role)) == -1) typeArr.push(toTitleCase(d.role))})
+        // ntwrk.filteredData.nodes.data.forEach(function(d, i) { if (typeArr.indexOf(toTitleCase(d.role)) == -1) typeArr.push(toTitleCase(d.role))})
         nodeType.updateText(typeArr)
         ntwrk.SVG.on("mousewheel", function() {
             setTimeout(function() {
