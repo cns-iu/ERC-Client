@@ -250,7 +250,7 @@ events.forceNetwork01 = function(ntwrk) {
         nodeColor.updateStopColors(configs.forceNetwork01.nodes.styleEncoding.color.range)
         nodeColor.updateText([d3.min(ntwrk.Scales.nodeColorScale.domain()), d3.mean(ntwrk.Scales.nodeColorScale.domain()), d3.max(ntwrk.Scales.nodeColorScale.domain())])
 
-        var roleColor = ["#35618f", "#bde267", "#60409b", "#3dcdc1"];
+        var roleColor = ["#35618f", "#bde267", "#60409b", "#3dcdc1","#d3d3d3"];
         nodeType.setTitle("Author Type")
         
         nodeType.updateTypeColors(roleColor)
@@ -283,7 +283,7 @@ events.forceNetwork01 = function(ntwrk) {
         })
 
         //Faculty, Student, Unknown
-        var typeArr = [roleColor[0],roleColor[1],roleColor[2],roleColor[3]]; 
+        var typeArr = ["Other","Faculty","Postdoc","Staff","Student"]; 
         ntwrk.filteredData.nodes.data.forEach(function(d, i) { if (d.role == null) d.role = "Other"})
         // ntwrk.filteredData.nodes.data.forEach(function(d, i) { if (typeArr.indexOf(toTitleCase(d.role)) == -1) typeArr.push(toTitleCase(d.role))})
         nodeType.updateText(typeArr)
