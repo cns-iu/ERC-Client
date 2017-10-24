@@ -327,6 +327,39 @@ tfoot td {
   transform: translate(-40%, 0);
 }
 
+ .scimap-legend {
+       
+}
+
+.scimap-legend button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.scimap-legend button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.scimap-legend button:hover span {
+  padding-right: 25px;
+}
+
+.scimap-legend button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.scimap-legend button:hover {
+  background-color: #d8d8d8; /* blue color */
+}
+
+
 .scimap-legend {
   width: 600px;
   z-index: 10000;
