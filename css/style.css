@@ -327,8 +327,19 @@ tfoot td {
   transform: translate(-40%, 0);
 }
 
- .scimap-legend {
-       
+.scimap-legend {
+  width: 600px;
+  z-index: 10000;
+  font-size: 18px;
+  color: #000;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: -260px;
+  left: 40%;
+  transform: translate(-40%, 0);
 }
 
 .scimap-legend button span {
@@ -359,21 +370,6 @@ tfoot td {
   background-color: #d8d8d8; /* blue color */
 }
 
-
-.scimap-legend {
-  width: 600px;
-  z-index: 10000;
-  font-size: 18px;
-  color: #000;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  display: block;
-  text-align: center;
-  position: fixed;
-  bottom: -260px;
-  left: 40%;
-  transform: translate(-40%, 0);
-}
 
 .prosym.legend.legend-container {
   width: 160px;
