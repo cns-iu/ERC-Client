@@ -342,6 +342,27 @@ tfoot td {
   transform: translate(-40%, 0);
 }
 
+
+.scimap-legend button {
+  display: inline-block;
+/*  position: relative;*/
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background: #eaeaea;
+  color: rgba(0,0,0,0.87);
+  border: .5px solid #afafaf;
+  border-radius: 2px;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+}
+
 .scimap-legend button span {
   cursor: pointer;
   display: inline-block;
@@ -433,6 +454,7 @@ tfoot td {
   opacity: 1;
   right: 0;
 }
+
 .legend-container button:hover {
   background-color: #d8d8d8; /* blue color */
 }
