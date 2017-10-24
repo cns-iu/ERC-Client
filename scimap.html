@@ -48,7 +48,7 @@
                 </button>
                 <div class="legend-row">
                     <div flex layout="row" layout-wrap>
-                        <div flex="32" layout="column" style="margin-top: 6px; margin-left: 10px;">
+                        <div flex="32" legend-test-bug layout="column" style="margin-top: 6px; margin-left: 10px;">
                             <div class="legend-item-label">Nodes</div>
                             <div>
                                 <div flex class="legend-item-1">
@@ -153,14 +153,14 @@
                 bottom: '-30px'
             }, 250);
             legendToggleOff = false;
-            $(".legend-item-2").css("display","block")
+            $(".legend-test-bug").css("display","block")
 
         } else {
             $(".scimap-legend").animate({
                 bottom: '-260px'
             }, 75);
             legendToggleOff = true;
-            $(".legend-item-2").css("display","none")
+            $(".legend-test-bug").css("display","none")
         }
 
     }
