@@ -21,12 +21,16 @@
         }
 
         .legend-item-label {
-
+            text-align: left;
         }
 
         .legend-row {
             width: 550px;
         }
+
+        .scimap.legend.legend-container {
+        width: 550px;
+}
     </style>
 
 </head>
@@ -49,7 +53,7 @@
                 <div class="legend-row">
                     <div flex layout="row" layout-wrap>
                         <div flex="33" layout="column">
-                            <div class="legend-item-label" style="width:170px;">Nodes</div>
+                            <div class="legend-item-label">Nodes</div>
                             <div flex layout="row">
                                 <div flex class="legend-item-1">
                                     <div ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-vis-type="LegendNodeSize" id="nodeSize" ng-identifier="nodeSize">
