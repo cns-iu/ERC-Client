@@ -18,7 +18,6 @@
 
         .legend-item-2 {
             width: 650px !important;
-           display: none;
         }
 
         .legend-item-label {
@@ -158,6 +157,7 @@
                 bottom: '-30px'
             }, 250);
             legendToggleOff = false;
+            $(".legend-item-2").css("display","none")
         } else {
             $(".scimap-legend").animate({
                 bottom: '-260px'
