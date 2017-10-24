@@ -330,8 +330,6 @@ tfoot td {
 .scimap-legend {
   width: 600px;
   z-index: 10000;
-  text-align: center;
-  /*height: 500px;*/
   font-size: 18px;
   color: #000;
   border-top-left-radius: 25px;
@@ -340,7 +338,7 @@ tfoot td {
   text-align: center;
   position: fixed;
   bottom: -260px;
-  left: 50%;
+  left: 40%;
   transform: translate(-40%, 0);
 }
 
