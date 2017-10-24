@@ -337,8 +337,8 @@ tfoot td {
   text-align: center;
   position: fixed;
   bottom: -260px;
-  left: 40%;
-  transform: translate(-40%, 0);
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 
