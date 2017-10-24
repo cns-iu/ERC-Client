@@ -150,14 +150,14 @@
     function toggleLegend() {
         if (legendToggleOff) {
             $(".scimap-legend").animate({
-                bottom: '-260px'
+                bottom: '0px'
             }, 250);
             legendToggleOff = false;
             $(".test-bug").css("display","none");
 
         } else {
             $(".scimap-legend").animate({
-                bottom: '0px'
+                bottom: '-260px'
             }, 75);
             legendToggleOff = true;
             $(".test-bug").css("display","block");
