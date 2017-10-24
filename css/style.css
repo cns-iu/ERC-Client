@@ -327,7 +327,7 @@ tfoot td {
   transform: translate(-40%, 0);
 }
 
-.scimap.legend.legend-container {
+.scimap-legend {
   width: 600px;
   z-index: 10000;
   text-align: center;
