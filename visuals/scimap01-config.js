@@ -45,13 +45,26 @@ events.scimap01 = function(ntwrk) {
                 return d1.journal == d2.journal && d1.title == d2.title
             })
             if (matches.length == 0) {
+                if (d1.url!= null){
                 tableData.push({
                     authors: d1.author_list,
                     year: d1.year,
                     title: d1.title,
                     url: d1.url,
-                    journal: d1.journal
+                    journal: d1.journal,
+                    class:"enabled"
                 })
+             }
+                else{
+                tableData.push({
+                    authors: d1.author_list,
+                    year: d1.year,
+                    title: d1.title,
+                    url: d1.url,
+                    journal: d1.journal,
+                    class:"disabled"
+                })
+             }
             }
         })
         $("#disc-name").text(d.disc_name);
