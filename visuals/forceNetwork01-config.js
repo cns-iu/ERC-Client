@@ -89,6 +89,7 @@ events.forceNetwork01 = function(ntwrk) {
                 title: d1.title,
                 journal: d1.journal,
                 url: d1.url,
+                class: "enabled"
                 
             })
         }
@@ -99,6 +100,7 @@ events.forceNetwork01 = function(ntwrk) {
                 title: d1.title,
                 journal: d1.journal,
                 url: "#0",
+                class: "disabled"
              
             })
         }
