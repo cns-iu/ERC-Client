@@ -82,43 +82,57 @@ edges: {
 
 
 
-      })
+    })
 
 
 
 
   ntwrk.filteredData.authors.data.forEach(function(d1,i1){// $("#zip-name").text(d.key + "_");
-  tableData = [];
-   ntwrk.filteredData.records.data.forEach(function(d2, i2) {
+    tableData = [];
+    ntwrk.filteredData.records.data.forEach(function(d2, i2) {
 
-    d2.author_ids.forEach(function(idd){
-              if (idd == d1.idd ) {
-                      var authNames = [];
-                      d2.author_ids.forEach(function(d3, i3) {
-                          authNames.push(ntwrk.filteredData.authors.data.find(function(d4, i4) {
-                              return d4.idd == d3;
-                          }).author)
-                      })
-                              tableData.push({
-                          authors: authNames.join("; "),
-                          year: d2.year,
-                          title: d2.title,
-                          journal: d2.journal
-                      })
+      d2.author_ids.forEach(function(idd){
+        if (idd == d1.idd ) {
+          var authNames = [];
+          d2.author_ids.forEach(function(d3, i3) {
+            authNames.push(ntwrk.filteredData.authors.data.find(function(d4, i4) {
+              return d4.idd == d3;
+            }).author)
+          })
+          if(d2.url!=null){
+            tableData.push({
+              authors: authNames.join("; "),
+              year: d2.year,
+              title: d2.title,
+              journal: d2.journal,
+              url: d2.url,
+              class:"enabled"
+            })
+          }
+          else{
+            tableData.push({
+              authors: authNames.join("; "),
+              year: d2.year,
+              title: d2.title,
+              journal: d2.journal,
+              url: "#",
+              class:"disabled"
+            })
+          }
 
-                          } 
-        })
+        } 
+      })
+    })
+
+
+    d1.tableD = tableData;
+
   })
 
 
-   d1.tableD = tableData;
-
- })
-
-
-    document.getElementById("geocoded").innerHTML = geo;
-    document.getElementById("notgeocoded").innerHTML = notgeo;
-    ntwrk.filteredData.arcs = [];
+  document.getElementById("geocoded").innerHTML = geo;
+  document.getElementById("notgeocoded").innerHTML = notgeo;
+  ntwrk.filteredData.arcs = [];
      //i=0;
      ntwrk.filteredData.edges.data.forEach(function(d){
 
@@ -141,13 +155,13 @@ edges: {
    }
    events.prosym01 = function(ntwrk) {
 
-        nodeSize.setTitle("Node Degree")
-        nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-        nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);
-        nodeSize.updateTextFromFunc(function(d) {
-            return prosym01.Scales.nodeSizeScale(d) / ntwrk.zoom.scale();
-        });
+    nodeSize.setTitle("Node Degree")
+    nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
+    nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);
+    nodeSize.updateTextFromFunc(function(d) {
+      return prosym01.Scales.nodeSizeScale(d) / ntwrk.zoom.scale();
+    });
 
 
 
-   }
+  }
