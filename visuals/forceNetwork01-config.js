@@ -99,7 +99,7 @@ events.forceNetwork01 = function(ntwrk) {
                 year: d1.year,
                 title: d1.title,
                 journal: d1.journal,
-                url: "#0",
+                url: "#",
                 class: "disabled"
              
             })

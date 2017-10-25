@@ -60,7 +60,7 @@ events.scimap01 = function(ntwrk) {
                     authors: d1.author_list,
                     year: d1.year,
                     title: d1.title,
-                    url: d1.url,
+                    url: "#",
                     journal: d1.journal,
                     class:"disabled"
                 })
