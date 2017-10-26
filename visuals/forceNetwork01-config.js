@@ -20,7 +20,7 @@ configs.forceNetwork01 = {
         styleEncoding: {
             strokeWidth: {
                 attr: "weight",
-                range: [1, 5]
+                range: [1, 10]
             },
             opacity: {
                 attr: "weight",
