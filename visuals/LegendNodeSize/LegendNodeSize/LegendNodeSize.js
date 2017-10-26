@@ -99,10 +99,10 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
         }
 
         context.updateTextFromFunc = function(f) {
-            var max = f(forceNetwork01.configs.nodes.styleEncoding.size.range[1]);
-            m = (forceNetwork01.configs.nodes.styleEncoding.size.range[1]+forceNetwork01.configs.nodes.styleEncoding.size.range[0])/2;
+            var max = f(forceNetwork01.maxNumPapers);
+            m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
             var mean = f(m);
-            var min = f(forceNetwork01.configs.nodes.styleEncoding.size.range[0]);
+            var min = f(forceNetwork01.minNumPapers);
             nodeSize.updateText([min, mean, max]);
         }
 
