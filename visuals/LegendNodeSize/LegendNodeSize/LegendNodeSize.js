@@ -99,10 +99,10 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
         }
 
         context.updateTextFromFunc = function(f){
-            var max = forceNetwork01.maxNumPapers*forceNetwork01.zoom.scale();
+            var max = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
             m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
-            var mean = m*forceNetwork01.zoom.scale();
-            var min = forceNetwork01.minNumPapers*forceNetwork01.zoom.scale();
+            var mean = forceNetwork01.Scales.nodeSizeScale(m)*forceNetwork01.zoom.scale();
+            var min = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.minNumPapers)*forceNetwork01.zoom.scale();
             nodeSize.updateText([min, mean, max]);
         }
 
