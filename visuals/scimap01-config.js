@@ -24,10 +24,16 @@ events.scimap01 = function(ntwrk) {
             return d.values.children.length
         }))
         .range(configs.scimap01.records.styleEncoding.size.range)
-
+    scimap01.maxValue = 0;
+    scimap01.minValue = 0;
+  
     ntwrk.nestedData.sub_disc.forEach(function(d, i) {
         var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
         var currNode = currNodeG.selectAll("circle").attr("r", ntwrk.Scales.rScale(d.values.children.length));
+     if(scimap01.maxValue < d.values.children.length)
+            scimap01.maxValue = d.values.children.length;
+      if(scimap01.minValue > d.values.children.length)
+            scimap01.minValue = d.values.children.length;
     })
 
     setTimeout(function() {
@@ -74,15 +80,7 @@ events.scimap01 = function(ntwrk) {
         showPopup(tableData);
         ntwrk.isPopupShowing = true;
 
-    scimap01.maxValue = 0;
-    scimap01.minValue = 0;
-    ntwrk.nestedData.sub_disc.forEach(function(d){
-        if(scimap01.maxValue < d.values.children.length)
-            scimap01.maxValue = d.values.children.length;
-      if(scimap01.minValue > d.values.children.length)
-            scimap01.minValue = d.values.children.length;
-          
-    })
+  
     }
 
 
