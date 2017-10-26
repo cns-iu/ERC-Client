@@ -98,13 +98,31 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             context.getMinG().attr("transform", "translate(70," + (174 - (minNodeSize * 2)) + ")")
         }
 
-        context.updateTextFromFunc = function(f){
+        context.updateTextFromFunc = function(viz){
            
+           if(viz=="network"){
                 var max = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
                 m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
                 var mean = forceNetwork01.Scales.nodeSizeScale(m)*forceNetwork01.zoom.scale();
                 var min = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.minNumPapers)*forceNetwork01.zoom.scale();
                 nodeSize.updateText([min, mean, max]);
+            }
+
+            if(viz=="scimap"){
+                var max = scimap01.Scales.rScale(scimap01.maxNumPapers)*scimap01.zoom.scale();
+                m = (scimap01.maxNumPapers - scimap01.minNumPapers)/2;
+                var mean = scimap01.Scales.rScale(m)*scimap01.zoom.scale();
+                var min = scimap01.Scales.rScale(scimap01.minNumPapers)*scimap01.zoom.scale();
+                nodeSize.updateText([min, mean, max]);
+            }
+
+            if(viz=="geomap"){
+                var max = prosym01.Scales.nodeSizeScale(prosym01.maxNumPapers)*prosym01.zoom.scale();
+                m = (prosym01.maxNumPapers - prosym01.minNumPapers)/2;
+                var mean = prosym01.Scales.nodeSizeScale(m)*prosym01.zoom.scale();
+                var min = prosym01.Scales.nodeSizeScale(prosym01.minNumPapers)*prosym01.zoom.scale();
+                nodeSize.updateText([min, mean, max]);
+            }
             
         }
 

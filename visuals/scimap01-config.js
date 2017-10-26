@@ -83,7 +83,7 @@ events.scimap01 = function(ntwrk) {
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range);
-        nodeSize.updateTextFromFunc();
+        nodeSize.updateTextFromFunc("scimap");
 
         ntwrk.SVG.on("mousewheel", function() {
             setTimeout(function() {

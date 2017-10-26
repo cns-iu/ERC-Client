@@ -237,7 +237,7 @@ events.forceNetwork01 = function(ntwrk) {
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range);
-        nodeSize.updateTextFromFunc();
+        nodeSize.updateTextFromFunc("network");
 
         edgeSize.setTitle("#Co-authored Papers")
         edgeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")

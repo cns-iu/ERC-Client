@@ -158,9 +158,7 @@ edges: {
     nodeSize.setTitle("Node Degree")
     nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
     nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);
-    nodeSize.updateTextFromFunc(function(d) {
-      return prosym01.Scales.nodeSizeScale(d) / ntwrk.zoom.scale();
-    });
+    nodeSize.updateTextFromFunc("geomap");
 
 
 
