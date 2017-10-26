@@ -325,10 +325,15 @@ dataprep.forceNetwork01 = function(ntwrk) {
         ntwrk.filteredData.nodes = processedData.nodes;
         ntwrk.filteredData.edges = processedData.edges;
     }
-    ntwrk.dataArray = ntwrk.filteredData.nodes.data;
+    ntwrk.maxNumPapers = 0;
+    ntwrk.minNumPapers = 0;
+    ntwrk.filteredData.nodes.data.forEach(function(d){
+        if (d.numPapers>ntwrk.maxNumPapers){
+            ntwrk.maxNumPapers = d.numPapers;
+        }
+        if(d.numPapers<ntwrk.minNumPapers){
+            ntwrk.minNumPapers = d.numPapers;
+        }
+    })
 
-    ntwrk.dataArray.sort(function(x, y) {
-           return d3.descending(x.numPapers,y.numPapers)
-
-    });
-}
+    }
