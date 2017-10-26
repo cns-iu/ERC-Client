@@ -115,7 +115,7 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                 nodeSize.updateText([min, mean, max]);
             }
 
-            }
+            
         }
 
         context.updateText = function(arr) {
