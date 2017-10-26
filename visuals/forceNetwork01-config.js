@@ -3,7 +3,7 @@ configs.forceNetwork01 = {
         styleEncoding: {
             size: {
                 attr: "numPapers",
-                range: [2, 10],
+                range: [1, 50],
                 scale: "linear"
             },
             color: {
