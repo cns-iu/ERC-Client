@@ -98,12 +98,24 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             context.getMinG().attr("transform", "translate(70," + (174 - (minNodeSize * 2)) + ")")
         }
 
-        context.updateTextFromFunc = function(f){
-            var max = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
-            m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
-            var mean = forceNetwork01.Scales.nodeSizeScale(m)*forceNetwork01.zoom.scale();
-            var min = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.minNumPapers)*forceNetwork01.zoom.scale();
-            nodeSize.updateText([min, mean, max]);
+        function context.updateTextFromFunc(forString){
+            if("nodes" == forString)
+            {
+                var max = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
+                m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
+                var mean = forceNetwork01.Scales.nodeSizeScale(m)*forceNetwork01.zoom.scale();
+                var min = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.minNumPapers)*forceNetwork01.zoom.scale();
+                nodeSize.updateText([min, mean, max]);
+            }
+            if("edges" == forString){
+                var max = forceNetwork01.Scales.edgeSizeScale(forceNetwork01.maxEdgeWeight)*forceNetwork01.zoom.scale();
+                m = (forceNetwork01.maxEdgeWeight - forceNetwork01.minEdgeWeight)/2;
+                var mean = forceNetwork01.Scales.edgeSizeScale(m)*forceNetwork01.zoom.scale();
+                var min = forceNetwork01.Scales.edgeSizeScale(forceNetwork01.minEdgeWeight)*forceNetwork01.zoom.scale();
+                nodeSize.updateText([min, mean, max]);
+            }
+
+            }
         }
 
         context.updateText = function(arr) {

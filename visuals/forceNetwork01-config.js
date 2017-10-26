@@ -237,14 +237,12 @@ events.forceNetwork01 = function(ntwrk) {
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range);
-        nodeSize.updateTextFromFunc();
+        nodeSize.updateTextFromFunc("nodes");
 
         edgeSize.setTitle("#Co-authored Papers")
         edgeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         edgeSize.updateEdgeSize(configs.forceNetwork01.edges.styleEncoding.strokeWidth.range);
-        edgeSize.updateTextFromFunc(function(d) {
-            return ntwrk.Scales.edgeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
-        });
+        edgeSize.updateTextFromFunc("edges");
 
         nodeColor.setTitle("Year of First Publication")
         nodeColor.updateStopColors(configs.forceNetwork01.nodes.styleEncoding.color.range)
@@ -331,6 +329,17 @@ dataprep.forceNetwork01 = function(ntwrk) {
         }
         if(d.numPapers<ntwrk.minNumPapers){
             ntwrk.minNumPapers = d.numPapers;
+        }
+    })
+
+    ntwrk.maxEdgeWeight = 0;
+    ntwrk.minEdgeWeight = 0;
+    ntwrk.filteredData.edges.data.forEach(function(d){
+        if (d.weight>ntwrk.maxEdgeWeight){
+            ntwrk.maxEdgeWeight = d.weight;
+        }
+        if(d.weight<ntwrk.minEdgeWeight){
+            ntwrk.minEdgeWeight = d.weight;
         }
     })
 
