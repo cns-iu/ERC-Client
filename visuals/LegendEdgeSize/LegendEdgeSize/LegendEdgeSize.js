@@ -74,10 +74,17 @@ visualizationFunctions.LegendEdgeSize = function(element, data, opts) {
             midEdge.attr("stroke-width", midEdgeSize)
         }
 
-        context.updateText = function(arr) {
-            context.setMinVal(Utilities.round(arr[0], 0))
-            context.setMidVal(Utilities.round(arr[1], 0))
-            context.setMaxVal(Utilities.round(arr[2], 0))
+        context.updateText = function() {
+         
+            var max = forceNetwork01.Scales.edgeSizeScale(forceNetwork01.maxEdgeWeight)*forceNetwork01.zoom.scale();
+            m = (forceNetwork01.maxEdgeWeight - forceNetwork01.minEdgeWeight)/2;
+            var mean = forceNetwork01.Scales.edgeSizeScale(m)*forceNetwork01.zoom.scale();
+            var min = forceNetwork01.Scales.edgeSizeScale(forceNetwork01.minEdgeWeight)*forceNetwork01.zoom.scale();
+            nodeSize.updateText([min, mean, max]);
+            
+            context.setMinVal(Utilities.round(min, 0))
+            context.setMidVal(Utilities.round(mean, 0))
+            context.setMaxVal(Utilities.round(max, 0))
         }
 
         context.updateTextFromFunc = function(f) {
