@@ -98,11 +98,11 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             context.getMinG().attr("transform", "translate(70," + (174 - (minNodeSize * 2)) + ")")
         }
 
-        context.updateTextFromFunc = function(f) {
-            var max = f(forceNetwork01.maxNumPapers);
+        context.updateTextFromFunc = function(f){
+            var max = f(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
             m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
-            var mean = f(m);
-            var min = f(forceNetwork01.minNumPapers);
+            var mean = f(m)*forceNetwork01.zoom.scale();
+            var min = f(forceNetwork01.minNumPapers)*forceNetwork01.zoom.scale();
             nodeSize.updateText([min, mean, max]);
         }
 
