@@ -74,6 +74,15 @@ events.scimap01 = function(ntwrk) {
         showPopup(tableData);
         ntwrk.isPopupShowing = true;
 
+    scimap01.maxValue = 0;
+    scimap01.minValue = 0;
+    ntwrk.nestedData.sub_disc.forEach(function(d){
+        if(scimap01.maxValue < d.values.children.length)
+            scimap01.maxValue = d.values.children.length;
+      if(scimap01.minValue > d.values.children.length)
+            scimap01.minValue = d.values.children.length;
+          
+    })
     }
 
 
@@ -147,13 +156,4 @@ dataprep.scimap01 = function(ntwrk) {
     })
     ntwrk.filteredData.records.data = newData;
 
-    scimap01.maxValue = 0;
-    scimap01.minValue = 0;
-    ntwrk.nestedData.sub_disc.forEach(function(d){
-        if(scimap01.maxValue < d.values.children.length)
-            scimap01.maxValue = d.values.children.length;
-      if(scimap01.minValue > d.values.children.length)
-            scimap01.minValue = d.values.children.length;
-          
-    })
 };
