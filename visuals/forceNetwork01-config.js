@@ -325,7 +325,10 @@ dataprep.forceNetwork01 = function(ntwrk) {
         ntwrk.filteredData.nodes = processedData.nodes;
         ntwrk.filteredData.edges = processedData.edges;
     }
-    ntwrk.filteredData.nodes.data.sort(function(x, y) {
+    ntwrk.dataArray = ntwrk.filteredData.nodes.data;
+
+    ntwrk.dataArray.sort(function(x, y) {
            return d3.descending(x.numPapers,y.numPapers)
+
     });
 }
