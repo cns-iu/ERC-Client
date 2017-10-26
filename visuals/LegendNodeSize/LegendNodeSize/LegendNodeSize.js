@@ -98,7 +98,7 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             context.getMinG().attr("transform", "translate(70," + (174 - (minNodeSize * 2)) + ")")
         }
 
-        function context.updateTextFromFunc(forString){
+        context.updateTextFromFunc = function(forString){
             if("nodes" == forString)
             {
                 var max = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
