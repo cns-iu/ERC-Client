@@ -3,7 +3,7 @@ configs.forceNetwork01 = {
         styleEncoding: {
             size: {
                 attr: "numPapers",
-                range: [1, 10],
+                range: [2, 10],
                 scale: "linear"
             },
             color: {
@@ -20,7 +20,7 @@ configs.forceNetwork01 = {
         styleEncoding: {
             strokeWidth: {
                 attr: "weight",
-                range: [1, 8]
+                range: [1, 5]
             },
             opacity: {
                 attr: "weight",
