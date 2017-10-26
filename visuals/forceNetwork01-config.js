@@ -237,12 +237,12 @@ events.forceNetwork01 = function(ntwrk) {
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range);
-        nodeSize.updateTextFromFunc("nodes");
+        nodeSize.updateTextFromFunc();
 
         edgeSize.setTitle("#Co-authored Papers")
         edgeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         edgeSize.updateEdgeSize(configs.forceNetwork01.edges.styleEncoding.strokeWidth.range);
-        edgeSize.updateTextFromFunc("edges");
+        edgeSize.updateTextFromFunc();
 
         nodeColor.setTitle("Year of First Publication")
         nodeColor.updateStopColors(configs.forceNetwork01.nodes.styleEncoding.color.range)
