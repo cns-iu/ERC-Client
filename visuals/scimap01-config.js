@@ -83,7 +83,9 @@ events.scimap01 = function(ntwrk) {
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range);
-        nodeSize.updateTextFromFunc("scimap");
+        nodeSize.updateTextFromFunc(function(d) {
+            return ntwrk.Scales.rScale.invert(d / 2) / ntwrk.zoom.scale();
+        });
 
         ntwrk.SVG.on("mousewheel", function() {
             setTimeout(function() {
@@ -144,4 +146,14 @@ dataprep.scimap01 = function(ntwrk) {
         }
     })
     ntwrk.filteredData.records.data = newData;
+
+    scimap01.maxValue = 0;
+    scimap01.minValue = 0;
+    ntwrk.nestedData.sub_disc.forEach(function(d){
+        if(scimap01.maxValue < d.values.children.length)
+            scimap01.maxValue = d.values.children.length;
+      if(scimap01.minValue > d.values.children.length)
+            scimap01.minValue = d.values.children.length;
+          
+    })
 };

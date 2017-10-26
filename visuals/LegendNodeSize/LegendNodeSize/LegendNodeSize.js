@@ -109,10 +109,10 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             }
 
             if(viz=="scimap"){
-                var max = scimap01.Scales.rScale(scimap01.maxNumPapers)*scimap01.zoom.scale();
-                m = (scimap01.maxNumPapers - scimap01.minNumPapers)/2;
+                var max = scimap01.Scales.rScale(scimap01.maxValue)*scimap01.zoom.scale();
+                m = (scimap01.maxValue - scimap01.minValue)/2;
                 var mean = scimap01.Scales.rScale(m)*scimap01.zoom.scale();
-                var min = scimap01.Scales.rScale(scimap01.minNumPapers)*scimap01.zoom.scale();
+                var min = scimap01.Scales.rScale(scimap01.minValue)*scimap01.zoom.scale();
                 nodeSize.updateText([min, mean, max]);
             }
 
