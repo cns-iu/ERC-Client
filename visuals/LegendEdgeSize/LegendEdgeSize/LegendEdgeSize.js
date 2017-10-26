@@ -69,10 +69,10 @@ visualizationFunctions.LegendEdgeSize = function(element, data, opts) {
             var midEdge = context.getMidEdge();
             var maxEdge = context.getMaxEdge();
             
-
-            minEdge.attr("stroke-width", minEdgeSize)
-            midEdge.attr("stroke-width", midEdgeSize)
-            maxEdge.attr("stroke-width", maxEdgeSize)
+            mid = (arr[1] - arr[0])/2;
+            minEdge.attr("stroke-width", arr[0]);
+            midEdge.attr("stroke-width", mid);
+            maxEdge.attr("stroke-width", arr[1]);
             
         }
 
