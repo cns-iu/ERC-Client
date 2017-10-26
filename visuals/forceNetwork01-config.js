@@ -340,6 +340,8 @@ dataprep.forceNetwork01 = function(ntwrk) {
         }
         if(d.weight<ntwrk.minEdgeWeight){
             ntwrk.minEdgeWeight = d.weight;
+            if(d.weight == 0)
+                console.log(d);
         }
     })
 
