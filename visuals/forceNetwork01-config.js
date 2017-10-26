@@ -333,15 +333,14 @@ dataprep.forceNetwork01 = function(ntwrk) {
     })
 
     ntwrk.maxEdgeWeight = 0;
-    ntwrk.minEdgeWeight = 0;
+    ntwrk.minEdgeWeight = 1;
     ntwrk.filteredData.edges.data.forEach(function(d){
         if (d.weight>ntwrk.maxEdgeWeight){
             ntwrk.maxEdgeWeight = d.weight;
         }
         if(d.weight<ntwrk.minEdgeWeight){
             ntwrk.minEdgeWeight = d.weight;
-            if(d.weight == 0)
-                console.log(d);
+        
         }
     })
 
