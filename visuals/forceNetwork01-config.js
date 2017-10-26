@@ -238,7 +238,7 @@ events.forceNetwork01 = function(ntwrk) {
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
         nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range);
         nodeSize.updateTextFromFunc(function(d) {
-            return ntwrk.Scales.nodeSizeScale.invert(d) / ntwrk.zoom.scale();
+            return ntwrk.Scales.nodeSizeScale(d) * ntwrk.zoom.scale();
         });
 
         edgeSize.setTitle("#Co-authored Papers")
