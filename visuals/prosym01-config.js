@@ -149,39 +149,43 @@ edges: {
     })
 
  // Set leaflet map
-  prosym01.map = new L.map('map', {
-    center: new L.LatLng(50,15),
-    zoom: 4,
-    layers: [
-    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      subdomains: 'abcd',
-      noWrap:true,
-      minZoom: 4,
-      maxZoom: 20,
-      ext: 'png'
-    })
-    ]
-  });
+ prosym01.map = new L.map('map', {
+  center: new L.LatLng(50,15),
+  zoom: 4,
+  layers: [
+  L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: 'abcd',
+    noWrap:true,
+    minZoom: 4,
+    maxZoom: 20,
+    ext: 'png'
+  })
+  ]
+});
  // Setup spatialsankey object
-    prosym01.spatialsankey = d3.spatialsankey()
-    .lmap(prosym01.map)
-    .nodes(prosym01.filteredData.authors.data)
-    .links(prosym01.filteredData.edges.data);
+ prosym01.spatialsankey = d3.spatialsankey()
+ .lmap(prosym01.map)
+ .nodes(prosym01.filteredData.authors.data)
+ .links(prosym01.filteredData.edges.data);
 
 
-   }
-   events.prosym01 = function(ntwrk) {
-    setTimeout(function() {
-        configureDOMElements();
-    }, 500);
-    function configureDOMElements(){
-    console.log(prosym01.spatialsankey.nodeSizeArr);
+}
+events.prosym01 = function(ntwrk) {
+
+
+  
+ ntwrk.SVG.on("mousewheel", function() {
+  setTimeout(function() {
     nodeSize.setTitle("Node Degree")
     nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
     nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);
     nodeSize.updateTextFromFunc("geomap");
-  }
 
 
-  }
+  }, 10);
+});
+ 
+
+
+}
