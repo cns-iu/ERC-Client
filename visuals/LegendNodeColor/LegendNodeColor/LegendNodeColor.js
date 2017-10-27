@@ -70,7 +70,7 @@ visualizationFunctions.LegendNodeColor = function(element, data, opts) {
                 return context.SVG.selectAll("#stop-color-1")
             }
 
-            context.SVG.attr("width", 150);
+            context.SVG.attr("width", 180);
             context.SVG.attr("height", 150);
         });
 
