@@ -3,7 +3,7 @@ configs.prosym01 = {
   styleEncoding: {
     size: {
       attr: "",//takes attribute as degree from spatial sankey
-      range: [10, 20],
+      range: [2,10],
       scaleType: "linear"
     }
   }
