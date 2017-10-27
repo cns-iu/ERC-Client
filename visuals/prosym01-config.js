@@ -149,12 +149,16 @@ edges: {
     })
 
 
-
+ // Setup spatialsankey object
+    prosym01.spatialsankey = d3.spatialsankey()
+    .lmap(context.map)
+    .nodes(context.filteredData.authors.data)
+    .links(context.filteredData.edges.data);
 
 
    }
    events.prosym01 = function(ntwrk) {
-    console.log(ntwrk.spatialsankey.nodeSizeArr);
+    console.log(prosym01.spatialsankey.nodeSizeArr);
     nodeSize.setTitle("Node Degree")
     nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
     nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);

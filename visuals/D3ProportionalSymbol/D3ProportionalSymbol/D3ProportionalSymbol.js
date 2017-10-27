@@ -170,11 +170,7 @@ prosym01.nodelayer = svg.append("g");
 d3.json("nodes.geojson", function(nodes) {
   d3.csv("links.csv", function(links) {
 
-    // Setup spatialsankey object
-    prosym01.spatialsankey = d3.spatialsankey()
-    .lmap(context.map)
-    .nodes(context.filteredData.authors.data)
-    .links(context.filteredData.edges.data);
+   
 
  
     var mouseover = function(d){
