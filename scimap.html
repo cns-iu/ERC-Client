@@ -125,7 +125,10 @@
         {
             document.body.style.backgroundColor = '#282823';
             document.getElementById("zoom-text").style.fill="white";
-             document.getElementsByClassName("subd_label").style.color="white";
+            subd_labels_arr = document.getElementsByClassName("subd_label");
+            subd_labels_arr.forEach(function(element){
+                element.style.color="white";
+            })
         }
         if (current == "rgb(40, 40, 35)" ) {
             document.body.style.backgroundColor = 'white';
