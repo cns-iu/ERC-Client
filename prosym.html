@@ -222,7 +222,7 @@ a.disabled {
 </body>
 <script type="text/javascript">
   $(document).ready(function(){
-    populateNotGeocoded();
+  setTimeout(populateNotGeocoded(), 3000);
     $('[data-toggle="tooltip"]').tooltip(); 
       $(".legend-container").click(function() {
                 toggleLegend();
