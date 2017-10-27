@@ -3,7 +3,7 @@ configs.prosym01 = {
   styleEncoding: {
     size: {
       attr: "",//takes attribute as degree from spatial sankey
-      range: [10, 20],
+      range: [2,10],
       scaleType: "linear"
     }
   }
@@ -27,6 +27,7 @@ edges: {
     notgeo = 0;
     prosym01.isPopupShowing = false;  
     ntwrk.map={}
+    prosym01.notgeocoded = [];
 
 
     if (ntwrk.DataService.mapDatasource[ntwrk.attrs.ngDataField].toProcess) {
@@ -42,7 +43,9 @@ edges: {
 
     ntwrk.PrimaryDataAttr = "nodes";
     ntwrk.filteredData.authors.data.forEach(function(d,i){
+   
 
+   
       if((d.lat!=null) 
         && (d.lng!=null))
       {
@@ -63,6 +66,7 @@ edges: {
       else
       {
         notgeo++;
+        
         d.type="Feature";
         d.id = i;
         d.properties = {};
@@ -74,6 +78,8 @@ edges: {
         d.geometry.coordinates=[]
         d.geometry.coordinates[0] =  0;
         d.geometry.coordinates[1] =  0;
+   
+        prosym01.notgeocoded[notgeo] = d;
 
 
       }

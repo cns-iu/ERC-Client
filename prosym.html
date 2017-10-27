@@ -112,8 +112,8 @@ div.tooltip {
 }
 #geomapAbout{
     position: absolute;
-   top:10px;
-   left:40px;
+   top:80px;
+   left:10px;
     z-index: 10;
 }
 .modal-dialog{
@@ -222,6 +222,7 @@ a.disabled {
 </body>
 <script type="text/javascript">
   $(document).ready(function(){
+    populateNotGeocoded();
     $('[data-toggle="tooltip"]').tooltip(); 
       $(".legend-container").click(function() {
                 toggleLegend();
