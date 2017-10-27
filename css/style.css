@@ -575,9 +575,9 @@ tfoot td {
 
 .modal-content {
   display: block;
-    width: inherit;
+
     overflow-y: scroll;
-    height: 160px;
+    
 }
 .modal-content tbody {
     height: 550px;
