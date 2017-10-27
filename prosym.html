@@ -337,14 +337,16 @@ function unicodeEscape(string) {
 }
 
     function populateNotGeocoded(){
-          var str = "<ul>";
+          var ul = document.createElement('ul');
 
       for(var i in prosym01.notgeocoded){
-         str += "<li>"+i.author+"</li>";
+         li = document.createElement('li');
+         content = document.createTextNode(i.author); 
+         li.appendChild(content);
+         ul.appendChild(li);
       }
 
-      str += "</ul>";
-      $("#authorDetails").append(str);
+      $("#authorDetails").append(ul);
 }
 
 </script>
