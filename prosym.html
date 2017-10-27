@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Author Geolocation Network</title>
+<title>Co-authorship Geomap</title>
 
 <link rel="stylesheet" href="css/leaflet.css"/>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -76,7 +76,7 @@ circle{
 #stats{
   position: absolute;
   bottom:0px;
-  width:130px;
+  width:160px;
 }
 
 .modal-header-warning {
@@ -158,7 +158,7 @@ a.disabled {
 <div id="container" class="flexChild rowParent">
  <!-- Trigger the modal with a button -->
  <div ng-include="'partials/prosym_about_modal.html'"></div>
-  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#aboutModal" id="geomapAbout">  <span class="glyphicon glyphicon-info-sign"></span> About</button>
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#aboutModal" id="geomapAbout">  <span class="glyphicon glyphicon-info-sign"></span> Usage</button>
   
   <div ng-include="'partials/prosym-popup.html'"></div>
 <div id="rowChild18007" class="flexChild">
@@ -174,14 +174,14 @@ a.disabled {
   <button type="button" class="close" aria-label="Close" onclick="closeStats()" data-toggle="tooltip" title=" Close Stats " data-placement= "right">
   <span aria-hidden="true" >&times;</span>
 </button>
-    <div class="title" >User Statistics</div>
-    <div>#Authors Geocoded: <span id="geocoded"></span>.</div>
-    <div>#Authors Not Geocoded: <span id="notgeocoded"></span>.</div>
+    <div class="title" >Warning! Incomplete Data</div>
+    <div>#Authors Geocoded: <span id="geocoded"></span></div>
+    <div>#Authors Not Geocoded: <span id="notgeocoded"></span></div>
 	    <div >
 
   <!-- Trigger the modal with a button -->
   <div ng-include="'partials/prosym_warning_modal.html'"></div>
-  <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#warningModal">  <span class="glyphicon glyphicon-info-sign"></span> Warning</button>
+  <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#warningModal">  <span class="glyphicon glyphicon-info-sign"></span> Details</button>
 
   
   
