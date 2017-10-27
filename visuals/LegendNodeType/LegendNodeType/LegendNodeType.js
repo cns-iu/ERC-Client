@@ -66,7 +66,7 @@ visualizationFunctions.LegendNodeType = function(element, data, opts) {
             context.setNote = function(text) {
                 context.getNote().text(text);
             }
-            context.SVG.attr("width", 180);
+            context.SVG.attr("width", 150);
             context.SVG.attr("height", 150);
         });
 
