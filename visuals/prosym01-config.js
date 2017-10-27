@@ -176,12 +176,12 @@ events.prosym01 = function(ntwrk) {
     configureDOMElements();
   }, 500);
   function configureDOMElements(){
-    
+
    nodeSize.setTitle("Node Degree")
    nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
    nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);
    nodeSize.updateTextFromFunc("geomap");
-   ntwrk.SVG.on("mousewheel", function() {
+   ntwrk.SVG.on("zoom", function() {
     setTimeout(function() {
       nodeSize.setTitle("Node Degree")
       nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
