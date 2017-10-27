@@ -336,19 +336,6 @@ function unicodeEscape(string) {
                  .join("");
 }
 
- setTimeout(populateNotGeocoded(), 30000);
-    function populateNotGeocoded(){
-          var ul = document.createElement('ul');
-
-      for(var i in prosym01.notgeocoded){
-         li = document.createElement('li');
-         content = document.createTextNode(i.author); 
-         li.appendChild(content);
-         ul.appendChild(li);
-      }
-
-      $("#authorDetails").append(ul);
-}
 
 
 </script>

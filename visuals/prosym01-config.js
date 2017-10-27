@@ -175,6 +175,20 @@ edges: {
  .nodes(prosym01.filteredData.authors.data)
  .links(prosym01.filteredData.edges.data);
 
+ setTimeout(populateNotGeocoded(), 500);
+    function populateNotGeocoded(){
+          var ul = document.createElement('ul');
+
+      for(var i in prosym01.notgeocoded){
+         li = document.createElement('li');
+         content = document.createTextNode(i.author); 
+         li.appendChild(content);
+         ul.appendChild(li);
+      }
+
+      $("#authorDetails").append(ul);
+}
+
 
 }
 events.prosym01 = function(ntwrk) {
