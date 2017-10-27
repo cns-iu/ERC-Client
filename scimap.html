@@ -139,7 +139,7 @@ window.addEventListener('load', () => {
 
             const link = document.createElement('a');
             link.href = 'data:image/xml+svg;base64,' + btoa(doc);
-            link.download = 'download.svg';
+            link.download = 'scimapViz.svg';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
