@@ -400,6 +400,13 @@ tfoot td {
   background-color: #d8d8d8; /* blue color */
 }
 
+.scimap-legend-row {
+  top: 0px;
+  background: #fff;
+/*  border: 1px solid #222;*/
+  border: .5px solid #afafaf;
+  padding: 5px 0px 10px 2px;
+}
 
 .prosym.legend.legend-container {
   width: 160px;
