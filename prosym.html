@@ -337,13 +337,13 @@ function unicodeEscape(string) {
 }
 
     function populateNotGeocoded(){
-          var str = '<ul >';
+          var str = "<ul>";
 
       for(var i in prosym01.notgeocoded){
-         str += '<li>'+i.author+'</li>';
+         str += "<li>"+i.author+"</li>";
       }
 
-      str += '</ul>';
+      str += "</ul>";
       document.getElementById("authorDetails").append(str);
 }
 
