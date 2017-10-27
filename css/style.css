@@ -573,7 +573,7 @@ tfoot td {
     top: 90px;
 }  
 
-.modal-content {
+#authorDetails {
   display: block;
  height: 550px;
     overflow-y: scroll;
