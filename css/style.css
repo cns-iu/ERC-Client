@@ -131,7 +131,7 @@ dl, dd, dt{
 .popup {
     z-index: 10001;
     background: white;
-    font-family: 'Open Sans' sans-serif;
+    font-family: 'Open Sans' sans-serif !important;
     font-size: 16px;
     outline: solid;
     outline-width: .125px;
@@ -275,7 +275,7 @@ tfoot td {
 
 .legend-item-label {
   background: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important; 
   text-transform: capitalize;
   font-weight: 600;
   margin-right: 15px;
@@ -348,7 +348,7 @@ tfoot td {
   padding: 10px 20px;
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -415,7 +415,7 @@ tfoot td {
   padding: 10px 20px;
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
