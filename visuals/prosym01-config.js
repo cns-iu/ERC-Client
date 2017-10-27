@@ -27,6 +27,7 @@ edges: {
     notgeo = 0;
     prosym01.isPopupShowing = false;  
     ntwrk.map={}
+    prosym01.notgeocoded = [];
 
 
     if (ntwrk.DataService.mapDatasource[ntwrk.attrs.ngDataField].toProcess) {
@@ -43,7 +44,6 @@ edges: {
     ntwrk.PrimaryDataAttr = "nodes";
     ntwrk.filteredData.authors.data.forEach(function(d,i){
    
-    prosym01.notgeocoded = [];
 
    
       if((d.lat!=null) 
@@ -79,7 +79,7 @@ edges: {
         d.geometry.coordinates[0] =  0;
         d.geometry.coordinates[1] =  0;
    
-        prosym01.notgeocoded.push(d);
+        prosym01.notgeocoded[notgeo] = d;
 
 
       }
