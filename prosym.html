@@ -222,7 +222,7 @@ a.disabled {
 </body>
 <script type="text/javascript">
   $(document).ready(function(){
-  setTimeout(populateNotGeocoded(), 30000);
+ 
     $('[data-toggle="tooltip"]').tooltip(); 
       $(".legend-container").click(function() {
                 toggleLegend();
@@ -336,7 +336,7 @@ function unicodeEscape(string) {
                  .join("");
 }
 
-
+ setTimeout(populateNotGeocoded(), 30000);
     function populateNotGeocoded(){
           var ul = document.createElement('ul');
 
