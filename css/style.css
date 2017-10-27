@@ -575,7 +575,7 @@ tfoot td {
 
 .modal-content {
   display: block;
-
+ height: 550px;
     overflow-y: scroll;
     
 }
