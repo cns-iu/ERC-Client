@@ -479,7 +479,7 @@ tfoot td {
 #downloadSVG{
   position:absolute;
   z-index: 10;
-  top:80px;
+  top:120px;
  left:10px;
  background-color: #FF6600 ;
  color:white;
@@ -575,7 +575,7 @@ tfoot td {
 #scimapAbout{
     position: absolute;
     left: 10px;
-    top:120px;
+    top:80px;
     z-index: 10;
 }
 
