@@ -117,10 +117,12 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             }
 
             if(viz=="geomap"){
-                var max = prosym01.spatialsankey.nodeSizeArr.sort()[prosym01.spatialsankey.nodeSizeArr.length-1]*prosym01.map.getZoom();
-                m = (prosym01.spatialsankey.nodeSizeArr.sort()[prosym01.spatialsankey.nodeSizeArr.length-1] - prosym01.spatialsankey.nodeSizeArr.sort()[0])/2;
+                sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
+                
+                var max = sortedArr[sortedArr.length-1]*prosym01.map.getZoom();
+                m = (sortedArr[sortedArr.length-1] - sortedArr[0])/2;
                 var mean = m*prosym01.map.getZoom();;
-                var min = prosym01.spatialsankey.nodeSizeArr.sort()[0]*prosym01.map.getZoom();;
+                var min = sortedArr[0]*prosym01.map.getZoom();;
                 nodeSize.updateText([min, mean, max]);
             }
             
