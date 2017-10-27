@@ -179,9 +179,9 @@ edges: {
     function populateNotGeocoded(){
           var ul = document.createElement('ul');
 
-      for(var i in prosym01.notgeocoded){
+      for(x=1;x<prosym01.notgeocoded.length;x++){
          li = document.createElement('li');
-         content = document.createTextNode(i.author); 
+         content = document.createTextNode(prosym01.notgeocoded[x].author); 
          li.appendChild(content);
          ul.appendChild(li);
       }
