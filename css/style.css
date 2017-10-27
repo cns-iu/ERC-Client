@@ -244,6 +244,16 @@ tfoot td {
   padding: 7px 11px;
 }
 
+#nodeFill{
+ text-align: left;
+  padding: 7px 11px;
+}
+
+#nodeOutline{
+ text-align: left;
+  padding: 7px 11px;
+}
+
 #edges{
   text-align: left;
   padding: 7px 11px;
