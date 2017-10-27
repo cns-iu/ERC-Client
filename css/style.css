@@ -336,7 +336,7 @@ tfoot td {
   border-top-right-radius: 25px;
   text-align: center;
   position: fixed;
-  bottom: -255px;
+  bottom: -257px;
   left: 50%;
   transform: translate(-50%, 0);
 }
