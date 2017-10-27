@@ -42,7 +42,10 @@ edges: {
 
     ntwrk.PrimaryDataAttr = "nodes";
     ntwrk.filteredData.authors.data.forEach(function(d,i){
+   
+    prosym01.notgeocoded = [];
 
+   
       if((d.lat!=null) 
         && (d.lng!=null))
       {
@@ -63,6 +66,7 @@ edges: {
       else
       {
         notgeo++;
+        
         d.type="Feature";
         d.id = i;
         d.properties = {};
@@ -74,6 +78,8 @@ edges: {
         d.geometry.coordinates=[]
         d.geometry.coordinates[0] =  0;
         d.geometry.coordinates[1] =  0;
+   
+        prosym01.notgeocoded.push(d);
 
 
       }
