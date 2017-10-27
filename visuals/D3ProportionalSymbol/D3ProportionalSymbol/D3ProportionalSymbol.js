@@ -176,11 +176,7 @@ d3.json("nodes.geojson", function(nodes) {
     .nodes(context.filteredData.authors.data)
     .links(context.filteredData.edges.data);
 
-
-    context.Scales.nodeSizeScale = Utilities.makeDynamicScaleNew(d3.extent(prosym01.spatialsankey.nodeSizeArr, function(d, i) {
-      return d;
-    }), context.config.meta.nodes.styleEncoding.size.range)
-
+ 
     var mouseover = function(d){
 
 
