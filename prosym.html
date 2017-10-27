@@ -336,6 +336,17 @@ function unicodeEscape(string) {
                  .join("");
 }
 
+    function populateNotGeocoded(){
+          var str = '<ul style='position:absolute; bottom:0px'>';
+
+      for(var i in prosym01.notgeocoded){
+         str += '<li>'+i.author+'</li>';
+      }
+
+      str += '</ul>';
+      document.getElementById("authorDetails").append(str);
+}
+
 </script>
 
  
