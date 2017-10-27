@@ -336,7 +336,9 @@ tfoot td {
   left: 40%;
   transform: translate(-40%, 0);
 }
-
+#nodeColor{
+  width:300px;
+}
 .scimap-legend {
   width: 620px;
   z-index: 10000;
