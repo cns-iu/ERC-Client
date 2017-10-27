@@ -185,6 +185,92 @@ a.disabled {
         }
 
     }
+
+
+    window.addEventListener('load', () => {
+    const bundle = bundleCss();
+
+    document.getElementById('downloadSVG').addEventListener('click', () => {
+        bundle.then((stylesheet) => {
+            const doc = document.getElementsByTagName('svg')[0].outerHTML
+                // add in the styles, and also set the xmlns, which is mandatory to get things to show the svg "stand-alone"
+                .replace(/<svg(.*?>)/, '<svg xmlns="http://www.w3.org/2000/svg" $1\n<style>/* <![CDATA[ */\n' + stylesheet + '\n/* ]]> */</style>');
+
+            const link = document.createElement('a');
+            link.href = 'data:image/xml+svg;base64,' + btoa(doc);
+            link.download = 'coauthorViz.svg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    });
+});
+
+
+// make a big <style> tag representing the page context for downloaded svg
+function bundleCss() {
+    return new Promise((resolve, reject) => {
+        xhr('GET', 'src/Init.js')
+            .then((res) => {
+                // wait for all xhr
+                Promise.all(
+                    // get a list of all the stylesheets referenced by angular.
+                    // (this might just need to be [ 'css/svg.css' ])
+                    res.response.match(/[^\s"']+[.]css/g).filter((ma) => { return ma.indexOf('/') > -1; })
+                        // fetch content
+                        .map((url) => { return xhr('GET', url); })
+                // xhr responses
+                ).then((stylesheets) => {
+                    // concatenate into a giant stylesheet
+                    resolve(stylesheets.map((ss) => { return unicodeEscape(ss.response); }).join('\n'));
+                });
+            }, console.error);
+    });
+}
+
+// not sure how angular does this, but you can use its mechanism instead
+function xhr(method, url, opts) {
+    if (!opts) {
+        opts = {};
+    }
+    return new Promise((resolve, reject) => {
+        const req = new XMLHttpRequest;
+        req.open(method, url);
+        if (opts.headers) {
+            Object.keys(opts.headers).forEach((k) => {
+                req.setRequestHeader(k, opts.headers[k]);
+            });
+        }
+        req.send(opts.body);
+        req.onreadystatechange = () => {
+            if (req.readyState === 4) {
+                if (req.status >= 200 && req.status < 300) {
+                    resolve(req);
+                }
+                else {
+                    reject(req);
+                }
+            }
+        };
+    });
+};
+
+// shout out somebody on stackoverflow. some of the stylesheets are non-ascii
+function padWithLeadingZeros(string) {
+    return new Array(5 - string.length).join("0") + string;
+}
+function unicodeCharEscape(charCode) {
+    return "\\u" + padWithLeadingZeros(charCode.toString(16));
+}
+function unicodeEscape(string) {
+    return string.split("")
+                 .map(function (char) {
+                     var charCode = char.charCodeAt(0);
+                     return charCode > 127 ? unicodeCharEscape(charCode) : char;
+                 })
+                 .join("");
+}
+
 </script>
 
 </html>
