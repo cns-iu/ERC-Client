@@ -206,7 +206,7 @@ d3.json("nodes.geojson", function(nodes) {
       prosym01.circs.transition().style('opacity',function (d) {
         if(targetNodes.indexOf(d.id)!=-1)
           targetNames.push(d.author.toString());
-        return (this === circleUnderMouse|| targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0.2;
+        return (this === circleUnderMouse|| targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0.3;
       });
 
 
@@ -294,7 +294,7 @@ d3.json("nodes.geojson", function(nodes) {
       prosym01.circs.transition().style('opacity',function (d) {  
         if(targetNodes.indexOf(d.id)!=-1)
           targetNames.push(d.author.toString());
-        return (this === circleUnderMouse || targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0.2;
+        return (this === circleUnderMouse || targetNodes.indexOf(d.id)!=-1) ? 0.7 : 0.3;
       });
 
       barChart02.SVG.selectAll("text.wvf-label-mid").attr("opacity",.25);
