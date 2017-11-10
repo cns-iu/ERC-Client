@@ -108,7 +108,7 @@ a.disabled {
  <div flex layout="row" style="height: 100%; overflow: hidden !important;">
   <!-- Trigger the modal with a button -->
    <div ng-include="'partials/coauthor_about_modal.html'"></div>
-  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#myModal"> Usage </button>
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-info-sign"></span> Usage </button>
 
 
     <div flex="80" layout="column flex-80" style="overflow: hidden;">
@@ -166,7 +166,7 @@ a.disabled {
         </div>
     </div>
     <button type="button" class="btn btn-primary btn-s" id="downloadSVG">Download SVG</button>
-     <button type="button" class="btn btn-primary btn-s" id="aboutButton"> <span class="glyphicon glyphicon-info-sign"></span> About</button>
+     <button type="button" class="btn btn-primary btn-s" id="aboutButton"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
 </body>
 <script>
     var legendToggleOff = true;
