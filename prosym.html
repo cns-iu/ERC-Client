@@ -110,9 +110,9 @@ div.tooltip {
     
     width: 100px; 
 }
-#geomapAbout{
+#geomapUsage{
     position: absolute;
-   top:80px;
+   top:120px;
    left:10px;
     z-index: 10;
 }
@@ -144,7 +144,14 @@ a.disabled {
    cursor: default;
    color:black;
 }
+#geomapAbout{
+   position:absolute;
+  z-index: 10;
+  top:80px;
+ left:10px;
 
+
+}
 </style>
 <script src="lib/angular/angular.js"></script>
   <script src="lib/head.js"></script>
@@ -158,7 +165,7 @@ a.disabled {
 <div id="container" class="flexChild rowParent">
  <!-- Trigger the modal with a button -->
  <div ng-include="'partials/prosym_about_modal.html'"></div>
-  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#aboutModal" id="geomapAbout">  <span class="glyphicon glyphicon-info-sign"></span> Usage</button>
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#aboutModal" id="geomapUsage">  <span class="glyphicon glyphicon-info-sign"></span> Usage</button>
   
   <div ng-include="'partials/prosym-popup.html'"></div>
 <div id="rowChild18007" class="flexChild">
@@ -219,7 +226,7 @@ a.disabled {
                 </div>
                 </div>
                <!--   <button type="button" class="btn btn-primary btn-s" id="downloadSVG">Download SVG</button> -->
-               <button type="button" class="btn btn-primary btn-s" id="scimapAbout"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
+               <button type="button" class="btn btn-primary btn-s" id="geomapAbout"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
 </body>
 <script type="text/javascript">
   $(document).ready(function(){

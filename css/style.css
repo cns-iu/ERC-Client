@@ -589,13 +589,13 @@ tfoot td {
 #scimapUsage{
     position: absolute;
     left: 10px;
-    top:80px;
+    top:120px;
     z-index: 10;
 }
 #scimapAbout{
    position:absolute;
   z-index: 10;
-  top:120px;
+  top:80px;
  left:10px;
 
 
