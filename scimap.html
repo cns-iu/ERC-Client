@@ -52,7 +52,7 @@
     <div class="container-fluid">
        <!-- Trigger the modal with a button -->
        <div ng-include="'partials/scimap_about_modal.html'"></div>
-       <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#myModal" id="scimapAbout">  <span class="glyphicon glyphicon-info-sign"></span> Usage</button>
+       <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#myModal" id="scimapUsage">  <span class="glyphicon glyphicon-info-sign"></span> Usage</button>
        <div flex layout-fill layout="row" >
         <div flex layout="column">
             <div ng-include="'partials/scimap-popup.html'"></div>
@@ -91,7 +91,8 @@
 </div>
 
 <button type="button" class="btn btn-primary btn-s" id="backgroundChange" onclick="changeBackgroundColor();">B/W</button><br><br>
-<button type="button" class="btn btn-primary btn-s" id="downloadSVG">Download SVG</button>
+<!-- <button type="button" class="btn btn-primary btn-s" id="downloadSVG">Download SVG</button> -->
+<button type="button" class="btn btn-primary btn-s" id="scimapAbout"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
 </div>
 </body>
 <script>
