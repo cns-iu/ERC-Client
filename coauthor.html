@@ -101,6 +101,18 @@ a.disabled {
    color:black;
 }
 
+.modal-header-primary {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #428bca;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
   </style>
 </head>
 
@@ -108,7 +120,7 @@ a.disabled {
  <div flex layout="row" style="height: 100%; overflow: hidden !important;">
   <!-- Trigger the modal with a button -->
    <div ng-include="'partials/coauthor_usage_modal.html'"></div>
-  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#coAuthorUsageModal" id="usageButton"> <span class="glyphicon glyphicon-info-sign"></span> Usage </button>
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#coauthorUsageModal" id="usageButton"> <span class="glyphicon glyphicon-info-sign"></span> Usage </button>
 
 
     <div flex="80" layout="column flex-80" style="overflow: hidden;">
@@ -166,7 +178,8 @@ a.disabled {
         </div>
     </div>
 <!--     <button type="button" class="btn btn-primary btn-s" id="downloadSVG"> <span class="glyphicon glyphicon-download"></span>Download SVG</button> -->
-     <button type="button" class="btn btn-primary btn-s" id="aboutButton"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
+    <div ng-include="'partials/coauthor_about_modal.html'"></div>
+     <button type="button" class="btn btn-primary btn-s" data-toggle="modal" data-target="#coauthorAboutModal" id="aboutButton"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
 </body>
 <script>
     var legendToggleOff = true;
