@@ -152,6 +152,21 @@ a.disabled {
 
 
 }
+
+.modal-header-info {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5bc0de;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+
+
 </style>
 <script src="lib/angular/angular.js"></script>
   <script src="lib/head.js"></script>
@@ -226,7 +241,8 @@ a.disabled {
                 </div>
                 </div>
                <!--   <button type="button" class="btn btn-primary btn-s" id="downloadSVG">Download SVG</button> -->
-               <button type="button" class="btn btn-primary btn-s" id="geomapAbout"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
+                 <div ng-include="'partials/geomap_about_modal.html'"></div>
+               <button type="button" class="btn btn-primary btn-s" data-toggle="modal" data-target="#geomapAboutModal" id="geomapAbout"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
 </body>
 <script type="text/javascript">
   $(document).ready(function(){
