@@ -183,7 +183,7 @@ tbody {
     height: 160px;
 }
 
-.prosym-popup tbody {
+.geomap-popup tbody {
     max-height: 140px;
 }
 
@@ -408,7 +408,7 @@ tfoot td {
   padding: 5px 0px 10px 2px;
 }
 
-.prosym.legend.legend-container {
+.geomap.legend.legend-container {
   width: 160px;
   z-index: 10000;
   text-align: center;

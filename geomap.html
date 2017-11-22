@@ -164,10 +164,10 @@ a.disabled {
 <div class="container-fluid">
 <div id="container" class="flexChild rowParent">
  <!-- Trigger the modal with a button -->
- <div ng-include="'partials/prosym_about_modal.html'"></div>
-  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#aboutModal" id="geomapUsage">  <span class="glyphicon glyphicon-info-sign"></span> Usage</button>
+ <div ng-include="'partials/geomap_usage_modal.html'"></div>
+  <button type="button" class="btn btn-info btn-s" data-toggle="modal" data-target="#geomapUsageModal" id="geomapUsage">  <span class="glyphicon glyphicon-info-sign"></span> Usage</button>
   
-  <div ng-include="'partials/prosym-popup.html'"></div>
+  <div ng-include="'partials/geomap-popup.html'"></div>
 <div id="rowChild18007" class="flexChild">
 <div ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-reset-on-resize ng-config="visuals/prosym01-config.js" ng-vis-type="D3ProportionalSymbol" id="prosym01" ng-data-field="nanohub" ng-identifier="prosym01">
                     </div>
@@ -187,7 +187,7 @@ a.disabled {
 	    <div >
 
   <!-- Trigger the modal with a button -->
-  <div ng-include="'partials/prosym_warning_modal.html'"></div>
+  <div ng-include="'partials/geomap_warning_modal.html'"></div>
   <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#warningModal">  <span class="glyphicon glyphicon-info-sign"></span> Details</button>
 
   
@@ -203,7 +203,7 @@ a.disabled {
       </div></div>
 </div>
 
-<div class="legend-container prosym legend">
+<div class="legend-container geomap legend">
                     <button>
                         <span>Legend</span>
                     </button>
