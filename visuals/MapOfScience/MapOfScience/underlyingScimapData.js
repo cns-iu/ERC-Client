@@ -14279,7 +14279,6 @@ var underlyingScimapData = {
         "lngshrt": 51.625,
         "lng": 53.1,
         "latshrt": 8.603238866,
-        "y": 119,
         "lat": 9.109311741,
         "disc_id": 10,
         "x": 359
