@@ -14107,77 +14107,77 @@ var underlyingScimapData = {
         "disc_id": 2
     }, {
         "disc_name": "Medical Specialties",
-        "color": "#FF0000",
+        "color": "#D30706",
         "alt_color": -22784,
         "y": 177,
         "x": 350,
         "disc_id": 3
     }, {
         "disc_name": "Chemical, Mechanical, & Civil Engineering",
-        "color": "#61FFFF",
+        "color": "#55D4D2",
         "alt_color": -39396,
         "y": 142,
         "x": 217,
         "disc_id": 4
     }, {
         "disc_name": "Chemistry",
-        "color": "#0000FF",
+        "color": "#0707D2",
         "alt_color": -2408414,
         "y": 230,
         "x": 250,
         "disc_id": 5
     }, {
         "disc_name": "Earth Sciences",
-        "color": "#A71916",
+        "color": "#9B180F",
         "alt_color": -48328,
         "y": 48,
         "x": 235,
         "disc_id": 6
     }, {
         "disc_name": "Electrical Engineering & Computer Science",
-        "color": "#FF85FF",
+        "color": "#D372D2",
         "alt_color": -44173,
         "y": 196,
         "x": 138,
         "disc_id": 7
     }, {
         "disc_name": "Brain Research",
-        "color": "#FFB529",
+        "color": "#D39827",
         "alt_color": -1146456,
         "y": 171,
         "x": 410,
         "disc_id": 8
     }, {
         "disc_name": "Humanities",
-        "color": "#FFFF80",
+        "color": "#D3D46D",
         "alt_color": -1162327,
         "y": 42,
         "x": 484,
         "disc_id": 9
     }, {
         "disc_name": "Infectious Diseases",
-        "color": "#B8150B",
+        "color": "#8D1B18",
         "alt_color": -4970894,
         "y": 149,
         "x": 359,
         "disc_id": 10
     }, {
         "disc_name": "Math & Physics",
-        "color": "#A819FA",
+        "color": "#8E1BCE",
         "alt_color": -7260020,
         "y": 229,
         "x": 156,
         "disc_id": 11
     }, {
         "disc_name": "Health Professionals",
-        "color": "#FF804D",
+        "color": "#D36E44",
         "alt_color": -5483836,
         "y": 245,
         "x": 390,
         "disc_id": 12
     }, {
         "disc_name": "Social Sciences",
-        "color": "#FFFF00",
+        "color": "#D3D406",
         "alt_color": -5014843,
         "y": 147,
         "x": 484,
@@ -14185,7 +14185,7 @@ var underlyingScimapData = {
     }],
     "labels": [{
         "disc_name": "Biology",
-        "color": "#379908",
+        "color": "#33820D",
         "lngshrt": -19.25,
         "lng": -19.8,
         "latshrt": -51.27530364,
@@ -14195,7 +14195,7 @@ var underlyingScimapData = {
         "x": 278
     }, {
         "disc_name": "Biotechnology",
-        "color": "#00FF80",
+        "color": "#07D46D",
         "lngshrt": 0.875,
         "lng": 0.9,
         "latshrt": -8.603238866,
@@ -14205,7 +14205,7 @@ var underlyingScimapData = {
         "x": 301
     }, {
         "disc_name": "Medical Specialties",
-        "color": "#FF0000",
+        "color": "#D30706",
         "lngshrt": 43.75,
         "lng": 45,
         "latshrt": 27.87449393,
@@ -14215,7 +14215,7 @@ var underlyingScimapData = {
         "x": 350
     }, {
         "disc_name": "Chemical, Mechanical, & Civil Engineering",
-        "color": "#61FFFF",
+        "color": "#55D4D2",
         "lngshrt": -72.625,
         "lng": -74.7,
         "latshrt": 3.785425101,
@@ -14225,7 +14225,7 @@ var underlyingScimapData = {
         "x": 217
     }, {
         "disc_name": "Chemistry",
-        "color": "#0000FF",
+        "color": "#0707D2",
         "lngshrt": -43.75,
         "lng": -45,
         "latshrt": 64.35222672,
@@ -14235,7 +14235,7 @@ var underlyingScimapData = {
         "x": 250
     }, {
         "disc_name": "Earth Sciences",
-        "color": "#A71916",
+        "color": "#9B180F",
         "lngshrt": -56.875,
         "lng": -58.5,
         "latshrt": -60.91093117,
@@ -14245,7 +14245,7 @@ var underlyingScimapData = {
         "x": 235
     }, {
         "disc_name": "Electrical Engineering & Computer Science",
-        "color": "#FF85FF",
+        "color": "#D372D2",
         "lngshrt": -141.75,
         "lng": -145.8,
         "latshrt": 40.951417,
@@ -14255,7 +14255,7 @@ var underlyingScimapData = {
         "x": 138
     }, {
         "disc_name": "Brain Research",
-        "color": "#FFB529",
+        "color": "#D39827",
         "lngshrt": 96.25,
         "lng": 99,
         "latshrt": 23.74493927,
@@ -14265,7 +14265,7 @@ var underlyingScimapData = {
         "x": 410
     }, {
         "disc_name": "Humanities",
-        "color": "#FFFF80",
+        "color": "#D3D46D",
         "lngshrt": 161,
         "lng": 165.6,
         "latshrt": -65.04048583,
@@ -14275,7 +14275,7 @@ var underlyingScimapData = {
         "x": 484
     }, {
         "disc_name": "Infectious Diseases",
-        "color": "#B8150B",
+        "color": "#8D1B18",
         "lngshrt": 51.625,
         "lng": 53.1,
         "latshrt": 8.603238866,
@@ -14285,7 +14285,7 @@ var underlyingScimapData = {
         "x": 359
     }, {
         "disc_name": "Math & Physics",
-        "color": "#A819FA",
+        "color": "#8E1BCE",
         "lngshrt": -126,
         "lng": -129.6,
         "latshrt": 63.66396761,
@@ -14295,7 +14295,7 @@ var underlyingScimapData = {
         "x": 156
     }, {
         "disc_name": "Health Professionals",
-        "color": "#FF804D",
+        "color": "#D36E44",
         "lngshrt": 78.75,
         "lng": 81,
         "latshrt": 74.67611336,
@@ -14305,7 +14305,7 @@ var underlyingScimapData = {
         "x": 390
     }, {
         "disc_name": "Social Sciences",
-        "color": "#FFFF00",
+        "color": "#D3D406",
         "lngshrt": 161,
         "lng": 165.6,
         "latshrt": 7.226720648,
