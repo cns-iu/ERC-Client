@@ -14093,14 +14093,14 @@ var underlyingScimapData = {
     }],
     "disciplines": [{
         "disc_name": "Biology",
-        "color": "#379908",
+        "color": "#33820D",
         "alt_color": -2186398,
         "y": 62,
         "x": 278,
         "disc_id": 1
     }, {
         "disc_name": "Biotechnology",
-        "color": "#00FF80",
+        "color": "#07D46D",
         "alt_color": -11697,
         "y": 124,
         "x": 301,
