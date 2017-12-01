@@ -102,7 +102,7 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                       maxNode
                           .attr("r", context.geoNodeSizeMax*zoom);
             }
-                      
+
               }
 
         context.updateTextFromFunc = function(viz){
@@ -126,10 +126,10 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             if(viz=="geomap"){
                 sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
 
-                var max = sortedArr[sortedArr.length-1]*prosym01.map.getZoom();
+                var max = sortedArr[sortedArr.length-1]/prosym01.map.getZoom();
                 m = (sortedArr[sortedArr.length-1] - sortedArr[0])/2;
-                var mean = m*prosym01.map.getZoom();;
-                var min = sortedArr[0]*prosym01.map.getZoom();;
+                var mean = m/prosym01.map.getZoom();;
+                var min = sortedArr[0]/prosym01.map.getZoom();;
                 context.geoNodeSizeMax = max;
                 context.geoNodeSizeMid = mean;
                 context.geoNodeSizeMin = min;
