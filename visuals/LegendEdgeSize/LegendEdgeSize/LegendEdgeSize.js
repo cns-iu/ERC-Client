@@ -12,13 +12,13 @@ visualizationFunctions.LegendEdgeSize = function(element, data, opts) {
                 return context.SVG.selectAll("#title");
             }
             context.getMaxG = function() {
-                return context.SVG.selectAll("#maxG");
+                return context.SVG.selectAll("#maxEdge");
             }
             context.getMidG = function() {
-                return context.SVG.selectAll("#midG");
+                return context.SVG.selectAll("#midEdge");
             }
             context.getMinG = function() {
-                return context.SVG.selectAll("#minG");
+                return context.SVG.selectAll("#minEdge");
             }
 
             context.getMaxVal = function() {
