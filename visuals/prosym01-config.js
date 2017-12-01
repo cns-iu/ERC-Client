@@ -92,7 +92,8 @@ edges: {
 
 
 
-
+  ntwrk.maxPapers =1;
+  ntwr.minPapers = 1;
   ntwrk.filteredData.authors.data.forEach(function(d1,i1){// $("#zip-name").text(d.key + "_");
     tableData = [];
     ntwrk.filteredData.records.data.forEach(function(d2, i2) {
@@ -132,6 +133,10 @@ edges: {
 
 
     d1.tableD = tableData;
+    if (d1.tableD.length > maxPapers)
+      maxPapers = d1.tableD.length;
+    if(d1.tableD.length < minPapers)
+      minPapers = d1.tableD.length;
 
   })
 
@@ -204,7 +209,7 @@ events.prosym01 = function(ntwrk) {
    d3.select("#map").select("svg").on("mousewheel", function() {
     setTimeout(function() {
       nodeSize.setTitle("Node Degree")
-      nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
+      // nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
       nodeSize.updateTextFromFunc("geomap");
       nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range,ntwrk.zoom.scale(),"geomap");
 

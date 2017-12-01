@@ -98,15 +98,19 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                         .attr("r", arr[1]*zoom);
                       }
             if (viz == "geomap"){
+              var sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
+              var max = sortedArr[sortedArr.length-1];
+              var mid = (sortedArr[sortedArr.length-1] + sortedArr[0])/2;
+              var min = sortedArr[0];
                       minNode.transition()
   	                     .duration(100)
-                          .attr("r", context.geoNodeSizeMin);
+                          .attr("r", min);
                       midNode.transition()
     	                 .duration(100)
-                          .attr("r", context.geoNodeSizeMid);
+                          .attr("r", mid);
                       maxNode.transition()
     	                 .duration(100)
-                          .attr("r", context.geoNodeSizeMax);
+                          .attr("r", max);
             }
 
               }
@@ -124,16 +128,9 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             }
 
             if(viz=="geomap"){
-                sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
-                var max = sortedArr[sortedArr.length-1];
-                var mid = (sortedArr[sortedArr.length-1] + sortedArr[0])/2;
-                var min = sortedArr[0];
-                context.geoNodeSizeMax = max;
-                context.geoNodeSizeMid = mid;
-                context.geoNodeSizeMin = min;
-
-                nodeSize.updateText([min, mid, max]);
-            }
+                var mid = (prosym01.minPapers + prosym01.maxPapers)/2;
+                nodeSize.updateText([prosym01.minPapers, mid, prosym01.maxPapers]);
+              }
 
         }
 
