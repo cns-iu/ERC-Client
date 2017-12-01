@@ -76,7 +76,7 @@
 
 .wvf-node {
     stroke: #333333;
-    stroke-width: 1px;
+    stroke-width: 0.5px;
     cursor: pointer;
 
 }
@@ -86,7 +86,7 @@
 }
 
 .wvf-node.selected {
-    stroke-width: 1.2px;
+    stroke-width: 0.8px;
 }
 
 .subd {
