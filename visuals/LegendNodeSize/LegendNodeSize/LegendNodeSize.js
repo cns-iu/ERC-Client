@@ -87,7 +87,8 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             var maxNode = context.getMaxNode();
 
             if (viz == "network" || viz == "scimap"){
-                    minNode
+                    minNode.transition()
+  	                 .duration(1000)
                         .attr("r", arr[0]*zoom);
                     midNode
                         .attr("r", ((arr[0]+arr[1])/2)*zoom);
@@ -95,7 +96,8 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                         .attr("r", arr[1]*zoom);
                       }
             if (viz == "geomap"){
-                      minNode
+                      minNode.transition()
+  	                     .duration(1000)
                           .attr("r", context.geoNodeSizeMin/(prosym01.map.getZoom()-3));
                       midNode
                           .attr("r", context.geoNodeSizeMid/(prosym01.map.getZoom()-3));
