@@ -25,7 +25,7 @@ edges: {
   dataprep.prosym01 = function(ntwrk) {
     geo = 0;
     notgeo = 0;
-    prosym01.isPopupShowing = false;  
+    prosym01.isPopupShowing = false;
     ntwrk.map={}
     prosym01.notgeocoded = [];
 
@@ -43,10 +43,10 @@ edges: {
 
     ntwrk.PrimaryDataAttr = "nodes";
     ntwrk.filteredData.authors.data.forEach(function(d,i){
-   
 
-   
-      if((d.lat!=null) 
+
+
+      if((d.lat!=null)
         && (d.lng!=null))
       {
         geo++;
@@ -60,13 +60,13 @@ edges: {
         d.geometry.type="Point";
         d.geometry.coordinates=[]
         d.geometry.coordinates[0] =  d.lng;
-        d.geometry.coordinates[1] =  d.lat;   
+        d.geometry.coordinates[1] =  d.lat;
 
       }
       else
       {
         notgeo++;
-        
+
         d.type="Feature";
         d.id = i;
         d.properties = {};
@@ -78,7 +78,7 @@ edges: {
         d.geometry.coordinates=[]
         d.geometry.coordinates[0] =  0;
         d.geometry.coordinates[1] =  0;
-   
+
         prosym01.notgeocoded[notgeo] = d;
 
 
@@ -126,7 +126,7 @@ edges: {
             })
           }
 
-        } 
+        }
       })
     })
 
@@ -143,7 +143,7 @@ edges: {
      ntwrk.filteredData.edges.data.forEach(function(d){
 
 
-      if((ntwrk.filteredData.authors.data[d.source].latitude!=null) 
+      if((ntwrk.filteredData.authors.data[d.source].latitude!=null)
         && (ntwrk.filteredData.authors.data[d.source].longitude!=null)
         && (ntwrk.filteredData.authors.data[d.target].latitude!=null)
         &&  (ntwrk.filteredData.authors.data[d.target].longitude!=null))
@@ -181,7 +181,7 @@ edges: {
 
       for(x=1;x<prosym01.notgeocoded.length;x++){
          li = document.createElement('li');
-         content = document.createTextNode(prosym01.notgeocoded[x].author); 
+         content = document.createTextNode(prosym01.notgeocoded[x].author);
          li.appendChild(content);
          ul.appendChild(li);
       }
@@ -199,13 +199,13 @@ events.prosym01 = function(ntwrk) {
 
    nodeSize.setTitle("Node Degree")
    nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-   nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);
+   nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range,ntwrk.zoom.scale());
    nodeSize.updateTextFromFunc("geomap");
    d3.select("#map").select("svg").on("mousewheel", function() {
     setTimeout(function() {
       nodeSize.setTitle("Node Degree")
       nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-      nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range);
+      nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range,ntwrk.zoom.scale());
       nodeSize.updateTextFromFunc("geomap");
     }, 10);
   });
