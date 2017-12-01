@@ -127,7 +127,7 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                 sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
 
                 var max = sortedArr[sortedArr.length-1];
-                m = (sortedArr[sortedArr.length-1] - sortedArr[0])/2;
+                m = (sortedArr[sortedArr.length-1] + sortedArr[0])/2;
                 var mean = m;
                 var min = sortedArr[0];
                 context.geoNodeSizeMax = max;
