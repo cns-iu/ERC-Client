@@ -89,13 +89,13 @@ events.scimap01 = function(ntwrk) {
     function configureDOMElements() {
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-        nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range,ntwrk.zoom.scale());
+        nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range,ntwrk.zoom.scale(),"scimap");
         nodeSize.updateTextFromFunc("scimap");
 
         ntwrk.SVG.on("mousewheel", function() {
             setTimeout(function() {
                 nodeSize.updateTextFromFunc("scimap");
-                nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range,ntwrk.zoom.scale());
+                nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range,ntwrk.zoom.scale(),"scimap");
                 nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
 
             }, 10);
