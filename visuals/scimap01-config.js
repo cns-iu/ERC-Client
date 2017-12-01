@@ -26,7 +26,7 @@ events.scimap01 = function(ntwrk) {
         .range(configs.scimap01.records.styleEncoding.size.range)
     scimap01.maxValue = 0;
     scimap01.minValue = 0;
-  
+
     ntwrk.nestedData.sub_disc.forEach(function(d, i) {
         var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
         var currNode = currNodeG.selectAll("circle").attr("r", ntwrk.Scales.rScale(d.values.children.length));
@@ -76,11 +76,11 @@ events.scimap01 = function(ntwrk) {
         $("#disc-name").text(d.disc_name);
         $("#subd-name").text(d.subd_name);
 
-        //in Injectors.js. Makes it easier to do this across visualizations. 
+        //in Injectors.js. Makes it easier to do this across visualizations.
         showPopup(tableData);
         ntwrk.isPopupShowing = true;
 
-  
+
     }
 
 
@@ -89,12 +89,13 @@ events.scimap01 = function(ntwrk) {
     function configureDOMElements() {
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-        nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range);
+        nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range,ntwrk.zoom.scale());
         nodeSize.updateTextFromFunc("scimap");
 
         ntwrk.SVG.on("mousewheel", function() {
             setTimeout(function() {
                 nodeSize.updateTextFromFunc("scimap");
+                nodeSize.updateNodeSize(configs.scimap01.records.styleEncoding.size.range,ntwrk.zoom.scale());
                 nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
 
             }, 10);
