@@ -96,11 +96,11 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                       }
             if (viz == "geomap"){
                       minNode
-                          .attr("r", context.geoNodeSizeMin*zoom);
+                          .attr("r", context.geoNodeSizeMin);
                       midNode
-                          .attr("r", context.geoNodeSizeMid*zoom);
+                          .attr("r", context.geoNodeSizeMid);
                       maxNode
-                          .attr("r", context.geoNodeSizeMax*zoom);
+                          .attr("r", context.geoNodeSizeMax);
             }
 
               }
