@@ -289,10 +289,7 @@ events.forceNetwork01 = function(ntwrk) {
             setTimeout(function() {
 
                 nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range, ntwrk.zoom.scale(), "network");
-
-                nodeSize.updateTextFromFunc(function(d) {
-                    return ntwrk.Scales.nodeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
-                });
+                nodeSize.updateTextFromFunc("network");
                 edgeSize.updateEdgeSize(configs.forceNetwork01.edges.styleEncoding.strokeWidth.range, ntwrk.zoom.scale());
                 // edgeSize.updateTextFromFunc(function(d) {
                 //     return ntwrk.Scales.edgeSizeScale.invert(d / 2) / ntwrk.zoom.scale();

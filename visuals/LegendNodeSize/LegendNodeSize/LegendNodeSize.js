@@ -108,30 +108,22 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
         context.updateTextFromFunc = function(viz){
 
            if(viz=="network"){
-                var max = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
-                m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
-                var mean = forceNetwork01.Scales.nodeSizeScale(m)*forceNetwork01.zoom.scale();
-                var min = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.minNumPapers)*forceNetwork01.zoom.scale();
-                nodeSize.updateText([min, mean, max]);
+                var mid = (forceNetwork01.maxNumPapers + forceNetwork01.minNumPapers)/2;
+                nodeSize.updateText([forceNetwork01.minNumPapers, mid, forceNetwork01.maxNumPapers]);
             }
 
             if(viz=="scimap"){
-                var max = scimap01.Scales.rScale(scimap01.maxValue)*scimap01.zoom.scale();
-                m = (scimap01.maxValue - scimap01.minValue)/2;
-                var mean = scimap01.Scales.rScale(m)*scimap01.zoom.scale();
-                var min = scimap01.Scales.rScale(scimap01.minValue)*scimap01.zoom.scale();
-                nodeSize.updateText([min, mean, max]);
+                var mid = (scimap01.maxValue + scimap01.minValue)/2;
+                nodeSize.updateText([scimap01.minValue, mid, scimap01.maxValue]);
             }
 
             if(viz=="geomap"){
                 sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
-
                 var max = sortedArr[sortedArr.length-1];
-                m = (sortedArr[sortedArr.length-1] + sortedArr[0])/2;
-                var mean = m;
+                var mid = (sortedArr[sortedArr.length-1] + sortedArr[0])/2;
                 var min = sortedArr[0];
                 context.geoNodeSizeMax = max;
-                context.geoNodeSizeMid = mean;
+                context.geoNodeSizeMid = mid;
                 context.geoNodeSizeMin = min;
 
                 nodeSize.updateText([min, mean, max]);
