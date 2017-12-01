@@ -24,8 +24,8 @@ events.scimap01 = function(ntwrk) {
             return d.values.children.length
         }))
         .range(configs.scimap01.records.styleEncoding.size.range)
-    scimap01.maxValue = 0;
-    scimap01.minValue = 0;
+    scimap01.maxValue = 1;
+    scimap01.minValue = 1;
 
     ntwrk.nestedData.sub_disc.forEach(function(d, i) {
         var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
