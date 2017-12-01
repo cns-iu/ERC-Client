@@ -236,7 +236,7 @@ events.forceNetwork01 = function(ntwrk) {
         var sliderFormScope = angular.element(sliderFormElem).scope();
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-        nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range,ntwrk.zoom.scale());
+        nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range,ntwrk.zoom.scale(), "network");
         nodeSize.updateTextFromFunc("network");
 
         edgeSize.setTitle("#Co-authored Papers")
@@ -288,7 +288,7 @@ events.forceNetwork01 = function(ntwrk) {
         ntwrk.SVG.on("mousewheel", function() {
             setTimeout(function() {
 
-                nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range, ntwrk.zoom.scale());
+                nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range, ntwrk.zoom.scale(), "network");
 
                 nodeSize.updateTextFromFunc(function(d) {
                     return ntwrk.Scales.nodeSizeScale.invert(d / 2) / ntwrk.zoom.scale();

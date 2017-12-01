@@ -199,14 +199,15 @@ events.prosym01 = function(ntwrk) {
 
    nodeSize.setTitle("Node Degree")
    nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-   nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range,ntwrk.zoom.scale());
    nodeSize.updateTextFromFunc("geomap");
+   nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range,ntwrk.zoom.scale(),"geomap");
    d3.select("#map").select("svg").on("mousewheel", function() {
     setTimeout(function() {
       nodeSize.setTitle("Node Degree")
       nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-      nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range,ntwrk.zoom.scale());
       nodeSize.updateTextFromFunc("geomap");
+      nodeSize.updateNodeSize(configs.prosym01.nodes.styleEncoding.size.range,ntwrk.zoom.scale(),"geomap");
+
     }, 10);
   });
  }

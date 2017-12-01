@@ -81,24 +81,32 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             // context.setNodeSizes([4, 64])
         });
 
-        context.updateNodeSize = function(arr,zoom) {          
+        context.updateNodeSize = function(arr,zoom,viz) {
             var minNode = context.getMinNode();
             var midNode = context.getMidNode();
             var maxNode = context.getMaxNode();
 
-            minNode
-                .attr("r", arr[0]*zoom);
-                
-            
-            midNode
-                .attr("r", ((arr[0]+arr[1])/2)*zoom);
-            
-            maxNode
-                .attr("r", arr[1]*zoom);
+            if (viz == "network" || viz == "scimap"){
+                    minNode
+                        .attr("r", arr[0]*zoom);
+                    midNode
+                        .attr("r", ((arr[0]+arr[1])/2)*zoom);
+                    maxNode
+                        .attr("r", arr[1]*zoom);
+                      }
+            if (viz == "geomap"){
+                      minNode
+                          .attr("r", context.geoNodeSizeMin*zoom);
+                      midNode
+                          .attr("r", context.geoNodeSizeMid*zoom);
+                      maxNode
+                          .attr("r", context.geoNodeSizeMax*zoom);
+            }
+                      
               }
 
         context.updateTextFromFunc = function(viz){
-           
+
            if(viz=="network"){
                 var max = forceNetwork01.Scales.nodeSizeScale(forceNetwork01.maxNumPapers)*forceNetwork01.zoom.scale();
                 m = (forceNetwork01.maxNumPapers - forceNetwork01.minNumPapers)/2;
@@ -117,14 +125,18 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
 
             if(viz=="geomap"){
                 sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
-                
+
                 var max = sortedArr[sortedArr.length-1]*prosym01.map.getZoom();
                 m = (sortedArr[sortedArr.length-1] - sortedArr[0])/2;
                 var mean = m*prosym01.map.getZoom();;
                 var min = sortedArr[0]*prosym01.map.getZoom();;
+                context.geoNodeSizeMax = max;
+                context.geoNodeSizeMid = mean;
+                context.geoNodeSizeMin = min;
+
                 nodeSize.updateText([min, mean, max]);
             }
-            
+
         }
 
         context.updateText = function(arr) {
