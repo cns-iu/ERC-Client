@@ -126,7 +126,7 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                 context.geoNodeSizeMid = mid;
                 context.geoNodeSizeMin = min;
 
-                nodeSize.updateText([min, mean, max]);
+                nodeSize.updateText([min, mid, max]);
             }
 
         }
