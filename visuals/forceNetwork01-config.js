@@ -322,8 +322,8 @@ dataprep.forceNetwork01 = function(ntwrk) {
         ntwrk.filteredData.nodes = processedData.nodes;
         ntwrk.filteredData.edges = processedData.edges;
     }
-    ntwrk.maxNumPapers = 0;
-    ntwrk.minNumPapers = 0;
+    ntwrk.maxNumPapers = 1;
+    ntwrk.minNumPapers = 1;
     ntwrk.filteredData.nodes.data.forEach(function(d){
         if (d.numPapers>ntwrk.maxNumPapers){
             ntwrk.maxNumPapers = d.numPapers;
