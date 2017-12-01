@@ -90,7 +90,7 @@ events.forceNetwork01 = function(ntwrk) {
                 journal: d1.journal,
                 url: d1.url,
                 class: "enabled"
-                
+
             })
         }
         else{
@@ -101,14 +101,14 @@ events.forceNetwork01 = function(ntwrk) {
                 journal: d1.journal,
                 url: "#",
                 class: "disabled"
-             
+
             })
         }
-    
+
         })
 
         $("#popup-name").text(d[configs.forceNetwork01.labels.identifier.attr])
-        //in Injectors.js. Makes it easier to do this across visualizations. 
+        //in Injectors.js. Makes it easier to do this across visualizations.
         showPopup(tableData);
         ntwrk.isPopupShowing = true;
 
@@ -250,7 +250,7 @@ events.forceNetwork01 = function(ntwrk) {
 
         var roleColor = ["#35618f", "#bde267", "#60409b", "#3dcdc1","#d3d3d3"];
         nodeType.setTitle("Author Type")
-        
+
         nodeType.updateTypeColors(roleColor)
         function toTitleCase(str) {
             return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
@@ -269,7 +269,7 @@ events.forceNetwork01 = function(ntwrk) {
 
 
         barChart01.SVG.barGroups.selectAll("rect").style("stroke", function(d, i) {
-            
+
           switch (d.values.children[0].role) {
             case "other": return roleColor[0]; break;
             case "faculty": return roleColor[1]; break;
@@ -281,7 +281,7 @@ events.forceNetwork01 = function(ntwrk) {
         })
 
         //Faculty, Student, Unknown
-        var typeArr = ["Other","Faculty","Postdoc","Staff","Student"]; 
+        var typeArr = ["Other","Faculty","Postdoc","Staff","Student"];
         ntwrk.filteredData.nodes.data.forEach(function(d, i) { if (d.role == null) d.role = "Other"})
         // ntwrk.filteredData.nodes.data.forEach(function(d, i) { if (typeArr.indexOf(toTitleCase(d.role)) == -1) typeArr.push(toTitleCase(d.role))})
         nodeType.updateText(typeArr)
@@ -289,13 +289,13 @@ events.forceNetwork01 = function(ntwrk) {
             setTimeout(function() {
 
                 nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range, ntwrk.zoom.scale());
-               
+
                 nodeSize.updateTextFromFunc(function(d) {
                     return ntwrk.Scales.nodeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
                 });
-                edgeSize.updateTextFromFunc(function(d) {
-                    return ntwrk.Scales.edgeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
-                });
+                // edgeSize.updateTextFromFunc(function(d) {
+                //     return ntwrk.Scales.edgeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
+                // });
                 nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
                 edgeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
             }, 10);
@@ -314,7 +314,7 @@ events.forceNetwork01 = function(ntwrk) {
         $(".popup").css({ display: "none" })
         ntwrk.isPopupShowing = false;
         ntwrk.nodeMouseout();
-         $("#colorpicker").hide();  
+         $("#colorpicker").hide();
     })
 }
 
@@ -343,7 +343,7 @@ dataprep.forceNetwork01 = function(ntwrk) {
         }
         if(d.weight<ntwrk.minEdgeWeight){
             ntwrk.minEdgeWeight = d.weight;
-        
+
         }
     })
 

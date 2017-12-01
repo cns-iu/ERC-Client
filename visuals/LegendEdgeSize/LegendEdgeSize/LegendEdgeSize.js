@@ -64,16 +64,15 @@ visualizationFunctions.LegendEdgeSize = function(element, data, opts) {
             context.SVG.attr("height", 150);
         });
 
-        context.updateEdgeSize = function(arr) {          
-            var minEdge = context.getMinEdge();
-            var midEdge = context.getMidEdge();
-            var maxEdge = context.getMaxEdge();
-            
-            mid = (arr[1] - arr[0])/2;
-            minEdge.attr("stroke-width", arr[0]);
-            midEdge.attr("stroke-width", mid);
-            maxEdge.attr("stroke-width", arr[1]);
-            
+        context.updateEdgeSize = function(arr, zoom) {
+          var minEdge = context.getMinEdge();
+           var midEdge = context.getMidEdge();
+           var maxEdge = context.getMaxEdge();
+
+           maxEdge.select("line").attr("stroke-width",arr[1]*zoom);
+            midEdge.select("line").attr("stroke-width",(arr[0]+arr[1])/2*zoom);
+            minEdge.select("line").attr("stroke-width",arr[0]*zoom);
+
         }
 
         context.updateText = function(arr) {
@@ -87,7 +86,7 @@ visualizationFunctions.LegendEdgeSize = function(element, data, opts) {
             m = (forceNetwork01.maxEdgeWeight - forceNetwork01.minEdgeWeight)/2;
             var mean = forceNetwork01.Scales.edgeSizeScale(m)*forceNetwork01.zoom.scale();
             var min = forceNetwork01.Scales.edgeSizeScale(forceNetwork01.minEdgeWeight)*forceNetwork01.zoom.scale();
-            
+
             edgeSize.updateText([min, mean, max]);
         }
 
