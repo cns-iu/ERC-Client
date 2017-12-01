@@ -100,7 +100,7 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             if (viz == "geomap"){
                       minNode.transition()
   	                     .duration(100)
-                          .attr("r", context.geoNodeSizeMin));
+                          .attr("r", context.geoNodeSizeMin);
                       midNode.transition()
     	                 .duration(100)
                           .attr("r", context.geoNodeSizeMid);
