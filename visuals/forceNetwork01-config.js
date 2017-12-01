@@ -236,12 +236,12 @@ events.forceNetwork01 = function(ntwrk) {
         var sliderFormScope = angular.element(sliderFormElem).scope();
         nodeSize.setTitle("#Papers")
         nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-        nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range);
+        nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range,ntwrk.zoom.scale());
         nodeSize.updateTextFromFunc("network");
 
         edgeSize.setTitle("#Co-authored Papers")
         edgeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
-        edgeSize.updateEdgeSize(configs.forceNetwork01.edges.styleEncoding.strokeWidth.range);
+        edgeSize.updateEdgeSize(configs.forceNetwork01.edges.styleEncoding.strokeWidth.range,ntwrk.zoom.scale());
         edgeSize.updateTextFromFunc();
 
         nodeColor.setTitle("Year of First Publication")
@@ -287,6 +287,9 @@ events.forceNetwork01 = function(ntwrk) {
         nodeType.updateText(typeArr)
         ntwrk.SVG.on("mousewheel", function() {
             setTimeout(function() {
+
+                nodeSize.updateNodeSize(configs.forceNetwork01.nodes.styleEncoding.size.range, ntwrk.zoom.scale());
+               
                 nodeSize.updateTextFromFunc(function(d) {
                     return ntwrk.Scales.nodeSizeScale.invert(d / 2) / ntwrk.zoom.scale();
                 });

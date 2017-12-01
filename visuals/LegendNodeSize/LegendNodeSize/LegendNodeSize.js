@@ -81,22 +81,21 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             context.setNodeSizes([4, 64])
         });
 
-        context.updateNodeSize = function(arr) {          
+        context.updateNodeSize = function(arr,zoom) {          
             var minNode = context.getMinNode();
             var midNode = context.getMidNode();
-            var minNodeSize = (64 * arr[0]) / arr[1];
-            var midNodeSize = (64 + minNodeSize) / 2;
+            var maxNode = context.getMaxNode();
 
             minNode
-                .attr("r", minNodeSize)
-                .attr("cy", 174 - minNodeSize)
+                .attr("r", arr[0]*zoom);
+                
             
             midNode
-                .attr("r", midNodeSize)
-                .attr("cy", 174 - midNodeSize)
-            context.getMidG().attr("transform", "translate(70," + (174 - (midNodeSize * 2)) + ")")
-            context.getMinG().attr("transform", "translate(70," + (174 - (minNodeSize * 2)) + ")")
-        }
+                .attr("r", ((arr[0]+arr[1])/2)*zoom);
+            
+            maxNode
+                .attr("r", arr[1]*zoom);
+              }
 
         context.updateTextFromFunc = function(viz){
            
