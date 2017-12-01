@@ -78,7 +78,7 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
 
             context.SVG.attr("width", 150);
             context.SVG.attr("height", 150);
-            context.setNodeSizes([4, 64])
+            // context.setNodeSizes([4, 64])
         });
 
         context.updateNodeSize = function(arr,zoom) {          
