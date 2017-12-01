@@ -82,12 +82,8 @@ visualizationFunctions.LegendEdgeSize = function(element, data, opts) {
         }
 
         context.updateTextFromFunc = function() {
-            var max = forceNetwork01.Scales.edgeSizeScale(forceNetwork01.maxEdgeWeight)*forceNetwork01.zoom.scale();
-            m = (forceNetwork01.maxEdgeWeight - forceNetwork01.minEdgeWeight)/2;
-            var mean = forceNetwork01.Scales.edgeSizeScale(m)*forceNetwork01.zoom.scale();
-            var min = forceNetwork01.Scales.edgeSizeScale(forceNetwork01.minEdgeWeight)*forceNetwork01.zoom.scale();
-
-            edgeSize.updateText([min, mean, max]);
+            var mid = (forceNetwork01.maxEdgeWeight + forceNetwork01.minEdgeWeight)/2;
+            edgeSize.updateText([forceNetwork01.minEdgeWeight, mid, forceNetwork01.maxEdgeWeight]);
         }
 
 

@@ -78,7 +78,7 @@
     stroke: #333333;
     stroke-width: 1px;
     cursor: pointer;
-    
+
 }
 
 .forceNetwork01 .wvf-node {
@@ -86,7 +86,7 @@
 }
 
 .wvf-node.selected {
-    stroke-width: 4px;
+    stroke-width: 1.2px;
 }
 
 .subd {
