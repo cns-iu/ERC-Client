@@ -96,11 +96,11 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
                       }
             if (viz == "geomap"){
                       minNode
-                          .attr("r", context.geoNodeSizeMin);
+                          .attr("r", context.geoNodeSizeMin)/prosym01.map.getZoom();
                       midNode
-                          .attr("r", context.geoNodeSizeMid);
+                          .attr("r", context.geoNodeSizeMid)/prosym01.map.getZoom();
                       maxNode
-                          .attr("r", context.geoNodeSizeMax);
+                          .attr("r", context.geoNodeSizeMax)/prosym01.map.getZoom();
             }
 
               }
@@ -126,10 +126,10 @@ visualizationFunctions.LegendNodeSize = function(element, data, opts) {
             if(viz=="geomap"){
                 sortedArr = prosym01.spatialsankey.nodeSizeArr.sort();
 
-                var max = sortedArr[sortedArr.length-1]/prosym01.map.getZoom();
+                var max = sortedArr[sortedArr.length-1];
                 m = (sortedArr[sortedArr.length-1] - sortedArr[0])/2;
-                var mean = m/prosym01.map.getZoom();;
-                var min = sortedArr[0]/prosym01.map.getZoom();;
+                var mean = m;
+                var min = sortedArr[0];
                 context.geoNodeSizeMax = max;
                 context.geoNodeSizeMid = mean;
                 context.geoNodeSizeMin = min;
