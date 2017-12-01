@@ -133,10 +133,10 @@ edges: {
 
 
     d1.tableD = tableData;
-    if (d1.tableD.length > maxPapers)
-      maxPapers = d1.tableD.length;
-    if(d1.tableD.length < minPapers)
-      minPapers = d1.tableD.length;
+    if (d1.tableD.length > ntwrk.maxPapers)
+      ntwrk.maxPapers = d1.tableD.length;
+    if(d1.tableD.length < ntwrk.minPapers)
+      ntwrk.minPapers = d1.tableD.length;
 
   })
 
