@@ -93,7 +93,7 @@ edges: {
 
 
   ntwrk.maxPapers =1;
-  ntwr.minPapers = 1;
+  ntwrk.minPapers = 1;
   ntwrk.filteredData.authors.data.forEach(function(d1,i1){// $("#zip-name").text(d.key + "_");
     tableData = [];
     ntwrk.filteredData.records.data.forEach(function(d2, i2) {
