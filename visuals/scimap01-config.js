@@ -127,6 +127,8 @@ dataprep.scimap01 = function(ntwrk) {
         var match = [];
         if (d.journal) {
             match = mappingJournal.records.data.filter(function(d1, i1) {
+                if(d1.subd_id == 463)
+                    {console.log(d); console.log(d1);}
                 return d1.formal_name.toLowerCase() == d.journal.toLowerCase()
             })
         }
