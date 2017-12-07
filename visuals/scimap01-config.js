@@ -125,13 +125,19 @@ dataprep.scimap01 = function(ntwrk) {
     var newData = [];
     ntwrk.filteredData.records.data.forEach(function(d, i) {
         var match = [];
+        var counter_463 = 0;
         if (d.journal) {
             match = mappingJournal.records.data.filter(function(d1, i1) {
                 if(d1.subd_id == 463)
-                    {console.log(d); console.log(d1);}
+                    {
+                      
+                      if(d1.formal_name.toLowerCase() == d.journal.toLowerCase())
+                        counter_463++;
+                  }
                 return d1.formal_name.toLowerCase() == d.journal.toLowerCase()
             })
         }
+        console.log("counter_463 = ",counter_463);
         match.forEach(function(d1, i1) {
             var authors = [];
             d.author_ids.forEach(function(d2, i2) {
