@@ -30,6 +30,10 @@ events.scimap01 = function(ntwrk) {
     ntwrk.nestedData.sub_disc.forEach(function(d, i) {
         var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
         var currNode = currNodeG.selectAll("circle").attr("r", ntwrk.Scales.rScale(d.values.children.length));
+     if(scimap01.maxValue < d.values.children.length)
+            scimap01.maxValue = d.values.children.length;
+      if(scimap01.minValue > d.values.children.length)
+            scimap01.minValue = d.values.children.length;
     })
 
     setTimeout(function() {
@@ -38,12 +42,42 @@ events.scimap01 = function(ntwrk) {
 
 
     ntwrk.nodeClickEvent = function(d, i) {
-
+        var tableData = [];
+        var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
+            return d.subd_id == d1.key
+        });
+        match.values.children.forEach(function(d1, i1) {
+            var matches = tableData.filter(function(d2, i2) {
+                return d1.journal == d2.journal && d1.title == d2.title
+            })
+            if (matches.length == 0) {
+                if (d1.url!= null){
+                tableData.push({
+                    authors: d1.author_list,
+                    year: d1.year,
+                    title: d1.title,
+                    url: d1.url,
+                    journal: d1.journal,
+                    class:"enabled"
+                })
+             }
+                else{
+                tableData.push({
+                    authors: d1.author_list,
+                    year: d1.year,
+                    title: d1.title,
+                    url: "#",
+                    journal: d1.journal,
+                    class:"disabled"
+                })
+             }
+            }
+        })
         $("#disc-name").text(d.disc_name);
         $("#subd-name").text(d.subd_name);
 
         //in Injectors.js. Makes it easier to do this across visualizations.
-        showPopup(d.tableData);
+        showPopup(tableData);
         ntwrk.isPopupShowing = true;
 
 
@@ -91,12 +125,19 @@ dataprep.scimap01 = function(ntwrk) {
     var newData = [];
     ntwrk.filteredData.records.data.forEach(function(d, i) {
         var match = [];
+        var counter_463 = 0;
         if (d.journal) {
             match = mappingJournal.records.data.filter(function(d1, i1) {
+                if(d1.subd_id == 463)
+                    {
+                      
+                      if(d1.formal_name.toLowerCase() == d.journal.toLowerCase())
+                        counter_463++;
+                  }
                 return d1.formal_name.toLowerCase() == d.journal.toLowerCase()
             })
         }
-
+        console.log("counter_463 = ",counter_463);
         match.forEach(function(d1, i1) {
             var authors = [];
             d.author_ids.forEach(function(d2, i2) {
@@ -117,40 +158,5 @@ dataprep.scimap01 = function(ntwrk) {
         }
     })
     ntwrk.filteredData.records.data = newData;
-
-    ntwrk.filteredData.records.data.forEach(function(d, i) {
-  d.tableData = [];
-    var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
-        return d.subd_id == d1.key
-    });
-    match.values.children.forEach(function(d1, i1) {
-        var matches = tableData.filter(function(d2, i2) {
-            return d1.journal == d2.journal && d1.title == d2.title
-        })
-        if (matches.length == 0) {
-            if (d1.url!= null){
-            tableData.push({
-                authors: d1.author_list,
-                year: d1.year,
-                title: d1.title,
-                url: d1.url,
-                journal: d1.journal,
-                class:"enabled"
-            })
-         }
-            else{
-            tableData.push({
-                authors: d1.author_list,
-                year: d1.year,
-                title: d1.title,
-                url: "#",
-                journal: d1.journal,
-                class:"disabled"
-            })
-         }
-        }
-    })
-
-});
 
 };
