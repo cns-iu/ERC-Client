@@ -157,7 +157,7 @@ dataprep.scimap01 = function(ntwrk) {
         var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
           return d.subd_id == d1.key
         });
-
+        if (match){
         match.values.children.forEach(function(d1, i1) {
 
           var matches = d.tableData.filter(function(d2, i2) {
@@ -186,7 +186,7 @@ dataprep.scimap01 = function(ntwrk) {
             }
           }
         })
-
-      }); }, 3000);
+    }
+      }); }, 1000);
 
 };
