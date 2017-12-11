@@ -159,39 +159,39 @@ dataprep.scimap01 = function(ntwrk) {
     })
     ntwrk.filteredData.records.data = newData;
 
-    setTimeout(ntwrk.filteredData.records.data.forEach(function(d, i) {
-      d.tableData = [];
-      var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
-        return d.subd_id == d1.key
-      });
-      match.values.children.forEach(function(d1, i1) {
-        var matches = tableData.filter(function(d2, i2) {
-          return d1.journal == d2.journal && d1.title == d2.title
+    setTimeout(function(){   ntwrk.filteredData.records.data.forEach(function(d, i) {
+        d.tableData = [];
+        var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
+          return d.subd_id == d1.key
+        });
+        match.values.children.forEach(function(d1, i1) {
+          var matches = tableData.filter(function(d2, i2) {
+            return d1.journal == d2.journal && d1.title == d2.title
+          })
+          if (matches.length == 0) {
+            if (d1.url!= null){
+              tableData.push({
+                authors: d1.author_list,
+                year: d1.year,
+                title: d1.title,
+                url: d1.url,
+                journal: d1.journal,
+                class:"enabled"
+              })
+            }
+            else{
+              tableData.push({
+                authors: d1.author_list,
+                year: d1.year,
+                title: d1.title,
+                url: "#",
+                journal: d1.journal,
+                class:"disabled"
+              })
+            }
+          }
         })
-        if (matches.length == 0) {
-          if (d1.url!= null){
-            tableData.push({
-              authors: d1.author_list,
-              year: d1.year,
-              title: d1.title,
-              url: d1.url,
-              journal: d1.journal,
-              class:"enabled"
-            })
-          }
-          else{
-            tableData.push({
-              authors: d1.author_list,
-              year: d1.year,
-              title: d1.title,
-              url: "#",
-              journal: d1.journal,
-              class:"disabled"
-            })
-          }
-        }
-      })
 
-    });, 10000);
+      }); }, 3000);
 
 };
