@@ -157,8 +157,9 @@ dataprep.scimap01 = function(ntwrk) {
         var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
           return d.subd_id == d1.key
         });
-        d1.tableData = [];
+
         match.values.children.forEach(function(d1, i1) {
+          d1.tableData = [];
           var matches = d1.tableData.filter(function(d2, i2) {
             return d1.journal == d2.journal && d1.title == d2.title
           })
