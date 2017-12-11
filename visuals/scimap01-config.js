@@ -165,12 +165,12 @@ dataprep.scimap01 = function(ntwrk) {
           return d.subd_id == d1.key
         });
         match.values.children.forEach(function(d1, i1) {
-          var matches = tableData.filter(function(d2, i2) {
+          var matches = d.tableData.filter(function(d2, i2) {
             return d1.journal == d2.journal && d1.title == d2.title
           })
           if (matches.length == 0) {
             if (d1.url!= null){
-              tableData.push({
+              d.tableData.push({
                 authors: d1.author_list,
                 year: d1.year,
                 title: d1.title,
@@ -180,7 +180,7 @@ dataprep.scimap01 = function(ntwrk) {
               })
             }
             else{
-              tableData.push({
+              d.tableData.push({
                 authors: d1.author_list,
                 year: d1.year,
                 title: d1.title,
