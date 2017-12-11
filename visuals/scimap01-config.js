@@ -152,20 +152,20 @@ dataprep.scimap01 = function(ntwrk) {
     })
     ntwrk.filteredData.records.data = newData;
 
-    setTimeout(function(){   ntwrk.filteredData.records.data.forEach(function(d, i) {
-
+    setTimeout(function(){   ntwrk.underlyingDataNodes.forEach(function(d, i) {
+      d.tableData = [];
         var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
           return d.subd_id == d1.key
         });
 
         match.values.children.forEach(function(d1, i1) {
-          d1.tableData = [];
-          var matches = d1.tableData.filter(function(d2, i2) {
+
+          var matches = d.tableData.filter(function(d2, i2) {
             return d1.journal == d2.journal && d1.title == d2.title
           })
           if (matches.length == 0) {
             if (d1.url!= null){
-              d1.tableData.push({
+              d.tableData.push({
                 authors: d1.author_list,
                 year: d1.year,
                 title: d1.title,
@@ -175,7 +175,7 @@ dataprep.scimap01 = function(ntwrk) {
               })
             }
             else{
-              d1.tableData.push({
+              d.tableData.push({
                 authors: d1.author_list,
                 year: d1.year,
                 title: d1.title,
