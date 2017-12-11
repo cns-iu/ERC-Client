@@ -24,16 +24,12 @@ events.scimap01 = function(ntwrk) {
     return d.values.children.length
   }))
   .range(configs.scimap01.records.styleEncoding.size.range)
-  scimap01.maxValue = 1;
-  scimap01.minValue = 1;
+
 
   ntwrk.nestedData.sub_disc.forEach(function(d, i) {
     var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
     var currNode = currNodeG.selectAll("circle").attr("r", ntwrk.Scales.rScale(d.values.children.length));
-    if(scimap01.maxValue < d.values.children.length)
-    scimap01.maxValue = d.values.children.length;
-    if(scimap01.minValue > d.values.children.length)
-    scimap01.minValue = d.values.children.length;
+
   })
 
   setTimeout(function() {
@@ -52,7 +48,7 @@ events.scimap01 = function(ntwrk) {
 
 
   ntwrk.SVG.underlyingNodeG.on("click", ntwrk.nodeClickEvent);
-  
+
   function configureDOMElements() {
     nodeSize.setTitle("#Papers")
     nodeSize.setNote("Based on zoom level (" + Utilities.round(ntwrk.zoom.scale(), 1) + "x)")
@@ -118,9 +114,11 @@ dataprep.scimap01 = function(ntwrk) {
     }
   })
   ntwrk.filteredData.records.data = newData;
-
+  scimap01.maxValue = 1;
+  scimap01.minValue = 1;
   setTimeout(function(){   ntwrk.underlyingDataNodes.forEach(function(d, i) {
     d.tableData = [];
+
     var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
       return d.subd_id == d1.key
     });
@@ -154,6 +152,10 @@ dataprep.scimap01 = function(ntwrk) {
         }
       })
     }
+    if(scimap01.maxValue < d.tableData.length)
+    scimap01.maxValue = d.tableData.length;
+    if(scimap01.minValue > d.tableData.length)
+    scimap01.minValue = d.tableData.length;
   }); }, 1000);
 
 };
