@@ -373,7 +373,7 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                 context.nestedData.sub_disc.forEach(function(d, i) {
                     var rVal = 0;
                     d.values.children.forEach(function(d1, i1) {
-                        rVal += func(d1) || 1;
+                        rVal += func(d1) || 0;
                     })
                     d.rScaleVal = rVal;
                 });
