@@ -157,6 +157,7 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                     .attr("x", 0)
                     .attr("y", -defaultNodeSize)
                     .attr("text-anchor", "middle")
+                context.underlyingDataNodes = underlyingData.nodes;
                 return nodeG
             }
 
@@ -313,7 +314,7 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                     })
             }
 
-    
+
             context.SVG.applyNodeEvents = function(sel) {
                 sel.on("mouseover", function(d, i) {
                         context.SVG.underlyingNodes.classDeselect();
@@ -328,10 +329,10 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                     .on("mouseout", function(d, i) {
                         context.SVG.selectAll("*").classDefault();
                     })
-                    
+
             }
             context.SVG.applyNodeEvents(context.SVG.underlyingNodeG)
-            
+
 
             context.SVG.update = function(newData) {
                 if (newData) {
@@ -342,7 +343,7 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                 context.SVG.underlyingNodes
                     .attr("r", defaultNodeSize)
 
-                
+
 
                 context.SVG.recalculateMaxGlobalDomain(function(d) {
                     return d[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr]
@@ -352,7 +353,7 @@ visualizationFunctions.MapOfScience = function(element, data, opts) {
                 })
             }
 
-            
+
             context.SVG.recalculateMaxGlobalDomain = function(func) {
                 rVals = [];
                 context.nestedData.sub_disc.forEach(function(d, i) {
