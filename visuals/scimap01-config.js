@@ -125,19 +125,12 @@ dataprep.scimap01 = function(ntwrk) {
     var newData = [];
     ntwrk.filteredData.records.data.forEach(function(d, i) {
         var match = [];
-        var counter_463 = 0;
         if (d.journal) {
             match = mappingJournal.records.data.filter(function(d1, i1) {
-                if(d1.subd_id == 463)
-                    {
-
-                      if(d1.formal_name.toLowerCase() == d.journal.toLowerCase())
-                        counter_463++;
-                  }
                 return d1.formal_name.toLowerCase() == d.journal.toLowerCase()
             })
         }
-        console.log("counter_463 = ",counter_463);
+
         match.forEach(function(d1, i1) {
             var authors = [];
             d.author_ids.forEach(function(d2, i2) {
@@ -160,17 +153,18 @@ dataprep.scimap01 = function(ntwrk) {
     ntwrk.filteredData.records.data = newData;
 
     setTimeout(function(){   ntwrk.filteredData.records.data.forEach(function(d, i) {
-        d.tableData = [];
+
         var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
           return d.subd_id == d1.key
         });
+        d1.tableData = [];
         match.values.children.forEach(function(d1, i1) {
-          var matches = d.tableData.filter(function(d2, i2) {
+          var matches = d1.tableData.filter(function(d2, i2) {
             return d1.journal == d2.journal && d1.title == d2.title
           })
           if (matches.length == 0) {
             if (d1.url!= null){
-              d.tableData.push({
+              d1.tableData.push({
                 authors: d1.author_list,
                 year: d1.year,
                 title: d1.title,
@@ -180,7 +174,7 @@ dataprep.scimap01 = function(ntwrk) {
               })
             }
             else{
-              d.tableData.push({
+              d1.tableData.push({
                 authors: d1.author_list,
                 year: d1.year,
                 title: d1.title,
