@@ -19,18 +19,18 @@ configs.scimap01 = {
 events.scimap01 = function(ntwrk) {
   ntwrk.isPopupShowing = false;
 
-  // ntwrk.Scales.rScale = d3.scale[configs.scimap01.records.styleEncoding.size.scaleType]()
-  // .domain(d3.extent(ntwrk.nestedData.sub_disc, function(d, i) {
-  //   return d.values.children.length
-  // }))
-  // .range(configs.scimap01.records.styleEncoding.size.range)
+  ntwrk.Scales.rScale = d3.scale[configs.scimap01.records.styleEncoding.size.scaleType]()
+  .domain(d3.extent(ntwrk.nestedData.sub_disc, function(d, i) {
+    return d.values.children.length
+  }))
+  .range(configs.scimap01.records.styleEncoding.size.range)
 
 
-  // ntwrk.nestedData.sub_disc.forEach(function(d, i) {
-  //   var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
-  //   var currNode = currNodeG.selectAll("circle").attr("r", ntwrk.Scales.rScale(d.values.children.length));
+  ntwrk.nestedData.sub_disc.forEach(function(d, i) {
+    var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
+    var currNode = currNodeG.selectAll("circle").attr("r", ntwrk.Scales.rScale(d.values.children.length));
 
-  // })
+  })
 
   setTimeout(function() {
     configureDOMElements();
