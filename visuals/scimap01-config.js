@@ -8,7 +8,7 @@ configs.scimap01 = {
     styleEncoding: {
       size: {
         attr: "tableData",
-        range: [5, 15],
+        range: [10, 20],
         scaleType: "linear"
       }
     }
