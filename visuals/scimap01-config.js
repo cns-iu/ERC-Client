@@ -8,7 +8,7 @@ configs.scimap01 = {
     styleEncoding: {
       size: {
         attr: "tableData",
-        range: [4, 20],
+        range: [1, 10],
         scaleType: "linear"
       }
     }
@@ -69,14 +69,18 @@ events.scimap01 = function(ntwrk) {
     var match = ntwrk.underlyingDataNodes.find(function(d1){
       return d1.subd_id == d.key;
     })
-    return match.tableData.length;
+    return match[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr].length;
   }))
   .range(configs.scimap01.records.styleEncoding.size.range)
 
 
   ntwrk.nestedData.sub_disc.forEach(function(d, i) {
+    var match = ntwrk.underlyingDataNodes.find(function(d1){
+      return d1.subd_id == d.key;
+    })
     var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
-    var currNode = currNodeG.selectAll("circle").attr("r", ntwrk.Scales.rScale(d.values.children.length));
+    var currNode = currNodeG.selectAll("circle").attr("r",
+    ntwrk.Scales.rScale(match[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr].length));
 
   })
 
