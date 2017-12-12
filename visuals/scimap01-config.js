@@ -18,6 +18,51 @@ configs.scimap01 = {
 
 events.scimap01 = function(ntwrk) {
   ntwrk.isPopupShowing = false;
+  scimap01.maxValue = 1;
+  scimap01.minValue = 1;
+
+  ntwrk.underlyingDataNodes.forEach(function(d, i) {
+    d.tableData = [];
+
+    var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
+      return d.subd_id == d1.key
+    });
+    if (match){
+      match.values.children.forEach(function(d1, i1) {
+
+        var matches = d.tableData.filter(function(d2, i2) {
+          return d1.journal == d2.journal && d1.title == d2.title
+        })
+        if (matches.length == 0) {
+          if (d1.url!= null){
+            d.tableData.push({
+              authors: d1.author_list,
+              year: d1.year,
+              title: d1.title,
+              url: d1.url,
+              journal: d1.journal,
+              class:"enabled"
+            })
+          }
+          else{
+            d.tableData.push({
+              authors: d1.author_list,
+              year: d1.year,
+              title: d1.title,
+              url: "#",
+              journal: d1.journal,
+              class:"disabled"
+            })
+          }
+        }
+      })
+    }
+    if(scimap01.maxValue < d.tableData.length)
+    scimap01.maxValue = d.tableData.length;
+    if(scimap01.minValue > d.tableData.length)
+    scimap01.minValue = d.tableData.length;
+  });
+
 
   ntwrk.Scales.rScale = d3.scale[configs.scimap01.records.styleEncoding.size.scaleType]()
   .domain(d3.extent(ntwrk.nestedData.sub_disc, function(d, i) {
@@ -114,48 +159,6 @@ dataprep.scimap01 = function(ntwrk) {
     }
   })
   ntwrk.filteredData.records.data = newData;
-  scimap01.maxValue = 1;
-  scimap01.minValue = 1;
-  setTimeout(function(){   ntwrk.underlyingDataNodes.forEach(function(d, i) {
-    d.tableData = [];
 
-    var match = ntwrk.nestedData.sub_disc.find(function(d1, i1) {
-      return d.subd_id == d1.key
-    });
-    if (match){
-      match.values.children.forEach(function(d1, i1) {
-
-        var matches = d.tableData.filter(function(d2, i2) {
-          return d1.journal == d2.journal && d1.title == d2.title
-        })
-        if (matches.length == 0) {
-          if (d1.url!= null){
-            d.tableData.push({
-              authors: d1.author_list,
-              year: d1.year,
-              title: d1.title,
-              url: d1.url,
-              journal: d1.journal,
-              class:"enabled"
-            })
-          }
-          else{
-            d.tableData.push({
-              authors: d1.author_list,
-              year: d1.year,
-              title: d1.title,
-              url: "#",
-              journal: d1.journal,
-              class:"disabled"
-            })
-          }
-        }
-      })
-    }
-    if(scimap01.maxValue < d.tableData.length)
-    scimap01.maxValue = d.tableData.length;
-    if(scimap01.minValue > d.tableData.length)
-    scimap01.minValue = d.tableData.length;
-  }); }, 1000);
 
 };
