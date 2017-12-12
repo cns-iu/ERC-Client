@@ -7,7 +7,7 @@ configs.scimap01 = {
   records: {
     styleEncoding: {
       size: {
-        attr: "values",
+        attr: "tableData",
         range: [4, 20],
         scaleType: "linear"
       }
@@ -66,7 +66,10 @@ events.scimap01 = function(ntwrk) {
 
   ntwrk.Scales.rScale = d3.scale[configs.scimap01.records.styleEncoding.size.scaleType]()
   .domain(d3.extent(ntwrk.nestedData.sub_disc, function(d, i) {
-    return d.values.children.length
+    var match = ntwrk.underlyingDataNodes.find(function(d1){
+      return d1.subd_id == d.key;
+    })
+    return match.tableData.length;
   }))
   .range(configs.scimap01.records.styleEncoding.size.range)
 
