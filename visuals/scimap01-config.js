@@ -69,7 +69,7 @@ events.scimap01 = function(ntwrk) {
     var match = ntwrk.underlyingDataNodes.find(function(d1){
       return d1.subd_id == d.key;
     })
-    return match[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr].length;
+    return match[ntwrk.config.meta[ntwrk.PrimaryDataAttr].styleEncoding.size.attr].length;
   }))
   .range(configs.scimap01.records.styleEncoding.size.range)
 
@@ -80,7 +80,7 @@ events.scimap01 = function(ntwrk) {
     })
     var currNodeG = ntwrk.SVG.underlyingNodeG.filter(".subd_id" + d.key);
     var currNode = currNodeG.selectAll("circle").attr("r",
-    ntwrk.Scales.rScale(match[context.config.meta[context.PrimaryDataAttr].styleEncoding.size.attr].length));
+    ntwrk.Scales.rScale(match[ntwrk.config.meta[ntwrk.PrimaryDataAttr].styleEncoding.size.attr].length));
 
   })
 
