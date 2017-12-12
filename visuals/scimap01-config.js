@@ -94,7 +94,12 @@ events.scimap01 = function(ntwrk) {
     $("#subd-name").text(d.subd_name);
 
     //in Injectors.js. Makes it easier to do this across visualizations.
-    showPopup(d.tableData);
+    if(d.tableData.length>0)
+      showPopup(d.tableData);
+    else {
+      d.tableData = "No papers found";
+      showPopup(d.tableData);
+          }
     ntwrk.isPopupShowing = true;
   }
 
