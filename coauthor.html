@@ -26,17 +26,17 @@ body {
     cursor: pointer;
 }
 
-div.tooltip {	
-    position: absolute;		
+div.tooltip {
+    position: absolute;
     margin-top: 0px;
-    z-index: 100000000;	
-    text-align: center;			
-    width: 60px;					
-    height: 28px;					
-    padding: 2px;				
-    font: 12px sans-serif;		 
-    border: 0px;		
-    border-radius: 8px;		
+    z-index: 100000000;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    border: 0px;
+    border-radius: 8px;
 }
 
 /*.brush .extent {
@@ -79,7 +79,7 @@ div.tooltip {
     position: relative;
     top:90px;
 	overflow-y: hidden;
-}  
+}
 
 #aboutTable th{
     color:black;
@@ -113,6 +113,10 @@ a.disabled {
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
 }
+
+#aboutButtonLabel{
+  color: black;
+}
   </style>
 </head>
 
@@ -145,7 +149,7 @@ a.disabled {
                                         <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-vis-type="LegendNodeSize" id="nodeSize" ng-identifier="nodeSize">
                                         </div>
                                     </div>
-                                    
+
                                     <div flex class="legend-item">
                                         <div layout="column" layout-fill class="wrapper" ng-controller="ngCnsVisual" ng-data-attr="ng-cns-visual" ng-vis-type="LegendNodeColor" id="nodeColor" ng-identifier="nodeColor">
                                         </div>
@@ -179,7 +183,7 @@ a.disabled {
     </div>
 <!--     <button type="button" class="btn btn-primary btn-s" id="downloadSVG"> <span class="glyphicon glyphicon-download"></span>Download SVG</button> -->
     <div ng-include="'partials/coauthor_about_modal.html'"></div>
-     <button type="button" class="btn btn-primary btn-s" data-toggle="modal" data-target="#coauthorAboutModal" id="aboutButton"> <span class="glyphicon glyphicon-question-sign"></span> About</button>
+     <button type="button" class="btn btn-primary btn-s" data-toggle="modal" data-target="#coauthorAboutModal" id="aboutButton"> <span class="glyphicon glyphicon-question-sign"></span> <span id="aboutButtonLabel">About</span></button>
 </body>
 <script>
     var legendToggleOff = true;
